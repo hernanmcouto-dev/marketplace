@@ -5,16 +5,10 @@ import { useRouter } from "next/navigation";
 
 export default function ClientePage() {
   const router = useRouter();
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // Verificar autenticación
-    const auth = document.cookie.includes("auth=");
-    if (!auth) {
-      router.push("/login");
-    } else {
-      setLoading(false);
-    }
+    setLoading(false);
   }, [router]);
 
   const handleLogout = async () => {

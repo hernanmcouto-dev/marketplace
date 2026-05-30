@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 interface LogMessage {
@@ -19,6 +19,12 @@ export default function ScraperPage() {
   const [running, setRunning] = useState(false);
   const [logs, setLogs] = useState<LogMessage[]>([]);
   const [progress, setProgress] = useState(0);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Solo renderizar si hay sesión
+    setLoading(false);
+  }, []);
 
   const handleStartScraper = async () => {
     setRunning(true);
