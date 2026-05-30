@@ -1,0 +1,607 @@
+
+
+<script>
+
+
+	function ventana_ctct(url)
+	   {
+	   window.open(url,"Consultar cuenta corriente","width=1600,height=1300");	
+	   }
+
+	   
+</script>
+
+
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+
+<title>
+</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!--<link href="css/estilos.css" rel="stylesheet" type="text/css">-->
+
+
+
+<style type="text/css">
+
+
+body {
+	/* padding-top:220px;  /* Con encabezado fijo, para que el primer producto no lo tape el banner */
+	padding-top: 0px; 
+	margin-top:0px;
+	
+	background-color: #FFF;  /* Color BLANCO del fondo del catalogo, la parte del tapiz */  /* USAR ESTE */
+	/*background-color: #FFFFBF;  /* Color del fondo del catalogo, la parte del tapiz AMARILLO SUAVE */
+	
+	/* electrobyk */
+	/*background-color: #6C6;  /* Color VERDE del fondo del catalogo, la parte del tapiz */
+}
+
+
+
+
+
+
+#contenedor_encabezado 
+    {
+	/*background-color: #FFFFBF;   /* Color del fondo del encabezado, la parte del tapiz AMARILLO SUAVE */
+
+	background-color: #FFF;   /* Color BLANCO del fondo del encabezado, la parte del tapiz */  /* USAR ESTE */
+	
+	/* electrobyk */
+	/*background-color: #6C6;  /* Color VERDE del fondo del catalogo, la parte del tapiz */
+	
+	/*background-color: #6C6;  */
+    }
+
+
+
+
+.boton_superior {
+	display:block;
+	background-color:#00C;
+	color:#FFF;
+	margin-top:7px;
+	margin-left:15px;
+	border-radius:5px;
+	height:25px;
+	width:130px;
+	text-align:center;
+	background: linear-gradient(to right, #00B2B2, #0859AA);
+}
+
+	
+a.boton_rojo {
+	display:block;
+	background-color:#F54649;
+	color:#FFF;
+	margin-top:7px;
+	margin-left:15px;
+	border-radius:5px;
+	height:25px;
+	width:140px;
+	text-align:center;	
+}
+
+#los_links li a.boton_rojo {
+	color:#FFF;
+}
+
+#los_links li a.boton_rojo:hover {
+	background-color:#F54649;
+}
+
+
+
+
+
+
+a.boton_rosa {
+	display:block;
+	background-color:#FFC8D2;
+	color:#FFF;
+	margin-top:7px;
+	margin-left:15px;
+	border-radius:5px;
+	height:25px;
+	width:140px;
+	text-align:center;	
+}
+
+#los_links li a.boton_rosa {
+	color:#FFF;
+}
+
+#los_links li a.boton_rosa:hover {
+	background-color:#FFC8D2;
+}
+
+
+
+a.boton_rubros {
+	display:block;
+	margin-top:7px;
+	margin-left:15px;
+	border-radius:5px;
+	width:140px;
+	height:25px;
+	font-size:10px;
+	background: #03C;
+	text-align:center;
+}
+
+#los_links li a.boton_rubros {
+	color:#FFF;
+}
+
+#los_links li a.boton_rubros:hover {
+	background: #03C;
+}
+
+li.contenedor_rubro {
+	padding:0px;
+	margin:0px;
+}
+
+.cartel_agotado {
+	position:absolute;
+	top:0; left:0;
+	z-index:1;
+	width:100%
+
+}
+.cartel_agotado img {
+	position:relative;
+	top:0; left:0;
+	z-index:1;
+}
+
+
+
+.caja_precio_javier {
+	border-radius:10px;
+	background: linear-gradient(to bottom, #3399FF, #0859AA); 
+	/* background: linear-gradient(to right, #7D0101, #0859AA); /* reyesdeloeste */
+	padding:20px;
+	color:#FFF;  /*  Color de la fuente */
+	/*	color: #000;  /*  Color de la fuente reyesdeloeste*/
+}
+
+
+
+#descrip h1 {
+	font-size:18px;
+	font-weight:bold;
+}
+
+
+
+#menu {                           /* Toma por defecto estas configuraciones, de haber otras con el mismo nombre en estilos.css */
+    /* background-color: #D1FEFE;    /* Color de barra superior CELESTE  catalogo2021 */  
+
+     background-color: #FFF;  /* USAR ESTE */
+
+
+
+	/*height:160px;   /*  Altura del banner superior  USAR ESTA, PORQUE SINO EN EL TELEFONO NO SE DESPLIEGAN LOS RUBROS */
+	/*height:200px;   /*  Altura del banner superior  USAR ESTA, PORQUE SINO EN EL TELEFONO NO SE DESPLIEGAN LOS RUBROS */
+	/* height:40px;   /*  Altura del banner superior */
+	border-radius:25px;
+}
+
+
+
+
+.caja_producto 
+    {
+	margin-bottom:10px;   /* Separacion entre producto y producto */
+	border-bottom-style:solid;
+	border-bottom-color:#333;
+	border-bottom-width:3px;
+	padding-bottom:8px; 
+
+	background-color: #F3F3F3;  /* GRIS SUAVE */
+	/*background-color: #FF9;  /* Technocell AMARILLO */
+
+	/*border-radius:25px; /* ACTUAL */
+	border-radius:45px; /* pasamano */
+
+    box-shadow: 5px 5px #666;
+	width:98%;
+	/* text-shadow: 2px 2px 5px #333;   Sombra a las letras */
+    }
+
+
+
+
+
+.caja_producto_mibo
+    {
+	margin-bottom:10px;   /* Separacion entre producto y producto */
+	border-bottom-style:solid;
+	border-bottom-color:#333;
+	border-bottom-width:3px;
+	padding-bottom:8px; 
+
+	background-color: #F3F3F3;  /* GRIS SUAVE */
+	border-radius:0px; 
+
+    /* box-shadow: 5px 5px #666; */
+	width:98%;
+	/* text-shadow: 2px 2px 5px #333;   Sombra a las letras */
+    }
+
+
+
+
+
+.caja_precio_noimptk 
+    {
+	border-radius:10px;
+	background: linear-gradient(to bottom, #3399FF, #0859AA); 
+	/* background: linear-gradient(to right, #7D0101, #0859AA); /* reyesdeloeste */
+	padding:20px;
+	color:#FFF;  /*  Color de la fuente */
+	/*	color: #000;  /*  Color de la fuente reyesdeloeste*/
+	font-size:18px;
+    }
+
+
+
+.caja_precio_bastet
+    {
+	border-radius:10px;
+	background: linear-gradient(to bottom, #FFC8D2, #FFC8D2); 
+	padding:20px;
+	color:#000;  /*  Color de la fuente */
+	font-size:18px;
+    }
+
+
+
+.caja_precio_mibo 
+    {
+	border-radius:10px;
+	background: linear-gradient(to bottom, #FFF, #FFF); 
+	padding:20px;
+	color: #000;  /*  Color de la fuente */
+	font-size:18px;
+	font-weight:bold;
+
+    }
+
+
+
+.caja_precio_fp3277 
+    {
+	border-radius:10px;
+	background: linear-gradient(to bottom, #3399FF, #0859AA); 
+	/* background: linear-gradient(to right, #7D0101, #0859AA); /* reyesdeloeste */
+	height:25px;
+	padding:10px;
+	color:#FFF;  /*  Color de la fuente */
+	/*	color: #000;  /*  Color de la fuente reyesdeloeste*/
+	font-size:14px;
+    }
+
+
+
+
+#boton_ver_producto 
+    {
+	background-color: #F00;
+	/* background-color:#00C; */
+	/* color:#FFF;   /* Normal COLOR LETRAS*/
+	color: #FFF;    /*  reyesdeloeste COLOR LETRAS*/
+	margin-left:0px;
+	margin-top: 0px;
+	border-radius:5px;
+	height:50px;
+	width:100px;
+	text-align:center;
+	/*background: linear-gradient(to right, #00B2B2, #0859AA);   /* Normal, celeste degradee */
+	
+	/*background: linear-gradient(to right, #FF0, #FF0);   /* reyesdeloeste */
+}
+
+
+
+
+
+
+#boton_comprar 
+    {
+	background-color:#00C;
+	 color:#FFF;   /* Normal */
+	/*	color:#000;    /*  reyesdeloeste */
+	margin-left:0px;
+	margin-top: 0px;
+	border-radius:5px;
+	height:40px;
+	width:80px;
+	text-align:center;
+	background: linear-gradient(to right, #00B2B2, #0859AA);   /* Normal, celeste degradee */
+	/*    background: linear-gradient(to right, #FF0, #FF0);   /* reyesdeloeste */
+}
+
+
+#boton_volver 
+    {
+	display:inline-block;
+	background-color:#00C;
+	 color:#FFF;	 
+	/*    color:#000;    /*  reyesdeloeste */
+	border-radius:5px;
+	height:40px;
+	width:80px;
+	padding-top: 8px;
+	text-align:center;
+	background: linear-gradient(to right, #00B2B2, #0859AA); 
+	/*    background: linear-gradient(to right, #FF0, #FF0);   /* reyesdeloeste */
+    }
+
+
+
+
+#boton_volver_rosa
+    {
+	display:inline-block;
+    color:#000;	 
+	border-radius:5px;
+	height:40px;
+	width:80px;
+	padding-top: 8px;
+	text-align:center;
+	background: linear-gradient(to right, #FFC8D2, #FFC8D2); 
+    }
+
+
+
+
+
+
+
+
+
+.whatsapp-button {
+  position: fixed; /* Fija el botón en la posición deseada */
+  bottom: 0px; /* Distancia desde la parte inferior de la ventana */
+  right: 0px; /* Distancia desde el borde derecho de la ventana */
+  z-index: 999; /* Asegura que el botón esté siempre encima de otros elementos */
+  background-color: #25d366; /* Color de fondo verde de WhatsApp */
+  color: #fff; /* Color del icono blanco */
+  border: none;
+  border-radius: 50%; /* Hace que el botón sea completamente redondo */
+  width: 50px; /* Ancho del botón */
+  height: 50px; /* Alto del botón */
+  padding: 0; /* Elimina el espaciado interno del botón */
+  font-size: 35px; /* Tamaño del icono */
+  text-decoration: none; /* Elimina la decoración del enlace */
+  display: flex; /* Utiliza flexbox para centrar el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+}
+
+.whatsapp-button:hover {
+  background-color: #000080; /* Cambia el color al pasar el mouse */
+  }
+/* Estilos para el botón de WhatsApp */
+
+
+</style>
+
+
+
+
+
+
+
+
+
+<script>
+function buscar_rubro(id_rubro)
+   {
+   window.location.href="catalogo2021.php?rub="+id_rubro;	
+   }
+   
+   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+<a name="inicio"></a>
+  
+
+
+<div class="container" id="contenedor_principal">
+	<!-- <div class="navbar-fixed-top container" id="contenedor_encabezado">  <!-- Encabezado fijo  Ver con Tomas padding-top-->
+	<div id="contenedor_encabezado">     <!-- Encabezado movil -->
+	<div class="row">
+    	<div id="banner" class="col-xs-12"><img src="banner.fw.png" class="img-responsive"  alt=""/></div>
+    </div>
+	<div class="row">
+		<header id="encabezado" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">            	
+              <nav class="navbar navbar-default" id="menu">
+              	<div id="marginador">
+                  <div class="navbar-header" id="botoncito">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1" id="boton_menu">
+                          <span>MENU</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>                    
+                      
+                  </div>
+                  
+                  <div class="collapse navbar-collapse" id="navbar-1" >
+                  	   <div id="los_links">
+                      	<ul class="nav navbar-nav navbar-left" id="links"> 
+                          
+                           <li>
+                           		
+                                
+                                
+                                	                                	<form action="catalogo2021.php" method="post" enctype="multipart/form-data">
+                                	<div class="col-xs-4 col-md-3">
+                                    
+                                    
+                              <!-- <input autofocus type="password" name="txtbusca" id="txtbusca" class="form-control"> -->
+                                    
+	                                <input autocomplete="off" class="form-control" name="txtbusca" id="txtbusca" type="text" placeholder="Buscar..."> 
+                                     </div>
+                                     <div class="col-xs-1">
+	                                    <input type="image" src="lupa.png" id="icono_lupa">
+                                     </div>
+                                     
+                                     <div class="col-xs-7 col-md-2">
+                                     
+                                     	<a class="boton_superior" href="ver_compra_vieja.php">VER PEDIDO</a>
+                                        
+                                     </div>
+									 <br class="hidden-md hidden-lg"><br class="hidden-md hidden-lg">
+                                      <div class="col-xs-3 col-md-2">
+                                      
+
+                                        
+                                     	 <a class="boton_superior" href="catalogo2021.php?rub=99999">GENERAL</a>
+                                         
+                                                                                 
+                                     </div>
+                                     
+
+                                     <div class="col-xs-3 col-md-2">
+                                     
+                                       
+                                     	<a class="boton_superior" href="catalogo2021.php?rub=88888">NOVEDADES</a>
+                                        
+                                                                            </div>
+                                     
+									<div class="col-xs-3 col-md-2">
+										                                           
+                                          										      <a class="boton_superior" href="catalogo_en_excel.php">EXCEL</a>  
+										                                          </div>
+                                   
+                                     
+                                     
+                                                                         </form>
+								
+                                
+                            </li> 
+                            <div class="clearfix"></div>                          
+                            
+                        							<li>
+							<div class="col-xs-6 col-md-12">
+								<select class="form-control" onChange="buscar_rubro(this.value)" id="mi_menu">                        
+																			<option  value="45">ART. ARGENTINA (3)</option>
+									  										<option  value="24">ART. DE NIÑOS varios (45)</option>
+									  										<option  value="5">ART.MOTO/BICI/AUTO/CALCULADORAS (11)</option>
+									  										<option  value="8">AURICULARES (12)</option>
+									  										<option  value="42">BALANZAS/CAMARAS VARIAS /CANDADO (9)</option>
+									  										<option  value="21">BELLEZA/VAPEADOR (14)</option>
+									  										<option  value="31">CABLES /ADAPTADORES (43)</option>
+									  										<option  value="26">CARG. 220V/12V/NOTEB. Y ZAPATI (20)</option>
+									  										<option  value="34">CONSOLAS/TECNOLOG./JOYST./.ELECT (16)</option>
+									  										<option  value="33">ESTEREO AUTO/CONTROL REMOTO  (3)</option>
+									  										<option  value="41">HOGAR y DECO (42)</option>
+									  										<option  value="29">ILUMINACION/LINTERNAS AROS LED E (31)</option>
+									  										<option  value="38">LIBRERIA/MOCHILAS/BANDOLERA/RIÑ (20)</option>
+									  										<option  value="44">MASCOTAS (4)</option>
+									  										<option  value="35">MEMORIAS / PEND./ REPETID. WIFI (2)</option>
+									  										<option  value="28">PARLANTES/ MICROFO./KARAOKE (17)</option>
+									  										<option  value="14">PILAS ( de todo tipo) (39)</option>
+									  										<option  value="4">PRODUCTOS SOLARES (0)</option>
+									  										<option  value="32">RELOJES SMART/ENCENDEDORES/DESPE (15)</option>
+									  										<option  value="30">SOPORTES DE AUTO, T.V, CELU,MOTO (23)</option>
+									  										<option  value="43">TELEFONOS VARIOS (0)</option>
+									  									</select>  
+								</div>
+							</li>
+					      
+                                                 	   
+                       	   <!--<li><a class="links_destacados" href="contacto.php">CONTACTO</a></li>-->                                                                                
+                        </ul>        
+                     </div>
+                   
+                  </div>  
+                    	
+                  
+    	       </div>                  
+            </nav>            
+        </header>
+    </div>    
+    </div>
+		
+        
+			<div class="col-xs-12" id="contador">
+                <span class="pull-right">
+                                </span>
+            </div>
+        	                   
+            
+    	<div class="row">
+                </div>        
+		
+    <div class="empuje"></div>
+</div>
+
+   <script src="js/jquery-3.1.1.min.js"></script>
+   <script src="js/bootstrap.js"></script>
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+  
+
+        <a href="https://wa.me/+5491132661418?text=Hola!%20Me%20interesa%20comprar%20en%20sanjulian99%20 %20" class="whatsapp-button" target="_blank"><img src="whats.png"></a>
+     
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+ 
+   
+</body>
+</html>

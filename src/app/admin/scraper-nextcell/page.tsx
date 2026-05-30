@@ -14,7 +14,7 @@ interface LogMessage {
   timestamp?: string;
 }
 
-export default function ScraperPage() {
+export default function ScraperNextCellPage() {
   const router = useRouter();
   const [running, setRunning] = useState(false);
   const [logs, setLogs] = useState<LogMessage[]>([]);
@@ -32,7 +32,7 @@ export default function ScraperPage() {
     setProgress(0);
 
     try {
-      const response = await fetch("/api/scrape-impotekno", {
+      const response = await fetch("/api/scrape-nextcell", {
         method: "POST",
       });
 
@@ -108,7 +108,7 @@ export default function ScraperPage() {
 
       {/* Main Content */}
       <main style={{ flex: 1, padding: "2rem", maxWidth: "80rem", margin: "0 auto", width: "100%" }}>
-        <h2 style={{ fontSize: "1.875rem", marginBottom: "2rem" }}>🕷️ Web Scraper - Impotekno</h2>
+        <h2 style={{ fontSize: "1.875rem", marginBottom: "2rem" }}>🕷️ Web Scraper - NextCell</h2>
 
         {/* Control Panel */}
         <div
@@ -224,10 +224,10 @@ export default function ScraperPage() {
         >
           <p style={{ margin: "0 0 0.5rem 0", fontWeight: "bold" }}>ℹ️ Información:</p>
           <ul style={{ margin: "0.5rem 0 0 1.5rem", paddingLeft: 0 }}>
-            <li>Impotekno: 22 categorías</li>
+            <li>NextCell: Productos públicos vía REST API</li>
             <li>Margen: 10%</li>
-            <li>Prefijo SKU: SAR-</li>
-            <li>Destino: public/products.json</li>
+            <li>Prefijo SKU: PTT-</li>
+            <li>Destino: public/products-nextcell.json</li>
           </ul>
         </div>
       </main>

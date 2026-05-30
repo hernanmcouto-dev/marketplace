@@ -1,11 +1,16 @@
 import { NextRequest } from "next/server";
 import fs from "fs";
 import path from "path";
+import got from "got";
+import { CookieJar } from "tough-cookie";
+import { downloadAndCacheImage, getImageUrl } from "@/lib/image-registry";
+
+export const maxDuration = 600;
 
 const CATEGORIES = [1, 2, 9, 10, 18, 22, 23, 29, 33, 44, 48, 51, 56, 61, 73, 78, 82, 83, 84, 85, 87, 88];
 
 function sendLog(controller: ReadableStreamDefaultController, message: string) {
-  const log = JSON.stringify({ type: "log", message, timestamp: new Date().toISOString() });
+  const log = JSON.stringify({ type: "log", message });
   controller.enqueue(`data: ${log}\n\n`);
 }
 
@@ -71,7 +76,7 @@ async function extractProductsFromHtml(html: string): Promise<any[]> {
       products.push({
         sku: `SAR-${sku}`,
         name,
-        unit_price: Math.round(unit_price * 1.15), // 15% margen
+        unit_price: Math.round(unit_price * 1.1), // 10% margen
         units_per_package,
         image_url: `https://www.impotekno.com/fotos/${sku}.jpg`,
       });
@@ -81,67 +86,56 @@ async function extractProductsFromHtml(html: string): Promise<any[]> {
   return products;
 }
 
-export async function GET(req: NextRequest) {
-  const searchParams = req.nextUrl.searchParams;
-  const action = searchParams.get("action");
-
-  // Endpoint para obtener progreso/status
-  if (action === "status") {
-    const filePath = path.join(process.cwd(), "public", "products.json");
-    const exists = fs.existsSync(filePath);
-    const count = exists
-      ? JSON.parse(fs.readFileSync(filePath, "utf-8")).length
-      : 0;
-
-    return new Response(
-      JSON.stringify({ imported: count, lastImport: new Date().toISOString() }),
-      {
-        headers: { "Content-Type": "application/json" },
-      }
-    );
-  }
-
-  return new Response("OK");
-}
-
 export async function POST(req: NextRequest) {
-  // Retornar stream con Server-Sent Events
   const stream = new ReadableStream({
     async start(controller) {
       try {
         sendLog(controller, "🚀 Iniciando scraper de Impotekno...");
-        await new Promise((r) => setTimeout(r, 500));
+        sendLog(controller, "🔐 Realizando login...");
+
+        // Crear cliente con CookieJar para mantener sesión
+        const cookieJar = new CookieJar();
+        const client = got.extend({
+          cookieJar,
+          headers: {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+          },
+        });
+
+        // Login
+        try {
+          await client.post("https://www.impotekno.com/index.php", {
+            form: {
+              clave: "sarmiento",
+              enviar: "Ingresar",
+            },
+          });
+          sendLog(controller, "✓ Login exitoso");
+        } catch (err: any) {
+          sendLog(controller, `⚠️ Login falló: ${err.message}`);
+        }
 
         const allProducts: any[] = [];
 
         for (let i = 0; i < CATEGORIES.length; i++) {
           const categoryId = CATEGORIES[i];
-
           sendProgress(controller, i, CATEGORIES.length, `Extrayendo categoría ${categoryId}...`);
 
           try {
-            const response = await fetch(
-              `https://www.impotekno.com/catalogo_imptk.php?rub=${categoryId}`,
-              {
-                headers: {
-                  "User-Agent":
-                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-                },
-              }
+            const response = await client.get(
+              `https://www.impotekno.com/catalogo_imptk.php?rub=${categoryId}`
             );
 
-            if (!response.ok) {
-              sendLog(controller, `⚠️ Categoría ${categoryId}: No disponible (${response.status})`);
-              continue;
-            }
-
-            const html = await response.text();
+            const html = response.body;
             const products = await extractProductsFromHtml(html);
 
-            sendLog(controller, `✓ Categoría ${categoryId}: ${products.length} productos`);
-            allProducts.push(...products);
+            if (products.length > 0) {
+              sendLog(controller, `✓ Categoría ${categoryId}: ${products.length} productos`);
+              allProducts.push(...products);
+            } else {
+              sendLog(controller, `⚠️ Categoría ${categoryId}: Sin productos`);
+            }
 
-            // Delay para no sobrecargar
             await new Promise((r) => setTimeout(r, 500));
           } catch (err: any) {
             sendLog(controller, `❌ Error en categoría ${categoryId}: ${err.message}`);
@@ -149,20 +143,50 @@ export async function POST(req: NextRequest) {
         }
 
         if (allProducts.length === 0) {
-          sendError(controller, "No se extrajeron productos");
+          sendError(controller, "No se extrajeron productos. Verifica la clave de acceso.");
           controller.close();
           return;
         }
 
         sendLog(controller, `📊 Total extraído: ${allProducts.length} productos`);
+
+        // Transformar productos con prefijo
+        const transformedProducts = allProducts.map((p) => ({
+          sku: `SAR-${p.sku}`,
+          name: p.name,
+          unit_price: Math.round(p.unit_price * 1.15),
+          units_per_package: p.units_per_package,
+          image_url: p.image_url,
+        }));
+
+        sendLog(controller, "🖼️ Proxy inteligente de imágenes (caché bajo demanda)...");
+
+        // Usar proxy con caché inteligente
+        const productsWithProxy = transformedProducts.map((product) => {
+          // Buscar si ya tiene imagen cacheada
+          const cachedUrl = getImageUrl(product.sku);
+          if (cachedUrl) {
+            sendLog(controller, `♻️ Reutilizando caché: ${product.sku}`);
+            return {
+              ...product,
+              image_url: cachedUrl,
+            };
+          }
+
+          // Usar proxy para descarga bajo demanda
+          return {
+            ...product,
+            image_url: `/api/image-proxy?url=${encodeURIComponent(product.image_url)}&provider=impotekno&sku=${product.sku}`,
+          };
+        });
+
         sendLog(controller, "💾 Guardando productos...");
 
-        // Guardar en archivo
         const filePath = path.join(process.cwd(), "public", "products.json");
-        fs.writeFileSync(filePath, JSON.stringify(allProducts, null, 2), "utf-8");
+        fs.writeFileSync(filePath, JSON.stringify(productsWithProxy, null, 2), "utf-8");
 
         sendLog(controller, `✅ Guardado en: public/products.json`);
-        sendComplete(controller, allProducts.length);
+        sendComplete(controller, productsWithProxy.length);
         controller.close();
       } catch (err: any) {
         sendError(controller, err.message || "Error desconocido");

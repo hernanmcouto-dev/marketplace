@@ -1,11 +1,16 @@
 import { NextRequest } from "next/server";
 import fs from "fs";
 import path from "path";
+import got from "got";
+import { CookieJar } from "tough-cookie";
+import { downloadAndCacheImage, getImageUrl } from "@/lib/image-registry";
+
+export const maxDuration = 600;
 
 const CATEGORIES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 99999];
 
 function sendLog(controller: ReadableStreamDefaultController, message: string) {
-  const log = JSON.stringify({ type: "log", message, timestamp: new Date().toISOString() });
+  const log = JSON.stringify({ type: "log", message });
   controller.enqueue(`data: ${log}\n\n`);
 }
 
@@ -39,67 +44,25 @@ function sendComplete(controller: ReadableStreamDefaultController, count: number
   controller.enqueue(`data: ${complete}\n\n`);
 }
 
-async function extractProductsFromHtml(html: string): Promise<any[]> {
+function extractProducts(html: string): any[] {
   const products: any[] = [];
 
-  // Buscar bloques de productos (similar a Impotekno)
-  const productBlockRegex = /<div[^>]*class="[^"]*caja_producto[^"]*"[^>]*>[\s\S]*?<\/div>\s*<\/div>/g;
-  const blocks = html.match(productBlockRegex) || [];
+  // Buscar bloques de productos: <a name="SKU"> seguido de <h1>NOMBRE</h1> y precio en <strong>
+  const productBlockRegex = /<a\s+(?:name|id)="([^"]+)"[^>]*>[\s\S]*?<h1>([^<]+)<\/h1>[\s\S]*?Codigo:\s*([^\<\n]+)[\s\S]*?<strong[^>]*>[\s\S]*?\$\s*([0-9,]+)/g;
 
-  // Si no encuentra con caja_producto, intentar con otra estructura
-  if (blocks.length === 0) {
-    // Buscar por estructura alternativa de San Julián
-    const altRegex = /<div[^>]*>[\s\S]*?<h[1-3]>(.*?)<\/h[1-3]>[\s\S]*?Codigo:\s*([^\<\n]+)[\s\S]*?\$\s*([0-9,]+)[\s\S]*?<\/div>/g;
-    let match;
-
-    while ((match = altRegex.exec(html)) !== null) {
-      const name = match[1]?.trim();
-      const sku = match[2]?.trim();
-      const priceStr = match[3]?.replace(/,/g, "");
-      const unit_price = parseInt(priceStr) || 0;
-
-      if (sku && name && unit_price > 0) {
-        products.push({
-          sku: `PAS-${sku}`,
-          name,
-          unit_price: Math.round(unit_price * 1.1), // 10% margen
-          units_per_package: 1,
-          image_url: `https://sanjulian99.com/fotos/${sku}.jpg`,
-        });
-      }
-    }
-
-    return products;
-  }
-
-  // Procesar bloques encontrados
-  for (const block of blocks) {
-    // Extraer nombre
-    const nameMatch = block.match(/<h[1-3]>(.*?)<\/h[1-3]>/);
-    const name = nameMatch ? nameMatch[1].trim() : null;
-
-    // Extraer SKU
-    const skuMatch = block.match(/Codigo:\s*([^\<\n]+)/);
-    const sku = skuMatch ? skuMatch[1].trim() : null;
-
-    // Extraer cantidad por bulto
-    const quantityMatch = block.match(/Ctdad\.\s*por\s*bulto:\s*([0-9]+)/i);
-    const units_per_package = quantityMatch ? parseInt(quantityMatch[1]) : 1;
-
-    // Extraer precio
-    const priceMatch = block.match(/\$\s*([0-9,]+)/);
-    let unit_price = 0;
-    if (priceMatch) {
-      const priceStr = priceMatch[1].replace(/,/g, "");
-      unit_price = parseInt(priceStr) || 0;
-    }
+  let match;
+  while ((match = productBlockRegex.exec(html)) !== null) {
+    const sku = match[1].trim();
+    const name = match[2].trim();
+    const priceStr = match[4].replace(/,/g, "").trim();
+    const unit_price = parseInt(priceStr) || 0;
 
     if (sku && name && unit_price > 0) {
       products.push({
-        sku: `PAS-${sku}`,
+        sku,
         name,
-        unit_price: Math.round(unit_price * 1.1), // 10% margen
-        units_per_package,
+        unit_price,
+        units_per_package: 1,
         image_url: `https://sanjulian99.com/fotos/${sku}.jpg`,
       });
     }
@@ -109,111 +72,123 @@ async function extractProductsFromHtml(html: string): Promise<any[]> {
 }
 
 export async function POST(req: NextRequest) {
-  // Retornar stream con Server-Sent Events
   const stream = new ReadableStream({
     async start(controller) {
       try {
         sendLog(controller, "🚀 Iniciando scraper de San Julián...");
-        sendLog(controller, "🔐 Realizando login...");
 
-        await new Promise((r) => setTimeout(r, 500));
+        const products: any[] = [];
+        const categoryIds = CATEGORIES;
 
-        // Hacer login primero
-        const loginFormData = new FormData();
-        loginFormData.append("clave", "pasteur");
-        loginFormData.append("enviar", "Ingresar");
+        const cookieJar = new CookieJar();
+        const client = got.extend({
+          cookieJar,
+          headers: {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+          },
+        });
 
-        let cookies = "";
+        sendLog(controller, "🔐 Haciendo login...");
         try {
-          const loginResponse = await fetch("https://sanjulian99.com/index.php", {
-            method: "POST",
-            body: loginFormData,
-            headers: {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+          await client.post("https://sanjulian99.com/index.php", {
+            form: {
+              clave: "pasteur",
+              enviar: "Ingresar",
             },
-            redirect: "follow",
           });
-
-          const setCookieHeaders = loginResponse.headers.getSetCookie?.();
-          if (setCookieHeaders && setCookieHeaders.length > 0) {
-            cookies = setCookieHeaders
-              .map((c) => c.split(";")[0])
-              .join("; ");
-          }
-
           sendLog(controller, "✓ Login exitoso");
         } catch (err: any) {
-          sendLog(controller, `⚠️ Login falló, intentando sin autenticación: ${err.message}`);
+          sendLog(controller, `⚠️ Error en login: ${err.message}`);
         }
 
-        const allProducts: any[] = [];
+        for (let i = 0; i < categoryIds.length; i++) {
+          const categoryId = categoryIds[i];
 
-        for (let i = 0; i < CATEGORIES.length; i++) {
-          const categoryId = CATEGORIES[i];
-
-          sendProgress(controller, i, CATEGORIES.length, `Extrayendo categoría ${categoryId}...`);
+          sendProgress(
+            controller,
+            i,
+            categoryIds.length,
+            `Extrayendo categoría ${categoryId}...`
+          );
 
           try {
-            const headers: any = {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-            };
-
-            if (cookies) {
-              headers["Cookie"] = cookies;
-            }
-
-            const response = await fetch(
-              `https://sanjulian99.com/catalogo2021.php?rub=${categoryId}`,
-              { headers }
+            const response = await client.get(
+              `https://sanjulian99.com/catalogo2021.php?rub=${categoryId}`
             );
 
-            if (!response.ok) {
-              sendLog(controller, `⚠️ Categoría ${categoryId}: ${response.status}`);
-              continue;
-            }
-
-            const html = await response.text();
-
-            // Verificar si la respuesta contiene "ingreso clave" (error de login)
-            if (html.includes("ingreso clave") || html.includes("No ingreso")) {
-              sendLog(controller, `⚠️ Categoría ${categoryId}: Requiere autenticación`);
-              continue;
-            }
-
-            const products = await extractProductsFromHtml(html);
-
-            if (products.length > 0) {
-              sendLog(controller, `✓ Categoría ${categoryId}: ${products.length} productos`);
-              allProducts.push(...products);
-            } else {
-              sendLog(controller, `⚠️ Categoría ${categoryId}: Sin productos`);
-            }
-
-            await new Promise((r) => setTimeout(r, 500));
+            const html = response.body;
+            const categoryProducts = extractProducts(html);
+            products.push(...categoryProducts);
+            sendLog(
+              controller,
+              `✓ Categoría ${categoryId}: ${categoryProducts.length} productos`
+            );
           } catch (err: any) {
-            sendLog(controller, `❌ Error en categoría ${categoryId}: ${err.message}`);
+            sendLog(
+              controller,
+              `⚠️ Error en categoría ${categoryId}: ${err.message}`
+            );
           }
+
+          await new Promise((r) => setTimeout(r, 300));
         }
 
-        if (allProducts.length === 0) {
-          sendError(controller, "No se extrajeron productos. El sitio puede estar en mantenimiento o requerir credenciales diferentes.");
+        sendLog(controller, `📊 Total extraído: ${products.length} productos`);
+
+        if (products.length === 0) {
+          sendError(
+            controller,
+            "No se extrajeron productos del sitio"
+          );
           controller.close();
           return;
         }
 
-        const productsWithProvider = allProducts.map((p) => ({
-          ...p,
-          provider: "San Julián",
+        // Transformar productos
+        const transformedProducts = products.map((p) => ({
+          sku: `PAS-${p.sku}`,
+          name: p.name,
+          unit_price: Math.round(p.unit_price * 1.1),
+          units_per_package: p.units_per_package,
+          image_url: p.image_url,
         }));
 
-        sendLog(controller, `📊 Total extraído: ${productsWithProvider.length} productos`);
+        sendLog(controller, "🖼️ Proxy inteligente de imágenes (caché bajo demanda)...");
+
+        // Usar proxy con caché inteligente
+        const productsWithProxy = transformedProducts.map((product) => {
+          // Buscar si ya tiene imagen cacheada
+          const cachedUrl = getImageUrl(product.sku);
+          if (cachedUrl) {
+            sendLog(controller, `♻️ Reutilizando caché: ${product.sku}`);
+            return {
+              ...product,
+              image_url: cachedUrl,
+            };
+          }
+
+          // Usar proxy para descarga bajo demanda
+          return {
+            ...product,
+            image_url: `/api/image-proxy?url=${encodeURIComponent(product.image_url)}&provider=sanjulian&sku=${product.sku}`,
+          };
+        });
+
         sendLog(controller, "💾 Guardando productos...");
 
-        const filePath = path.join(process.cwd(), "public", "products-sanjulian.json");
-        fs.writeFileSync(filePath, JSON.stringify(productsWithProvider, null, 2), "utf-8");
+        const filePath = path.join(
+          process.cwd(),
+          "public",
+          "products-sanjulian.json"
+        );
+        fs.writeFileSync(
+          filePath,
+          JSON.stringify(productsWithProxy, null, 2),
+          "utf-8"
+        );
 
         sendLog(controller, `✅ Guardado en: public/products-sanjulian.json`);
-        sendComplete(controller, productsWithProvider.length);
+        sendComplete(controller, productsWithProxy.length);
         controller.close();
       } catch (err: any) {
         sendError(controller, err.message || "Error desconocido");

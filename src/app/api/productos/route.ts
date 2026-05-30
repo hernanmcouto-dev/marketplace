@@ -24,6 +24,15 @@ export async function GET(req: NextRequest) {
       }
     }
 
+    // Cargar NextCell
+    const nextcellPath = path.join(process.cwd(), "public", "products-nextcell.json");
+    if (fs.existsSync(nextcellPath)) {
+      const data = JSON.parse(fs.readFileSync(nextcellPath, "utf-8"));
+      if (Array.isArray(data)) {
+        allProducts.push(...data);
+      }
+    }
+
     return NextResponse.json(
       {
         success: true,

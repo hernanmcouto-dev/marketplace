@@ -168,6 +168,23 @@ export default function AdminPage() {
                 🕷️ Web Scraper - San Julián
               </button>
             </Link>
+            <Link href="/admin/scraper-nextcell" style={{ textDecoration: "none" }}>
+              <button
+                style={{
+                  width: "100%",
+                  padding: "0.75rem 1rem",
+                  backgroundColor: "#0891b2",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "0.375rem",
+                  cursor: "pointer",
+                  textAlign: "left",
+                  fontWeight: "500",
+                }}
+              >
+                🕷️ Web Scraper - NextCell
+              </button>
+            </Link>
             <Link href="/admin/productos" style={{ textDecoration: "none" }}>
               <button
                 style={{
@@ -183,6 +200,23 @@ export default function AdminPage() {
                 }}
               >
                 📋 Gestionar Productos
+              </button>
+            </Link>
+            <Link href="/admin/import-productos" style={{ textDecoration: "none" }}>
+              <button
+                style={{
+                  width: "100%",
+                  padding: "0.75rem 1rem",
+                  backgroundColor: "#06b6d4",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "0.375rem",
+                  cursor: "pointer",
+                  textAlign: "left",
+                  fontWeight: "500",
+                }}
+              >
+                📥 Importar desde JSON
               </button>
             </Link>
             <button
