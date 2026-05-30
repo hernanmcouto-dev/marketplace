@@ -15,22 +15,25 @@ export default function TipoCambioPage() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    const loadSuppliers = async () => {
-      try {
-        const response = await fetch("/api/suppliers/exchange-rate");
-        const data = await response.json();
-        if (data.suppliers) {
-          setSuppliers(data.suppliers);
-        }
-      } catch (err) {
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
     loadSuppliers();
   }, []);
+
+  const loadSuppliers = async () => {
+    try {
+      const response = await fetch("/api/suppliers/exchange-rate", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      });
+      const data = await response.json();
+      if (data.suppliers) {
+        setSuppliers(data.suppliers);
+      }
+      setLoading(false);
+    } catch (err) {
+      console.error("Error loading suppliers:", err);
+      setLoading(false);
+    }
+  };
 
   const handleUpdate = async (supplierId: string, newRate: number) => {
     try {
@@ -41,13 +44,12 @@ export default function TipoCambioPage() {
       });
 
       if (response.ok) {
-        setMessage("Exchange rate actualizado correctamente");
-        setTimeout(() => setMessage(""), 3000);
-        setSuppliers(
-          suppliers.map((s) =>
-            s.id === supplierId ? { ...s, exchange_rate: newRate } : s
-          )
-        );
+        const result = await response.json();
+        setMessage("Tipo de cambio actualizado");
+        setTimeout(() => setMessage(""), 2000);
+        await loadSuppliers();
+      } else {
+        setMessage("Error al actualizar");
       }
     } catch (err) {
       setMessage("Error al actualizar");
@@ -55,49 +57,76 @@ export default function TipoCambioPage() {
     }
   };
 
-  if (loading) return <div className="p-8">Cargando...</div>;
-
   return (
-    <div className="p-8 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-2">Tipo de Cambio</h1>
-      <p className="text-gray-600 mb-8">Gestiona los tipos de cambio para proveedores con precios en USD</p>
+    <div style={{ padding: "2rem", maxWidth: "56rem", margin: "0 auto" }}>
+      <h1 style={{ fontSize: "1.875rem", fontWeight: "bold", marginBottom: "0.5rem" }}>
+        Tipo de Cambio
+      </h1>
+      <p style={{ color: "#4b5563", marginBottom: "2rem" }}>
+        Gestiona los tipos de cambio para proveedores
+      </p>
 
       {message && (
-        <div className="mb-4 p-4 bg-blue-100 text-blue-800 rounded">
+        <div style={{ marginBottom: "1rem", padding: "1rem", backgroundColor: "#dbeafe", color: "#1e40af", borderRadius: "0.375rem" }}>
           {message}
         </div>
       )}
 
-      <div className="space-y-4">
-        {suppliers.map((supplier) => (
-          <div key={supplier.id} className="bg-white p-6 rounded border">
-            <div className="flex items-center justify-between">
-              <div>
-                <h3 className="text-lg font-semibold">{supplier.name}</h3>
-                <p className="text-sm text-gray-500">ID: {supplier.id}</p>
-              </div>
-              <div className="flex items-center gap-4">
-                <input
-                  type="number"
-                  value={supplier.exchange_rate}
-                  onChange={(e) =>
-                    handleUpdate(supplier.id, parseFloat(e.target.value))
-                  }
-                  onBlur={(e) =>
-                    handleUpdate(supplier.id, parseFloat(e.target.value))
-                  }
-                  className="w-32 px-3 py-2 border rounded font-mono text-right"
-                />
-                <span className="text-sm text-gray-500 w-20">{supplier.currency}/ARS</span>
+      {loading ? (
+        <div style={{ textAlign: "center", padding: "2rem", color: "#9ca3af" }}>
+          Cargando proveedores...
+        </div>
+      ) : suppliers.length === 0 ? (
+        <div style={{ textAlign: "center", padding: "2rem", color: "#9ca3af" }}>
+          No hay proveedores configurados
+        </div>
+      ) : (
+        <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+          {suppliers.map((supplier) => (
+            <div
+              key={supplier.id}
+              style={{
+                backgroundColor: "white",
+                padding: "1.5rem",
+                borderRadius: "0.375rem",
+                border: "1px solid #e5e7eb",
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                <div>
+                  <h3 style={{ fontSize: "1.125rem", fontWeight: "600", margin: "0 0 0.25rem 0" }}>
+                    {supplier.name}
+                  </h3>
+                  <p style={{ fontSize: "0.875rem", color: "#6b7280", margin: 0 }}>
+                    {supplier.currency} → ARS
+                  </p>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+                  <input
+                    type="number"
+                    value={supplier.exchange_rate}
+                    onChange={(e) => {
+                      const newVal = parseFloat(e.target.value);
+                      if (!isNaN(newVal)) {
+                        handleUpdate(supplier.id, newVal);
+                      }
+                    }}
+                    style={{
+                      width: "8rem",
+                      padding: "0.5rem",
+                      border: "1px solid #d1d5db",
+                      borderRadius: "0.375rem",
+                      fontFamily: "monospace",
+                      textAlign: "right",
+                    }}
+                  />
+                  <span style={{ fontSize: "0.875rem", color: "#6b7280", width: "5rem" }}>
+                    {supplier.exchange_rate.toFixed(2)}
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
-
-      {suppliers.length === 0 && (
-        <div className="text-center p-8 text-gray-500">
-          No hay proveedores configurados
+          ))}
         </div>
       )}
     </div>
