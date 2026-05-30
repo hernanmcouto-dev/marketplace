@@ -1,0 +1,3162 @@
+[
+  {
+    "sku": "JGG-0001",
+    "name": "ADAPTADOR AUXILIAR HEMBRA A IPHONE BT EN CAJA ACRILICA!",
+    "description": "",
+    "unit_price": 1699,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0001"
+  },
+  {
+    "sku": "JGG-0002",
+    "name": "AMPLIFICADOR DE PANTALLA PARA CELULAR 12 PLG CURVO JG-CURVO",
+    "description": "",
+    "unit_price": 2456,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0002"
+  },
+  {
+    "sku": "JGG-0003",
+    "name": "AURICULAR IN EAR ML CAJA ACR&Iacute;LICA AUR-1174!",
+    "description": "",
+    "unit_price": 1931,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0003"
+  },
+  {
+    "sku": "JGG-0004",
+    "name": "AURICULAR VINCHA BT LUZ RGB PREMIUM (SD/FM) JG-B39!",
+    "description": "",
+    "unit_price": 9575,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0004"
+  },
+  {
+    "sku": "JGG-0005",
+    "name": "BASE COOLER PAD PARA NOTEBOOK 17 PLG JG-COOL17!",
+    "description": "",
+    "unit_price": 10039,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0005"
+  },
+  {
+    "sku": "JGG-0006",
+    "name": "BASE COOLER PARA NOTEBOOK 15.6 PLG JG-COOL #",
+    "description": "",
+    "unit_price": 7336,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0006"
+  },
+  {
+    "sku": "JGG-0007",
+    "name": "BLOCK DE NOTAS ADHESIVAS MAGNETICAS 8.5 PLG",
+    "description": "",
+    "unit_price": 3552,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0007"
+  },
+  {
+    "sku": "JGG-0008",
+    "name": "BRAZALETE PARA CELULAR XL !",
+    "description": "",
+    "unit_price": 1853,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0008"
+  },
+  {
+    "sku": "JGG-0009",
+    "name": "CABLE HDMI A TC 4K!",
+    "description": "",
+    "unit_price": 12896,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0009"
+  },
+  {
+    "sku": "JGG-0010",
+    "name": "CABLE MICRO USB V8 2.1A 2M LDNIO LS-572 !",
+    "description": "",
+    "unit_price": 3923,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0010"
+  },
+  {
+    "sku": "JGG-0011",
+    "name": "CABLE MICRO USB V8 AITECH ACRILICO (PACK X 25) !",
+    "description": "",
+    "unit_price": 849,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0011"
+  },
+  {
+    "sku": "JGG-0012",
+    "name": "CABLE MICRO USB V8 COLORES SJ-283 !",
+    "description": "",
+    "unit_price": 386,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0012"
+  },
+  {
+    "sku": "JGG-0013",
+    "name": "CALCULADORA 402!",
+    "description": "",
+    "unit_price": 880,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0013"
+  },
+  {
+    "sku": "JGG-0014",
+    "name": "CAMARA DIGITAL INFANTIL + FUNDA RECARGABLE CONEJO",
+    "description": "",
+    "unit_price": 10502,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0014"
+  },
+  {
+    "sku": "JGG-0015",
+    "name": "CAMARA SEGURIDAD IP 3 ANTENAS !",
+    "description": "",
+    "unit_price": 17513,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0015"
+  },
+  {
+    "sku": "JGG-0016",
+    "name": "CAMARA SEGURIDAD WIFI 400M 2 PULGADAS !",
+    "description": "",
+    "unit_price": 44093,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0016"
+  },
+  {
+    "sku": "JGG-0017",
+    "name": "CAMARA WEB PS2 CON DRIVERS PARA PC !",
+    "description": "",
+    "unit_price": 10378,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0017"
+  },
+  {
+    "sku": "JGG-0018",
+    "name": "CANDADO PARA NOTEBOOK CON COMBINACION 1.2 MTS !",
+    "description": "",
+    "unit_price": 5792,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0018"
+  },
+  {
+    "sku": "JGG-0019",
+    "name": "CARGADOR DE BATERIA 18650 EN CAJA !",
+    "description": "",
+    "unit_price": 1266,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0019"
+  },
+  {
+    "sku": "JGG-0020",
+    "name": "CARGADOR NOTEBOOK HOMOLOGADO DELL/HP PIN GRUESO 4.62A 7.4X5mm !",
+    "description": "",
+    "unit_price": 10193,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0020"
+  },
+  {
+    "sku": "JGG-0021",
+    "name": "CARGADOR NOTEBOOK HOMOLOGADO LENOVO 3.25A 7.9 X 5mm !",
+    "description": "",
+    "unit_price": 7104,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0021"
+  },
+  {
+    "sku": "JGG-0022",
+    "name": "CARRY DISK USB 2.0 P-74 !",
+    "description": "",
+    "unit_price": 5251,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0022"
+  },
+  {
+    "sku": "JGG-0023",
+    "name": "CONVERTIDOR ADAPTADOR IDE A SATA !",
+    "description": "",
+    "unit_price": 5019,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0023"
+  },
+  {
+    "sku": "JGG-0024",
+    "name": "DOCK DE CARGA PARA AURICULAR, RELOJ, 5 EN 1 !",
+    "description": "",
+    "unit_price": 11506,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0024"
+  },
+  {
+    "sku": "JGG-0025",
+    "name": "FUENTE PARA PS2 ( 8.5V / 3.5 ) *!",
+    "description": "",
+    "unit_price": 7722,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0025"
+  },
+  {
+    "sku": "JGG-0026",
+    "name": "HUB USB 4 PUERTOS 3.0 CON INTERRUPTOR JG-HUBINTERR3.0 !",
+    "description": "",
+    "unit_price": 6100,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0026"
+  },
+  {
+    "sku": "JGG-0027",
+    "name": "HUB USB 7 PUERTOS 3.0 CON INTERRUPTOR JG-HUB73.0 !",
+    "description": "",
+    "unit_price": 9961,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0027"
+  },
+  {
+    "sku": "JGG-0028",
+    "name": "JUEGO POPIT ELECTRICO VELOCIDAD CON LUZ !",
+    "description": "",
+    "unit_price": 3969,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0028"
+  },
+  {
+    "sku": "JGG-0029",
+    "name": "LAMPARA LED USB DISE&Ntilde;O JG-VS244 #",
+    "description": "",
+    "unit_price": 3707,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0029"
+  },
+  {
+    "sku": "JGG-0030",
+    "name": "LAMPARA SOLAR CON ARBOL DE NAVIDAD X 2 UNIDADES #",
+    "description": "",
+    "unit_price": 15290,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0030"
+  },
+  {
+    "sku": "JGG-0031",
+    "name": "LAMPARA SOLAR CON FLOR DE LIRIO X 2 UNIDADES",
+    "description": "",
+    "unit_price": 8803,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0031"
+  },
+  {
+    "sku": "JGG-0032",
+    "name": "LECTOR DE MEMORIA SD CON OTG USB A MICRO USB",
+    "description": "",
+    "unit_price": 541,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0032"
+  },
+  {
+    "sku": "JGG-0033",
+    "name": "MALLA DEPORTIVA M3/M4 AZUL Y NEGRA PACK X 50 !",
+    "description": "",
+    "unit_price": 958,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0033"
+  },
+  {
+    "sku": "JGG-0034",
+    "name": "MALLA M5/6/7 COLOR PASTEL JG-8606 !",
+    "description": "",
+    "unit_price": 927,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0034"
+  },
+  {
+    "sku": "JGG-0035",
+    "name": "MALLA M5/6/7 DISE&Ntilde;O PACK X 10 JG-8606 !",
+    "description": "",
+    "unit_price": 1344,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0035"
+  },
+  {
+    "sku": "JGG-0036",
+    "name": "MALLA PARA APPLE WATCH 42/44/45/49 MM!",
+    "description": "",
+    "unit_price": 1931,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0036"
+  },
+  {
+    "sku": "JGG-0037",
+    "name": "MALLA PARA APPLE WATCH COLORES JG-8611 !",
+    "description": "",
+    "unit_price": 1699,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0037"
+  },
+  {
+    "sku": "JGG-0038",
+    "name": "MALLA SAMSUNG FIT2 COLORES JG-8614 !",
+    "description": "",
+    "unit_price": 1158,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0038"
+  },
+  {
+    "sku": "JGG-0039",
+    "name": "MICROFONO CORBATERO INALAMBRICO 3.5 MINI PLUG K-35 !",
+    "description": "",
+    "unit_price": 7336,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0039"
+  },
+  {
+    "sku": "JGG-0040",
+    "name": "MICROFONO KARAOKE RGB K10 JG-MICKARAOKE",
+    "description": "",
+    "unit_price": 12355,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0040"
+  },
+  {
+    "sku": "JGG-0041",
+    "name": "MOCHILA DE COMPRESION AL VACIO #",
+    "description": "",
+    "unit_price": 103475,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0041"
+  },
+  {
+    "sku": "JGG-0042",
+    "name": "MOUSE INALAMBRICO BT TRANSPARENTE JG-TRANSBT !",
+    "description": "",
+    "unit_price": 7135,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0042"
+  },
+  {
+    "sku": "JGG-0043",
+    "name": "PAD MOUSE GAMER DISE&Ntilde;O SURTIDO (30 X 70 X 0.3) YT-301/302 !",
+    "description": "",
+    "unit_price": 4649,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0043"
+  },
+  {
+    "sku": "JGG-0044",
+    "name": "PARLANTE BT USB PAR-169",
+    "description": "",
+    "unit_price": 4170,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0044"
+  },
+  {
+    "sku": "JGG-0045",
+    "name": "PIZARRA ACRILICA LED 18X14 CM",
+    "description": "",
+    "unit_price": 5328,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0045"
+  },
+  {
+    "sku": "JGG-0046",
+    "name": "POP IT JUEGO RITMO ELECTRICO MUSICA",
+    "description": "",
+    "unit_price": 4170,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0046"
+  },
+  {
+    "sku": "JGG-0047",
+    "name": "SOPORTE PROYECTOR DE 0.40 CM CON GIRO E INCLINACION!",
+    "description": "",
+    "unit_price": 10425,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0047"
+  },
+  {
+    "sku": "JGG-0048",
+    "name": "ZAPATILLA 2 TOMAS MAS 4 PUERTOS USB",
+    "description": "",
+    "unit_price": 6950,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0048"
+  },
+  {
+    "sku": "JGG-0049",
+    "name": "ZAPATILLA ELECTRONICA 3 TOMAS 2 USB T13 &iexcl;",
+    "description": "",
+    "unit_price": 6486,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0049"
+  },
+  {
+    "sku": "JGG-0050",
+    "name": "ADAPTADOR OTG USB A TC JG-OTGTC #",
+    "description": "",
+    "unit_price": 849,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0050"
+  },
+  {
+    "sku": "JGG-0051",
+    "name": "ADAPTADOR UTP RJ45 A TC 3.0 JG-R45TC #",
+    "description": "",
+    "unit_price": 12479,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0051"
+  },
+  {
+    "sku": "JGG-0052",
+    "name": "AURICULAR EARBUDS BT CON DISPLAY JG-AURIF9 #",
+    "description": "",
+    "unit_price": 4942,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0052"
+  },
+  {
+    "sku": "JGG-0053",
+    "name": "AURICULAR IN EAR BT CON PANTALLA NOISE CANCELLING JG-SCREENAURI #",
+    "description": "",
+    "unit_price": 19151,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0053"
+  },
+  {
+    "sku": "JGG-0054",
+    "name": "AURICULAR IN EAR TC BUEN SONIDO JG-INEARTC",
+    "description": "",
+    "unit_price": 3784,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0054"
+  },
+  {
+    "sku": "JGG-0055",
+    "name": "AURICULAR VINCHA BT ASTRONAUTA JG-VINCHABT #",
+    "description": "",
+    "unit_price": 12201,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0055"
+  },
+  {
+    "sku": "JGG-0056",
+    "name": "AURICULAR VINCHA BT P47 (NEGRO-AZUL-ROSA) #",
+    "description": "",
+    "unit_price": 4834,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0056"
+  },
+  {
+    "sku": "JGG-0057",
+    "name": "AURICULAR VINCHA BT P9 PRO MAX JG-P9 #",
+    "description": "",
+    "unit_price": 8649,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0057"
+  },
+  {
+    "sku": "JGG-0058",
+    "name": "BOLSO PARA CONSOLA PS4 #",
+    "description": "",
+    "unit_price": 18378,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0058"
+  },
+  {
+    "sku": "JGG-0059",
+    "name": "CABLE EXTENSION USB MACHO A HEMBRA 2.0 3MTS JG-MAH3M #",
+    "description": "",
+    "unit_price": 2162,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0059"
+  },
+  {
+    "sku": "JGG-0060",
+    "name": "CABLE IPHONE INOVA CAB-3102BP",
+    "description": "",
+    "unit_price": 2548,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0060"
+  },
+  {
+    "sku": "JGG-0061",
+    "name": "CABLE MICRO USB V8 2.1A LDNIO AMARILLO #",
+    "description": "",
+    "unit_price": 1745,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0061"
+  },
+  {
+    "sku": "JGG-0062",
+    "name": "CABLE PLUG A PLUG 3 MTS EN BOLSA JG-AUX3M #",
+    "description": "",
+    "unit_price": 1158,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0062"
+  },
+  {
+    "sku": "JGG-0063",
+    "name": "CABLE PLUG MACHO A HEMBRA 3 MTS JG-PLUGMAH #",
+    "description": "",
+    "unit_price": 1035,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0063"
+  },
+  {
+    "sku": "JGG-0064",
+    "name": "CABLE TIPO C MALLADO 5.1A TREQA DISE&Ntilde;O JG-TCTREQA #",
+    "description": "",
+    "unit_price": 3089,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0064"
+  },
+  {
+    "sku": "JGG-0065",
+    "name": "CARGADOR MICRO USB V8 3.8A IBEK IB-3801",
+    "description": "",
+    "unit_price": 2857,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0065"
+  },
+  {
+    "sku": "JGG-0066",
+    "name": "CARRY DISK 3.0 CON TC JG-CARRYTC #",
+    "description": "",
+    "unit_price": 10162,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0066"
+  },
+  {
+    "sku": "JGG-0067",
+    "name": "CARRY DISK USB 3.0 TRANSPARENTE JG-CARRY3.0T #",
+    "description": "",
+    "unit_price": 6996,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0067"
+  },
+  {
+    "sku": "JGG-0068",
+    "name": "DIGITAL CASE JG-DIGITALCASE #",
+    "description": "",
+    "unit_price": 5560,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0068"
+  },
+  {
+    "sku": "JGG-0069",
+    "name": "FUNDA MALETIN NOTEBOOK 14 PULGADAS JG-14 #",
+    "description": "",
+    "unit_price": 8649,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0069"
+  },
+  {
+    "sku": "JGG-0070",
+    "name": "HUB USB 7 PUERTOS CON INTERRUPTOR JG-HUB7 #",
+    "description": "",
+    "unit_price": 4139,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0070"
+  },
+  {
+    "sku": "JGG-0071",
+    "name": "MICROFONO CORBATERO INALAMBRICO TC Y IPHONE CON BASE JG-CORBATBASE",
+    "description": "",
+    "unit_price": 18409,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0071"
+  },
+  {
+    "sku": "JGG-0072",
+    "name": "PAD MOUSE CON GEL (PACK ACRILICO) JG-ELACRIL #",
+    "description": "",
+    "unit_price": 3475,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0072"
+  },
+  {
+    "sku": "JGG-0073",
+    "name": "PAD MOUSE CON GEL TRANSPARENTE JG-GELTRANSP #",
+    "description": "",
+    "unit_price": 5637,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0073"
+  },
+  {
+    "sku": "JGG-0074",
+    "name": "REPETIDOR DE WIFI 300 MBPS EN CAJA JG-0548 #",
+    "description": "",
+    "unit_price": 12170,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0074"
+  },
+  {
+    "sku": "JGG-0075",
+    "name": "TRIPODE PARA ARO DE LUZ EXTENSIBLE 2.1 MTS #",
+    "description": "",
+    "unit_price": 6255,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0075"
+  },
+  {
+    "sku": "JGG-0076",
+    "name": "ADAPTADOR 8 EN 1 TC A HDTV/RJ45/USB2.0/USB3.0/TC PACK X 10 JG-HUBTC8EN1",
+    "description": "",
+    "unit_price": 21452,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0076"
+  },
+  {
+    "sku": "JGG-0077",
+    "name": "ADAPTADOR AUXILIAR HEMBRA A IPHONE EN CAJA PACK X 10 JG-IPHAUX",
+    "description": "",
+    "unit_price": 3012,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0077"
+  },
+  {
+    "sku": "JGG-0078",
+    "name": "ADAPTADOR AUXILIAR HEMBRA A TC EN CAJA PACK X 10 JG-TCAUX",
+    "description": "",
+    "unit_price": 2857,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0078"
+  },
+  {
+    "sku": "JGG-0079",
+    "name": "ADAPTADOR CONVERSOR AUDIO OPTICO A RCA JG-OPTICAL",
+    "description": "",
+    "unit_price": 9745,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0079"
+  },
+  {
+    "sku": "JGG-0080",
+    "name": "ADAPTADOR CONVERTIDOR ACTIVO DVI 24+1 A VGA JG-DVIVGA",
+    "description": "",
+    "unit_price": 7259,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0080"
+  },
+  {
+    "sku": "JGG-0081",
+    "name": "ADAPTADOR CONVERTIDOR AV HDMI FULL HD 1080P JGAVHDTV",
+    "description": "",
+    "unit_price": 9730,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0081"
+  },
+  {
+    "sku": "JGG-0082",
+    "name": "ADAPTADOR CONVERTIDOR AV VGA FULL HD 1080P",
+    "description": "",
+    "unit_price": 10656,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0082"
+  },
+  {
+    "sku": "JGG-0083",
+    "name": "ADAPTADOR CONVERTIDOR HDMI AV FULL HD 1080P (JG-HDTVAV)",
+    "description": "",
+    "unit_price": 8649,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0083"
+  },
+  {
+    "sku": "JGG-0084",
+    "name": "ADAPTADOR CONVERTIDOR HDMI-VGA FULL HD 1080P JG-HDTVVGA",
+    "description": "",
+    "unit_price": 7876,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0084"
+  },
+  {
+    "sku": "JGG-0085",
+    "name": "ADAPTADOR CONVERTIDOR VGA HDMI FULL HD 1080P JG-VGAHDTV",
+    "description": "",
+    "unit_price": 6734,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0085"
+  },
+  {
+    "sku": "JGG-0086",
+    "name": "ADAPTADOR DISPLAYPORT A HDMI BOX JG-DPHDTV",
+    "description": "",
+    "unit_price": 5421,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0086"
+  },
+  {
+    "sku": "JGG-0087",
+    "name": "ADAPTADOR DISPLAYPORT A HDMI EN BOLSA JG-DPHDTV",
+    "description": "",
+    "unit_price": 4788,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0087"
+  },
+  {
+    "sku": "JGG-0088",
+    "name": "ADAPTADOR DISPLAYPORT A VGA JG-DPVGA",
+    "description": "",
+    "unit_price": 5405,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0088"
+  },
+  {
+    "sku": "JGG-0089",
+    "name": "ADAPTADOR DVI 24+1 A VGA *",
+    "description": "",
+    "unit_price": 2625,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0089"
+  },
+  {
+    "sku": "JGG-0090",
+    "name": "ADAPTADOR ENCHUFE 3 PATAS",
+    "description": "",
+    "unit_price": 973,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0090"
+  },
+  {
+    "sku": "JGG-0091",
+    "name": "ADAPTADOR EXTENSOR RJ45 A HDMI *",
+    "description": "",
+    "unit_price": 7413,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0091"
+  },
+  {
+    "sku": "JGG-0092",
+    "name": "ADAPTADOR EXTENSOR USB X UTP RJ45 *",
+    "description": "",
+    "unit_price": 8803,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0092"
+  },
+  {
+    "sku": "JGG-0093",
+    "name": "ADAPTADOR HDMI A DVI 24+1",
+    "description": "",
+    "unit_price": 2625,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0093"
+  },
+  {
+    "sku": "JGG-0094",
+    "name": "ADAPTADOR HDMI A TC 3.0 JG-TCHDTV",
+    "description": "",
+    "unit_price": 11120,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0094"
+  },
+  {
+    "sku": "JGG-0095",
+    "name": "ADAPTADOR HDMI A VGA CON PLUG PARA AUDIO JG-HDTVVGA",
+    "description": "",
+    "unit_price": 4710,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0095"
+  },
+  {
+    "sku": "JGG-0096",
+    "name": "ADAPTADOR HDMI HEMBRA A HDMI HEMBRA *",
+    "description": "",
+    "unit_price": 1931,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0096"
+  },
+  {
+    "sku": "JGG-0097",
+    "name": "ADAPTADOR HDMI MACHO A HDMI HEMBRA",
+    "description": "",
+    "unit_price": 1915,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0097"
+  },
+  {
+    "sku": "JGG-0098",
+    "name": "ADAPTADOR HDMI VGA SIN PLUG AUDIO JG-HDTVVGA2",
+    "description": "",
+    "unit_price": 3923,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0098"
+  },
+  {
+    "sku": "JGG-0099",
+    "name": "ADAPTADOR MINI DISPLAYPORT A HDMI *",
+    "description": "",
+    "unit_price": 6023,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0099"
+  },
+  {
+    "sku": "JGG-0100",
+    "name": "ADAPTADOR MUNDIAL CON ENTRADA USB Y TC",
+    "description": "",
+    "unit_price": 7568,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0100"
+  },
+  {
+    "sku": "JGG-0101",
+    "name": "ADAPTADOR MUNDIAL JG-EX01127",
+    "description": "",
+    "unit_price": 3629,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0101"
+  },
+  {
+    "sku": "JGG-0102",
+    "name": "ADAPTADOR OTG IPHONE A TC JG-OTGIPHTC",
+    "description": "",
+    "unit_price": 1127,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0102"
+  },
+  {
+    "sku": "JGG-0103",
+    "name": "ADAPTADOR RECEPTOR CAR BT JG-CARBT",
+    "description": "",
+    "unit_price": 3089,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0103"
+  },
+  {
+    "sku": "JGG-0104",
+    "name": "ADAPTADOR SPLITTER 1X2 4K EN BLISTER",
+    "description": "",
+    "unit_price": 11815,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0104"
+  },
+  {
+    "sku": "JGG-0105",
+    "name": "ADAPTADOR SPLITTER HDMI 1 X 2 4K CON FUENTE",
+    "description": "",
+    "unit_price": 18069,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0105"
+  },
+  {
+    "sku": "JGG-0106",
+    "name": "ADAPTADOR SPLITTER HDMI 1 X 4 4K CON FUENTE",
+    "description": "",
+    "unit_price": 15290,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0106"
+  },
+  {
+    "sku": "JGG-0107",
+    "name": "ADAPTADOR SPLITTER HDMI 1 X 8 4K CON FUENTE",
+    "description": "",
+    "unit_price": 55583,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0107"
+  },
+  {
+    "sku": "JGG-0108",
+    "name": "ADAPTADOR TC A HDMI USB Y TC 3 EN 1 JG-HDTVTC3EN1",
+    "description": "",
+    "unit_price": 16062,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0108"
+  },
+  {
+    "sku": "JGG-0109",
+    "name": "ADAPTADOR TIPO C A USB 3.0 JG-TCUSB3.0",
+    "description": "",
+    "unit_price": 1822,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0109"
+  },
+  {
+    "sku": "JGG-0110",
+    "name": "ADAPTADOR USB 2.0 A RJ45 JG-RJ45",
+    "description": "",
+    "unit_price": 6641,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0110"
+  },
+  {
+    "sku": "JGG-0111",
+    "name": "ADAPTADOR VGA A TIPO C 3.1",
+    "description": "",
+    "unit_price": 6456,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0111"
+  },
+  {
+    "sku": "JGG-0112",
+    "name": "ADAPTADOR VINCHA GAMER PC-PS4 (2 HEMBRA A 1 MACHO) *",
+    "description": "",
+    "unit_price": 1544,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0112"
+  },
+  {
+    "sku": "JGG-0113",
+    "name": "ADAPTADOR VINCHA GAMER PS4 A PC (2 MACHO A 1 HEMBRA) *",
+    "description": "",
+    "unit_price": 1622,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0113"
+  },
+  {
+    "sku": "JGG-0114",
+    "name": "AMPLIFICADOR DE PANTALLA PARA CELULAR 12 PULGADAS",
+    "description": "",
+    "unit_price": 2703,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0114"
+  },
+  {
+    "sku": "JGG-0115",
+    "name": "ANTENA WIFI 1200 MPBS JG-ANTENA",
+    "description": "",
+    "unit_price": 5251,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0115"
+  },
+  {
+    "sku": "JGG-0116",
+    "name": "ARO DE LUZ LED USB 26CM RGB SIN TRIPODE",
+    "description": "",
+    "unit_price": 7259,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0116"
+  },
+  {
+    "sku": "JGG-0117",
+    "name": "ARO DE LUZ LED USB 26CM SIN TRIPODE JG-ARO26",
+    "description": "",
+    "unit_price": 6023,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0117"
+  },
+  {
+    "sku": "JGG-0118",
+    "name": "ARO DE LUZ LED USB 30CM SIN TRIPODE JG-ARO30",
+    "description": "",
+    "unit_price": 8494,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0118"
+  },
+  {
+    "sku": "JGG-0119",
+    "name": "ASPIRADORA PORTATIL INALAMBRICA",
+    "description": "",
+    "unit_price": 15444,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0119"
+  },
+  {
+    "sku": "JGG-0120",
+    "name": "AURICULAR BT AIRPODS",
+    "description": "",
+    "unit_price": 13591,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0120"
+  },
+  {
+    "sku": "JGG-0121",
+    "name": "AURICULAR BT SPORT OPEN-EAR",
+    "description": "",
+    "unit_price": 7104,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0121"
+  },
+  {
+    "sku": "JGG-0122",
+    "name": "AURICULAR EARBUDS BT CON VISOR JG-AURIM10",
+    "description": "",
+    "unit_price": 7259,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0122"
+  },
+  {
+    "sku": "JGG-0123",
+    "name": "AURICULAR EARBUDS BT TIME",
+    "description": "",
+    "unit_price": 8185,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0123"
+  },
+  {
+    "sku": "JGG-0124",
+    "name": "AURICULAR EARBUDS SAMSUNG BUDS 2 PRO",
+    "description": "",
+    "unit_price": 23629,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0124"
+  },
+  {
+    "sku": "JGG-0125",
+    "name": "AURICULAR IN EAR MANOS LIBRES ROMPEOIDOS 4 ONLY",
+    "description": "",
+    "unit_price": 1699,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0125"
+  },
+  {
+    "sku": "JGG-0126",
+    "name": "AURICULAR IN EAR MANOS LIBRES THUNDER XAEA",
+    "description": "",
+    "unit_price": 2919,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0126"
+  },
+  {
+    "sku": "JGG-0127",
+    "name": "AURICULAR IN EAR MANOS LIBRES TIME EN BOLSA",
+    "description": "",
+    "unit_price": 1390,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0127"
+  },
+  {
+    "sku": "JGG-0128",
+    "name": "AURICULAR IN EAR ML CON MARCA BUEN SONIDO",
+    "description": "",
+    "unit_price": 1313,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0128"
+  },
+  {
+    "sku": "JGG-0129",
+    "name": "AURICULAR VINCHA BT P9 COLORES",
+    "description": "",
+    "unit_price": 8185,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0129"
+  },
+  {
+    "sku": "JGG-0130",
+    "name": "BASE DE CARGA DOBLE PARA JOYSTICK PS4",
+    "description": "",
+    "unit_price": 6950,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0130"
+  },
+  {
+    "sku": "JGG-0131",
+    "name": "CABLE 2 RCA A PLUG 1.5 MTS EN BOLSA JG-2A1",
+    "description": "",
+    "unit_price": 849,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0131"
+  },
+  {
+    "sku": "JGG-0132",
+    "name": "CABLE 3 RCA A 3 RCA 1.5 MTS",
+    "description": "",
+    "unit_price": 1544,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0132"
+  },
+  {
+    "sku": "JGG-0133",
+    "name": "CABLE 3 RCA A PLUG 1.5 MTS *",
+    "description": "",
+    "unit_price": 1544,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0133"
+  },
+  {
+    "sku": "JGG-0134",
+    "name": "CABLE 3,5 3RCA A PLUG MEJOR CALIDAD",
+    "description": "",
+    "unit_price": 1853,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0134"
+  },
+  {
+    "sku": "JGG-0135",
+    "name": "CABLE AUDIO FIBRA OPTICA 1.5 MTS",
+    "description": "",
+    "unit_price": 3537,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0135"
+  },
+  {
+    "sku": "JGG-0136",
+    "name": "CABLE AUDIO FIBRA OPTICA 3 MTS *",
+    "description": "",
+    "unit_price": 4015,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0136"
+  },
+  {
+    "sku": "JGG-0137",
+    "name": "CABLE DISPLAYPORT A DISPLAYPORT 4K 1.8 MTS EN BOLSA JG-DPDP4K",
+    "description": "",
+    "unit_price": 7413,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0137"
+  },
+  {
+    "sku": "JGG-0138",
+    "name": "CABLE DISPLAYPORT A HDMI 4K 1.5 MTS JG-CABDPHDTV",
+    "description": "",
+    "unit_price": 5220,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0138"
+  },
+  {
+    "sku": "JGG-0139",
+    "name": "CABLE DISPLAYPORT A TC 4K JG-DPTC",
+    "description": "",
+    "unit_price": 13591,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0139"
+  },
+  {
+    "sku": "JGG-0140",
+    "name": "CABLE EXTENSION USB MACHO A HEMBRA 2.0 1.5 MTS JG-USB2.0MAH",
+    "description": "",
+    "unit_price": 1375,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0140"
+  },
+  {
+    "sku": "JGG-0141",
+    "name": "CABLE EXTENSION USB MACHO A HEMBRA 3.0 1.5 MTS JG-USB3.0MAH",
+    "description": "",
+    "unit_price": 3861,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0141"
+  },
+  {
+    "sku": "JGG-0142",
+    "name": "CABLE EXTENSION USB MACHO A MACHO 2.0 1.5 MTS JG-USBMAM",
+    "description": "",
+    "unit_price": 1158,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0142"
+  },
+  {
+    "sku": "JGG-0143",
+    "name": "CABLE EXTENSION USB MACHO A MACHO 3.0 1.5 MTS *",
+    "description": "",
+    "unit_price": 5483,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0143"
+  },
+  {
+    "sku": "JGG-0144",
+    "name": "CABLE EXTENSION USB MACHO A MACHO 3.0 1.5 MTS JG-USB3.0MAM",
+    "description": "",
+    "unit_price": 3861,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0144"
+  },
+  {
+    "sku": "JGG-0145",
+    "name": "CABLE HDMI 1,5 MTS ECONOMICO JG-HDTVECON",
+    "description": "",
+    "unit_price": 1529,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0145"
+  },
+  {
+    "sku": "JGG-0146",
+    "name": "CABLE HDMI 1.5 MTS 4K JG-HDTV4K",
+    "description": "",
+    "unit_price": 3938,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0146"
+  },
+  {
+    "sku": "JGG-0147",
+    "name": "CABLE HDMI 1.5 MTS MALLADO JG-HTV1.5M",
+    "description": "",
+    "unit_price": 1946,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0147"
+  },
+  {
+    "sku": "JGG-0148",
+    "name": "CABLE HDMI 10 MTS 4K JG-HDTV4K10M",
+    "description": "",
+    "unit_price": 11583,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0148"
+  },
+  {
+    "sku": "JGG-0149",
+    "name": "CABLE HDMI 10 MTS MALLADO JG-HTV10M",
+    "description": "",
+    "unit_price": 8216,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0149"
+  },
+  {
+    "sku": "JGG-0150",
+    "name": "CABLE HDMI 15 MTS MALLADO JG-HDTV15M",
+    "description": "",
+    "unit_price": 11568,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0150"
+  },
+  {
+    "sku": "JGG-0151",
+    "name": "CABLE HDMI 20 MTS MALLADO JG-HTV20M",
+    "description": "",
+    "unit_price": 15985,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0151"
+  },
+  {
+    "sku": "JGG-0152",
+    "name": "CABLE HDMI 3 MTS 4K JG-HDTV4K3M",
+    "description": "",
+    "unit_price": 5792,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0152"
+  },
+  {
+    "sku": "JGG-0153",
+    "name": "CABLE HDMI 3 MTS MALLADO JG-HTV3M",
+    "description": "",
+    "unit_price": 3073,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0153"
+  },
+  {
+    "sku": "JGG-0154",
+    "name": "CABLE HDMI 5 MTS 4K JG-HDTV4K5M",
+    "description": "",
+    "unit_price": 8031,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0154"
+  },
+  {
+    "sku": "JGG-0155",
+    "name": "CABLE HDMI 5 MTS MALLADO JG-HDTV5M",
+    "description": "",
+    "unit_price": 4618,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0155"
+  },
+  {
+    "sku": "JGG-0156",
+    "name": "CABLE HDMI A MICRO HDMI *",
+    "description": "",
+    "unit_price": 4942,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0156"
+  },
+  {
+    "sku": "JGG-0157",
+    "name": "CABLE HDMI A MINI HDMI",
+    "description": "",
+    "unit_price": 5328,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0157"
+  },
+  {
+    "sku": "JGG-0158",
+    "name": "CABLE HDMI A TIPO C JG-HDTVTC",
+    "description": "",
+    "unit_price": 17761,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0158"
+  },
+  {
+    "sku": "JGG-0159",
+    "name": "CABLE IMPRESORA 2.0 1.5 MTS PACK X 100 JG-USBIMPR #",
+    "description": "",
+    "unit_price": 1375,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0159"
+  },
+  {
+    "sku": "JGG-0160",
+    "name": "CABLE IMPRESORA 2.0 3MTS",
+    "description": "",
+    "unit_price": 2239,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0160"
+  },
+  {
+    "sku": "JGG-0161",
+    "name": "CABLE IPHONE 1 MTS FOXCOM JG-IMP107",
+    "description": "",
+    "unit_price": 2162,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0161"
+  },
+  {
+    "sku": "JGG-0162",
+    "name": "CABLE IPHONE 4.4A XAEA THOR",
+    "description": "",
+    "unit_price": 2394,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0162"
+  },
+  {
+    "sku": "JGG-0163",
+    "name": "CABLE MICRO USB V8 3.1A TIME",
+    "description": "",
+    "unit_price": 1081,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0163"
+  },
+  {
+    "sku": "JGG-0164",
+    "name": "CABLE MICRO USB V8 6A EN CAJA ECONOMICO PACK X 20 JG-B1337",
+    "description": "",
+    "unit_price": 1035,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0164"
+  },
+  {
+    "sku": "JGG-0165",
+    "name": "CABLE MICRO USB V8 LDNIO 2.4A 2 MTS LDNIO FAST CHARGING LS-592 *",
+    "description": "",
+    "unit_price": 2996,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0165"
+  },
+  {
+    "sku": "JGG-0166",
+    "name": "CABLE MICRO USB V8 PARA PS4 CAJA SONY CON FILTRO 1.5 MTS",
+    "description": "",
+    "unit_price": 2162,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0166"
+  },
+  {
+    "sku": "JGG-0167",
+    "name": "CABLE MICRO USB V8 PARA PS4 CON FILTRO EN BOLSA 2.2 MTS",
+    "description": "",
+    "unit_price": 1344,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0167"
+  },
+  {
+    "sku": "JGG-0168",
+    "name": "CABLE MINI USB V3 CON FILTRO PARA JOYSTICK PS3 EN CAJA SONY 1.5 MTS *",
+    "description": "",
+    "unit_price": 2162,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0168"
+  },
+  {
+    "sku": "JGG-0169",
+    "name": "CABLE MINI USB V3 PS3 CON FILTRO 1.5 MTS JG-V3PLAY",
+    "description": "",
+    "unit_price": 1189,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0169"
+  },
+  {
+    "sku": "JGG-0170",
+    "name": "CABLE PLUG A PLUG 1.5 MTS EN BOLSA JG-PLUG1.5",
+    "description": "",
+    "unit_price": 695,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0170"
+  },
+  {
+    "sku": "JGG-0171",
+    "name": "CABLE PLUG A PLUG CURVO 90 GRADOS 1.2 MTS IBEK AU-90",
+    "description": "",
+    "unit_price": 1931,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0171"
+  },
+  {
+    "sku": "JGG-0172",
+    "name": "CABLE POWER 8 220V INTERLOCK 1.5 MTS BUENA CALIDAD PACK X 25",
+    "description": "",
+    "unit_price": 2394,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0172"
+  },
+  {
+    "sku": "JGG-0173",
+    "name": "CABLE POWER PC 220V IMPRESORA,MONITOR 1.5 MTS OFERTA !!!!",
+    "description": "",
+    "unit_price": 2239,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0173"
+  },
+  {
+    "sku": "JGG-0174",
+    "name": "CABLE POWER TREBOL 220V 1,5 MTS *",
+    "description": "",
+    "unit_price": 2394,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0174"
+  },
+  {
+    "sku": "JGG-0175",
+    "name": "CABLE RED 10 MTS CATEGORIA 5 BLANCOS JG-RED10",
+    "description": "",
+    "unit_price": 2347,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0175"
+  },
+  {
+    "sku": "JGG-0176",
+    "name": "CABLE RED 15 MTS CATEGORIA 5",
+    "description": "",
+    "unit_price": 3784,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0176"
+  },
+  {
+    "sku": "JGG-0177",
+    "name": "CABLE RED 2 MTS CATEGORIA 5 BLANCOS JG-RED2M",
+    "description": "",
+    "unit_price": 819,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0177"
+  },
+  {
+    "sku": "JGG-0178",
+    "name": "CABLE RED 20 MTS CATEGORIA 5 BLANCOS JG-RED20M",
+    "description": "",
+    "unit_price": 4031,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0178"
+  },
+  {
+    "sku": "JGG-0179",
+    "name": "CABLE RED 3 MTS CATEGORIA 5 BLANCOS JG-RED3M",
+    "description": "",
+    "unit_price": 988,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0179"
+  },
+  {
+    "sku": "JGG-0180",
+    "name": "CABLE RED 30 MTS CATEGORIA 5 BLANCOS JG-RED30M",
+    "description": "",
+    "unit_price": 5637,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0180"
+  },
+  {
+    "sku": "JGG-0181",
+    "name": "CABLE RED 5 MTS CATEGORIA 5 BLANCOS JG-RED5M",
+    "description": "",
+    "unit_price": 1313,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0181"
+  },
+  {
+    "sku": "JGG-0182",
+    "name": "CABLE TC A IPHONE 1 MTS TIPO ORIGINAL JG-IMP111",
+    "description": "",
+    "unit_price": 2471,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0182"
+  },
+  {
+    "sku": "JGG-0183",
+    "name": "CABLE TC A TC 1 MTS TIPO ORIGINAL",
+    "description": "",
+    "unit_price": 2579,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0183"
+  },
+  {
+    "sku": "JGG-0184",
+    "name": "CABLE TC A TC 6A SX-00 JG-TCATC",
+    "description": "",
+    "unit_price": 3552,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0184"
+  },
+  {
+    "sku": "JGG-0185",
+    "name": "CABLE TC A TC XAEA AX VIOLETA Y NARANJA",
+    "description": "",
+    "unit_price": 1931,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0185"
+  },
+  {
+    "sku": "JGG-0186",
+    "name": "CABLE TC MALLADO ALTA RESISTENCIA ZEUS XAEA",
+    "description": "",
+    "unit_price": 2317,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0186"
+  },
+  {
+    "sku": "JGG-0187",
+    "name": "CABLE TC MALLADO HERA XAEA",
+    "description": "",
+    "unit_price": 2317,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0187"
+  },
+  {
+    "sku": "JGG-0188",
+    "name": "CABLE TC MALLADO TIME EN CAJA EXHIBIDOR X 20",
+    "description": "",
+    "unit_price": 1668,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0188"
+  },
+  {
+    "sku": "JGG-0189",
+    "name": "CABLE TC ONLY MOD-126 SWIFT",
+    "description": "",
+    "unit_price": 1097,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0189"
+  },
+  {
+    "sku": "JGG-0190",
+    "name": "CABLE TC TIME PUNTA METAL",
+    "description": "",
+    "unit_price": 1699,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0190"
+  },
+  {
+    "sku": "JGG-0191",
+    "name": "CABLE TIPO C 3A BULUD S22 JG-TCS22",
+    "description": "",
+    "unit_price": 1390,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0191"
+  },
+  {
+    "sku": "JGG-0192",
+    "name": "CABLE TIPO C 6A EN CAJA ECONOMICO PACK X 20 JG-B1336",
+    "description": "",
+    "unit_price": 1174,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0192"
+  },
+  {
+    "sku": "JGG-0193",
+    "name": "CABLE TIPO C A IPHONE S23 PACK X 10 JG-TCIPHS23",
+    "description": "",
+    "unit_price": 2394,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0193"
+  },
+  {
+    "sku": "JGG-0194",
+    "name": "CABLE TIPO C MALLADO 4.4A HULK XAEA",
+    "description": "",
+    "unit_price": 2131,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0194"
+  },
+  {
+    "sku": "JGG-0195",
+    "name": "CABLE TIPO C MALLADO 4.4A WOLVERINE XAEA (MOD-95)",
+    "description": "",
+    "unit_price": 2548,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0195"
+  },
+  {
+    "sku": "JGG-0196",
+    "name": "CABLE TIPO C MALLADO 4.4A XAEA THOR",
+    "description": "",
+    "unit_price": 2162,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0196"
+  },
+  {
+    "sku": "JGG-0197",
+    "name": "CABLE TIPO C MALLADO 6A S13 NEGROS JG-TCS13",
+    "description": "",
+    "unit_price": 2193,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0197"
+  },
+  {
+    "sku": "JGG-0198",
+    "name": "CABLE USB 3.0 PARA DISCO RIGIDO",
+    "description": "",
+    "unit_price": 6332,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0198"
+  },
+  {
+    "sku": "JGG-0199",
+    "name": "CABLE USB A PLUG 1.35mm PARA PARLANTES Y DISPOSITIVOS",
+    "description": "",
+    "unit_price": 1081,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0199"
+  },
+  {
+    "sku": "JGG-0200",
+    "name": "CABLE VGA 1.5 MTS 4K JG-VGAPRO",
+    "description": "",
+    "unit_price": 5251,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0200"
+  },
+  {
+    "sku": "JGG-0201",
+    "name": "CABLE VGA 1.5 MTS JG-VGA1.5M",
+    "description": "",
+    "unit_price": 1761,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0201"
+  },
+  {
+    "sku": "JGG-0202",
+    "name": "CABLE VGA 3 MTS JG-VGA3M",
+    "description": "",
+    "unit_price": 2471,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0202"
+  },
+  {
+    "sku": "JGG-0203",
+    "name": "CAPTURADORA DE VIDEO HDMI A USB",
+    "description": "",
+    "unit_price": 14517,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0203"
+  },
+  {
+    "sku": "JGG-0204",
+    "name": "CARGADOR 12V 2 USB 1 TC 3.1A 45W QUICK CHARGE *",
+    "description": "",
+    "unit_price": 3784,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0204"
+  },
+  {
+    "sku": "JGG-0205",
+    "name": "CARGADOR 12V 2A 3,5 X 1,35 mm PARA NOTEBOOK GOBIERNO",
+    "description": "",
+    "unit_price": 8031,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0205"
+  },
+  {
+    "sku": "JGG-0206",
+    "name": "CARGADOR 12V 3 MTS PARA INTERNET STARLINK",
+    "description": "",
+    "unit_price": 23012,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0206"
+  },
+  {
+    "sku": "JGG-0207",
+    "name": "CARGADOR 12V 3.1A CON CABLE TIPO C IBEK *",
+    "description": "",
+    "unit_price": 3938,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0207"
+  },
+  {
+    "sku": "JGG-0208",
+    "name": "CARGADOR 12V 3A 1 USB 1 TC VOLTAIR XAEA",
+    "description": "",
+    "unit_price": 7645,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0208"
+  },
+  {
+    "sku": "JGG-0209",
+    "name": "CARGADOR 19V 2.37A PIN ROJO 3.5 X 1.35mm PARA NOTEBOOK GOBIERNO",
+    "description": "",
+    "unit_price": 18317,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0209"
+  },
+  {
+    "sku": "JGG-0210",
+    "name": "CARGADOR 19V 3.42A PIN ROJO 3.5 X 1.35mm PARA NOTEBOOK GOBIERNO",
+    "description": "",
+    "unit_price": 19274,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0210"
+  },
+  {
+    "sku": "JGG-0211",
+    "name": "CARGADOR 30W 1 USB + 1 TC CON CABLE TC XAEA INTENSIFY",
+    "description": "",
+    "unit_price": 4942,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0211"
+  },
+  {
+    "sku": "JGG-0212",
+    "name": "CARGADOR 30W 1 USB + 1 TC XAEA INTENSIFY",
+    "description": "",
+    "unit_price": 4093,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0212"
+  },
+  {
+    "sku": "JGG-0213",
+    "name": "CARGADOR 30W 3 USB CON CABLE TC INTESIFY XAEA",
+    "description": "",
+    "unit_price": 3784,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0213"
+  },
+  {
+    "sku": "JGG-0214",
+    "name": "CARGADOR 45W 1 TC + PD 5.1A CON CABLE XAEA RAPTOR",
+    "description": "",
+    "unit_price": 5328,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0214"
+  },
+  {
+    "sku": "JGG-0215",
+    "name": "CARGADOR 45W 1 TC 5.1A SIN CABLE XAEA RAPTOR",
+    "description": "",
+    "unit_price": 4324,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0215"
+  },
+  {
+    "sku": "JGG-0216",
+    "name": "CARGADOR CABEZAL 20W 5.8A IBEK TIPO C + USB CAJA X 30 UNID",
+    "description": "",
+    "unit_price": 3846,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0216"
+  },
+  {
+    "sku": "JGG-0217",
+    "name": "CARGADOR CABEZAL 20W TC (PATA ARGENTINA) JG-IMP102",
+    "description": "",
+    "unit_price": 5019,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0217"
+  },
+  {
+    "sku": "JGG-0218",
+    "name": "CARGADOR CABEZAL 35W TC",
+    "description": "",
+    "unit_price": 4710,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0218"
+  },
+  {
+    "sku": "JGG-0219",
+    "name": "CARGADOR CABEZAL 5,4A 55W HYPER 1USB + 1TC -XAEA",
+    "description": "",
+    "unit_price": 11876,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0219"
+  },
+  {
+    "sku": "JGG-0220",
+    "name": "CARGADOR CABEZAL 5A 45W 1 USB +1 TC XAEA OPTIMUM / SUPREME",
+    "description": "",
+    "unit_price": 6100,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0220"
+  },
+  {
+    "sku": "JGG-0221",
+    "name": "CARGADOR CABEZAL 65W 2TC + 1 USB INOVA",
+    "description": "",
+    "unit_price": 6023,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0221"
+  },
+  {
+    "sku": "JGG-0222",
+    "name": "CARGADOR CABEZAL 65W PD 2 PUERTOS C Y 1 USB XAEA EXTREME",
+    "description": "",
+    "unit_price": 14363,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0222"
+  },
+  {
+    "sku": "JGG-0223",
+    "name": "CARGADOR DE PILA RECARGABLE USB AA Y AAA",
+    "description": "",
+    "unit_price": 5853,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0223"
+  },
+  {
+    "sku": "JGG-0224",
+    "name": "CARGADOR INALAMBRICO 10W FLEXA CON LUZ 2A 1TC XAEA",
+    "description": "",
+    "unit_price": 13745,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0224"
+  },
+  {
+    "sku": "JGG-0225",
+    "name": "CARGADOR INALAMBRICO 15W ION CON CABLE TC ONLY",
+    "description": "",
+    "unit_price": 4556,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0225"
+  },
+  {
+    "sku": "JGG-0226",
+    "name": "CARGADOR INALAMBRICO XPIRAL XAEA",
+    "description": "",
+    "unit_price": 5174,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0226"
+  },
+  {
+    "sku": "JGG-0227",
+    "name": "CARGADOR MAGNETICO VOLTRIX XAEA 25W",
+    "description": "",
+    "unit_price": 8108,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0227"
+  },
+  {
+    "sku": "JGG-0228",
+    "name": "CARGADOR NOTEBOOK REPLICA ACER 65W 5.5X1.7 S/CABLE",
+    "description": "",
+    "unit_price": 21853,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0228"
+  },
+  {
+    "sku": "JGG-0229",
+    "name": "CARGADOR NOTEBOOK REPLICA ASUS 65W 19V 3.42A 4.0X1.35 S/CABLE *",
+    "description": "",
+    "unit_price": 21853,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0229"
+  },
+  {
+    "sku": "JGG-0230",
+    "name": "CARGADOR NOTEBOOK REPLICA DELL 65W 3.34A 7.4 X 5.0 mm",
+    "description": "",
+    "unit_price": 22394,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0230"
+  },
+  {
+    "sku": "JGG-0231",
+    "name": "CARGADOR NOTEBOOK REPLICA HP CELESTE 65W 4.5 X 3.0mm",
+    "description": "",
+    "unit_price": 21251,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0231"
+  },
+  {
+    "sku": "JGG-0232",
+    "name": "CARGADOR NOTEBOOK REPLICA HP PIN GRUESO SHURE CON CABLE TREBOL 3.5A 65W-3",
+    "description": "",
+    "unit_price": 17452,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0232"
+  },
+  {
+    "sku": "JGG-0233",
+    "name": "CARGADOR NOTEBOOK REPLICA LENOVO 65W 20V 3.25A 4.0 X 1.7",
+    "description": "",
+    "unit_price": 18780,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0233"
+  },
+  {
+    "sku": "JGG-0234",
+    "name": "CARGADOR NOTEBOOK REPLICA LENOVO 65W 20V 5.5 X 2.5MM *",
+    "description": "",
+    "unit_price": 22239,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0234"
+  },
+  {
+    "sku": "JGG-0235",
+    "name": "CARGADOR NOTEBOOK REPLICA LENOVO TIPO C 20V 3.25A *",
+    "description": "",
+    "unit_price": 53282,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0235"
+  },
+  {
+    "sku": "JGG-0236",
+    "name": "CARGADOR NOTEBOOK REPLICA LENOVO USB YOGA 3.25A 65W 20V *",
+    "description": "",
+    "unit_price": 21498,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0236"
+  },
+  {
+    "sku": "JGG-0237",
+    "name": "CARGADOR NOTEBOOK REPLICA SAMSUNG 65W 19V 5.5X3 mm S/CABLE",
+    "description": "",
+    "unit_price": 19768,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0237"
+  },
+  {
+    "sku": "JGG-0238",
+    "name": "CARGADOR NOTEBOOK REPLICA TOSHIBA 65W 19V 5.5x2.5mm *",
+    "description": "",
+    "unit_price": 19768,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0238"
+  },
+  {
+    "sku": "JGG-0239",
+    "name": "CARGADOR NOTEBOOK UNIVERSAL IBEK PIN LENOVO YOGA Y HP CELESTE",
+    "description": "",
+    "unit_price": 10656,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0239"
+  },
+  {
+    "sku": "JGG-0240",
+    "name": "CARGADOR NOTEBOOK UNIVERSAL ONLY PIN LENOVO YOGA Y HP CEL",
+    "description": "",
+    "unit_price": 12201,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0240"
+  },
+  {
+    "sku": "JGG-0241",
+    "name": "CARGADOR NOTEBOOK UNIVERSAL ONLY PIN LENOVO, HP Y TC",
+    "description": "",
+    "unit_price": 13127,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0241"
+  },
+  {
+    "sku": "JGG-0242",
+    "name": "CARGADOR PARA MONITOR SAMSUNG 14V 3A (6.4X4.4)",
+    "description": "",
+    "unit_price": 20695,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0242"
+  },
+  {
+    "sku": "JGG-0243",
+    "name": "CARGADOR PILA AA / AAA 150 MHI SND-512",
+    "description": "",
+    "unit_price": 8093,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0243"
+  },
+  {
+    "sku": "JGG-0244",
+    "name": "CARGADOR TIPO C 3.8A IBEK IB-3803 *",
+    "description": "",
+    "unit_price": 3073,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0244"
+  },
+  {
+    "sku": "JGG-0245",
+    "name": "CARGADOR USB A TC CON CABLE 15W ALO ( PACK X 10 )",
+    "description": "",
+    "unit_price": 2764,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0245"
+  },
+  {
+    "sku": "JGG-0246",
+    "name": "CARGADOR USB CON CABLE TC 4.8A RUSH YEXA",
+    "description": "",
+    "unit_price": 2764,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0246"
+  },
+  {
+    "sku": "JGG-0247",
+    "name": "CARGADOR USB+C 45W CON CABLE TC INOVA",
+    "description": "",
+    "unit_price": 5560,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0247"
+  },
+  {
+    "sku": "JGG-0248",
+    "name": "CARRY DISK 2.0 JG-CARRY075",
+    "description": "",
+    "unit_price": 6950,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0248"
+  },
+  {
+    "sku": "JGG-0249",
+    "name": "CARRY DISK 3.0 JG-CARRY076",
+    "description": "",
+    "unit_price": 9112,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0249"
+  },
+  {
+    "sku": "JGG-0250",
+    "name": "CARRY DISK PARA DISCO SOLIDO USB 3.1 M2",
+    "description": "",
+    "unit_price": 23166,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0250"
+  },
+  {
+    "sku": "JGG-0251",
+    "name": "CONSOLA DE JUEGOS PORTATIL R36S PANTALLA DE 3.5 PLG",
+    "description": "",
+    "unit_price": 66239,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0251"
+  },
+  {
+    "sku": "JGG-0252",
+    "name": "CONSOLA DE JUEGOS PORTATIL R39S PANTALLA DE 4 PLG",
+    "description": "",
+    "unit_price": 83398,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0252"
+  },
+  {
+    "sku": "JGG-0253",
+    "name": "CONSOLA HDMI JOYSTICK INALAMBRICO TIPO PS5 CAJA BLANCA",
+    "description": "",
+    "unit_price": 35367,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0253"
+  },
+  {
+    "sku": "JGG-0254",
+    "name": "CONSOLA STICK CON JOYSTICK INALAMBRICO 64GB",
+    "description": "",
+    "unit_price": 25483,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0254"
+  },
+  {
+    "sku": "JGG-0255",
+    "name": "CONTADORA DE BILLETE CON VISOR",
+    "description": "",
+    "unit_price": 106564,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0255"
+  },
+  {
+    "sku": "JGG-0256",
+    "name": "CONTROL REMOTO SMART TV UNIVERSAL PACK X 60 JG-CONTRSMART",
+    "description": "",
+    "unit_price": 3938,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0256"
+  },
+  {
+    "sku": "JGG-0257",
+    "name": "CONTROL REMOTO UNIVERSAL AIRE ACONDICIONADO JG-CONTRAIRE",
+    "description": "",
+    "unit_price": 3722,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0257"
+  },
+  {
+    "sku": "JGG-0258",
+    "name": "DOCK DE CARGA 35W 3 USB 3 TC CON BASE CELULAR",
+    "description": "",
+    "unit_price": 9961,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0258"
+  },
+  {
+    "sku": "JGG-0259",
+    "name": "ESTABILIZADOR FORZA FVR-1202A / 600W",
+    "description": "",
+    "unit_price": 43784,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0259"
+  },
+  {
+    "sku": "JGG-0260",
+    "name": "ESTABILIZADOR FORZA FVR-902A / 450W",
+    "description": "",
+    "unit_price": 30347,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0260"
+  },
+  {
+    "sku": "JGG-0261",
+    "name": "ESTABILIZADOR SELFIE CON LUZ LED Y MICROFONO",
+    "description": "",
+    "unit_price": 9884,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0261"
+  },
+  {
+    "sku": "JGG-0262",
+    "name": "FICHA RJ45 PARA CABLE RED CATEGORIA 5 BOLSA x 100 JG-CAT5",
+    "description": "",
+    "unit_price": 77,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0262"
+  },
+  {
+    "sku": "JGG-0263",
+    "name": "FM TRANSMISOR BT 12V-24V 2USB + 1TC + RBG JG-FMRGB",
+    "description": "",
+    "unit_price": 8803,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0263"
+  },
+  {
+    "sku": "JGG-0264",
+    "name": "FUENTE 5V 2A PARA TABLET Y TV BOX",
+    "description": "",
+    "unit_price": 5174,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0264"
+  },
+  {
+    "sku": "JGG-0265",
+    "name": "FUNDA MALETIN NOTEBOOK 15.6 ECONONICA JG-15.6ECON",
+    "description": "",
+    "unit_price": 9575,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0265"
+  },
+  {
+    "sku": "JGG-0266",
+    "name": "FUNDA MALETIN NOTEBOOK 15.6 PRO JG-15.6PRO",
+    "description": "",
+    "unit_price": 17452,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0266"
+  },
+  {
+    "sku": "JGG-0267",
+    "name": "FUNDA MALETIN NOTEBOOK 15.6 PULGADAS ( 40*30CM ) JG-15.6",
+    "description": "",
+    "unit_price": 12170,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0267"
+  },
+  {
+    "sku": "JGG-0268",
+    "name": "GUIRNALDA 10 FOCOS LUZ CALIDA",
+    "description": "",
+    "unit_price": 28880,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0268"
+  },
+  {
+    "sku": "JGG-0269",
+    "name": "HOLDER DOBLE SOPAPA PARA CELULAR",
+    "description": "",
+    "unit_price": 1081,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0269"
+  },
+  {
+    "sku": "JGG-0270",
+    "name": "HUB USB 4 PUERTOS 2.0 CON INTERRUPTOR",
+    "description": "",
+    "unit_price": 3475,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0270"
+  },
+  {
+    "sku": "JGG-0271",
+    "name": "HUB USB 4 PUERTOS 2.0 CON INTERRUPTOR PACK X 12 JG-HUBINTER",
+    "description": "",
+    "unit_price": 3475,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0271"
+  },
+  {
+    "sku": "JGG-0272",
+    "name": "HUB USB 4 PUERTOS 3.0 REAL JG-HUB3.0",
+    "description": "",
+    "unit_price": 5714,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0272"
+  },
+  {
+    "sku": "JGG-0273",
+    "name": "HUB USB TIPO C ( 3USB 2.0 + 1USB 3.0 ) JG-HUBTC",
+    "description": "",
+    "unit_price": 4710,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0273"
+  },
+  {
+    "sku": "JGG-0274",
+    "name": "JOYSTICK PC ANALOGICO SEISA SJ-703 *",
+    "description": "",
+    "unit_price": 10656,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0274"
+  },
+  {
+    "sku": "JGG-0275",
+    "name": "JOYSTICK PS2 ANALOGICO CON CABLE SJ802",
+    "description": "",
+    "unit_price": 11351,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0275"
+  },
+  {
+    "sku": "JGG-0276",
+    "name": "JOYSTICK PS3 COLORES GENERICO",
+    "description": "",
+    "unit_price": 12201,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0276"
+  },
+  {
+    "sku": "JGG-0277",
+    "name": "JOYSTICK PS3 SONY",
+    "description": "",
+    "unit_price": 12201,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0277"
+  },
+  {
+    "sku": "JGG-0278",
+    "name": "JOYSTICK PS4 INALAMBRICO GENERICO",
+    "description": "",
+    "unit_price": 19305,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0278"
+  },
+  {
+    "sku": "JGG-0279",
+    "name": "JOYSTICK PS4 SONY INALAMBRICO NEGRO Y COLORES",
+    "description": "",
+    "unit_price": 20386,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0279"
+  },
+  {
+    "sku": "JGG-0280",
+    "name": "JOYSTICK PS5 SONY BLANCOS + COLORES",
+    "description": "",
+    "unit_price": 100232,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0280"
+  },
+  {
+    "sku": "JGG-0281",
+    "name": "JUEGO POPIT ELECTRICO VELOCIDAD CON LUZ UNICORNIO",
+    "description": "",
+    "unit_price": 6023,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0281"
+  },
+  {
+    "sku": "JGG-0282",
+    "name": "KIT RGB 3528 EXTERIOR INTERIOR 5 MTS *",
+    "description": "",
+    "unit_price": 13127,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0282"
+  },
+  {
+    "sku": "JGG-0283",
+    "name": "KIT RGB 5050 IBEK EXTERIOR INTERIOR 5 MTS",
+    "description": "",
+    "unit_price": 10039,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0283"
+  },
+  {
+    "sku": "JGG-0284",
+    "name": "LAMPARA DE MESA CON BRAZO LARGO DE METAL",
+    "description": "",
+    "unit_price": 19923,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0284"
+  },
+  {
+    "sku": "JGG-0285",
+    "name": "LAMPARA LED EFECTO SOL ATARDECER",
+    "description": "",
+    "unit_price": 4633,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0285"
+  },
+  {
+    "sku": "JGG-0286",
+    "name": "LAMPARA RGB CON CONTROL 9W",
+    "description": "",
+    "unit_price": 3475,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0286"
+  },
+  {
+    "sku": "JGG-0287",
+    "name": "LAPIZ 3D IMPRESORA CON PANTALLA JG-L3D",
+    "description": "",
+    "unit_price": 13745,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0287"
+  },
+  {
+    "sku": "JGG-0288",
+    "name": "LAPIZ 3D IMPRESORA INALAMBRICO PRO JG-L3DPRO",
+    "description": "",
+    "unit_price": 22425,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0288"
+  },
+  {
+    "sku": "JGG-0289",
+    "name": "LAPIZ 3D IMPRESORA PERSONAJES (CAPYBARA-LABUBU-KUROMI)",
+    "description": "",
+    "unit_price": 20077,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0289"
+  },
+  {
+    "sku": "JGG-0290",
+    "name": "LAPIZ OPTICO IOS Y ANDROID JG-LAPIZOPT",
+    "description": "",
+    "unit_price": 19367,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0290"
+  },
+  {
+    "sku": "JGG-0291",
+    "name": "LAPIZ OPTICO PARA PC - TABLET (PACK X 6U)",
+    "description": "",
+    "unit_price": 849,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0291"
+  },
+  {
+    "sku": "JGG-0292",
+    "name": "LECTOR DE MEMORIA MICRO SD PACK X 50 JG-LECTMULTI",
+    "description": "",
+    "unit_price": 927,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0292"
+  },
+  {
+    "sku": "JGG-0293",
+    "name": "LECTOR DE MEMORIA MULTIPLE",
+    "description": "",
+    "unit_price": 1390,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0293"
+  },
+  {
+    "sku": "JGG-0294",
+    "name": "LECTOR DE MEMORIA MULTIPLE GRANDE CON PACKING JG-CARDREADER",
+    "description": "",
+    "unit_price": 6456,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0294"
+  },
+  {
+    "sku": "JGG-0295",
+    "name": "LECTOR DE MEMORIA USB TIPO C MULTIPLE",
+    "description": "",
+    "unit_price": 5869,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0295"
+  },
+  {
+    "sku": "JGG-0296",
+    "name": "MALLA DEPORTIVA M5/M6/M7 (PACK X 50 UNID) JG-8602",
+    "description": "",
+    "unit_price": 2008,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0296"
+  },
+  {
+    "sku": "JGG-0297",
+    "name": "MARCADORES DOBLE PUNTA TOUCH X 36 COLORES JG-TOUCH36",
+    "description": "",
+    "unit_price": 8803,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0297"
+  },
+  {
+    "sku": "JGG-0298",
+    "name": "MARCADORES DOBLE PUNTA TOUCH X 48 COLORES JG-TOUCH48",
+    "description": "",
+    "unit_price": 11737,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0298"
+  },
+  {
+    "sku": "JGG-0299",
+    "name": "MARCADORES DOBLE PUNTA TOUCH X 60 COLORES JG-TOUCH60",
+    "description": "",
+    "unit_price": 16525,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0299"
+  },
+  {
+    "sku": "JGG-0300",
+    "name": "MEMORIA SD XC 64GB HIKSEMI NEO",
+    "description": "",
+    "unit_price": 14981,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0300"
+  },
+  {
+    "sku": "JGG-0301",
+    "name": "MESA PARA NOTEBOOK JG-MESANOT",
+    "description": "",
+    "unit_price": 12201,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0301"
+  },
+  {
+    "sku": "JGG-0302",
+    "name": "MICROFONO CORBATERO INALAMBRICO 2 MIC TC JG-CORBAT2MICTC",
+    "description": "",
+    "unit_price": 11429,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0302"
+  },
+  {
+    "sku": "JGG-0303",
+    "name": "MICROFONO CORBATERO INALAMBRICO IPHONE Y TC K8 JG-CORBATCIPH",
+    "description": "",
+    "unit_price": 8571,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0303"
+  },
+  {
+    "sku": "JGG-0304",
+    "name": "MICROFONO CORBATERO INALAMBRICO TC 2 EN 1 CON BASE",
+    "description": "",
+    "unit_price": 43089,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0304"
+  },
+  {
+    "sku": "JGG-0305",
+    "name": "MICROFONO DINAMICO CON CABLE",
+    "description": "",
+    "unit_price": 4170,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0305"
+  },
+  {
+    "sku": "JGG-0306",
+    "name": "MICROFONO INALAMBRICO EN CAJA JG-MICINAL",
+    "description": "",
+    "unit_price": 23938,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0306"
+  },
+  {
+    "sku": "JGG-0307",
+    "name": "MINI PLACA USB WIFI 150 MPS JG-PLACAWIFI",
+    "description": "",
+    "unit_price": 5328,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0307"
+  },
+  {
+    "sku": "JGG-0308",
+    "name": "MOUSE INALAMBRICO BT RECARGABLE BLANCO RGB JG-MOUSEBTLED",
+    "description": "",
+    "unit_price": 6178,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0308"
+  },
+  {
+    "sku": "JGG-0309",
+    "name": "MOUSE INALAMBRICO BT RECARGABLE COLORES RGB JG-MOUSEBTLED",
+    "description": "",
+    "unit_price": 6178,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0309"
+  },
+  {
+    "sku": "JGG-0310",
+    "name": "MOUSE INALAMBRICO H-MOUINA JG-MOUINA",
+    "description": "",
+    "unit_price": 4865,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0310"
+  },
+  {
+    "sku": "JGG-0311",
+    "name": "PACHCORD 10 MTS CATEGORIA 6 GRIS JG-PACH10MCAT6",
+    "description": "",
+    "unit_price": 4402,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0311"
+  },
+  {
+    "sku": "JGG-0312",
+    "name": "PACHCORD 2 MTS CATEGORIA 6 GRIS JG-PACH2MCAT6",
+    "description": "",
+    "unit_price": 1390,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0312"
+  },
+  {
+    "sku": "JGG-0313",
+    "name": "PACHCORD 20 MTS CATEGORIA 6 JG-PACH20MCAT6",
+    "description": "",
+    "unit_price": 6100,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0313"
+  },
+  {
+    "sku": "JGG-0314",
+    "name": "PACHCORD 3 MTS CATEGORIA 6 BLANCOS JG-PACH3MCAT6",
+    "description": "",
+    "unit_price": 1761,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0314"
+  },
+  {
+    "sku": "JGG-0315",
+    "name": "PACHCORD 30 MTS CATEGORIA 6 BLANCOS JG-PACH30MCAT6",
+    "description": "",
+    "unit_price": 8726,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0315"
+  },
+  {
+    "sku": "JGG-0316",
+    "name": "PACHCORD 5 MTS CATEGORIA 6 JG-PACH5MCAT6",
+    "description": "",
+    "unit_price": 2394,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0316"
+  },
+  {
+    "sku": "JGG-0317",
+    "name": "PAD MOUSE ANTIDESLIZANTE CAMUFLADO 25 x 29 cm",
+    "description": "",
+    "unit_price": 1544,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0317"
+  },
+  {
+    "sku": "JGG-0318",
+    "name": "PAD MOUSE CON GEL PREMIUM COLORES JGEL",
+    "description": "",
+    "unit_price": 3737,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0318"
+  },
+  {
+    "sku": "JGG-0319",
+    "name": "PAD MOUSE CON GEL PREMIUM NEGRO JGEL PACK X 50",
+    "description": "",
+    "unit_price": 3737,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0319"
+  },
+  {
+    "sku": "JGG-0320",
+    "name": "PAD MOUSE GAMER 30 X 70 X 2MM JG-PADGAMER",
+    "description": "",
+    "unit_price": 5328,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0320"
+  },
+  {
+    "sku": "JGG-0321",
+    "name": "PAD MOUSE GAMER ATAJOS CODIGOS 30 X 70 CM",
+    "description": "",
+    "unit_price": 5328,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0321"
+  },
+  {
+    "sku": "JGG-0322",
+    "name": "PAD MOUSE GAMER AURORA 70 X 30 CM",
+    "description": "",
+    "unit_price": 5328,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0322"
+  },
+  {
+    "sku": "JGG-0323",
+    "name": "PAD MOUSE GAMER NEGRO 30 X 70 CM JG-BLACKGAMER",
+    "description": "",
+    "unit_price": 5328,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0323"
+  },
+  {
+    "sku": "JGG-0324",
+    "name": "PAD MOUSE LISO BORDADO NEGRO Y COLORES JG-PADLISO",
+    "description": "",
+    "unit_price": 1236,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0324"
+  },
+  {
+    "sku": "JGG-0325",
+    "name": "PANEL LED 10 PULGADAS JG-PANEL10\"",
+    "description": "",
+    "unit_price": 10502,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0325"
+  },
+  {
+    "sku": "JGG-0326",
+    "name": "PARLANTE BT CON LUZ RGB 3 PLG",
+    "description": "",
+    "unit_price": 6873,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0326"
+  },
+  {
+    "sku": "JGG-0327",
+    "name": "PARLANTE BT CON LUZ Y MICROFONO",
+    "description": "",
+    "unit_price": 9344,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0327"
+  },
+  {
+    "sku": "JGG-0328",
+    "name": "PARLANTE BT LDNIO S12 AUDIO HD 5.0 5W",
+    "description": "",
+    "unit_price": 26873,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0328"
+  },
+  {
+    "sku": "JGG-0329",
+    "name": "PARLANTE PARA PC CON CABLE ECONOMICO JG-PARECO",
+    "description": "",
+    "unit_price": 4788,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0329"
+  },
+  {
+    "sku": "JGG-0330",
+    "name": "PARLANTE PARA PC SUBWOOFER CON LUZ 2.1 YST-1306",
+    "description": "",
+    "unit_price": 24556,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0330"
+  },
+  {
+    "sku": "JGG-0331",
+    "name": "PARLANTE PC CON CABLE PESADO Y MEJOR CALIDAD JG-PARL006",
+    "description": "",
+    "unit_price": 10347,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0331"
+  },
+  {
+    "sku": "JGG-0332",
+    "name": "PARLANTE PC CON CABLE Y LUZ LED E-1078 JG-PARL1078",
+    "description": "",
+    "unit_price": 12124,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0332"
+  },
+  {
+    "sku": "JGG-0333",
+    "name": "PARLANTE PORTATIL MULTIMEDIA LEERFEI E-1014 JG-YST1014",
+    "description": "",
+    "unit_price": 10996,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0333"
+  },
+  {
+    "sku": "JGG-0334",
+    "name": "PEDIDOS DE TONER 1060/ 283A / 111L",
+    "description": "",
+    "unit_price": 772,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0334"
+  },
+  {
+    "sku": "JGG-0335",
+    "name": "PEDIDOS EN OTRA PAGINA WEB",
+    "description": "",
+    "unit_price": 1544,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0335"
+  },
+  {
+    "sku": "JGG-0336",
+    "name": "PILA ALCALINA AA RAYOVAC PACK X 10",
+    "description": "",
+    "unit_price": 571,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0336"
+  },
+  {
+    "sku": "JGG-0337",
+    "name": "PILA ALCALINA AAA RAYOVAC PACK X 10",
+    "description": "",
+    "unit_price": 571,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0337"
+  },
+  {
+    "sku": "JGG-0338",
+    "name": "PILA RENATA LITHIUM 2032",
+    "description": "",
+    "unit_price": 927,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0338"
+  },
+  {
+    "sku": "JGG-0339",
+    "name": "PINZA CRIMPEADORA Y PELA CABLE RJ45",
+    "description": "",
+    "unit_price": 7923,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0339"
+  },
+  {
+    "sku": "JGG-0340",
+    "name": "PIZARRA ACRILICA LED 30 X 20 CON MARCADORES JG-LED3020",
+    "description": "",
+    "unit_price": 9112,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0340"
+  },
+  {
+    "sku": "JGG-0341",
+    "name": "PIZARRA ACRILICA LED 40X30 CON MARCADORES JG-LED4030",
+    "description": "",
+    "unit_price": 13745,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0341"
+  },
+  {
+    "sku": "JGG-0342",
+    "name": "PLACA SONIDO 7.1 CON CONTROL DE VOLUMEN JG-PLASOUND7.1",
+    "description": "",
+    "unit_price": 2703,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0342"
+  },
+  {
+    "sku": "JGG-0343",
+    "name": "POWER BANK 10000 MAH CON TC CM-660",
+    "description": "",
+    "unit_price": 16911,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0343"
+  },
+  {
+    "sku": "JGG-0344",
+    "name": "POWER BANK 20.000 MAH",
+    "description": "",
+    "unit_price": 13591,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0344"
+  },
+  {
+    "sku": "JGG-0345",
+    "name": "POWER BANK 4 EN 1 10000 MAH",
+    "description": "",
+    "unit_price": 11351,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0345"
+  },
+  {
+    "sku": "JGG-0346",
+    "name": "POWER BANK 4 EN 1 25000 MAH",
+    "description": "",
+    "unit_price": 15830,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0346"
+  },
+  {
+    "sku": "JGG-0347",
+    "name": "PROTECTOR DE TENSION FORZA FVP-1202B",
+    "description": "",
+    "unit_price": 16448,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0347"
+  },
+  {
+    "sku": "JGG-0348",
+    "name": "PROTECTOR DE TENSION FORZA ZAPATILLA FSP-602USB-C 2200W",
+    "description": "",
+    "unit_price": 34162,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0348"
+  },
+  {
+    "sku": "JGG-0349",
+    "name": "PROYECTOR 4K GAMER CON 2 JOYSTICK Y APP",
+    "description": "",
+    "unit_price": 112587,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0349"
+  },
+  {
+    "sku": "JGG-0350",
+    "name": "PROYECTOR ASTRONAUTA CON CONTROL JG-ASTRON",
+    "description": "",
+    "unit_price": 20510,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0350"
+  },
+  {
+    "sku": "JGG-0351",
+    "name": "PROYECTOR INALAMBRICO GAMER C/JOYSTICK + APP",
+    "description": "",
+    "unit_price": 122008,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0351"
+  },
+  {
+    "sku": "JGG-0352",
+    "name": "PROYECTOR LED SMART ANDROID CON APP",
+    "description": "",
+    "unit_price": 88031,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0352"
+  },
+  {
+    "sku": "JGG-0353",
+    "name": "PUNTERO LASER EN ESTUCHE A PILAS",
+    "description": "",
+    "unit_price": 7876,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0353"
+  },
+  {
+    "sku": "JGG-0354",
+    "name": "RADIO AM/FM BT 3 BANDAS",
+    "description": "",
+    "unit_price": 22625,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0354"
+  },
+  {
+    "sku": "JGG-0355",
+    "name": "RECEPTOR BLUETOOTH USB 5.0 JG-BT5.0 ( PACK X 50 )",
+    "description": "",
+    "unit_price": 3073,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0355"
+  },
+  {
+    "sku": "JGG-0356",
+    "name": "RELOJ DESPERTADOR CON PANTALLA LED 6.5 PLG",
+    "description": "",
+    "unit_price": 13359,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0356"
+  },
+  {
+    "sku": "JGG-0357",
+    "name": "RELOJ DESPERTADOR CON PANTALLA LED 9 PLG PARA PARED",
+    "description": "",
+    "unit_price": 19228,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0357"
+  },
+  {
+    "sku": "JGG-0358",
+    "name": "REPUESTO FILAMENTO PARA LAPIZ 3D PRO X10 JG-REP3DPRO",
+    "description": "",
+    "unit_price": 7568,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0358"
+  },
+  {
+    "sku": "JGG-0359",
+    "name": "REPUESTO FILAMENTO PARA LAPIZ 3D X10 JG-REP3D",
+    "description": "",
+    "unit_price": 6023,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0359"
+  },
+  {
+    "sku": "JGG-0360",
+    "name": "SOPORTE AUTO PARA CELULAR IMANTADO",
+    "description": "",
+    "unit_price": 3475,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0360"
+  },
+  {
+    "sku": "JGG-0361",
+    "name": "SOPORTE CON FUNDA IMPERMEABLE PARA MOTO Y BICI JG-SOPBICI",
+    "description": "",
+    "unit_price": 6950,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0361"
+  },
+  {
+    "sku": "JGG-0362",
+    "name": "SOPORTE DE CELULAR PARA AUTO CON BRAZO JG-039",
+    "description": "",
+    "unit_price": 3243,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0362"
+  },
+  {
+    "sku": "JGG-0363",
+    "name": "SOPORTE DE CELULAR PARA AUTO ESPEJO RETROVISOR",
+    "description": "",
+    "unit_price": 3305,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0363"
+  },
+  {
+    "sku": "JGG-0364",
+    "name": "SOPORTE DE CELULAR PARA AUTO PRO 3 EN 1",
+    "description": "",
+    "unit_price": 6718,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0364"
+  },
+  {
+    "sku": "JGG-0365",
+    "name": "SOPORTE DE TV FIJO 14-42 PULGADAS JG-SOPTV1442",
+    "description": "",
+    "unit_price": 3120,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0365"
+  },
+  {
+    "sku": "JGG-0366",
+    "name": "SOPORTE DE TV FIJO 26-63 PULGADAS JG-SOPTV2663",
+    "description": "",
+    "unit_price": 4865,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0366"
+  },
+  {
+    "sku": "JGG-0367",
+    "name": "SOPORTE DE TV FIJO 40 A 120 PULGADAS JG-TV40A120",
+    "description": "",
+    "unit_price": 26903,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0367"
+  },
+  {
+    "sku": "JGG-0368",
+    "name": "SOPORTE DE TV FIJO 40 A 85 PULGADAS JG-TV40A85",
+    "description": "",
+    "unit_price": 7336,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0368"
+  },
+  {
+    "sku": "JGG-0369",
+    "name": "SOPORTE DE TV MOVIL 14 A 55 PULGADAS JG-SOPTVM",
+    "description": "",
+    "unit_price": 10409,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0369"
+  },
+  {
+    "sku": "JGG-0370",
+    "name": "SOPORTE DE TV MOVIL 32 A 70 PULGADAS JG-SOPTV3270",
+    "description": "",
+    "unit_price": 35506,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0370"
+  },
+  {
+    "sku": "JGG-0371",
+    "name": "SOPORTE DE TV STAND MOVIL DE 32 A 70 CON RUEDAS JG-TVSTAND32A70",
+    "description": "",
+    "unit_price": 84942,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0371"
+  },
+  {
+    "sku": "JGG-0372",
+    "name": "SOPORTE DE TV STAND MOVIL HASTA 100 PLG JG-TVSTANDPRO",
+    "description": "",
+    "unit_price": 98069,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0372"
+  },
+  {
+    "sku": "JGG-0373",
+    "name": "SOPORTE HOLDER UNIVERSAL AUTO",
+    "description": "",
+    "unit_price": 3583,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0373"
+  },
+  {
+    "sku": "JGG-0374",
+    "name": "SOPORTE MONITOR DOBLE BRAZO 14 HASTA 33 JG-SOPMON !",
+    "description": "",
+    "unit_price": 42471,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0374"
+  },
+  {
+    "sku": "JGG-0375",
+    "name": "SOPORTE PARA NOTEBOOK PLEGABLE METAL GRUESO JG-METAL",
+    "description": "",
+    "unit_price": 9807,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0375"
+  },
+  {
+    "sku": "JGG-0376",
+    "name": "SOPORTE PARA NOTEBOOK PLEGABLE METAL JG-METAL",
+    "description": "",
+    "unit_price": 8185,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0376"
+  },
+  {
+    "sku": "JGG-0377",
+    "name": "SOPORTE TV MOVIL REFORZADO 32 A 65 PLG JG-SOPTV3265M",
+    "description": "",
+    "unit_price": 20695,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0377"
+  },
+  {
+    "sku": "JGG-0378",
+    "name": "STAGE LASER MULTIPUNTO DE COLORES *",
+    "description": "",
+    "unit_price": 17838,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0378"
+  },
+  {
+    "sku": "JGG-0379",
+    "name": "TECLA SMART TACTIL WIFI DE 3 CANALES",
+    "description": "",
+    "unit_price": 26255,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0379"
+  },
+  {
+    "sku": "JGG-0380",
+    "name": "TIRA LED 10 MTS RGB CON APP PARA CELULAR JG-RGB10",
+    "description": "",
+    "unit_price": 8911,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0380"
+  },
+  {
+    "sku": "JGG-0381",
+    "name": "TIRA LED 5 MTS RGB CON APP PARA CELULAR",
+    "description": "",
+    "unit_price": 5869,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0381"
+  },
+  {
+    "sku": "JGG-0382",
+    "name": "TIRA LED 50X50 TV 3 MTS 90 LED",
+    "description": "",
+    "unit_price": 7568,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0382"
+  },
+  {
+    "sku": "JGG-0383",
+    "name": "TIRA NEON RGB 5M CON FUENTE Y CONTROL",
+    "description": "",
+    "unit_price": 13977,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0383"
+  },
+  {
+    "sku": "JGG-0384",
+    "name": "TRIPODE ALUMINIO EXTENSIBLE 1.1 MTS JG-TRP3110",
+    "description": "",
+    "unit_price": 6749,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0384"
+  },
+  {
+    "sku": "JGG-0385",
+    "name": "TRIPODE METALICO PARA CELULAR 1.5 MTS JG-TRIP3520",
+    "description": "",
+    "unit_price": 26564,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0385"
+  },
+  {
+    "sku": "JGG-0386",
+    "name": "TRIPODE PARA ARO DE LUZ EXTENSIBLE 2.1 MTS PRO",
+    "description": "",
+    "unit_price": 13205,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0386"
+  },
+  {
+    "sku": "JGG-0387",
+    "name": "TRIPODE PARA CELULAR 1.5 MTS",
+    "description": "",
+    "unit_price": 21853,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0387"
+  },
+  {
+    "sku": "JGG-0388",
+    "name": "TRIPODE PARA CELULAR JG-3366",
+    "description": "",
+    "unit_price": 19367,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0388"
+  },
+  {
+    "sku": "JGG-0389",
+    "name": "TRIPODE PARA PARLANTE CON BASE 1.2 MTS JG-TRIPAR1.2",
+    "description": "",
+    "unit_price": 13791,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0389"
+  },
+  {
+    "sku": "JGG-0390",
+    "name": "TRIPODE PARA PARLANTE CON BASE 1.8 MTS JG-TRIPAR1.8",
+    "description": "",
+    "unit_price": 15552,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0390"
+  },
+  {
+    "sku": "JGG-0391",
+    "name": "TV BOX IBEK ANDROID 8G+128G 8K CON MAGIS TV",
+    "description": "",
+    "unit_price": 33513,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0391"
+  },
+  {
+    "sku": "JGG-0392",
+    "name": "TV BOX LUO ANDROID 14.1 256G+512G CON MAGIS",
+    "description": "",
+    "unit_price": 43707,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0392"
+  },
+  {
+    "sku": "JGG-0393",
+    "name": "VELADOR DE ESCRITORIO LED TACTIL 3 TONOS",
+    "description": "",
+    "unit_price": 15367,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0393"
+  },
+  {
+    "sku": "JGG-0394",
+    "name": "VENTILADOR DE MANO COLORES",
+    "description": "",
+    "unit_price": 4479,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0394"
+  },
+  {
+    "sku": "JGG-0395",
+    "name": "ZAPATILLA 3 TOMAS + 4USB + 1TC 3.4A 3000W",
+    "description": "",
+    "unit_price": 22394,
+    "stock": 999,
+    "image_url": "/api/images/nodo-urquiza/JGG-0395"
+  }
+]
