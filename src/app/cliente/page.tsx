@@ -17,7 +17,33 @@ export default function ClientePage() {
   const [allProducts, setAllProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("todas");
   const [totalCount, setTotalCount] = useState(0);
+
+  const categories: { [key: string]: string[] } = {
+    "Electrónica": ["cable", "cargador", "adaptador", "conector", "usb", "hdmi", "audio"],
+    "Herramientas": ["destornillador", "martillo", "llave", "serrucho", "taladro", "tornillo"],
+    "Audio": ["parlante", "micrófono", "auricular", "audífono", "sonido"],
+    "Iluminación": ["lámpara", "led", "foco", "luz", "linterna"],
+    "Hogar": ["termo", "taza", "bandeja", "balde", "escoba", "trapo"],
+    "Accesorios": ["funda", "protector", "soporte", "gancho", "clip"],
+  };
+
+  const getProductCategory = (productName: string): string => {
+    const nameLower = productName.toLowerCase();
+    for (const [category, keywords] of Object.entries(categories)) {
+      if (keywords.some((keyword) => nameLower.includes(keyword))) {
+        return category;
+      }
+    }
+    return "Otros";
+  };
+
+  const getCategoryList = (): string[] => {
+    const cats = new Set<string>();
+    allProducts.forEach((p) => cats.add(getProductCategory(p.name)));
+    return Array.from(cats).sort();
+  };
 
   useEffect(() => {
     loadProducts();
@@ -25,7 +51,7 @@ export default function ClientePage() {
 
   useEffect(() => {
     filterAndSearch();
-  }, [search]);
+  }, [search, selectedCategory]);
 
   const loadProducts = async () => {
     try {
@@ -45,6 +71,11 @@ export default function ClientePage() {
 
   const filterAndSearch = () => {
     let filtered = allProducts;
+
+    // Filtrar por categoría
+    if (selectedCategory !== "todas") {
+      filtered = filtered.filter((p) => getProductCategory(p.name) === selectedCategory);
+    }
 
     // Filtrar por búsqueda
     if (search.trim()) {
@@ -133,11 +164,37 @@ export default function ClientePage() {
               🔍
             </button>
           </div>
-          {search && (
+          {(search || selectedCategory !== "todas") && (
             <p style={{ margin: 0, color: "#6b7280", fontSize: "0.75rem" }}>
               Mostrando {products.length} de {totalCount} productos
             </p>
           )}
+        </div>
+
+        {/* Category Filters */}
+        <div style={{ marginBottom: "2rem", paddingBottom: "1rem", borderBottom: "1px solid #e5e7eb", display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+          <p style={{ margin: "0 0 0.75rem 0", fontSize: "0.875rem", color: "#6b7280", fontWeight: "500" }}>📁 Catálogos:</p>
+          <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", justifyContent: "center" }}>
+            {["todas", ...getCategoryList()].map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setSelectedCategory(cat)}
+                style={{
+                  padding: "0.5rem 1rem",
+                  fontSize: "0.875rem",
+                  backgroundColor: selectedCategory === cat ? "#3b82f6" : "#f3f4f6",
+                  color: selectedCategory === cat ? "white" : "#374151",
+                  border: selectedCategory === cat ? "2px solid #3b82f6" : "1px solid #d1d5db",
+                  borderRadius: "0.375rem",
+                  cursor: "pointer",
+                  fontWeight: selectedCategory === cat ? "bold" : "normal",
+                  transition: "all 0.2s",
+                }}
+              >
+                {cat === "todas" ? "Todas las categorías" : cat}
+              </button>
+            ))}
+          </div>
         </div>
 
         {loading ? (
