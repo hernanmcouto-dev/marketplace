@@ -17,41 +17,30 @@ export default function ClientePage() {
   const [allProducts, setAllProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("todas");
+  const [suggestions, setSuggestions] = useState<Product[]>([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
   const [totalCount, setTotalCount] = useState(0);
-
-  const categories: { [key: string]: string[] } = {
-    "Electrónica": ["cable", "cargador", "adaptador", "conector", "usb", "hdmi", "audio"],
-    "Herramientas": ["destornillador", "martillo", "llave", "serrucho", "taladro", "tornillo"],
-    "Audio": ["parlante", "micrófono", "auricular", "audífono", "sonido"],
-    "Iluminación": ["lámpara", "led", "foco", "luz", "linterna"],
-    "Hogar": ["termo", "taza", "bandeja", "balde", "escoba", "trapo"],
-    "Accesorios": ["funda", "protector", "soporte", "gancho", "clip"],
-  };
-
-  const getProductCategory = (productName: string): string => {
-    const nameLower = productName.toLowerCase();
-    for (const [category, keywords] of Object.entries(categories)) {
-      if (keywords.some((keyword) => nameLower.includes(keyword))) {
-        return category;
-      }
-    }
-    return "Otros";
-  };
-
-  const getCategoryList = (): string[] => {
-    const cats = new Set<string>();
-    allProducts.forEach((p) => cats.add(getProductCategory(p.name)));
-    return Array.from(cats).sort();
-  };
 
   useEffect(() => {
     loadProducts();
   }, []);
 
   useEffect(() => {
-    filterAndSearch();
-  }, [search, selectedCategory]);
+    if (search.trim()) {
+      const searchLower = search.toLowerCase();
+      const filtered = allProducts.filter(
+        (p) =>
+          p.name?.toLowerCase().includes(searchLower) ||
+          p.sku?.toLowerCase().includes(searchLower)
+      );
+      setSuggestions(filtered.slice(0, 8)); // Mostrar máximo 8 sugerencias
+      setShowSuggestions(true);
+    } else {
+      setSuggestions([]);
+      setShowSuggestions(false);
+      setProducts(allProducts.slice(0, 50)); // Mostrar primeros 50 si está vacío
+    }
+  }, [search]);
 
   const loadProducts = async () => {
     try {
@@ -69,25 +58,13 @@ export default function ClientePage() {
     }
   };
 
-  const filterAndSearch = () => {
-    let filtered = allProducts;
-
-    // Filtrar por categoría
-    if (selectedCategory !== "todas") {
-      filtered = filtered.filter((p) => getProductCategory(p.name) === selectedCategory);
-    }
-
-    // Filtrar por búsqueda
-    if (search.trim()) {
-      const searchLower = search.toLowerCase();
-      filtered = filtered.filter(
-        (p) =>
-          p.name?.toLowerCase().includes(searchLower) ||
-          p.sku?.toLowerCase().includes(searchLower)
-      );
-    }
-
+  const selectSuggestion = (product: Product) => {
+    setSearch(product.name);
+    const filtered = allProducts.filter((p) =>
+      p.name?.toLowerCase().includes(product.name.toLowerCase())
+    );
     setProducts(filtered);
+    setShowSuggestions(false);
   };
 
   const handleLogout = async () => {
@@ -131,70 +108,82 @@ export default function ClientePage() {
       <main style={{ flex: 1, padding: "2rem", maxWidth: "80rem", margin: "0 auto", width: "100%" }}>
         <h2 style={{ fontSize: "1.875rem", marginBottom: "1rem" }}>Bienvenido, Cliente 👋</h2>
 
-        {/* Search Bar */}
-        <div style={{ marginBottom: "1.5rem", display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
-          <div style={{ display: "flex", gap: "0.5rem", maxWidth: "50%", marginBottom: "1rem", width: "100%" }}>
-            <input
-              type="text"
-              placeholder="Buscar producto..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              onKeyPress={(e) => e.key === "Enter" && filterAndSearch()}
-              style={{
-                flex: 1,
-                padding: "0.5rem 0.75rem",
-                fontSize: "0.875rem",
-                border: "1px solid #d1d5db",
-                borderRadius: "0.375rem",
-                fontFamily: "inherit",
-              }}
-            />
-            <button
-              onClick={filterAndSearch}
-              style={{
-                padding: "0.5rem 0.75rem",
-                backgroundColor: "#3b82f6",
-                color: "white",
-                border: "none",
-                borderRadius: "0.375rem",
-                cursor: "pointer",
-                fontSize: "1rem",
-              }}
-            >
-              🔍
-            </button>
-          </div>
-          {(search || selectedCategory !== "todas") && (
-            <p style={{ margin: 0, color: "#6b7280", fontSize: "0.75rem" }}>
-              Mostrando {products.length} de {totalCount} productos
-            </p>
-          )}
-        </div>
-
-        {/* Category Filters */}
-        <div style={{ marginBottom: "2rem", paddingBottom: "1rem", borderBottom: "1px solid #e5e7eb", display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
-          <p style={{ margin: "0 0 0.75rem 0", fontSize: "0.875rem", color: "#6b7280", fontWeight: "500" }}>📁 Catálogos:</p>
-          <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", justifyContent: "center" }}>
-            {["todas", ...getCategoryList()].map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
+        {/* Google-style Search Bar */}
+        <div style={{ marginBottom: "2rem", display: "flex", flexDirection: "column", alignItems: "center", width: "100%", maxWidth: "50%", margin: "0 auto 2rem" }}>
+          <div style={{ position: "relative", width: "100%" }}>
+            <div style={{ display: "flex", gap: "0.5rem" }}>
+              <input
+                type="text"
+                placeholder="🔍 Buscar cable, termo, herramientas..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                onFocus={() => search && setShowSuggestions(true)}
+                onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
                 style={{
-                  padding: "0.5rem 1rem",
-                  fontSize: "0.875rem",
-                  backgroundColor: selectedCategory === cat ? "#3b82f6" : "#f3f4f6",
-                  color: selectedCategory === cat ? "white" : "#374151",
-                  border: selectedCategory === cat ? "2px solid #3b82f6" : "1px solid #d1d5db",
+                  flex: 1,
+                  padding: "0.75rem 1rem",
+                  fontSize: "0.95rem",
+                  border: "1px solid #d1d5db",
                   borderRadius: "0.375rem",
-                  cursor: "pointer",
-                  fontWeight: selectedCategory === cat ? "bold" : "normal",
+                  fontFamily: "inherit",
+                  boxShadow: search ? "0 4px 6px rgba(0,0,0,0.1)" : "none",
                   transition: "all 0.2s",
                 }}
+              />
+            </div>
+
+            {/* Suggestions Dropdown */}
+            {showSuggestions && suggestions.length > 0 && (
+              <div
+                style={{
+                  position: "absolute",
+                  top: "100%",
+                  left: 0,
+                  right: 0,
+                  backgroundColor: "white",
+                  border: "1px solid #d1d5db",
+                  borderTop: "none",
+                  borderRadius: "0 0 0.375rem 0.375rem",
+                  boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+                  zIndex: 10,
+                  maxHeight: "300px",
+                  overflowY: "auto",
+                }}
               >
-                {cat === "todas" ? "Todas las categorías" : cat}
-              </button>
-            ))}
+                {suggestions.map((product) => (
+                  <div
+                    key={product.sku}
+                    onClick={() => selectSuggestion(product)}
+                    style={{
+                      padding: "0.75rem 1rem",
+                      borderBottom: "1px solid #f3f4f6",
+                      cursor: "pointer",
+                      transition: "background-color 0.2s",
+                    }}
+                    onMouseOver={(e) =>
+                      (e.currentTarget.style.backgroundColor = "#f3f4f6")
+                    }
+                    onMouseOut={(e) =>
+                      (e.currentTarget.style.backgroundColor = "white")
+                    }
+                  >
+                    <div style={{ fontSize: "0.875rem", fontWeight: "500", color: "#1f2937" }}>
+                      {product.name}
+                    </div>
+                    <div style={{ fontSize: "0.75rem", color: "#6b7280" }}>
+                      {product.sku} • ${product.unit_price.toLocaleString()}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
+
+          {search && !showSuggestions && (
+            <p style={{ margin: "0.5rem 0 0 0", color: "#6b7280", fontSize: "0.75rem" }}>
+              Mostrando {products.length} productos
+            </p>
+          )}
         </div>
 
         {loading ? (
