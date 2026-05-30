@@ -151,6 +151,23 @@ export default function AdminPage() {
                 🕷️ Web Scraper (Impotekno)
               </button>
             </Link>
+            <Link href="/admin/productos" style={{ textDecoration: "none" }}>
+              <button
+                style={{
+                  width: "100%",
+                  padding: "0.75rem 1rem",
+                  backgroundColor: "#8b5cf6",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "0.375rem",
+                  cursor: "pointer",
+                  textAlign: "left",
+                  fontWeight: "500",
+                }}
+              >
+                📋 Gestionar Productos
+              </button>
+            </Link>
             <button
               style={{
                 padding: "0.75rem 1rem",
