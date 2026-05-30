@@ -4,6 +4,12 @@ import path from "path";
 
 export async function GET(req: NextRequest) {
   try {
+    const { searchParams } = new URL(req.url);
+    const page = parseInt(searchParams.get("page") || "1");
+    const limit = parseInt(searchParams.get("limit") || "50");
+    const search = searchParams.get("search") || searchParams.get("q") || "";
+    const offset = (page - 1) * limit;
+
     const allProducts: any[] = [];
 
     // Cargar Impotekno
@@ -33,11 +39,30 @@ export async function GET(req: NextRequest) {
       }
     }
 
+    // Filtrar por búsqueda
+    let filteredProducts = allProducts;
+    if (search) {
+      const searchLower = search.toLowerCase();
+      filteredProducts = allProducts.filter(
+        (p) =>
+          p.name?.toLowerCase().includes(searchLower) ||
+          p.sku?.toLowerCase().includes(searchLower)
+      );
+    }
+
+    // Aplicar paginación
+    const paginatedProducts = filteredProducts.slice(offset, offset + limit);
+
     return NextResponse.json(
       {
         success: true,
-        count: allProducts.length,
-        products: allProducts,
+        count: filteredProducts.length,
+        total: allProducts.length,
+        page,
+        limit,
+        pages: Math.ceil(filteredProducts.length / limit),
+        search: search || null,
+        products: paginatedProducts,
       },
       { status: 200 }
     );
