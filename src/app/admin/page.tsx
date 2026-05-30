@@ -148,7 +148,24 @@ export default function AdminPage() {
                   fontWeight: "500",
                 }}
               >
-                🕷️ Web Scraper (Impotekno)
+                🕷️ Web Scraper - Impotekno
+              </button>
+            </Link>
+            <Link href="/admin/scraper-sanjulian" style={{ textDecoration: "none" }}>
+              <button
+                style={{
+                  width: "100%",
+                  padding: "0.75rem 1rem",
+                  backgroundColor: "#dc2626",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "0.375rem",
+                  cursor: "pointer",
+                  textAlign: "left",
+                  fontWeight: "500",
+                }}
+              >
+                🕷️ Web Scraper - San Julián
               </button>
             </Link>
             <Link href="/admin/productos" style={{ textDecoration: "none" }}>

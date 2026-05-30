@@ -4,23 +4,31 @@ import path from "path";
 
 export async function GET(req: NextRequest) {
   try {
-    const filePath = path.join(process.cwd(), "public", "products.json");
+    const allProducts: any[] = [];
 
-    if (!fs.existsSync(filePath)) {
-      return NextResponse.json(
-        { error: "No hay productos cargados", products: [] },
-        { status: 200 }
-      );
+    // Cargar Impotekno
+    const impoteknoPath = path.join(process.cwd(), "public", "products.json");
+    if (fs.existsSync(impoteknoPath)) {
+      const data = JSON.parse(fs.readFileSync(impoteknoPath, "utf-8"));
+      if (Array.isArray(data)) {
+        allProducts.push(...data);
+      }
     }
 
-    const data = fs.readFileSync(filePath, "utf-8");
-    const products = JSON.parse(data);
+    // Cargar San Julián
+    const sanjulianPath = path.join(process.cwd(), "public", "products-sanjulian.json");
+    if (fs.existsSync(sanjulianPath)) {
+      const data = JSON.parse(fs.readFileSync(sanjulianPath, "utf-8"));
+      if (Array.isArray(data)) {
+        allProducts.push(...data);
+      }
+    }
 
     return NextResponse.json(
       {
         success: true,
-        count: products.length,
-        products: Array.isArray(products) ? products : [],
+        count: allProducts.length,
+        products: allProducts,
       },
       { status: 200 }
     );
