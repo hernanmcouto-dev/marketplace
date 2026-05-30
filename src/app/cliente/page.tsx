@@ -17,6 +17,7 @@ export default function ClientePage() {
   const [allProducts, setAllProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
+  const [filter, setFilter] = useState("all");
   const [totalCount, setTotalCount] = useState(0);
 
   useEffect(() => {
@@ -24,12 +25,8 @@ export default function ClientePage() {
   }, []);
 
   useEffect(() => {
-    if (search.trim()) {
-      searchProducts();
-    } else {
-      setProducts(allProducts);
-    }
-  }, [search]);
+    filterAndSearch();
+  }, [search, filter]);
 
   const loadProducts = async () => {
     try {
@@ -47,20 +44,25 @@ export default function ClientePage() {
     }
   };
 
-  const searchProducts = async () => {
-    if (!search.trim()) {
-      setProducts(allProducts);
-      return;
+  const filterAndSearch = () => {
+    let filtered = allProducts;
+
+    // Filtrar por proveedor
+    if (filter !== "all") {
+      filtered = filtered.filter((p) => p.sku.startsWith(filter));
     }
-    try {
-      const response = await fetch(`/api/productos?search=${encodeURIComponent(search)}&limit=100`);
-      const data = await response.json();
-      if (data.products) {
-        setProducts(data.products);
-      }
-    } catch (err) {
-      console.error("Error searching products:", err);
+
+    // Filtrar por búsqueda
+    if (search.trim()) {
+      const searchLower = search.toLowerCase();
+      filtered = filtered.filter(
+        (p) =>
+          p.name?.toLowerCase().includes(searchLower) ||
+          p.sku?.toLowerCase().includes(searchLower)
+      );
     }
+
+    setProducts(filtered);
   };
 
   const handleLogout = async () => {
@@ -105,27 +107,73 @@ export default function ClientePage() {
         <h2 style={{ fontSize: "1.875rem", marginBottom: "1rem" }}>Bienvenido, Cliente 👋</h2>
 
         {/* Search Bar */}
-        <div style={{ marginBottom: "2rem" }}>
-          <input
-            type="text"
-            placeholder="🔍 Buscar por nombre o código (ej: cable, termo, SAR-123)..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            style={{
-              width: "100%",
-              padding: "0.75rem 1rem",
-              fontSize: "1rem",
-              border: "2px solid #3b82f6",
-              borderRadius: "0.5rem",
-              boxSizing: "border-box",
-              fontFamily: "inherit",
-            }}
-          />
-          {search && (
-            <p style={{ margin: "0.5rem 0 0 0", color: "#6b7280", fontSize: "0.875rem" }}>
+        <div style={{ marginBottom: "1.5rem" }}>
+          <div style={{ display: "flex", gap: "0.5rem", maxWidth: "50%", marginBottom: "1rem" }}>
+            <input
+              type="text"
+              placeholder="Buscar producto..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              onKeyPress={(e) => e.key === "Enter" && filterAndSearch()}
+              style={{
+                flex: 1,
+                padding: "0.5rem 0.75rem",
+                fontSize: "0.875rem",
+                border: "1px solid #d1d5db",
+                borderRadius: "0.375rem",
+                fontFamily: "inherit",
+              }}
+            />
+            <button
+              onClick={filterAndSearch}
+              style={{
+                padding: "0.5rem 0.75rem",
+                backgroundColor: "#3b82f6",
+                color: "white",
+                border: "none",
+                borderRadius: "0.375rem",
+                cursor: "pointer",
+                fontSize: "1rem",
+              }}
+            >
+              🔍
+            </button>
+          </div>
+          {(search || filter !== "all") && (
+            <p style={{ margin: 0, color: "#6b7280", fontSize: "0.75rem" }}>
               Mostrando {products.length} de {totalCount} productos
             </p>
           )}
+        </div>
+
+        {/* Catalog Filters */}
+        <div style={{ marginBottom: "2rem", paddingBottom: "1rem", borderBottom: "1px solid #e5e7eb" }}>
+          <p style={{ margin: "0 0 0.5rem 0", fontSize: "0.875rem", color: "#6b7280" }}>Filtrar por proveedor:</p>
+          <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+            {[
+              { label: "Todos", value: "all" },
+              { label: "Impotekno", value: "SAR" },
+              { label: "San Julián", value: "PAS" },
+              { label: "NextCell", value: "PTT" },
+            ].map((option) => (
+              <button
+                key={option.value}
+                onClick={() => setFilter(option.value)}
+                style={{
+                  padding: "0.4rem 0.75rem",
+                  fontSize: "0.75rem",
+                  backgroundColor: filter === option.value ? "#3b82f6" : "#f3f4f6",
+                  color: filter === option.value ? "white" : "#374151",
+                  border: "1px solid #d1d5db",
+                  borderRadius: "0.375rem",
+                  cursor: "pointer",
+                  fontWeight: filter === option.value ? "bold" : "normal",
+                }}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
         </div>
 
         {loading ? (
