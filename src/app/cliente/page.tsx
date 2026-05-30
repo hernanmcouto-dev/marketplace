@@ -14,23 +14,52 @@ interface Product {
 export default function ClientePage() {
   const router = useRouter();
   const [products, setProducts] = useState<Product[]>([]);
+  const [allProducts, setAllProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
+  const [search, setSearch] = useState("");
+  const [totalCount, setTotalCount] = useState(0);
 
   useEffect(() => {
     loadProducts();
   }, []);
 
+  useEffect(() => {
+    if (search.trim()) {
+      searchProducts();
+    } else {
+      setProducts(allProducts);
+    }
+  }, [search]);
+
   const loadProducts = async () => {
     try {
-      const response = await fetch("/api/productos");
+      const response = await fetch("/api/productos?limit=100");
       const data = await response.json();
       if (data.products) {
         setProducts(data.products);
+        setAllProducts(data.products);
+        setTotalCount(data.total);
       }
     } catch (err) {
       console.error("Error loading products:", err);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const searchProducts = async () => {
+    if (!search.trim()) {
+      setProducts(allProducts);
+      return;
+    }
+    try {
+      const response = await fetch(`/api/productos?search=${encodeURIComponent(search)}&limit=100`);
+      const data = await response.json();
+      if (data.products) {
+        setProducts(data.products);
+      }
+    } catch (err) {
+      console.error("Error searching products:", err);
     }
   };
 
@@ -74,6 +103,30 @@ export default function ClientePage() {
       {/* Main Content */}
       <main style={{ flex: 1, padding: "2rem", maxWidth: "80rem", margin: "0 auto", width: "100%" }}>
         <h2 style={{ fontSize: "1.875rem", marginBottom: "1rem" }}>Bienvenido, Cliente 👋</h2>
+
+        {/* Search Bar */}
+        <div style={{ marginBottom: "2rem" }}>
+          <input
+            type="text"
+            placeholder="🔍 Buscar por nombre o código (ej: cable, termo, SAR-123)..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            style={{
+              width: "100%",
+              padding: "0.75rem 1rem",
+              fontSize: "1rem",
+              border: "2px solid #3b82f6",
+              borderRadius: "0.5rem",
+              boxSizing: "border-box",
+              fontFamily: "inherit",
+            }}
+          />
+          {search && (
+            <p style={{ margin: "0.5rem 0 0 0", color: "#6b7280", fontSize: "0.875rem" }}>
+              Mostrando {products.length} de {totalCount} productos
+            </p>
+          )}
+        </div>
 
         {loading ? (
           <div style={{ textAlign: "center", padding: "2rem", color: "#6b7280" }}>
