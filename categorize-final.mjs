@@ -38,7 +38,11 @@ function categorizeProduct(name) {
   return 'Otros';
 }
 
-const categorized = {};
+const categorized = {
+  'Liquidación': [],
+  'Próximos Ingresos': []
+};
+
 allProducts.forEach(product => {
   const category = categorizeProduct(product.name);
   if (!categorized[category]) {
@@ -47,7 +51,7 @@ allProducts.forEach(product => {
   categorized[category].push(product);
 });
 
-console.log('Categorización Final Actualizada:\n');
+console.log('Categorización Actualizada:\n');
 let total = 0;
 Object.entries(categorized).sort().forEach(([cat, prods]) => {
   console.log(cat + ': ' + prods.length);
