@@ -18,6 +18,14 @@ Los scrapers de productos corren automáticamente cada día a través de `src/li
 3. Cada job hace POST a su endpoint correspondiente
 4. Los logs aparecen en la consola del server (búscar `[scheduler]`)
 
+### Almacenamiento de Imágenes (Smart Caching)
+- Las imágenes se guardan en **Supabase Storage** (`product-images` bucket)
+- Estructura: `{supplierId}/{sku}.{ext}`
+- Al rescrapear:
+  - ✅ Si SKU existe y tiene imagen: **reutiliza** la imagen guardada
+  - ✨ Si SKU es nuevo: **descarga** la imagen de la web y la guarda
+- Tabla `product_images` mantiene registro de URL pública y storage_path
+
 ### Para ejecutar manualmente
 ```bash
 curl -X POST http://localhost:3000/api/scrape-impotekno
@@ -27,4 +35,5 @@ curl -X POST http://localhost:3000/api/scrape-sanjulian
 ### Para agregar un nuevo scraper
 1. Agregar entrada en `SCRAPERS` array en `src/lib/scraper-scheduler.ts`
 2. El endpoint debe hacer POST y retornar `{ imported: número }`
-3. El scheduler lo ejecutará automáticamente
+3. Usar `src/lib/image-storage.ts` para manejar imágenes
+4. El scheduler lo ejecutará automáticamente
