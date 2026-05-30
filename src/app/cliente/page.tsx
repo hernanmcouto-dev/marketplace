@@ -17,7 +17,6 @@ export default function ClientePage() {
   const [allProducts, setAllProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
-  const [filter, setFilter] = useState("all");
   const [totalCount, setTotalCount] = useState(0);
 
   useEffect(() => {
@@ -26,7 +25,7 @@ export default function ClientePage() {
 
   useEffect(() => {
     filterAndSearch();
-  }, [search, filter]);
+  }, [search]);
 
   const loadProducts = async () => {
     try {
@@ -46,11 +45,6 @@ export default function ClientePage() {
 
   const filterAndSearch = () => {
     let filtered = allProducts;
-
-    // Filtrar por proveedor
-    if (filter !== "all") {
-      filtered = filtered.filter((p) => p.sku.startsWith(filter));
-    }
 
     // Filtrar por búsqueda
     if (search.trim()) {
@@ -107,8 +101,8 @@ export default function ClientePage() {
         <h2 style={{ fontSize: "1.875rem", marginBottom: "1rem" }}>Bienvenido, Cliente 👋</h2>
 
         {/* Search Bar */}
-        <div style={{ marginBottom: "1.5rem" }}>
-          <div style={{ display: "flex", gap: "0.5rem", maxWidth: "50%", marginBottom: "1rem" }}>
+        <div style={{ marginBottom: "1.5rem", display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+          <div style={{ display: "flex", gap: "0.5rem", maxWidth: "50%", marginBottom: "1rem", width: "100%" }}>
             <input
               type="text"
               placeholder="Buscar producto..."
@@ -139,41 +133,11 @@ export default function ClientePage() {
               🔍
             </button>
           </div>
-          {(search || filter !== "all") && (
+          {search && (
             <p style={{ margin: 0, color: "#6b7280", fontSize: "0.75rem" }}>
               Mostrando {products.length} de {totalCount} productos
             </p>
           )}
-        </div>
-
-        {/* Catalog Filters */}
-        <div style={{ marginBottom: "2rem", paddingBottom: "1rem", borderBottom: "1px solid #e5e7eb" }}>
-          <p style={{ margin: "0 0 0.5rem 0", fontSize: "0.875rem", color: "#6b7280" }}>Filtrar por proveedor:</p>
-          <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-            {[
-              { label: "Todos", value: "all" },
-              { label: "Impotekno", value: "SAR" },
-              { label: "San Julián", value: "PAS" },
-              { label: "NextCell", value: "PTT" },
-            ].map((option) => (
-              <button
-                key={option.value}
-                onClick={() => setFilter(option.value)}
-                style={{
-                  padding: "0.4rem 0.75rem",
-                  fontSize: "0.75rem",
-                  backgroundColor: filter === option.value ? "#3b82f6" : "#f3f4f6",
-                  color: filter === option.value ? "white" : "#374151",
-                  border: "1px solid #d1d5db",
-                  borderRadius: "0.375rem",
-                  cursor: "pointer",
-                  fontWeight: filter === option.value ? "bold" : "normal",
-                }}
-              >
-                {option.label}
-              </button>
-            ))}
-          </div>
         </div>
 
         {loading ? (
