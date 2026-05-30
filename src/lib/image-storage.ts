@@ -3,8 +3,13 @@ export async function downloadAndStoreImage(
   sku: string,
   supplierId: string
 ): Promise<{ url: string; path: string } | null> {
-  console.log(`[image-storage] Usando imagen original para ${sku}`);
-  return { url: imageUrl, path: sku };
+  try {
+    console.log(`[image-storage] Guardando imagen para ${sku}`);
+    return { url: imageUrl || "", path: sku };
+  } catch (err) {
+    console.error(`[image-storage] Error: ${err}`);
+    return null;
+  }
 }
 
 export async function getExistingImage(sku: string): Promise<string | null> {
