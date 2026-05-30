@@ -22,8 +22,9 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: "URL requerida" }, { status: 400 });
     }
 
-    // Crear nombre seguro del archivo
-    const fileName = Buffer.from(imageUrl).toString("base64").slice(0, 30) + ".jpg";
+    // Crear nombre seguro del archivo - usar SKU si está disponible
+    const ext = imageUrl.split(".").pop()?.toLowerCase() || "jpg";
+    const fileName = sku ? `${sku}.${ext}` : Buffer.from(imageUrl).toString("base64").slice(0, 30) + ".jpg";
     const providerDir = path.join(CACHE_DIR, provider);
 
     if (!fs.existsSync(providerDir)) {
