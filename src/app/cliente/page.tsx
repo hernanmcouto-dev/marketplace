@@ -44,11 +44,11 @@ export default function ClientePage() {
 
   const loadProducts = async () => {
     try {
-      const response = await fetch("/api/productos?limit=100");
+      const response = await fetch("/api/productos?limit=10000"); // Cargar TODOS los productos
       const data = await response.json();
       if (data.products) {
-        setProducts(data.products);
         setAllProducts(data.products);
+        setProducts(data.products.slice(0, 50)); // Mostrar primeros 50
         setTotalCount(data.total);
       }
     } catch (err) {
