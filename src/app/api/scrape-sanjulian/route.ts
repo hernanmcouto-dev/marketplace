@@ -114,7 +114,37 @@ export async function POST(req: NextRequest) {
     async start(controller) {
       try {
         sendLog(controller, "🚀 Iniciando scraper de San Julián...");
+        sendLog(controller, "🔐 Realizando login...");
+
         await new Promise((r) => setTimeout(r, 500));
+
+        // Hacer login primero
+        const loginFormData = new FormData();
+        loginFormData.append("clave", "pasteur");
+        loginFormData.append("enviar", "Ingresar");
+
+        let cookies = "";
+        try {
+          const loginResponse = await fetch("https://sanjulian99.com/index.php", {
+            method: "POST",
+            body: loginFormData,
+            headers: {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            },
+            redirect: "follow",
+          });
+
+          const setCookieHeaders = loginResponse.headers.getSetCookie?.();
+          if (setCookieHeaders && setCookieHeaders.length > 0) {
+            cookies = setCookieHeaders
+              .map((c) => c.split(";")[0])
+              .join("; ");
+          }
+
+          sendLog(controller, "✓ Login exitoso");
+        } catch (err: any) {
+          sendLog(controller, `⚠️ Login falló, intentando sin autenticación: ${err.message}`);
+        }
 
         const allProducts: any[] = [];
 
@@ -124,29 +154,41 @@ export async function POST(req: NextRequest) {
           sendProgress(controller, i, CATEGORIES.length, `Extrayendo categoría ${categoryId}...`);
 
           try {
+            const headers: any = {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            };
+
+            if (cookies) {
+              headers["Cookie"] = cookies;
+            }
+
             const response = await fetch(
               `https://sanjulian99.com/catalogo2021.php?rub=${categoryId}`,
-              {
-                headers: {
-                  "User-Agent":
-                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-                  "Cookie": "PHPSESSID=test", // Cookie básica
-                },
-              }
+              { headers }
             );
 
             if (!response.ok) {
-              sendLog(controller, `⚠️ Categoría ${categoryId}: No disponible (${response.status})`);
+              sendLog(controller, `⚠️ Categoría ${categoryId}: ${response.status}`);
               continue;
             }
 
             const html = await response.text();
+
+            // Verificar si la respuesta contiene "ingreso clave" (error de login)
+            if (html.includes("ingreso clave") || html.includes("No ingreso")) {
+              sendLog(controller, `⚠️ Categoría ${categoryId}: Requiere autenticación`);
+              continue;
+            }
+
             const products = await extractProductsFromHtml(html);
 
-            sendLog(controller, `✓ Categoría ${categoryId}: ${products.length} productos`);
-            allProducts.push(...products);
+            if (products.length > 0) {
+              sendLog(controller, `✓ Categoría ${categoryId}: ${products.length} productos`);
+              allProducts.push(...products);
+            } else {
+              sendLog(controller, `⚠️ Categoría ${categoryId}: Sin productos`);
+            }
 
-            // Delay para no sobrecargar
             await new Promise((r) => setTimeout(r, 500));
           } catch (err: any) {
             sendLog(controller, `❌ Error en categoría ${categoryId}: ${err.message}`);
@@ -154,12 +196,11 @@ export async function POST(req: NextRequest) {
         }
 
         if (allProducts.length === 0) {
-          sendError(controller, "No se extrajeron productos. Verifica que el sitio esté disponible.");
+          sendError(controller, "No se extrajeron productos. El sitio puede estar en mantenimiento o requerir credenciales diferentes.");
           controller.close();
           return;
         }
 
-        // Agregar proveedor a cada producto
         const productsWithProvider = allProducts.map((p) => ({
           ...p,
           provider: "San Julián",
@@ -168,7 +209,6 @@ export async function POST(req: NextRequest) {
         sendLog(controller, `📊 Total extraído: ${productsWithProvider.length} productos`);
         sendLog(controller, "💾 Guardando productos...");
 
-        // Guardar en archivo
         const filePath = path.join(process.cwd(), "public", "products-sanjulian.json");
         fs.writeFileSync(filePath, JSON.stringify(productsWithProvider, null, 2), "utf-8");
 
