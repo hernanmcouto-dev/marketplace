@@ -15,6 +15,7 @@ export async function GET(req: NextRequest) {
     } else {
       const impoteknoPath = path.join(process.cwd(), "public", "products.json");
       const sanjulianPath = path.join(process.cwd(), "public", "products-sanjulian.json");
+      const nodourzquizaPath = path.join(process.cwd(), "public", "products-nodourquiza.json");
 
       const impoteknoData = fs.existsSync(impoteknoPath)
         ? JSON.parse(fs.readFileSync(impoteknoPath, "utf-8"))
@@ -24,9 +25,14 @@ export async function GET(req: NextRequest) {
         ? JSON.parse(fs.readFileSync(sanjulianPath, "utf-8"))
         : [];
 
+      const nodourzquizaData = fs.existsSync(nodourzquizaPath)
+        ? JSON.parse(fs.readFileSync(nodourzquizaPath, "utf-8"))
+        : [];
+
       const allProducts = [
         ...impoteknoData.map((p: any) => ({ ...p, provider: "Impotekno" })),
         ...sanjulianData.map((p: any) => ({ ...p, provider: "San Julián" })),
+        ...nodourzquizaData.map((p: any) => ({ ...p, provider: "Nodo Urquiza" })),
       ];
 
       allProducts.forEach((product: any) => {
