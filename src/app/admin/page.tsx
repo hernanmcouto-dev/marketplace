@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function AdminPage() {
   const router = useRouter();
@@ -139,6 +140,23 @@ export default function AdminPage() {
         <div style={{ backgroundColor: "#f9fafb", borderRadius: "0.5rem", padding: "1.5rem" }}>
           <h3 style={{ marginTop: 0, marginBottom: "1rem" }}>Opciones de Administración</h3>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+            <Link href="/admin/scraper" style={{ textDecoration: "none" }}>
+              <button
+                style={{
+                  width: "100%",
+                  padding: "0.75rem 1rem",
+                  backgroundColor: "#ef4444",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "0.375rem",
+                  cursor: "pointer",
+                  textAlign: "left",
+                  fontWeight: "500",
+                }}
+              >
+                🕷️ Web Scraper (Impotekno)
+              </button>
+            </Link>
             <button
               style={{
                 padding: "0.75rem 1rem",
@@ -150,7 +168,7 @@ export default function AdminPage() {
                 textAlign: "left",
               }}
             >
-              ➕ Agregar Producto
+              ➕ Agregar Producto Manual
             </button>
             <button
               style={{
