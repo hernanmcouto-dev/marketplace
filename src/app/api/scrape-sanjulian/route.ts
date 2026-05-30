@@ -168,9 +168,10 @@ export async function POST(req: NextRequest) {
           }
 
           // Usar proxy para descarga bajo demanda
+          const timestamp = Date.now();
           return {
             ...product,
-            image_url: `/api/image-proxy?url=${encodeURIComponent(product.image_url)}&provider=sanjulian&sku=${product.sku}`,
+            image_url: `/api/image-proxy?url=${encodeURIComponent(product.image_url)}&provider=sanjulian&sku=${product.sku}&v=${timestamp}`,
           };
         });
 

@@ -140,9 +140,10 @@ export async function POST(req: NextRequest) {
 
           // Si tiene imagen, usar proxy para descarga bajo demanda
           if (product.image_url) {
+            const timestamp = Date.now();
             return {
               ...product,
-              image_url: `/api/image-proxy?url=${encodeURIComponent(product.image_url)}&provider=nextcell&sku=${product.sku}`,
+              image_url: `/api/image-proxy?url=${encodeURIComponent(product.image_url)}&provider=nextcell&sku=${product.sku}&v=${timestamp}`,
             };
           }
 
