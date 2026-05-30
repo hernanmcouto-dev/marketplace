@@ -201,14 +201,6 @@
       "provider": "Impotekno"
     },
     {
-      "sku": "PAS-EX02772",
-      "name": "LENTES DE SOL ALTAVOZ BLUETOOTH 5.4 INALAMBRICO",
-      "unit_price": 11849,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/EX02772.jpg",
-      "provider": "San Julián"
-    },
-    {
       "sku": "PAS-SP204",
       "name": "PARLANTE ASTRONAUTA +PROYEC.",
       "unit_price": 14765,
@@ -389,6 +381,14 @@
       "provider": "Impotekno"
     },
     {
+      "sku": "PAS-99077",
+      "name": "AURIC. P47 BLUETOOTH",
+      "unit_price": 3849,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/99077.jpg",
+      "provider": "San Julián"
+    },
+    {
       "sku": "PAS-E6S",
       "name": "AURICULAR BT C/ DISPLAY",
       "unit_price": 4868,
@@ -418,6 +418,22 @@
       "unit_price": 2759,
       "units_per_package": 240,
       "image_url": "https://sanjulian99.com/fotos/ATC60.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99077",
+      "name": "AURIC. P47 BLUETOOTH",
+      "unit_price": 3849,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/99077.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99077",
+      "name": "AURIC. P47 BLUETOOTH",
+      "unit_price": 3849,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/99077.jpg",
       "provider": "San Julián"
     },
     {
@@ -511,6 +527,38 @@
       "provider": "Impotekno"
     },
     {
+      "sku": "SAR-MELECH-454",
+      "name": "BOLIGRAFO MULTIFUBCIONAL",
+      "unit_price": 4945,
+      "units_per_package": 400,
+      "image_url": "https://www.impotekno.com/fotos/MELECH-454.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-MELECH-454",
+      "name": "BOLIGRAFO MULTIFUBCIONAL",
+      "unit_price": 4945,
+      "units_per_package": 400,
+      "image_url": "https://www.impotekno.com/fotos/MELECH-454.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "PAS-KS5145",
+      "name": "CALCULADORA ELECTRONICA COLORES 7X12cm",
+      "unit_price": 2759,
+      "units_per_package": 500,
+      "image_url": "https://sanjulian99.com/fotos/KS5145.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-91023",
+      "name": "CALCULADORA PASTEL TECLA",
+      "unit_price": 4706,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/91023.jpg",
+      "provider": "San Julián"
+    },
+    {
       "sku": "PAS-91033",
       "name": "MARCADOR DOBLE PUNTA TOUCH X 60 (PE60)",
       "unit_price": 9735,
@@ -556,6 +604,22 @@
       "unit_price": 4389,
       "units_per_package": 80,
       "image_url": "https://sanjulian99.com/fotos/LINF01.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-CALC601",
+      "name": "CALCULADORA PASTEL SOLAR",
+      "unit_price": 2921,
+      "units_per_package": 400,
+      "image_url": "https://sanjulian99.com/fotos/CALC601.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-L3D",
+      "name": "LAPIZ 3D  CON PANTALLA",
+      "unit_price": 10222,
+      "units_per_package": 40,
+      "image_url": "https://sanjulian99.com/fotos/L3D.jpg",
       "provider": "San Julián"
     },
     {
@@ -615,21 +679,13 @@
       "provider": "San Julián"
     }
   ],
-  "Electrónica & Gadgets": [
+  "Electrónica y Gadgets": [
     {
       "sku": "SAR-TMWF8401",
       "name": "ANTENA WIFI 600MPS TMPAS8417  1109",
       "unit_price": 3410,
       "units_per_package": 500,
       "image_url": "https://www.impotekno.com/fotos/TMWF8401.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-PY-LED",
-      "name": "PROYECTOR  SIN JOYSTICK P-1",
-      "unit_price": 57442,
-      "units_per_package": 1,
-      "image_url": "https://www.impotekno.com/fotos/PY-LED.jpg",
       "provider": "Impotekno"
     },
     {
@@ -657,51 +713,43 @@
       "provider": "Impotekno"
     },
     {
-      "sku": "SAR-YX-09",
-      "name": "LS-MP1 LASER  MULTIPUNTO  DE COLORES OA-IL591",
-      "unit_price": 13609,
-      "units_per_package": 30,
-      "image_url": "https://www.impotekno.com/fotos/YX-09.jpg",
+      "sku": "SAR-E99",
+      "name": "DRONE PRO MAX 4K HD  E88 S-2144",
+      "unit_price": 26335,
+      "units_per_package": 36,
+      "image_url": "https://www.impotekno.com/fotos/E99.jpg",
       "provider": "Impotekno"
     },
     {
-      "sku": "SAR-ADP-48005",
-      "name": "CONVERSOR (RCA) AV A HDMI ADP-48028",
-      "unit_price": 5463,
-      "units_per_package": 250,
-      "image_url": "https://www.impotekno.com/fotos/ADP-48005.jpg",
+      "sku": "SAR-BF-777S",
+      "name": "2 WALKIE TALKIE 16 CANALES",
+      "unit_price": 34108,
+      "units_per_package": 50,
+      "image_url": "https://www.impotekno.com/fotos/BF-777S.jpg",
       "provider": "Impotekno"
     },
     {
-      "sku": "SAR-ADP-48008",
-      "name": "SWITCH SELECTOR HDMI 4K 3X1 C/CONTROL",
-      "unit_price": 4371,
-      "units_per_package": 150,
-      "image_url": "https://www.impotekno.com/fotos/ADP-48008.jpg",
+      "sku": "SAR-BF-777S",
+      "name": "2 WALKIE TALKIE 16 CANALES",
+      "unit_price": 34108,
+      "units_per_package": 50,
+      "image_url": "https://www.impotekno.com/fotos/BF-777S.jpg",
       "provider": "Impotekno"
     },
     {
-      "sku": "SAR-BP24",
-      "name": "LED-83087 PROYECTOR ASTRONAUTA NV-ACHI",
-      "unit_price": 11489,
-      "units_per_package": 48,
-      "image_url": "https://www.impotekno.com/fotos/BP24.jpg",
+      "sku": "SAR-JL-897-2",
+      "name": "ENCENDEDOR RECARGABLE USB 903",
+      "unit_price": 3909,
+      "units_per_package": 1,
+      "image_url": "https://www.impotekno.com/fotos/JL-897-2.jpg",
       "provider": "Impotekno"
     },
     {
-      "sku": "SAR-LED-83019",
-      "name": "LED-83089 LUZ RBG ESQUINERO 104CM C/CONTROL WIFI",
-      "unit_price": 13799,
-      "units_per_package": 25,
-      "image_url": "https://www.impotekno.com/fotos/LED-83019.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "PAS-78040",
-      "name": "ADAP. DISPLAY PORT A HDMI (CON101)",
-      "unit_price": 3570,
-      "units_per_package": 300,
-      "image_url": "https://sanjulian99.com/fotos/78040.jpg",
+      "sku": "PAS-MINIIMPRE",
+      "name": "MINI IMPRESORA TERMICA BLUETOOH RECARG.",
+      "unit_price": 13792,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/MINIIMPRE.jpg",
       "provider": "San Julián"
     },
     {
@@ -713,27 +761,27 @@
       "provider": "San Julián"
     },
     {
-      "sku": "PAS-VGA2HDMI",
-      "name": "CONVERSOR VGA A HDMI",
-      "unit_price": 5192,
-      "units_per_package": 200,
-      "image_url": "https://sanjulian99.com/fotos/VGA2HDMI.jpg",
+      "sku": "PAS-CONT014",
+      "name": "CONTROL REMOTO T.V UNIVIVERSAL",
+      "unit_price": 2677,
+      "units_per_package": 240,
+      "image_url": "https://sanjulian99.com/fotos/CONT014.jpg",
       "provider": "San Julián"
     },
     {
-      "sku": "PAS-HDMI-5",
-      "name": "HDMI MALLADO 5 METROS LINDA CALIDAD",
-      "unit_price": 3245,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/HDMI-5.jpg",
+      "sku": "PAS-CONTTVBOX",
+      "name": "CONTROL REMOTO UNIVERSAL TVBOX Y DEMAS",
+      "unit_price": 2190,
+      "units_per_package": 500,
+      "image_url": "https://sanjulian99.com/fotos/CONTTVBOX.jpg",
       "provider": "San Julián"
     },
     {
-      "sku": "PAS-8EN1",
-      "name": "HUB 8 EN 1 HDMI + TF/SD + RJ45 + USB3.0 X2 + TC X2",
-      "unit_price": 16225,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/8EN1.jpg",
+      "sku": "PAS-EC001",
+      "name": "ENCENDEDOR IBEK X50",
+      "unit_price": 10547,
+      "units_per_package": 20,
+      "image_url": "https://sanjulian99.com/fotos/EC001.jpg",
       "provider": "San Julián"
     },
     {
@@ -745,31 +793,31 @@
       "provider": "San Julián"
     },
     {
-      "sku": "PAS-SMARTTV",
-      "name": "SMART TV LUO 43 FULL HD ANDROID (PRECIO FINAL)",
-      "unit_price": 356950,
-      "units_per_package": 1,
-      "image_url": "https://sanjulian99.com/fotos/SMARTTV.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99334",
-      "name": "SMART WATCH T900 PRO MAX",
-      "unit_price": 9735,
+      "sku": "PAS-MINIIMPRE",
+      "name": "MINI IMPRESORA TERMICA BLUETOOH RECARG.",
+      "unit_price": 13792,
       "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/99334.jpg",
+      "image_url": "https://sanjulian99.com/fotos/MINIIMPRE.jpg",
       "provider": "San Julián"
     },
     {
-      "sku": "PAS-78040",
-      "name": "ADAP. DISPLAY PORT A HDMI (CON101)",
-      "unit_price": 3570,
-      "units_per_package": 300,
-      "image_url": "https://sanjulian99.com/fotos/78040.jpg",
+      "sku": "PAS-MS21001",
+      "name": "RELOJ DE PARED LUJO 32CM",
+      "unit_price": 21888,
+      "units_per_package": 20,
+      "image_url": "https://sanjulian99.com/fotos/MS21001.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-RELED02",
+      "name": "RELOJ PARED DIGITAL  NUEVOSS ROJO 45CM",
+      "unit_price": 29205,
+      "units_per_package": 12,
+      "image_url": "https://sanjulian99.com/fotos/RELED02.jpg",
       "provider": "San Julián"
     }
   ],
-  "Cámaras & Video": [
+  "Seguridad y Cámaras": [
     {
       "sku": "SAR-NGW-45",
       "name": "CAMARA IP DOMO NOGA",
@@ -795,15 +843,225 @@
       "provider": "Impotekno"
     },
     {
+      "sku": "SAR-NG-611U",
+      "name": "MOUSE LED NOGA CON CABLE N R G A",
+      "unit_price": 1840,
+      "units_per_package": 200,
+      "image_url": "https://www.impotekno.com/fotos/NG-611U.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-105DB",
+      "name": "ALARMA CON SENSOR DE MOVIMIENTO YL-105",
+      "unit_price": 6765,
+      "units_per_package": 50,
+      "image_url": "https://www.impotekno.com/fotos/105DB.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-RET-4403",
+      "name": "R-121032 RELOJ DIGITAL ALARMA/FECHA/",
+      "unit_price": 3280,
+      "units_per_package": 200,
+      "image_url": "https://www.impotekno.com/fotos/RET-4403.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-REJ-4404",
+      "name": "RELOJ DIGITAL FECHA/ALARMA/TEMP KM9821A",
+      "unit_price": 3910,
+      "units_per_package": 100,
+      "image_url": "https://www.impotekno.com/fotos/REJ-4404.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-SL-30",
+      "name": "KM-6030 REFLECTOR SOLAR CON SENSOR 30LED",
+      "unit_price": 3680,
+      "units_per_package": 100,
+      "image_url": "https://www.impotekno.com/fotos/SL-30.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-LED-83055",
+      "name": "LED DE PARED BIDIRECCIONAL RGB+SENSOR",
+      "unit_price": 8746,
+      "units_per_package": 100,
+      "image_url": "https://www.impotekno.com/fotos/LED-83055.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-LED-83057",
+      "name": "LED PARED CALIDO BIDIRECCIONAL C/SENSOR",
+      "unit_price": 11499,
+      "units_per_package": 50,
+      "image_url": "https://www.impotekno.com/fotos/LED-83057.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "PAS-99061",
+      "name": "ALARMA SENSOR DE PUERTA A PILA",
+      "unit_price": 6023,
+      "units_per_package": 200,
+      "image_url": "https://sanjulian99.com/fotos/99061.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99061",
+      "name": "ALARMA SENSOR DE PUERTA A PILA",
+      "unit_price": 6023,
+      "units_per_package": 200,
+      "image_url": "https://sanjulian99.com/fotos/99061.jpg",
+      "provider": "San Julián"
+    },
+    {
       "sku": "PAS-78115",
       "name": "CAMARA 360 IP 5 ANTENAS",
       "unit_price": 16225,
       "units_per_package": 50,
       "image_url": "https://sanjulian99.com/fotos/78115.jpg",
       "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-CAMFOCO",
+      "name": "CAMARA WIFI IP DE FOCO 360",
+      "unit_price": 13792,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/CAMFOCO.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-M198",
+      "name": "MICROFONO NOGA CON CABLE",
+      "unit_price": 3207,
+      "units_per_package": 50,
+      "image_url": "https://sanjulian99.com/fotos/M198.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-REL901",
+      "name": "RELOJ ALARMA CRONOM.LUZ SUMERGIBLE 30M",
+      "unit_price": 9735,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/REL901.jpg",
+      "provider": "San Julián"
     }
   ],
-  "Cables & Adaptadores": [
+  "Audio y Video": [
+    {
+      "sku": "SAR-PY-LED",
+      "name": "PROYECTOR  SIN JOYSTICK P-1",
+      "unit_price": 57442,
+      "units_per_package": 1,
+      "image_url": "https://www.impotekno.com/fotos/PY-LED.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-HD-71018",
+      "name": "HD-71081 HOLDER SOPORTE REJILLA P/AUTO",
+      "unit_price": 2243,
+      "units_per_package": 200,
+      "image_url": "https://www.impotekno.com/fotos/HD-71018.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-HD-71075",
+      "name": "SOPORTE MAGNETICO HA-8043 K007",
+      "unit_price": 4255,
+      "units_per_package": 200,
+      "image_url": "https://www.impotekno.com/fotos/HD-71075.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-SP-73005",
+      "name": "SOPORTE PARA TV 14-42",
+      "unit_price": 2704,
+      "units_per_package": 20,
+      "image_url": "https://www.impotekno.com/fotos/SP-73005.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-BP24",
+      "name": "LED-83087 PROYECTOR ASTRONAUTA NV-ACHI",
+      "unit_price": 11489,
+      "units_per_package": 48,
+      "image_url": "https://www.impotekno.com/fotos/BP24.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "PAS-VS250",
+      "name": "SOPORTE ACCESORIO ARO SELFIE",
+      "unit_price": 1866,
+      "units_per_package": 1,
+      "image_url": "https://sanjulian99.com/fotos/VS250.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-78078",
+      "name": "SOPORTE AUTO SUPER PRO 3 EN 1",
+      "unit_price": 4868,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/78078.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-SOP601",
+      "name": "SOPORTE NUEVO PARA AUTO IMANTADO",
+      "unit_price": 4868,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/SOP601.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-SOPSOLAR",
+      "name": "SOPORTE PARA REFLECTORES SOLARES",
+      "unit_price": 8113,
+      "units_per_package": 20,
+      "image_url": "https://sanjulian99.com/fotos/SOPSOLAR.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-SOPBICI",
+      "name": "SOPORTE REFORZADO P/BICI Y MOTO",
+      "unit_price": 5030,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/SOPBICI.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-SOPFIJO",
+      "name": "SOPORTE TV FIJO (14-42)",
+      "unit_price": 2434,
+      "units_per_package": 20,
+      "image_url": "https://sanjulian99.com/fotos/SOPFIJO.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-TVJ3000",
+      "name": "SOPORTE TV MOVIL 14 A 55",
+      "unit_price": 7699,
+      "units_per_package": 10,
+      "image_url": "https://sanjulian99.com/fotos/TVJ3000.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-TV3270",
+      "name": "SOPORTE TV MOVIL 32\" HASTA 70\" (REFORZADO)",
+      "unit_price": 27388,
+      "units_per_package": 5,
+      "image_url": "https://sanjulian99.com/fotos/TV3270.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-FD1275",
+      "name": "TRIPODE EXTENSIBLE 2.1MTS",
+      "unit_price": 4868,
+      "units_per_package": 40,
+      "image_url": "https://sanjulian99.com/fotos/FD1275.jpg",
+      "provider": "San Julián"
+    }
+  ],
+  "Cables y Adaptadores": [
     {
       "sku": "SAR-ADAPTADOR",
       "name": "ADAPTADOR INTERNACIONAL  VIAJERO AD-13",
@@ -826,14 +1084,6 @@
       "unit_price": 2299,
       "units_per_package": 300,
       "image_url": "https://www.impotekno.com/fotos/ADAPTADOR.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-NG-611U",
-      "name": "MOUSE LED NOGA CON CABLE N R G A",
-      "unit_price": 1840,
-      "units_per_package": 200,
-      "image_url": "https://www.impotekno.com/fotos/NG-611U.jpg",
       "provider": "Impotekno"
     },
     {
@@ -901,12 +1151,36 @@
       "provider": "Impotekno"
     },
     {
+      "sku": "SAR-ADP-48005",
+      "name": "CONVERSOR (RCA) AV A HDMI ADP-48028",
+      "unit_price": 5463,
+      "units_per_package": 250,
+      "image_url": "https://www.impotekno.com/fotos/ADP-48005.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-ADP-48008",
+      "name": "SWITCH SELECTOR HDMI 4K 3X1 C/CONTROL",
+      "unit_price": 4371,
+      "units_per_package": 150,
+      "image_url": "https://www.impotekno.com/fotos/ADP-48008.jpg",
+      "provider": "Impotekno"
+    },
+    {
       "sku": "SAR-CAB-41005",
       "name": "CAB-41011 CABLE TIPO C PUNTA DE METAL",
       "unit_price": 1264,
       "units_per_package": 400,
       "image_url": "https://www.impotekno.com/fotos/CAB-41005.jpg",
       "provider": "Impotekno"
+    },
+    {
+      "sku": "PAS-78040",
+      "name": "ADAP. DISPLAY PORT A HDMI (CON101)",
+      "unit_price": 3570,
+      "units_per_package": 300,
+      "image_url": "https://sanjulian99.com/fotos/78040.jpg",
+      "provider": "San Julián"
     },
     {
       "sku": "PAS-RDO114",
@@ -1061,11 +1335,27 @@
       "provider": "San Julián"
     },
     {
-      "sku": "PAS-M198",
-      "name": "MICROFONO NOGA CON CABLE",
-      "unit_price": 3207,
-      "units_per_package": 50,
-      "image_url": "https://sanjulian99.com/fotos/M198.jpg",
+      "sku": "PAS-VGA2HDMI",
+      "name": "CONVERSOR VGA A HDMI",
+      "unit_price": 5192,
+      "units_per_package": 200,
+      "image_url": "https://sanjulian99.com/fotos/VGA2HDMI.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-HDMI-5",
+      "name": "HDMI MALLADO 5 METROS LINDA CALIDAD",
+      "unit_price": 3245,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/HDMI-5.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-8EN1",
+      "name": "HUB 8 EN 1 HDMI + TF/SD + RJ45 + USB3.0 X2 + TC X2",
+      "unit_price": 16225,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/8EN1.jpg",
       "provider": "San Julián"
     },
     {
@@ -1075,9 +1365,17 @@
       "units_per_package": 500,
       "image_url": "https://sanjulian99.com/fotos/78138.jpg",
       "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-78040",
+      "name": "ADAP. DISPLAY PORT A HDMI (CON101)",
+      "unit_price": 3570,
+      "units_per_package": 300,
+      "image_url": "https://sanjulian99.com/fotos/78040.jpg",
+      "provider": "San Julián"
     }
   ],
-  "Cargadores & Baterías": [
+  "Cargadores y Baterías": [
     {
       "sku": "SAR-TMCN901",
       "name": "CARGADOR DE NOTEBOOK C/FICHA LENOVO",
@@ -1111,11 +1409,19 @@
       "provider": "Impotekno"
     },
     {
-      "sku": "SAR-ESP-91013",
-      "name": "ESP-91046 ESPEJO LED LUZ FRIA A PILA Y USB",
-      "unit_price": 8624,
-      "units_per_package": 36,
-      "image_url": "https://www.impotekno.com/fotos/ESP-91013.jpg",
+      "sku": "SAR-BXL-833",
+      "name": "DEPILADORA 6 EN 1 RECARGABLE",
+      "unit_price": 16928,
+      "units_per_package": 100,
+      "image_url": "https://www.impotekno.com/fotos/BXL-833.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-ER025",
+      "name": "M-101016 PIEDRA EXFOLIADORA Y DEPILADORA  MM-1036",
+      "unit_price": 1854,
+      "units_per_package": 300,
+      "image_url": "https://www.impotekno.com/fotos/ER025.jpg",
       "provider": "Impotekno"
     },
     {
@@ -1133,22 +1439,6 @@
       "units_per_package": 10,
       "image_url": "https://www.impotekno.com/fotos/MELECH-209.jpg",
       "provider": "Impotekno"
-    },
-    {
-      "sku": "PAS-99061",
-      "name": "ALARMA SENSOR DE PUERTA A PILA",
-      "unit_price": 6023,
-      "units_per_package": 200,
-      "image_url": "https://sanjulian99.com/fotos/99061.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99061",
-      "name": "ALARMA SENSOR DE PUERTA A PILA",
-      "unit_price": 6023,
-      "units_per_package": 200,
-      "image_url": "https://sanjulian99.com/fotos/99061.jpg",
-      "provider": "San Julián"
     },
     {
       "sku": "PAS-BAT18650",
@@ -1503,31 +1793,23 @@
       "provider": "San Julián"
     },
     {
-      "sku": "PAS-99272",
-      "name": "TIRA NEON AMARILLA 5M 12V con fuente",
-      "unit_price": 8437,
-      "units_per_package": 40,
-      "image_url": "https://sanjulian99.com/fotos/99272.jpg",
+      "sku": "PAS-LA082",
+      "name": "POWER BANK 20.000 ma",
+      "unit_price": 11682,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/LA082.jpg",
       "provider": "San Julián"
     },
     {
-      "sku": "PAS-99265",
-      "name": "TIRA NEON BLANCO CALIDO 5M 12V con fuente",
-      "unit_price": 8113,
-      "units_per_package": 40,
-      "image_url": "https://sanjulian99.com/fotos/99265.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99273",
-      "name": "TIRA NEON NARANJA 5M 12V con fuente",
-      "unit_price": 8437,
-      "units_per_package": 40,
-      "image_url": "https://sanjulian99.com/fotos/99273.jpg",
+      "sku": "PAS-427610",
+      "name": "POWER BANK MI PORTATIL 12000MAH",
+      "unit_price": 9898,
+      "units_per_package": 200,
+      "image_url": "https://sanjulian99.com/fotos/427610.jpg",
       "provider": "San Julián"
     }
   ],
-  "Belleza & Personal": [
+  "Otros": [
     {
       "sku": "SAR-500-1",
       "name": "APLICADOR DE STRASS  PARA EL CABELLO 500-3",
@@ -1536,6 +1818,280 @@
       "image_url": "https://www.impotekno.com/fotos/500-1.jpg",
       "provider": "Impotekno"
     },
+    {
+      "sku": "SAR-RA001",
+      "name": "PERFILADOR DE CEJAS XD306-1 MELECH-294",
+      "unit_price": 667,
+      "units_per_package": 1200,
+      "image_url": "https://www.impotekno.com/fotos/RA001.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-500-1",
+      "name": "APLICADOR DE STRASS  PARA EL CABELLO 500-3",
+      "unit_price": 5175,
+      "units_per_package": 200,
+      "image_url": "https://www.impotekno.com/fotos/500-1.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-557-100B",
+      "name": "AUTO CYBERTRUCK TESLA CONTROL 168H-38",
+      "unit_price": 13800,
+      "units_per_package": 36,
+      "image_url": "https://www.impotekno.com/fotos/557-100B.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-CU-2591",
+      "name": "G-91104 PARASOL PARA AUTO PORTATIL",
+      "unit_price": 7475,
+      "units_per_package": 60,
+      "image_url": "https://www.impotekno.com/fotos/CU-2591.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-YX-09",
+      "name": "LS-MP1 LASER  MULTIPUNTO  DE COLORES OA-IL591",
+      "unit_price": 13609,
+      "units_per_package": 30,
+      "image_url": "https://www.impotekno.com/fotos/YX-09.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-1808",
+      "name": "CINTA AISLADORA X 10 UNIDADES ETL0112SA",
+      "unit_price": 3220,
+      "units_per_package": 50,
+      "image_url": "https://www.impotekno.com/fotos/1808.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-INF-91006",
+      "name": "INF-91100 INFLADOR MULTIUSO METALIZADO",
+      "unit_price": 3104,
+      "units_per_package": 100,
+      "image_url": "https://www.impotekno.com/fotos/INF-91006.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-130T14",
+      "name": "KIT 68 EN 1  DESTORNILLADORES C/TRINQUETE",
+      "unit_price": 22885,
+      "units_per_package": 30,
+      "image_url": "https://www.impotekno.com/fotos/130T14.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-PC5302",
+      "name": "MEC-2026A GORRO LEVANTA OREJA CON LUZ",
+      "unit_price": 5289,
+      "units_per_package": 240,
+      "image_url": "https://www.impotekno.com/fotos/PC5302.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-KM-2003",
+      "name": "ANTORCHA ESTACA SOLAR CALIDO JK-2003 XF-6017",
+      "unit_price": 3852,
+      "units_per_package": 105,
+      "image_url": "https://www.impotekno.com/fotos/KM-2003.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-LED-83063",
+      "name": "VELADOR CAPYBARA AVIÓN XJD-502",
+      "unit_price": 4599,
+      "units_per_package": 120,
+      "image_url": "https://www.impotekno.com/fotos/LED-83063.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-LED-83062",
+      "name": "VELADOR CAPYBARA MOTO XJD-93",
+      "unit_price": 4599,
+      "units_per_package": 120,
+      "image_url": "https://www.impotekno.com/fotos/LED-83062.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-KM-2003",
+      "name": "ANTORCHA ESTACA SOLAR CALIDO JK-2003 XF-6017",
+      "unit_price": 3852,
+      "units_per_package": 105,
+      "image_url": "https://www.impotekno.com/fotos/KM-2003.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-3057",
+      "name": "SET X 6 COPAS DE VINO",
+      "unit_price": 11385,
+      "units_per_package": 8,
+      "image_url": "https://www.impotekno.com/fotos/3057.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-P517",
+      "name": "SET X3 DE PCS PELA PAPA",
+      "unit_price": 2703,
+      "units_per_package": 240,
+      "image_url": "https://www.impotekno.com/fotos/P517.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "PAS-EX01826",
+      "name": "MINI AIRE OFERTA LIQUIDACION",
+      "unit_price": 5435,
+      "units_per_package": 60,
+      "image_url": "https://sanjulian99.com/fotos/EX01826.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-JUA252",
+      "name": "BASE BURBUJERA MUNDIALISTA",
+      "unit_price": 12169,
+      "units_per_package": 72,
+      "image_url": "https://sanjulian99.com/fotos/JUA252.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-PP013",
+      "name": "PP013) JUEGO RITMO ESPACIAL ELECTRICO MUSICA",
+      "unit_price": 7167,
+      "units_per_package": 120,
+      "image_url": "https://sanjulian99.com/fotos/PP013.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-JUA252",
+      "name": "BASE BURBUJERA MUNDIALISTA",
+      "unit_price": 12169,
+      "units_per_package": 72,
+      "image_url": "https://sanjulian99.com/fotos/JUA252.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-RDO12",
+      "name": "AMPLIFICADOR DE VIDEO P/CELULAR 12\" VS201",
+      "unit_price": 3229,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/RDO12.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-JUA252",
+      "name": "BASE BURBUJERA MUNDIALISTA",
+      "unit_price": 12169,
+      "units_per_package": 72,
+      "image_url": "https://sanjulian99.com/fotos/JUA252.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-91024",
+      "name": "CALC. SOLAR PASTEL TECLA Y DIGITOS GRANDES",
+      "unit_price": 5489,
+      "units_per_package": 96,
+      "image_url": "https://sanjulian99.com/fotos/91024.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99309",
+      "name": "CEPILLO A VAPOR RECARGABLE PERROS Y GATOS",
+      "unit_price": 5273,
+      "units_per_package": 200,
+      "image_url": "https://sanjulian99.com/fotos/99309.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99289",
+      "name": "CHISPERO RECARGABLE USB",
+      "unit_price": 2921,
+      "units_per_package": 300,
+      "image_url": "https://sanjulian99.com/fotos/99289.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-K8",
+      "name": "CORBATERO TIPO C y iphone   (A103-2)",
+      "unit_price": 5273,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/K8.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-ERIK03",
+      "name": "EXIBIDOR GIRATORIO RECARG,MIDE13.5CM DE DIAMETRO",
+      "unit_price": 12980,
+      "units_per_package": 60,
+      "image_url": "https://sanjulian99.com/fotos/ERIK03.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-AV1527",
+      "name": "FUNDA PARA AGUA CELULAR",
+      "unit_price": 925,
+      "units_per_package": 500,
+      "image_url": "https://sanjulian99.com/fotos/AV1527.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99399",
+      "name": "JUEGO DE MESA BASTA 3ERA GENERACION",
+      "unit_price": 14116,
+      "units_per_package": 72,
+      "image_url": "https://sanjulian99.com/fotos/99399.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-2782",
+      "name": "PEN 32GB SANDISK",
+      "unit_price": 12177,
+      "units_per_package": 0,
+      "image_url": "https://sanjulian99.com/fotos/2782.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-5126",
+      "name": "PERFUMERO PORTATIL RECARGABLE 5ML",
+      "unit_price": 762,
+      "units_per_package": 1200,
+      "image_url": "https://sanjulian99.com/fotos/5126.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-PP009",
+      "name": "POPIT ASTRONAUTA",
+      "unit_price": 4057,
+      "units_per_package": 120,
+      "image_url": "https://sanjulian99.com/fotos/PP009.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-RING01",
+      "name": "RING PARA CELULAR",
+      "unit_price": 1136,
+      "units_per_package": 1000,
+      "image_url": "https://sanjulian99.com/fotos/RING01.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-SMARTTV",
+      "name": "SMART TV LUO 43 FULL HD ANDROID (PRECIO FINAL)",
+      "unit_price": 356950,
+      "units_per_package": 1,
+      "image_url": "https://sanjulian99.com/fotos/SMARTTV.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99334",
+      "name": "SMART WATCH T900 PRO MAX",
+      "unit_price": 9735,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/99334.jpg",
+      "provider": "San Julián"
+    }
+  ],
+  "Cuidado Personal": [
     {
       "sku": "SAR-HOG0719BLA",
       "name": "BUCLERA RIZADORA",
@@ -1552,104 +2108,6 @@
       "image_url": "https://www.impotekno.com/fotos/OR-1201.jpg",
       "provider": "Impotekno"
     },
-    {
-      "sku": "SAR-BXL-833",
-      "name": "DEPILADORA 6 EN 1 RECARGABLE",
-      "unit_price": 16928,
-      "units_per_package": 100,
-      "image_url": "https://www.impotekno.com/fotos/BXL-833.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-ER025",
-      "name": "M-101016 PIEDRA EXFOLIADORA Y DEPILADORA  MM-1036",
-      "unit_price": 1854,
-      "units_per_package": 300,
-      "image_url": "https://www.impotekno.com/fotos/ER025.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-MS-10",
-      "name": "MASAJEADOR 5 EN 1 28W EL-MS700",
-      "unit_price": 17457,
-      "units_per_package": 30,
-      "image_url": "https://www.impotekno.com/fotos/MS-10.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-JC395",
-      "name": "MASAJEADOR ESPALDAR CON MANGO GB-868",
-      "unit_price": 21275,
-      "units_per_package": 20,
-      "image_url": "https://www.impotekno.com/fotos/JC395.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-RA001",
-      "name": "PERFILADOR DE CEJAS XD306-1 MELECH-294",
-      "unit_price": 667,
-      "units_per_package": 1200,
-      "image_url": "https://www.impotekno.com/fotos/RA001.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-SN-228",
-      "name": "PLANCHITA DE PELO CHICA MELECH-275 PP07",
-      "unit_price": 2818,
-      "units_per_package": 120,
-      "image_url": "https://www.impotekno.com/fotos/SN-228.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-HT-7701",
-      "name": "SECADOR DE PELO 2300W HS-3618 NV-7215",
-      "unit_price": 11356,
-      "units_per_package": 40,
-      "image_url": "https://www.impotekno.com/fotos/HT-7701.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-500-1",
-      "name": "APLICADOR DE STRASS  PARA EL CABELLO 500-3",
-      "unit_price": 5175,
-      "units_per_package": 200,
-      "image_url": "https://www.impotekno.com/fotos/500-1.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-M-121027",
-      "name": "M-121029  PISTOLA MASAJEADOR",
-      "unit_price": 12649,
-      "units_per_package": 40,
-      "image_url": "https://www.impotekno.com/fotos/M-121027.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-XY3199",
-      "name": "MINI MASAJEADOR BN1402",
-      "unit_price": 1971,
-      "units_per_package": 120,
-      "image_url": "https://www.impotekno.com/fotos/XY3199.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "PAS-99309",
-      "name": "CEPILLO A VAPOR RECARGABLE PERROS Y GATOS",
-      "unit_price": 5273,
-      "units_per_package": 200,
-      "image_url": "https://sanjulian99.com/fotos/99309.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99027",
-      "name": "SECADORA DE BROCHAS MAQUILL.oferta hasta agotar st",
-      "unit_price": 10547,
-      "units_per_package": 48,
-      "image_url": "https://sanjulian99.com/fotos/99027.jpg",
-      "provider": "San Julián"
-    }
-  ],
-  "Otros": [
     {
       "sku": "SAR-CRT-110021",
       "name": "CORTA PELO DE MASCOTA",
@@ -1675,13 +2133,1041 @@
       "provider": "Impotekno"
     },
     {
-      "sku": "SAR-105DB",
-      "name": "ALARMA CON SENSOR DE MOVIMIENTO YL-105",
-      "unit_price": 6765,
-      "units_per_package": 50,
-      "image_url": "https://www.impotekno.com/fotos/105DB.jpg",
+      "sku": "SAR-MS-10",
+      "name": "MASAJEADOR 5 EN 1 28W EL-MS700",
+      "unit_price": 17457,
+      "units_per_package": 30,
+      "image_url": "https://www.impotekno.com/fotos/MS-10.jpg",
       "provider": "Impotekno"
     },
+    {
+      "sku": "SAR-JC395",
+      "name": "MASAJEADOR ESPALDAR CON MANGO GB-868",
+      "unit_price": 21275,
+      "units_per_package": 20,
+      "image_url": "https://www.impotekno.com/fotos/JC395.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-SN-228",
+      "name": "PLANCHITA DE PELO CHICA MELECH-275 PP07",
+      "unit_price": 2818,
+      "units_per_package": 120,
+      "image_url": "https://www.impotekno.com/fotos/SN-228.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-HT-7701",
+      "name": "SECADOR DE PELO 2300W HS-3618 NV-7215",
+      "unit_price": 11356,
+      "units_per_package": 40,
+      "image_url": "https://www.impotekno.com/fotos/HT-7701.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-M-121027",
+      "name": "M-121029  PISTOLA MASAJEADOR",
+      "unit_price": 12649,
+      "units_per_package": 40,
+      "image_url": "https://www.impotekno.com/fotos/M-121027.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-XY3199",
+      "name": "MINI MASAJEADOR BN1402",
+      "unit_price": 1971,
+      "units_per_package": 120,
+      "image_url": "https://www.impotekno.com/fotos/XY3199.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "PAS-TRIM",
+      "name": "CORTA UÑA TRIM GRANDE",
+      "unit_price": 455,
+      "units_per_package": 600,
+      "image_url": "https://sanjulian99.com/fotos/TRIM.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99344",
+      "name": "ESPEJO HEXAGONAL (METAL)",
+      "unit_price": 2397,
+      "units_per_package": 1,
+      "image_url": "https://sanjulian99.com/fotos/99344.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99322",
+      "name": "ESPEJO MAQUILLAJE DE CARTERA",
+      "unit_price": 1319,
+      "units_per_package": 300,
+      "image_url": "https://sanjulian99.com/fotos/99322.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-RD1783M",
+      "name": "EXTRACTOR DE POLVO P/UÑAS 80W",
+      "unit_price": 44959,
+      "units_per_package": 12,
+      "image_url": "https://sanjulian99.com/fotos/RD1783M.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-DL1190",
+      "name": "MAQUINA CORTA PELO DALING DL-1190 PROFESIONAL",
+      "unit_price": 23364,
+      "units_per_package": 60,
+      "image_url": "https://sanjulian99.com/fotos/DL1190.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-SJ0017",
+      "name": "PISTOLA MASEAJORA MUSCULAR",
+      "unit_price": 11682,
+      "units_per_package": 40,
+      "image_url": "https://sanjulian99.com/fotos/SJ0017.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-TRIM",
+      "name": "CORTA UÑA TRIM GRANDE",
+      "unit_price": 455,
+      "units_per_package": 600,
+      "image_url": "https://sanjulian99.com/fotos/TRIM.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-TRIM",
+      "name": "CORTA UÑA TRIM GRANDE",
+      "unit_price": 455,
+      "units_per_package": 600,
+      "image_url": "https://sanjulian99.com/fotos/TRIM.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99342",
+      "name": "ESPEJO REDONDO CAJA NEGRA (METAL)",
+      "unit_price": 2110,
+      "units_per_package": 1,
+      "image_url": "https://sanjulian99.com/fotos/99342.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99027",
+      "name": "SECADORA DE BROCHAS MAQUILL.oferta hasta agotar st",
+      "unit_price": 10547,
+      "units_per_package": 48,
+      "image_url": "https://sanjulian99.com/fotos/99027.jpg",
+      "provider": "San Julián"
+    }
+  ],
+  "Iluminación": [
+    {
+      "sku": "SAR-ESP-91013",
+      "name": "ESP-91046 ESPEJO LED LUZ FRIA A PILA Y USB",
+      "unit_price": 8624,
+      "units_per_package": 36,
+      "image_url": "https://www.impotekno.com/fotos/ESP-91013.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-HMF-91082",
+      "name": "HDFK-1 HUMIDIFICADOR LED MELECH-23",
+      "unit_price": 5421,
+      "units_per_package": 80,
+      "image_url": "https://www.impotekno.com/fotos/HMF-91082.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-HMF-91062",
+      "name": "HUMIDIFCADOR RGB CL28 OFERTA!!!",
+      "unit_price": 5635,
+      "units_per_package": 60,
+      "image_url": "https://www.impotekno.com/fotos/HMF-91062.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-V-113803",
+      "name": "VENTILADOR LED TECHO  BLANCO Y NEGRO",
+      "unit_price": 67850,
+      "units_per_package": 1,
+      "image_url": "https://www.impotekno.com/fotos/V-113803.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-HM-7729G",
+      "name": "LINTERNA MULTIFUNCION RECARGABLE",
+      "unit_price": 15985,
+      "units_per_package": 36,
+      "image_url": "https://www.impotekno.com/fotos/HM-7729G.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-LED-9730",
+      "name": "FA-1203P TIRA LED NEON DE 7COLOR 5M 9728 OA-IL549",
+      "unit_price": 8309,
+      "units_per_package": 50,
+      "image_url": "https://www.impotekno.com/fotos/LED-9730.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-LED-83068",
+      "name": "LAMPARA  ATARDECER  OFERTA!!",
+      "unit_price": 4371,
+      "units_per_package": 100,
+      "image_url": "https://www.impotekno.com/fotos/LED-83068.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-B005",
+      "name": "LAMPARA CAMPING SOLAR RECARGABLE 2029KA",
+      "unit_price": 7130,
+      "units_per_package": 1,
+      "image_url": "https://www.impotekno.com/fotos/B005.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-HW-978W",
+      "name": "LAMPARA FOCO FAROL",
+      "unit_price": 9189,
+      "units_per_package": 60,
+      "image_url": "https://www.impotekno.com/fotos/HW-978W.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-VEL-81015",
+      "name": "LED-83049 VELADOR DE COLORES RECARGABLE",
+      "unit_price": 5175,
+      "units_per_package": 96,
+      "image_url": "https://www.impotekno.com/fotos/VEL-81015.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-LED-83058",
+      "name": "LED-83071 BOLA LED DE CRISTAL 8CM (NAVIDAD)",
+      "unit_price": 4599,
+      "units_per_package": 20,
+      "image_url": "https://www.impotekno.com/fotos/LED-83058.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-LED-83019",
+      "name": "LED-83089 LUZ RBG ESQUINERO 104CM C/CONTROL WIFI",
+      "unit_price": 13799,
+      "units_per_package": 25,
+      "image_url": "https://www.impotekno.com/fotos/LED-83019.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-LED-9726",
+      "name": "LED-83094 TIRA LED 50X50 RGB 5M 9734",
+      "unit_price": 7705,
+      "units_per_package": 40,
+      "image_url": "https://www.impotekno.com/fotos/LED-9726.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-YM200",
+      "name": "LED-83099 ARO DE LUZ LED RECTANGULAR",
+      "unit_price": 14720,
+      "units_per_package": 40,
+      "image_url": "https://www.impotekno.com/fotos/YM200.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-LED-81005",
+      "name": "LED-83105 LAMPARA MINI 20 LED MAGNETICO LED-83033",
+      "unit_price": 5118,
+      "units_per_package": 100,
+      "image_url": "https://www.impotekno.com/fotos/LED-81005.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-815",
+      "name": "LINTERNA COB 6433 OM JY-819 OM-5119",
+      "unit_price": 6450,
+      "units_per_package": 60,
+      "image_url": "https://www.impotekno.com/fotos/815.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-SD8677",
+      "name": "LINTERNA LED MINI RECARGABLE SD-8677",
+      "unit_price": 2933,
+      "units_per_package": 200,
+      "image_url": "https://www.impotekno.com/fotos/SD8677.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-FJD-101",
+      "name": "LINTERNA MINERA HIGH POWER HA-8437",
+      "unit_price": 2678,
+      "units_per_package": 240,
+      "image_url": "https://www.impotekno.com/fotos/FJD-101.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-HB-9707A-1",
+      "name": "LINTERNA MULTIFUNCIONAL C/ PANEL SOLAR",
+      "unit_price": 7992,
+      "units_per_package": 60,
+      "image_url": "https://www.impotekno.com/fotos/HB-9707A-1.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-511",
+      "name": "MELECH-93 LINTERNA MINI RECARGABLE METAL 911A",
+      "unit_price": 2455,
+      "units_per_package": 240,
+      "image_url": "https://www.impotekno.com/fotos/511.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-OM-1012",
+      "name": "PROTON MINI RGB 12 LED 1201",
+      "unit_price": 8338,
+      "units_per_package": 100,
+      "image_url": "https://www.impotekno.com/fotos/OM-1012.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-TMFOC9754",
+      "name": "TMFOC9759 FOCO BOLICHE DOBLE",
+      "unit_price": 3663,
+      "units_per_package": 100,
+      "image_url": "https://www.impotekno.com/fotos/TMFOC9754.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "PAS-V55",
+      "name": "LINTERNA PARA BICICLETA BLANCA RECARGABLE 3 MODOS",
+      "unit_price": 2759,
+      "units_per_package": 240,
+      "image_url": "https://sanjulian99.com/fotos/V55.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-LAM206",
+      "name": "LAMPARA AVION LED (LAM206/207) OFERTAAAA",
+      "unit_price": 3245,
+      "units_per_package": 144,
+      "image_url": "https://sanjulian99.com/fotos/LAM206.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-LAMCAPI",
+      "name": "LAMPARA RECARGABLE CAPIBARA  (RD543)",
+      "unit_price": 5679,
+      "units_per_package": 120,
+      "image_url": "https://sanjulian99.com/fotos/LAMCAPI.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-ARO36RGB",
+      "name": "ARO 36CM RGB Y BLANCO 14\"",
+      "unit_price": 13386,
+      "units_per_package": 20,
+      "image_url": "https://sanjulian99.com/fotos/ARO36RGB.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-ARO10PUL",
+      "name": "ARO SELFIE CALIDO/FRIO 26CM 10\"",
+      "unit_price": 4949,
+      "units_per_package": 40,
+      "image_url": "https://sanjulian99.com/fotos/ARO10PUL.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99125",
+      "name": "ESPEJO LED PLEGABLE OFERTAAA",
+      "unit_price": 5499,
+      "units_per_package": 60,
+      "image_url": "https://sanjulian99.com/fotos/99125.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-RGBFOC",
+      "name": "FOCO RGB CON CONTROL",
+      "unit_price": 2915,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/RGBFOC.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-LIN710",
+      "name": "LAMPARA EMERGENCIA/CAMPING 2 en 1",
+      "unit_price": 6328,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/LIN710.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99266",
+      "name": "LAMPARA PLATEADA TACTIL VELTAC",
+      "unit_price": 8693,
+      "units_per_package": 50,
+      "image_url": "https://sanjulian99.com/fotos/99266.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-JY819",
+      "name": "LINTERNA COB JY-819",
+      "unit_price": 6589,
+      "units_per_package": 60,
+      "image_url": "https://sanjulian99.com/fotos/JY819.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-RD496",
+      "name": "LINTERNA MINERA PRO",
+      "unit_price": 3245,
+      "units_per_package": 240,
+      "image_url": "https://sanjulian99.com/fotos/RD496.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-MS807",
+      "name": "LINTERNA RECARGABLE 7 LED EN CAJA",
+      "unit_price": 6039,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/MS807.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-P50",
+      "name": "LINTERNA RECARGABLE P50 POTENCIA",
+      "unit_price": 10060,
+      "units_per_package": 60,
+      "image_url": "https://sanjulian99.com/fotos/P50.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-EP090",
+      "name": "LUZ DE EMERGENCIA 90LED",
+      "unit_price": 14278,
+      "units_per_package": 60,
+      "image_url": "https://sanjulian99.com/fotos/EP090.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-JUA2030",
+      "name": "PIZARRA LED 20CM X 30CM",
+      "unit_price": 7142,
+      "units_per_package": 60,
+      "image_url": "https://sanjulian99.com/fotos/JUA2030.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-REL908",
+      "name": "RELOJ LED HORA Y FECHA",
+      "unit_price": 1947,
+      "units_per_package": 200,
+      "image_url": "https://sanjulian99.com/fotos/REL908.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-REL907",
+      "name": "RELOJ SILICONA LED HORA Y FECHA",
+      "unit_price": 2434,
+      "units_per_package": 200,
+      "image_url": "https://sanjulian99.com/fotos/REL907.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99272",
+      "name": "TIRA NEON AMARILLA 5M 12V con fuente",
+      "unit_price": 8437,
+      "units_per_package": 40,
+      "image_url": "https://sanjulian99.com/fotos/99272.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99265",
+      "name": "TIRA NEON BLANCO CALIDO 5M 12V con fuente",
+      "unit_price": 8113,
+      "units_per_package": 40,
+      "image_url": "https://sanjulian99.com/fotos/99265.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99273",
+      "name": "TIRA NEON NARANJA 5M 12V con fuente",
+      "unit_price": 8437,
+      "units_per_package": 40,
+      "image_url": "https://sanjulian99.com/fotos/99273.jpg",
+      "provider": "San Julián"
+    }
+  ],
+  "Electrónica Gamer": [
+    {
+      "sku": "SAR-X2",
+      "name": "CONSOLA X2 PLUS 64 GB",
+      "unit_price": 35529,
+      "units_per_package": 40,
+      "image_url": "https://www.impotekno.com/fotos/X2.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-AF-404",
+      "name": "JOYSTICK PS4 AFA EDICION LIMITADA",
+      "unit_price": 22368,
+      "units_per_package": 50,
+      "image_url": "https://www.impotekno.com/fotos/AF-404.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-MOU-150M07",
+      "name": "MOUSE INALAMBRICO TIME 150M10",
+      "unit_price": 3449,
+      "units_per_package": 100,
+      "image_url": "https://www.impotekno.com/fotos/MOU-150M07.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-X2",
+      "name": "CONSOLA X2 PLUS 64 GB",
+      "unit_price": 35529,
+      "units_per_package": 40,
+      "image_url": "https://www.impotekno.com/fotos/X2.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "PAS-NAL185",
+      "name": "CONSOLA GAME BOX GS5",
+      "unit_price": 25960,
+      "units_per_package": 40,
+      "image_url": "https://sanjulian99.com/fotos/NAL185.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-JOYP3SO",
+      "name": "JOYSTICK DE PLAY3 SONY NEGRO",
+      "unit_price": 10222,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/JOYP3SO.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-H-MOUINA",
+      "name": "MOUSE INALAMBRICO (mou100)",
+      "unit_price": 3245,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/H-MOUINA.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-V103",
+      "name": "PAD CAMUFLADO 25x29 antideslizante -",
+      "unit_price": 1294,
+      "units_per_package": 500,
+      "image_url": "https://sanjulian99.com/fotos/V103.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-W3500",
+      "name": "TECLADO + MOUSE INALAMB. OFERTAAAA",
+      "unit_price": 10889,
+      "units_per_package": 30,
+      "image_url": "https://sanjulian99.com/fotos/W3500.jpg",
+      "provider": "San Julián"
+    }
+  ],
+  "Juguetes y Entretenimiento": [
+    {
+      "sku": "SAR-S-2006A",
+      "name": "CRAYONES DE CERA COLORES X 6U.",
+      "unit_price": 229,
+      "units_per_package": 960,
+      "image_url": "https://www.impotekno.com/fotos/S-2006A.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-ILU0155",
+      "name": "VELADOR INFANTIL CARRUSEL",
+      "unit_price": 18090,
+      "units_per_package": 24,
+      "image_url": "https://www.impotekno.com/fotos/ILU0155.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-KIOSKO",
+      "name": "CARTEL KIOSKO OA-L576 ADBO-6",
+      "unit_price": 10707,
+      "units_per_package": 20,
+      "image_url": "https://www.impotekno.com/fotos/KIOSKO.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-JS-4428",
+      "name": "JUGUETE DISPENSADOR DE COMIDA P/MASCOTA",
+      "unit_price": 5865,
+      "units_per_package": 60,
+      "image_url": "https://www.impotekno.com/fotos/JS-4428.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-EF10009",
+      "name": "BANDERA  ARGENTINA  GRANDE 633114 90X145 WCF-10",
+      "unit_price": 1782,
+      "units_per_package": 250,
+      "image_url": "https://www.impotekno.com/fotos/EF10009.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-633116",
+      "name": "BANDERA P/ AUTO ARGENTINA 30X40CM EF10011 WCF-12",
+      "unit_price": 689,
+      "units_per_package": 500,
+      "image_url": "https://www.impotekno.com/fotos/633116.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-EF10009",
+      "name": "BANDERA  ARGENTINA  GRANDE 633114 90X145 WCF-10",
+      "unit_price": 1782,
+      "units_per_package": 250,
+      "image_url": "https://www.impotekno.com/fotos/EF10009.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "PAS-RDO127",
+      "name": "CACTUS BAILARIN RECARGABLE (cact001)",
+      "unit_price": 5642,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/RDO127.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-NAL254",
+      "name": "GLOBO LUMINOSO (SURTIDOS)",
+      "unit_price": 1785,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/NAL254.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-5742",
+      "name": "LLAVERO PORTASUBE OFERTAAAA",
+      "unit_price": 1295,
+      "units_per_package": 500,
+      "image_url": "https://sanjulian99.com/fotos/5742.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99382",
+      "name": "MASCOTA VIRTUAL EN BLISTER",
+      "unit_price": 2596,
+      "units_per_package": 288,
+      "image_url": "https://sanjulian99.com/fotos/99382.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-C4435",
+      "name": "PIZARRA MAGICA PERSONAJES 8.5 MULTICOLOR",
+      "unit_price": 2968,
+      "units_per_package": 200,
+      "image_url": "https://sanjulian99.com/fotos/C4435.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-PP006",
+      "name": "POP IT AUTO JUEGO VELOCIDAD (PP006)",
+      "unit_price": 3732,
+      "units_per_package": 1,
+      "image_url": "https://sanjulian99.com/fotos/PP006.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99019",
+      "name": "SONY ANGEL  X12 UNID (precio x unidad) ofertaa",
+      "unit_price": 536,
+      "units_per_package": 720,
+      "image_url": "https://sanjulian99.com/fotos/99019.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99030",
+      "name": "VALIJA PARA COLOREAR (ASTRON.Y UNICORNIO)",
+      "unit_price": 13792,
+      "units_per_package": 10,
+      "image_url": "https://sanjulian99.com/fotos/99030.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99287",
+      "name": "CARTEL LETRAS  COLORES",
+      "unit_price": 9735,
+      "units_per_package": 36,
+      "image_url": "https://sanjulian99.com/fotos/99287.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99069",
+      "name": "CORTAUÑA PARA MASCOTA",
+      "unit_price": 2028,
+      "units_per_package": 315,
+      "image_url": "https://sanjulian99.com/fotos/99069.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-5742",
+      "name": "LLAVERO PORTASUBE OFERTAAAA",
+      "unit_price": 1295,
+      "units_per_package": 500,
+      "image_url": "https://sanjulian99.com/fotos/5742.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99290",
+      "name": "MARRANITO/CERDITO  EQUILIBRISTA VIRAL",
+      "unit_price": 15739,
+      "units_per_package": 72,
+      "image_url": "https://sanjulian99.com/fotos/99290.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99382",
+      "name": "MASCOTA VIRTUAL EN BLISTER",
+      "unit_price": 2596,
+      "units_per_package": 288,
+      "image_url": "https://sanjulian99.com/fotos/99382.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-PIZABALLE",
+      "name": "PIZARRA MAGICA 9\" BALLENA",
+      "unit_price": 4345,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/PIZABALLE.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-PP005",
+      "name": "POP IT ANIMALES",
+      "unit_price": 3586,
+      "units_per_package": 1,
+      "image_url": "https://sanjulian99.com/fotos/PP005.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99019",
+      "name": "SONY ANGEL  X12 UNID (precio x unidad) ofertaa",
+      "unit_price": 536,
+      "units_per_package": 720,
+      "image_url": "https://sanjulian99.com/fotos/99019.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-427614",
+      "name": "STICKER MUNDIAL",
+      "unit_price": 1316,
+      "units_per_package": 300,
+      "image_url": "https://sanjulian99.com/fotos/427614.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-78033",
+      "name": "TETRIS  EN CAJA",
+      "unit_price": 2596,
+      "units_per_package": 200,
+      "image_url": "https://sanjulian99.com/fotos/78033.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99030",
+      "name": "VALIJA PARA COLOREAR (ASTRON.Y UNICORNIO)",
+      "unit_price": 13792,
+      "units_per_package": 10,
+      "image_url": "https://sanjulian99.com/fotos/99030.jpg",
+      "provider": "San Julián"
+    }
+  ],
+  "Electrónica": [
+    {
+      "sku": "SAR-TMPAS8410",
+      "name": "PLACA DE SONIDO SUPER OFERTA",
+      "unit_price": 711,
+      "units_per_package": 500,
+      "image_url": "https://www.impotekno.com/fotos/TMPAS8410.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "PAS-99336",
+      "name": "ORGANIZ.DE REMERAS/JEAN P/ PLACARD 10 unidades",
+      "unit_price": 15252,
+      "units_per_package": 140,
+      "image_url": "https://sanjulian99.com/fotos/99336.jpg",
+      "provider": "San Julián"
+    }
+  ],
+  "Deportes y Camping": [
+    {
+      "sku": "SAR-ICO-160913",
+      "name": "160918 COLCHON INFLABLE + INFLADOR  5min.",
+      "unit_price": 91999,
+      "units_per_package": 3,
+      "image_url": "https://www.impotekno.com/fotos/ICO-160913.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-ISF-160908",
+      "name": "SILLON INFLABLE GRAFITI CON REPOSAPIES",
+      "unit_price": 18975,
+      "units_per_package": 10,
+      "image_url": "https://www.impotekno.com/fotos/ISF-160908.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-ISF-160911",
+      "name": "SOFA CAMA PUFF INFLABLE",
+      "unit_price": 25144,
+      "units_per_package": 10,
+      "image_url": "https://www.impotekno.com/fotos/ISF-160911.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-ISF-160909",
+      "name": "SOFA REPOSERA INFLABLE",
+      "unit_price": 24597,
+      "units_per_package": 10,
+      "image_url": "https://www.impotekno.com/fotos/ISF-160909.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-ISF-160912",
+      "name": "SOFA SILLON PUFF ALMEJA  INFLABLE",
+      "unit_price": 17249,
+      "units_per_package": 20,
+      "image_url": "https://www.impotekno.com/fotos/ISF-160912.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-ICO-160913",
+      "name": "160918 COLCHON INFLABLE + INFLADOR  5min.",
+      "unit_price": 91999,
+      "units_per_package": 3,
+      "image_url": "https://www.impotekno.com/fotos/ICO-160913.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-CQ-01",
+      "name": "130501 LINGA PARA BICI 15X90",
+      "unit_price": 3935,
+      "units_per_package": 60,
+      "image_url": "https://www.impotekno.com/fotos/CQ-01.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-C-130502",
+      "name": "CADENA LINGA CON CODIGO 150GR",
+      "unit_price": 3795,
+      "units_per_package": 80,
+      "image_url": "https://www.impotekno.com/fotos/C-130502.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-0360",
+      "name": "CANDADO CHICO 38MM S0104 COD: GW-38L",
+      "unit_price": 1149,
+      "units_per_package": 240,
+      "image_url": "https://www.impotekno.com/fotos/0360.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-C265",
+      "name": "CANDADO EN CAJA  50MM GW-50L",
+      "unit_price": 1558,
+      "units_per_package": 120,
+      "image_url": "https://www.impotekno.com/fotos/C265.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-1903",
+      "name": "CINTA METRICA GIANT  7.5 METROS",
+      "unit_price": 3449,
+      "units_per_package": 120,
+      "image_url": "https://www.impotekno.com/fotos/1903.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-C-130504",
+      "name": "LINGA CADENA D MOTO CON CODIGO",
+      "unit_price": 3680,
+      "units_per_package": 60,
+      "image_url": "https://www.impotekno.com/fotos/C-130504.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-C-130507",
+      "name": "LINGA CADENA PARA MOTO CON CONDADO",
+      "unit_price": 3852,
+      "units_per_package": 60,
+      "image_url": "https://www.impotekno.com/fotos/C-130507.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-CQ-01",
+      "name": "130501 LINGA PARA BICI 15X90",
+      "unit_price": 3935,
+      "units_per_package": 60,
+      "image_url": "https://www.impotekno.com/fotos/CQ-01.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-912",
+      "name": "(BS)MONOPATIN C/LUZ  DE METAL",
+      "unit_price": 17249,
+      "units_per_package": 10,
+      "image_url": "https://www.impotekno.com/fotos/912.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-ALF-160901",
+      "name": "ALFOMBRA INFLABLE PARA BEBES 100X100CM",
+      "unit_price": 3449,
+      "units_per_package": 100,
+      "image_url": "https://www.impotekno.com/fotos/ALF-160901.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-BB-03",
+      "name": "PELOTA DE BASKET BALL N07 F224-2",
+      "unit_price": 5463,
+      "units_per_package": 50,
+      "image_url": "https://www.impotekno.com/fotos/BB-03.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-F274",
+      "name": "PELOTA MUNDIAL N°5 FIFA   A0717",
+      "unit_price": 5980,
+      "units_per_package": 1,
+      "image_url": "https://www.impotekno.com/fotos/F274.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-FS-7",
+      "name": "PELOTA SPINNER VOLADOR S-2217",
+      "unit_price": 4715,
+      "units_per_package": 1,
+      "image_url": "https://www.impotekno.com/fotos/FS-7.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-912",
+      "name": "(BS)MONOPATIN C/LUZ  DE METAL",
+      "unit_price": 17249,
+      "units_per_package": 10,
+      "image_url": "https://www.impotekno.com/fotos/912.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-NH-M1",
+      "name": "MESA DE CAMPING PLEGABLE BLANCA",
+      "unit_price": 59800,
+      "units_per_package": 1,
+      "image_url": "https://www.impotekno.com/fotos/NH-M1.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-JS-7069",
+      "name": "PARRILLA DE CARBONO PORTATIL",
+      "unit_price": 97405,
+      "units_per_package": 4,
+      "image_url": "https://www.impotekno.com/fotos/JS-7069.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "PAS-TQ2808",
+      "name": "LUZ BICI IMPERMEABLE DELANTERA SOLAR",
+      "unit_price": 6733,
+      "units_per_package": 200,
+      "image_url": "https://sanjulian99.com/fotos/TQ2808.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-HUE761",
+      "name": "PELOTA PLAYERA",
+      "unit_price": 649,
+      "units_per_package": 500,
+      "image_url": "https://sanjulian99.com/fotos/HUE761.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99398",
+      "name": "BANDERA ARGENTINA PARA BICICLETA",
+      "unit_price": 2110,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/99398.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-NAL123",
+      "name": "CANDADO 50MM",
+      "unit_price": 1541,
+      "units_per_package": 120,
+      "image_url": "https://sanjulian99.com/fotos/NAL123.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-GIU20",
+      "name": "CARPA  1.35CM X 1.05CM",
+      "unit_price": 17848,
+      "units_per_package": 30,
+      "image_url": "https://sanjulian99.com/fotos/GIU20.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-3673",
+      "name": "COMPRESOR DE AIRE",
+      "unit_price": 25960,
+      "units_per_package": 32,
+      "image_url": "https://sanjulian99.com/fotos/3673.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-2808",
+      "name": "LUZ BICI  C/ VISOR RECARGABLE PARA BICI - -",
+      "unit_price": 2434,
+      "units_per_package": 240,
+      "image_url": "https://sanjulian99.com/fotos/2808.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99306",
+      "name": "MANGUERA EXTENDIBLE 30MTRS",
+      "unit_price": 12169,
+      "units_per_package": 30,
+      "image_url": "https://sanjulian99.com/fotos/99306.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-HUE761",
+      "name": "PELOTA PLAYERA",
+      "unit_price": 649,
+      "units_per_package": 500,
+      "image_url": "https://sanjulian99.com/fotos/HUE761.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99197",
+      "name": "SOFA REPOSERA INFLABLE",
+      "unit_price": 26772,
+      "units_per_package": 10,
+      "image_url": "https://sanjulian99.com/fotos/99197.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99025",
+      "name": "TRABA PARA BICI /MOTO",
+      "unit_price": 8799,
+      "units_per_package": 30,
+      "image_url": "https://sanjulian99.com/fotos/99025.jpg",
+      "provider": "San Julián"
+    }
+  ],
+  "Hogar y Cocina": [
     {
       "sku": "SAR-OM-5107",
       "name": "ANAFE ELECTRICO 2 HORNALLAS 2000W HOG0164 AF-D2",
@@ -1784,22 +3270,6 @@
       "unit_price": 56925,
       "units_per_package": 2,
       "image_url": "https://www.impotekno.com/fotos/W132.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-HMF-91082",
-      "name": "HDFK-1 HUMIDIFICADOR LED MELECH-23",
-      "unit_price": 5421,
-      "units_per_package": 80,
-      "image_url": "https://www.impotekno.com/fotos/HMF-91082.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-HMF-91062",
-      "name": "HUMIDIFCADOR RGB CL28 OFERTA!!!",
-      "unit_price": 5635,
-      "units_per_package": 60,
-      "image_url": "https://www.impotekno.com/fotos/HMF-91062.jpg",
       "provider": "Impotekno"
     },
     {
@@ -1915,22 +3385,6 @@
       "provider": "Impotekno"
     },
     {
-      "sku": "SAR-RET-4403",
-      "name": "R-121032 RELOJ DIGITAL ALARMA/FECHA/",
-      "unit_price": 3280,
-      "units_per_package": 200,
-      "image_url": "https://www.impotekno.com/fotos/RET-4403.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-REJ-4404",
-      "name": "RELOJ DIGITAL FECHA/ALARMA/TEMP KM9821A",
-      "unit_price": 3910,
-      "units_per_package": 100,
-      "image_url": "https://www.impotekno.com/fotos/REJ-4404.jpg",
-      "provider": "Impotekno"
-    },
-    {
       "sku": "SAR-OR-118",
       "name": "SET DE OLLA  ANTIADHERENTE 9 PIEZAS",
       "unit_price": 79350,
@@ -1960,110 +3414,6 @@
       "unit_price": 12880,
       "units_per_package": 20,
       "image_url": "https://www.impotekno.com/fotos/GN-0087.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-ILU0155",
-      "name": "VELADOR INFANTIL CARRUSEL",
-      "unit_price": 18090,
-      "units_per_package": 24,
-      "image_url": "https://www.impotekno.com/fotos/ILU0155.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-V-113803",
-      "name": "VENTILADOR LED TECHO  BLANCO Y NEGRO",
-      "unit_price": 67850,
-      "units_per_package": 1,
-      "image_url": "https://www.impotekno.com/fotos/V-113803.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-CQ-01",
-      "name": "130501 LINGA PARA BICI 15X90",
-      "unit_price": 3935,
-      "units_per_package": 60,
-      "image_url": "https://www.impotekno.com/fotos/CQ-01.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-C-130502",
-      "name": "CADENA LINGA CON CODIGO 150GR",
-      "unit_price": 3795,
-      "units_per_package": 80,
-      "image_url": "https://www.impotekno.com/fotos/C-130502.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-0360",
-      "name": "CANDADO CHICO 38MM S0104 COD: GW-38L",
-      "unit_price": 1149,
-      "units_per_package": 240,
-      "image_url": "https://www.impotekno.com/fotos/0360.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-C265",
-      "name": "CANDADO EN CAJA  50MM GW-50L",
-      "unit_price": 1558,
-      "units_per_package": 120,
-      "image_url": "https://www.impotekno.com/fotos/C265.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-1808",
-      "name": "CINTA AISLADORA X 10 UNIDADES ETL0112SA",
-      "unit_price": 3220,
-      "units_per_package": 50,
-      "image_url": "https://www.impotekno.com/fotos/1808.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-1903",
-      "name": "CINTA METRICA GIANT  7.5 METROS",
-      "unit_price": 3449,
-      "units_per_package": 120,
-      "image_url": "https://www.impotekno.com/fotos/1903.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-INF-91006",
-      "name": "INF-91100 INFLADOR MULTIUSO METALIZADO",
-      "unit_price": 3104,
-      "units_per_package": 100,
-      "image_url": "https://www.impotekno.com/fotos/INF-91006.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-130T14",
-      "name": "KIT 68 EN 1  DESTORNILLADORES C/TRINQUETE",
-      "unit_price": 22885,
-      "units_per_package": 30,
-      "image_url": "https://www.impotekno.com/fotos/130T14.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-C-130504",
-      "name": "LINGA CADENA D MOTO CON CODIGO",
-      "unit_price": 3680,
-      "units_per_package": 60,
-      "image_url": "https://www.impotekno.com/fotos/C-130504.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-C-130507",
-      "name": "LINGA CADENA PARA MOTO CON CONDADO",
-      "unit_price": 3852,
-      "units_per_package": 60,
-      "image_url": "https://www.impotekno.com/fotos/C-130507.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-HM-7729G",
-      "name": "LINTERNA MULTIFUNCION RECARGABLE",
-      "unit_price": 15985,
-      "units_per_package": 36,
-      "image_url": "https://www.impotekno.com/fotos/HM-7729G.jpg",
       "provider": "Impotekno"
     },
     {
@@ -2099,30 +3449,6 @@
       "provider": "Impotekno"
     },
     {
-      "sku": "SAR-CQ-01",
-      "name": "130501 LINGA PARA BICI 15X90",
-      "unit_price": 3935,
-      "units_per_package": 60,
-      "image_url": "https://www.impotekno.com/fotos/CQ-01.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-912",
-      "name": "(BS)MONOPATIN C/LUZ  DE METAL",
-      "unit_price": 17249,
-      "units_per_package": 10,
-      "image_url": "https://www.impotekno.com/fotos/912.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-E99",
-      "name": "DRONE PRO MAX 4K HD  E88 S-2144",
-      "unit_price": 26335,
-      "units_per_package": 36,
-      "image_url": "https://www.impotekno.com/fotos/E99.jpg",
-      "provider": "Impotekno"
-    },
-    {
       "sku": "SAR-JS-7018",
       "name": "JUEGO SET DE BELLEZA Y MAQUILLAJE",
       "unit_price": 15410,
@@ -2131,205 +3457,239 @@
       "provider": "Impotekno"
     },
     {
-      "sku": "SAR-PC5302",
-      "name": "MEC-2026A GORRO LEVANTA OREJA CON LUZ",
-      "unit_price": 5289,
-      "units_per_package": 240,
-      "image_url": "https://www.impotekno.com/fotos/PC5302.jpg",
+      "sku": "SAR-YC8512",
+      "name": "CABEZAL DE DUCHA CON LUZ",
+      "unit_price": 7417,
+      "units_per_package": 100,
+      "image_url": "https://www.impotekno.com/fotos/YC8512.jpg",
       "provider": "Impotekno"
     },
     {
-      "sku": "SAR-BB-03",
-      "name": "PELOTA DE BASKET BALL N07 F224-2",
-      "unit_price": 5463,
-      "units_per_package": 50,
-      "image_url": "https://www.impotekno.com/fotos/BB-03.jpg",
+      "sku": "SAR-HT-2701",
+      "name": "CANILLA GRIFO MONOCOMANDO DE BAÑO",
+      "unit_price": 18054,
+      "units_per_package": 20,
+      "image_url": "https://www.impotekno.com/fotos/HT-2701.jpg",
       "provider": "Impotekno"
     },
     {
-      "sku": "SAR-F274",
-      "name": "PELOTA MUNDIAL N°5 FIFA   A0717",
-      "unit_price": 5980,
-      "units_per_package": 1,
-      "image_url": "https://www.impotekno.com/fotos/F274.jpg",
+      "sku": "SAR-B1208",
+      "name": "CANILLA PARA COCINA  AM-2709-1",
+      "unit_price": 14949,
+      "units_per_package": 20,
+      "image_url": "https://www.impotekno.com/fotos/B1208.jpg",
       "provider": "Impotekno"
     },
     {
-      "sku": "SAR-FS-7",
-      "name": "PELOTA SPINNER VOLADOR S-2217",
+      "sku": "SAR-YC8512",
+      "name": "CABEZAL DE DUCHA CON LUZ",
+      "unit_price": 7417,
+      "units_per_package": 100,
+      "image_url": "https://www.impotekno.com/fotos/YC8512.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-WG-4527",
+      "name": "CESTA ORGANIZADOR DE ROPA",
       "unit_price": 4715,
+      "units_per_package": 100,
+      "image_url": "https://www.impotekno.com/fotos/WG-4527.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-DG-2202",
+      "name": "EXPRIMIDOR DE LIMÓN STAINLESS STEEL MELECH-395",
+      "unit_price": 3818,
+      "units_per_package": 144,
+      "image_url": "https://www.impotekno.com/fotos/DG-2202.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-JS-7040",
+      "name": "JARRA DE VIDRIO + 6 VASOS DE VIDRIO YZH-41D",
+      "unit_price": 23460,
+      "units_per_package": 4,
+      "image_url": "https://www.impotekno.com/fotos/JS-7040.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-LYBW-L1",
+      "name": "JARRA TERMO 1LT  C/PANTALLA DE TEMPERATURA",
+      "unit_price": 24725,
+      "units_per_package": 18,
+      "image_url": "https://www.impotekno.com/fotos/LYBW-L1.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-BN1642",
+      "name": "MELECH-21 AFILADOR CUCHILLOS 3 EN 1 JS-7296",
+      "unit_price": 1667,
+      "units_per_package": 144,
+      "image_url": "https://www.impotekno.com/fotos/BN1642.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-ACC0323BLA",
+      "name": "SECAPLATOS ESCURRIDOR MULTIUSO",
+      "unit_price": 16042,
+      "units_per_package": 30,
+      "image_url": "https://www.impotekno.com/fotos/ACC0323BLA.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-JK-4117-01",
+      "name": "SET DE CUCHILLOS CON BASE",
+      "unit_price": 22999,
+      "units_per_package": 12,
+      "image_url": "https://www.impotekno.com/fotos/JK-4117-01.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-JK-4370",
+      "name": "SET DE UTENSILIOS 12PCS C/ SILICONA CUBRE ACERO",
+      "unit_price": 20930,
+      "units_per_package": 24,
+      "image_url": "https://www.impotekno.com/fotos/JK-4370.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "SAR-MY-04",
+      "name": "TAZA DE VIDRIO MEZCLADORA S-1034-01",
+      "unit_price": 7935,
+      "units_per_package": 60,
+      "image_url": "https://www.impotekno.com/fotos/MY-04.jpg",
+      "provider": "Impotekno"
+    },
+    {
+      "sku": "PAS-99223",
+      "name": "VENTILADOR DE MANO OFERTA LIQUIDACION",
+      "unit_price": 1461,
+      "units_per_package": 288,
+      "image_url": "https://sanjulian99.com/fotos/99223.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99221",
+      "name": "VENTILADOR DE MANO OFERTA LIQUIDACION!",
+      "unit_price": 1461,
+      "units_per_package": 288,
+      "image_url": "https://sanjulian99.com/fotos/99221.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99303",
+      "name": "ASPIRADORA INALAMBRICA RECARGABLE CON ACCESORIOS",
+      "unit_price": 20119,
+      "units_per_package": 20,
+      "image_url": "https://sanjulian99.com/fotos/99303.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-CAR6500",
+      "name": "CABEZAL.65W INOVA CARGA RAPIDA 1 USB + 2 TIPO C",
+      "unit_price": 5485,
+      "units_per_package": 300,
+      "image_url": "https://sanjulian99.com/fotos/CAR6500.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-DESP905",
+      "name": "DESPERTADOR CAMPANA  12 X 15CM",
+      "unit_price": 8113,
+      "units_per_package": 60,
+      "image_url": "https://sanjulian99.com/fotos/DESP905.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-RD632",
+      "name": "DISPENSER PARA JABON LIQUIDO",
+      "unit_price": 8924,
+      "units_per_package": 24,
+      "image_url": "https://sanjulian99.com/fotos/RD632.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99132",
+      "name": "HUMIDIFICADOR EFECTO FUEGO RD-283",
+      "unit_price": 10871,
+      "units_per_package": 40,
+      "image_url": "https://sanjulian99.com/fotos/99132.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-MOP212",
+      "name": "MOPA EXCURRIDORA NOVEDAD MOP212",
+      "unit_price": 8113,
+      "units_per_package": 45,
+      "image_url": "https://sanjulian99.com/fotos/MOP212.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-99346",
+      "name": "PRACTICUNA BONUX HOGAR 101*70*72",
+      "unit_price": 61490,
       "units_per_package": 1,
-      "image_url": "https://www.impotekno.com/fotos/FS-7.jpg",
-      "provider": "Impotekno"
+      "image_url": "https://sanjulian99.com/fotos/99346.jpg",
+      "provider": "San Julián"
     },
     {
-      "sku": "SAR-912",
-      "name": "(BS)MONOPATIN C/LUZ  DE METAL",
-      "unit_price": 17249,
-      "units_per_package": 10,
-      "image_url": "https://www.impotekno.com/fotos/912.jpg",
-      "provider": "Impotekno"
+      "sku": "PAS-NAL196",
+      "name": "SET CUCHILLOS 6PCS",
+      "unit_price": 17256,
+      "units_per_package": 30,
+      "image_url": "https://sanjulian99.com/fotos/NAL196.jpg",
+      "provider": "San Julián"
     },
     {
-      "sku": "SAR-KM-2003",
-      "name": "ANTORCHA ESTACA SOLAR CALIDO JK-2003 XF-6017",
-      "unit_price": 3852,
-      "units_per_package": 105,
-      "image_url": "https://www.impotekno.com/fotos/KM-2003.jpg",
-      "provider": "Impotekno"
+      "sku": "PAS-99304",
+      "name": "SET DE DUCHA  OFEERTA SEMANAL",
+      "unit_price": 2199,
+      "units_per_package": 250,
+      "image_url": "https://sanjulian99.com/fotos/99304.jpg",
+      "provider": "San Julián"
     },
     {
-      "sku": "SAR-KIOSKO",
-      "name": "CARTEL KIOSKO OA-L576 ADBO-6",
-      "unit_price": 10707,
-      "units_per_package": 20,
-      "image_url": "https://www.impotekno.com/fotos/KIOSKO.jpg",
-      "provider": "Impotekno"
+      "sku": "PAS-RD721",
+      "name": "SET DE UTILES 63 PCS",
+      "unit_price": 8600,
+      "units_per_package": 72,
+      "image_url": "https://sanjulian99.com/fotos/RD721.jpg",
+      "provider": "San Julián"
     },
     {
-      "sku": "SAR-LED-9730",
-      "name": "FA-1203P TIRA LED NEON DE 7COLOR 5M 9728 OA-IL549",
-      "unit_price": 8309,
-      "units_per_package": 50,
-      "image_url": "https://www.impotekno.com/fotos/LED-9730.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-SL-30",
-      "name": "KM-6030 REFLECTOR SOLAR CON SENSOR 30LED",
-      "unit_price": 3680,
-      "units_per_package": 100,
-      "image_url": "https://www.impotekno.com/fotos/SL-30.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-LED-83055",
-      "name": "LED DE PARED BIDIRECCIONAL RGB+SENSOR",
-      "unit_price": 8746,
-      "units_per_package": 100,
-      "image_url": "https://www.impotekno.com/fotos/LED-83055.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-LED-83057",
-      "name": "LED PARED CALIDO BIDIRECCIONAL C/SENSOR",
-      "unit_price": 11499,
-      "units_per_package": 50,
-      "image_url": "https://www.impotekno.com/fotos/LED-83057.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-VEL-81015",
-      "name": "LED-83049 VELADOR DE COLORES RECARGABLE",
-      "unit_price": 5175,
-      "units_per_package": 96,
-      "image_url": "https://www.impotekno.com/fotos/VEL-81015.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-LED-83058",
-      "name": "LED-83071 BOLA LED DE CRISTAL 8CM (NAVIDAD)",
-      "unit_price": 4599,
-      "units_per_package": 20,
-      "image_url": "https://www.impotekno.com/fotos/LED-83058.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-LED-9726",
-      "name": "LED-83094 TIRA LED 50X50 RGB 5M 9734",
-      "unit_price": 7705,
-      "units_per_package": 40,
-      "image_url": "https://www.impotekno.com/fotos/LED-9726.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-YM200",
-      "name": "LED-83099 ARO DE LUZ LED RECTANGULAR",
-      "unit_price": 14720,
-      "units_per_package": 40,
-      "image_url": "https://www.impotekno.com/fotos/YM200.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-815",
-      "name": "LINTERNA COB 6433 OM JY-819 OM-5119",
-      "unit_price": 6450,
+      "sku": "PAS-RD521",
+      "name": "SET DESTORNILLADOR GOLPE 6PCS",
+      "unit_price": 5489,
       "units_per_package": 60,
-      "image_url": "https://www.impotekno.com/fotos/815.jpg",
-      "provider": "Impotekno"
+      "image_url": "https://sanjulian99.com/fotos/RD521.jpg",
+      "provider": "San Julián"
     },
     {
-      "sku": "SAR-SD8677",
-      "name": "LINTERNA LED MINI RECARGABLE SD-8677",
-      "unit_price": 2933,
-      "units_per_package": 200,
-      "image_url": "https://www.impotekno.com/fotos/SD8677.jpg",
-      "provider": "Impotekno"
+      "sku": "PAS-TENECON",
+      "name": "TENDER 3 PISOS 1,7MTRS DOBLE CAÑO",
+      "unit_price": 18659,
+      "units_per_package": 6,
+      "image_url": "https://sanjulian99.com/fotos/TENECON.jpg",
+      "provider": "San Julián"
     },
     {
-      "sku": "SAR-FJD-101",
-      "name": "LINTERNA MINERA HIGH POWER HA-8437",
-      "unit_price": 2678,
-      "units_per_package": 240,
-      "image_url": "https://www.impotekno.com/fotos/FJD-101.jpg",
-      "provider": "Impotekno"
+      "sku": "PAS-99338",
+      "name": "VALIJA SET DE HERRAMIENTAS 108 PIEZAS",
+      "unit_price": 51109,
+      "units_per_package": 5,
+      "image_url": "https://sanjulian99.com/fotos/99338.jpg",
+      "provider": "San Julián"
     },
     {
-      "sku": "SAR-HB-9707A-1",
-      "name": "LINTERNA MULTIFUNCIONAL C/ PANEL SOLAR",
-      "unit_price": 7992,
-      "units_per_package": 60,
-      "image_url": "https://www.impotekno.com/fotos/HB-9707A-1.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-511",
-      "name": "MELECH-93 LINTERNA MINI RECARGABLE METAL 911A",
-      "unit_price": 2455,
-      "units_per_package": 240,
-      "image_url": "https://www.impotekno.com/fotos/511.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-OM-1012",
-      "name": "PROTON MINI RGB 12 LED 1201",
-      "unit_price": 8338,
-      "units_per_package": 100,
-      "image_url": "https://www.impotekno.com/fotos/OM-1012.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-LED-83063",
-      "name": "VELADOR CAPYBARA AVIÓN XJD-502",
-      "unit_price": 4599,
-      "units_per_package": 120,
-      "image_url": "https://www.impotekno.com/fotos/LED-83063.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-LED-83062",
-      "name": "VELADOR CAPYBARA MOTO XJD-93",
-      "unit_price": 4599,
-      "units_per_package": 120,
-      "image_url": "https://www.impotekno.com/fotos/LED-83062.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-KM-2003",
-      "name": "ANTORCHA ESTACA SOLAR CALIDO JK-2003 XF-6017",
-      "unit_price": 3852,
-      "units_per_package": 105,
-      "image_url": "https://www.impotekno.com/fotos/KM-2003.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-BF-777S",
-      "name": "2 WALKIE TALKIE 16 CANALES",
-      "unit_price": 34108,
-      "units_per_package": 50,
-      "image_url": "https://www.impotekno.com/fotos/BF-777S.jpg",
-      "provider": "Impotekno"
-    },
+      "sku": "PAS-99223",
+      "name": "VENTILADOR DE MANO OFERTA LIQUIDACION",
+      "unit_price": 1461,
+      "units_per_package": 288,
+      "image_url": "https://sanjulian99.com/fotos/99223.jpg",
+      "provider": "San Julián"
+    }
+  ],
+  "Ropa y Accesorios": [
     {
       "sku": "SAR-SG-12",
       "name": "GUANTE CLASICO DE HOMBRE",
@@ -2363,37 +3723,65 @@
       "provider": "Impotekno"
     },
     {
-      "sku": "SAR-JS-7069",
-      "name": "PARRILLA DE CARBONO PORTATIL",
-      "unit_price": 97405,
-      "units_per_package": 4,
-      "image_url": "https://www.impotekno.com/fotos/JS-7069.jpg",
+      "sku": "PAS-DEF-1",
+      "name": "GORRA AFA 3 ESTRELLAS",
+      "unit_price": 6049,
+      "units_per_package": 360,
+      "image_url": "https://sanjulian99.com/fotos/DEF-1.jpg",
+      "provider": "San Julián"
+    }
+  ],
+  "Mochilas y Bolsas": [
+    {
+      "sku": "SAR-JK-2409",
+      "name": "MOCHILA PARA TRASLADAR MASCOTAS",
+      "unit_price": 22425,
+      "units_per_package": 40,
+      "image_url": "https://www.impotekno.com/fotos/JK-2409.jpg",
       "provider": "Impotekno"
     },
     {
-      "sku": "SAR-BF-777S",
-      "name": "2 WALKIE TALKIE 16 CANALES",
-      "unit_price": 34108,
-      "units_per_package": 50,
-      "image_url": "https://www.impotekno.com/fotos/BF-777S.jpg",
-      "provider": "Impotekno"
+      "sku": "PAS-125048",
+      "name": "BANDOLERA SHIRKA",
+      "unit_price": 7788,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/125048.jpg",
+      "provider": "San Julián"
     },
     {
-      "sku": "SAR-EF10009",
-      "name": "BANDERA  ARGENTINA  GRANDE 633114 90X145 WCF-10",
-      "unit_price": 1782,
-      "units_per_package": 250,
-      "image_url": "https://www.impotekno.com/fotos/EF10009.jpg",
-      "provider": "Impotekno"
+      "sku": "PAS-125067",
+      "name": "BOLSA PLEGABLE PARA SUPER SHIRKA",
+      "unit_price": 2759,
+      "units_per_package": 360,
+      "image_url": "https://sanjulian99.com/fotos/125067.jpg",
+      "provider": "San Julián"
     },
     {
-      "sku": "SAR-EF10009",
-      "name": "BANDERA  ARGENTINA  GRANDE 633114 90X145 WCF-10",
-      "unit_price": 1782,
-      "units_per_package": 250,
-      "image_url": "https://www.impotekno.com/fotos/EF10009.jpg",
-      "provider": "Impotekno"
+      "sku": "PAS-MOMAS",
+      "name": "MOCHILA MULTIUSO TRANSP. (MASCOTA/ESCOLAR) 35CMX44",
+      "unit_price": 16225,
+      "units_per_package": 30,
+      "image_url": "https://sanjulian99.com/fotos/MOMAS.jpg",
+      "provider": "San Julián"
     },
+    {
+      "sku": "PAS-125050",
+      "name": "RIÑONERA SHIRKA",
+      "unit_price": 7058,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/125050.jpg",
+      "provider": "San Julián"
+    },
+    {
+      "sku": "PAS-125054",
+      "name": "RIÑONERA SHIRKA",
+      "unit_price": 6004,
+      "units_per_package": 100,
+      "image_url": "https://sanjulian99.com/fotos/125054.jpg",
+      "provider": "San Julián"
+    }
+  ],
+  "Bazar": [
     {
       "sku": "SAR-TH-27G",
       "name": "BOTELLA ANTIDERRAME C/ SORBETE INCORPORADO",
@@ -2459,627 +3847,11 @@
       "provider": "Impotekno"
     },
     {
-      "sku": "SAR-YC8512",
-      "name": "CABEZAL DE DUCHA CON LUZ",
-      "unit_price": 7417,
-      "units_per_package": 100,
-      "image_url": "https://www.impotekno.com/fotos/YC8512.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-HT-2701",
-      "name": "CANILLA GRIFO MONOCOMANDO DE BAÑO",
-      "unit_price": 18054,
-      "units_per_package": 20,
-      "image_url": "https://www.impotekno.com/fotos/HT-2701.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-B1208",
-      "name": "CANILLA PARA COCINA  AM-2709-1",
-      "unit_price": 14949,
-      "units_per_package": 20,
-      "image_url": "https://www.impotekno.com/fotos/B1208.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-YC8512",
-      "name": "CABEZAL DE DUCHA CON LUZ",
-      "unit_price": 7417,
-      "units_per_package": 100,
-      "image_url": "https://www.impotekno.com/fotos/YC8512.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-MELECH-454",
-      "name": "BOLIGRAFO MULTIFUBCIONAL",
-      "unit_price": 4945,
-      "units_per_package": 400,
-      "image_url": "https://www.impotekno.com/fotos/MELECH-454.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-WG-4527",
-      "name": "CESTA ORGANIZADOR DE ROPA",
-      "unit_price": 4715,
-      "units_per_package": 100,
-      "image_url": "https://www.impotekno.com/fotos/WG-4527.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-JL-897-2",
-      "name": "ENCENDEDOR RECARGABLE USB 903",
-      "unit_price": 3909,
-      "units_per_package": 1,
-      "image_url": "https://www.impotekno.com/fotos/JL-897-2.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-DG-2202",
-      "name": "EXPRIMIDOR DE LIMÓN STAINLESS STEEL MELECH-395",
-      "unit_price": 3818,
-      "units_per_package": 144,
-      "image_url": "https://www.impotekno.com/fotos/DG-2202.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-JS-7040",
-      "name": "JARRA DE VIDRIO + 6 VASOS DE VIDRIO YZH-41D",
-      "unit_price": 23460,
-      "units_per_package": 4,
-      "image_url": "https://www.impotekno.com/fotos/JS-7040.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-LYBW-L1",
-      "name": "JARRA TERMO 1LT  C/PANTALLA DE TEMPERATURA",
-      "unit_price": 24725,
-      "units_per_package": 18,
-      "image_url": "https://www.impotekno.com/fotos/LYBW-L1.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-BN1642",
-      "name": "MELECH-21 AFILADOR CUCHILLOS 3 EN 1 JS-7296",
-      "unit_price": 1667,
-      "units_per_package": 144,
-      "image_url": "https://www.impotekno.com/fotos/BN1642.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-ACC0323BLA",
-      "name": "SECAPLATOS ESCURRIDOR MULTIUSO",
-      "unit_price": 16042,
-      "units_per_package": 30,
-      "image_url": "https://www.impotekno.com/fotos/ACC0323BLA.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-JK-4117-01",
-      "name": "SET DE CUCHILLOS CON BASE",
-      "unit_price": 22999,
-      "units_per_package": 12,
-      "image_url": "https://www.impotekno.com/fotos/JK-4117-01.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-JK-4370",
-      "name": "SET DE UTENSILIOS 12PCS C/ SILICONA CUBRE ACERO",
-      "unit_price": 20930,
-      "units_per_package": 24,
-      "image_url": "https://www.impotekno.com/fotos/JK-4370.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-3057",
-      "name": "SET X 6 COPAS DE VINO",
-      "unit_price": 11385,
-      "units_per_package": 8,
-      "image_url": "https://www.impotekno.com/fotos/3057.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-P517",
-      "name": "SET X3 DE PCS PELA PAPA",
-      "unit_price": 2703,
-      "units_per_package": 240,
-      "image_url": "https://www.impotekno.com/fotos/P517.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-MY-04",
-      "name": "TAZA DE VIDRIO MEZCLADORA S-1034-01",
-      "unit_price": 7935,
-      "units_per_package": 60,
-      "image_url": "https://www.impotekno.com/fotos/MY-04.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-MELECH-454",
-      "name": "BOLIGRAFO MULTIFUBCIONAL",
-      "unit_price": 4945,
-      "units_per_package": 400,
-      "image_url": "https://www.impotekno.com/fotos/MELECH-454.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "PAS-KS5145",
-      "name": "CALCULADORA ELECTRONICA COLORES 7X12cm",
-      "unit_price": 2759,
-      "units_per_package": 500,
-      "image_url": "https://sanjulian99.com/fotos/KS5145.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-91023",
-      "name": "CALCULADORA PASTEL TECLA",
-      "unit_price": 4706,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/91023.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-V55",
-      "name": "LINTERNA PARA BICICLETA BLANCA RECARGABLE 3 MODOS",
-      "unit_price": 2759,
-      "units_per_package": 240,
-      "image_url": "https://sanjulian99.com/fotos/V55.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-TQ2808",
-      "name": "LUZ BICI IMPERMEABLE DELANTERA SOLAR",
-      "unit_price": 6733,
-      "units_per_package": 200,
-      "image_url": "https://sanjulian99.com/fotos/TQ2808.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99077",
-      "name": "AURIC. P47 BLUETOOTH",
-      "unit_price": 3849,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/99077.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99077",
-      "name": "AURIC. P47 BLUETOOTH",
-      "unit_price": 3849,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/99077.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-TRIM",
-      "name": "CORTA UÑA TRIM GRANDE",
-      "unit_price": 455,
-      "units_per_package": 600,
-      "image_url": "https://sanjulian99.com/fotos/TRIM.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99344",
-      "name": "ESPEJO HEXAGONAL (METAL)",
-      "unit_price": 2397,
-      "units_per_package": 1,
-      "image_url": "https://sanjulian99.com/fotos/99344.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99322",
-      "name": "ESPEJO MAQUILLAJE DE CARTERA",
-      "unit_price": 1319,
-      "units_per_package": 300,
-      "image_url": "https://sanjulian99.com/fotos/99322.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-RD1783M",
-      "name": "EXTRACTOR DE POLVO P/UÑAS 80W",
-      "unit_price": 44959,
-      "units_per_package": 12,
-      "image_url": "https://sanjulian99.com/fotos/RD1783M.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-DL1190",
-      "name": "MAQUINA CORTA PELO DALING DL-1190 PROFESIONAL",
-      "unit_price": 23364,
-      "units_per_package": 60,
-      "image_url": "https://sanjulian99.com/fotos/DL1190.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-EX01826",
-      "name": "MINI AIRE OFERTA LIQUIDACION",
-      "unit_price": 5435,
-      "units_per_package": 60,
-      "image_url": "https://sanjulian99.com/fotos/EX01826.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-SJ0017",
-      "name": "PISTOLA MASEAJORA MUSCULAR",
-      "unit_price": 11682,
-      "units_per_package": 40,
-      "image_url": "https://sanjulian99.com/fotos/SJ0017.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-TRIM",
-      "name": "CORTA UÑA TRIM GRANDE",
-      "unit_price": 455,
-      "units_per_package": 600,
-      "image_url": "https://sanjulian99.com/fotos/TRIM.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-JUA252",
-      "name": "BASE BURBUJERA MUNDIALISTA",
-      "unit_price": 12169,
-      "units_per_package": 72,
-      "image_url": "https://sanjulian99.com/fotos/JUA252.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-RDO127",
-      "name": "CACTUS BAILARIN RECARGABLE (cact001)",
-      "unit_price": 5642,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/RDO127.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-NAL254",
-      "name": "GLOBO LUMINOSO (SURTIDOS)",
-      "unit_price": 1785,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/NAL254.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-5742",
-      "name": "LLAVERO PORTASUBE OFERTAAAA",
-      "unit_price": 1295,
-      "units_per_package": 500,
-      "image_url": "https://sanjulian99.com/fotos/5742.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99382",
-      "name": "MASCOTA VIRTUAL EN BLISTER",
-      "unit_price": 2596,
-      "units_per_package": 288,
-      "image_url": "https://sanjulian99.com/fotos/99382.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-MINIIMPRE",
-      "name": "MINI IMPRESORA TERMICA BLUETOOH RECARG.",
-      "unit_price": 13792,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/MINIIMPRE.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-HUE761",
-      "name": "PELOTA PLAYERA",
-      "unit_price": 649,
-      "units_per_package": 500,
-      "image_url": "https://sanjulian99.com/fotos/HUE761.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-C4435",
-      "name": "PIZARRA MAGICA PERSONAJES 8.5 MULTICOLOR",
-      "unit_price": 2968,
-      "units_per_package": 200,
-      "image_url": "https://sanjulian99.com/fotos/C4435.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-PP013",
-      "name": "PP013) JUEGO RITMO ESPACIAL ELECTRICO MUSICA",
-      "unit_price": 7167,
-      "units_per_package": 120,
-      "image_url": "https://sanjulian99.com/fotos/PP013.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99019",
-      "name": "SONY ANGEL  X12 UNID (precio x unidad) ofertaa",
-      "unit_price": 536,
-      "units_per_package": 720,
-      "image_url": "https://sanjulian99.com/fotos/99019.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99030",
-      "name": "VALIJA PARA COLOREAR (ASTRON.Y UNICORNIO)",
-      "unit_price": 13792,
-      "units_per_package": 10,
-      "image_url": "https://sanjulian99.com/fotos/99030.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99223",
-      "name": "VENTILADOR DE MANO OFERTA LIQUIDACION",
-      "unit_price": 1461,
-      "units_per_package": 288,
-      "image_url": "https://sanjulian99.com/fotos/99223.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99221",
-      "name": "VENTILADOR DE MANO OFERTA LIQUIDACION!",
-      "unit_price": 1461,
-      "units_per_package": 288,
-      "image_url": "https://sanjulian99.com/fotos/99221.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-JUA252",
-      "name": "BASE BURBUJERA MUNDIALISTA",
-      "unit_price": 12169,
-      "units_per_package": 72,
-      "image_url": "https://sanjulian99.com/fotos/JUA252.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-RDO12",
-      "name": "AMPLIFICADOR DE VIDEO P/CELULAR 12\" VS201",
-      "unit_price": 3229,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/RDO12.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-ARO36RGB",
-      "name": "ARO 36CM RGB Y BLANCO 14\"",
-      "unit_price": 13386,
-      "units_per_package": 20,
-      "image_url": "https://sanjulian99.com/fotos/ARO36RGB.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-ARO10PUL",
-      "name": "ARO SELFIE CALIDO/FRIO 26CM 10\"",
-      "unit_price": 4949,
-      "units_per_package": 40,
-      "image_url": "https://sanjulian99.com/fotos/ARO10PUL.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99303",
-      "name": "ASPIRADORA INALAMBRICA RECARGABLE CON ACCESORIOS",
-      "unit_price": 20119,
-      "units_per_package": 20,
-      "image_url": "https://sanjulian99.com/fotos/99303.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99077",
-      "name": "AURIC. P47 BLUETOOTH",
-      "unit_price": 3849,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/99077.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99398",
-      "name": "BANDERA ARGENTINA PARA BICICLETA",
-      "unit_price": 2110,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/99398.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-125048",
-      "name": "BANDOLERA SHIRKA",
-      "unit_price": 7788,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/125048.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-JUA252",
-      "name": "BASE BURBUJERA MUNDIALISTA",
-      "unit_price": 12169,
-      "units_per_package": 72,
-      "image_url": "https://sanjulian99.com/fotos/JUA252.jpg",
-      "provider": "San Julián"
-    },
-    {
       "sku": "PAS-RD1001",
       "name": "BOTELLA TERMICA SPORT 500ML",
       "unit_price": 10547,
       "units_per_package": 50,
       "image_url": "https://sanjulian99.com/fotos/RD1001.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-CAR6500",
-      "name": "CABEZAL.65W INOVA CARGA RAPIDA 1 USB + 2 TIPO C",
-      "unit_price": 5485,
-      "units_per_package": 300,
-      "image_url": "https://sanjulian99.com/fotos/CAR6500.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-91024",
-      "name": "CALC. SOLAR PASTEL TECLA Y DIGITOS GRANDES",
-      "unit_price": 5489,
-      "units_per_package": 96,
-      "image_url": "https://sanjulian99.com/fotos/91024.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-CALC601",
-      "name": "CALCULADORA PASTEL SOLAR",
-      "unit_price": 2921,
-      "units_per_package": 400,
-      "image_url": "https://sanjulian99.com/fotos/CALC601.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-NAL123",
-      "name": "CANDADO 50MM",
-      "unit_price": 1541,
-      "units_per_package": 120,
-      "image_url": "https://sanjulian99.com/fotos/NAL123.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-GIU20",
-      "name": "CARPA  1.35CM X 1.05CM",
-      "unit_price": 17848,
-      "units_per_package": 30,
-      "image_url": "https://sanjulian99.com/fotos/GIU20.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99287",
-      "name": "CARTEL LETRAS  COLORES",
-      "unit_price": 9735,
-      "units_per_package": 36,
-      "image_url": "https://sanjulian99.com/fotos/99287.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99289",
-      "name": "CHISPERO RECARGABLE USB",
-      "unit_price": 2921,
-      "units_per_package": 300,
-      "image_url": "https://sanjulian99.com/fotos/99289.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-3673",
-      "name": "COMPRESOR DE AIRE",
-      "unit_price": 25960,
-      "units_per_package": 32,
-      "image_url": "https://sanjulian99.com/fotos/3673.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-CONT014",
-      "name": "CONTROL REMOTO T.V UNIVIVERSAL",
-      "unit_price": 2677,
-      "units_per_package": 240,
-      "image_url": "https://sanjulian99.com/fotos/CONT014.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-CONTTVBOX",
-      "name": "CONTROL REMOTO UNIVERSAL TVBOX Y DEMAS",
-      "unit_price": 2190,
-      "units_per_package": 500,
-      "image_url": "https://sanjulian99.com/fotos/CONTTVBOX.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-K8",
-      "name": "CORBATERO TIPO C y iphone   (A103-2)",
-      "unit_price": 5273,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/K8.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-TRIM",
-      "name": "CORTA UÑA TRIM GRANDE",
-      "unit_price": 455,
-      "units_per_package": 600,
-      "image_url": "https://sanjulian99.com/fotos/TRIM.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99069",
-      "name": "CORTAUÑA PARA MASCOTA",
-      "unit_price": 2028,
-      "units_per_package": 315,
-      "image_url": "https://sanjulian99.com/fotos/99069.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-DESP905",
-      "name": "DESPERTADOR CAMPANA  12 X 15CM",
-      "unit_price": 8113,
-      "units_per_package": 60,
-      "image_url": "https://sanjulian99.com/fotos/DESP905.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-RD632",
-      "name": "DISPENSER PARA JABON LIQUIDO",
-      "unit_price": 8924,
-      "units_per_package": 24,
-      "image_url": "https://sanjulian99.com/fotos/RD632.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-EC001",
-      "name": "ENCENDEDOR IBEK X50",
-      "unit_price": 10547,
-      "units_per_package": 20,
-      "image_url": "https://sanjulian99.com/fotos/EC001.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99125",
-      "name": "ESPEJO LED PLEGABLE OFERTAAA",
-      "unit_price": 5499,
-      "units_per_package": 60,
-      "image_url": "https://sanjulian99.com/fotos/99125.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99342",
-      "name": "ESPEJO REDONDO CAJA NEGRA (METAL)",
-      "unit_price": 2110,
-      "units_per_package": 1,
-      "image_url": "https://sanjulian99.com/fotos/99342.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-ERIK03",
-      "name": "EXIBIDOR GIRATORIO RECARG,MIDE13.5CM DE DIAMETRO",
-      "unit_price": 12980,
-      "units_per_package": 60,
-      "image_url": "https://sanjulian99.com/fotos/ERIK03.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-AV1527",
-      "name": "FUNDA PARA AGUA CELULAR",
-      "unit_price": 925,
-      "units_per_package": 500,
-      "image_url": "https://sanjulian99.com/fotos/AV1527.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-DEF-1",
-      "name": "GORRA AFA 3 ESTRELLAS",
-      "unit_price": 6049,
-      "units_per_package": 360,
-      "image_url": "https://sanjulian99.com/fotos/DEF-1.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99132",
-      "name": "HUMIDIFICADOR EFECTO FUEGO RD-283",
-      "unit_price": 10871,
-      "units_per_package": 40,
-      "image_url": "https://sanjulian99.com/fotos/99132.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99399",
-      "name": "JUEGO DE MESA BASTA 3ERA GENERACION",
-      "unit_price": 14116,
-      "units_per_package": 72,
-      "image_url": "https://sanjulian99.com/fotos/99399.jpg",
       "provider": "San Julián"
     },
     {
@@ -3091,315 +3863,11 @@
       "provider": "San Julián"
     },
     {
-      "sku": "PAS-L3D",
-      "name": "LAPIZ 3D  CON PANTALLA",
-      "unit_price": 10222,
-      "units_per_package": 40,
-      "image_url": "https://sanjulian99.com/fotos/L3D.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-JY819",
-      "name": "LINTERNA COB JY-819",
-      "unit_price": 6589,
-      "units_per_package": 60,
-      "image_url": "https://sanjulian99.com/fotos/JY819.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-RD496",
-      "name": "LINTERNA MINERA PRO",
-      "unit_price": 3245,
-      "units_per_package": 240,
-      "image_url": "https://sanjulian99.com/fotos/RD496.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-MS807",
-      "name": "LINTERNA RECARGABLE 7 LED EN CAJA",
-      "unit_price": 6039,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/MS807.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-P50",
-      "name": "LINTERNA RECARGABLE P50 POTENCIA",
-      "unit_price": 10060,
-      "units_per_package": 60,
-      "image_url": "https://sanjulian99.com/fotos/P50.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-5742",
-      "name": "LLAVERO PORTASUBE OFERTAAAA",
-      "unit_price": 1295,
-      "units_per_package": 500,
-      "image_url": "https://sanjulian99.com/fotos/5742.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-2808",
-      "name": "LUZ BICI  C/ VISOR RECARGABLE PARA BICI - -",
-      "unit_price": 2434,
-      "units_per_package": 240,
-      "image_url": "https://sanjulian99.com/fotos/2808.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-EP090",
-      "name": "LUZ DE EMERGENCIA 90LED",
-      "unit_price": 14278,
-      "units_per_package": 60,
-      "image_url": "https://sanjulian99.com/fotos/EP090.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99306",
-      "name": "MANGUERA EXTENDIBLE 30MTRS",
-      "unit_price": 12169,
-      "units_per_package": 30,
-      "image_url": "https://sanjulian99.com/fotos/99306.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99290",
-      "name": "MARRANITO/CERDITO  EQUILIBRISTA VIRAL",
-      "unit_price": 15739,
-      "units_per_package": 72,
-      "image_url": "https://sanjulian99.com/fotos/99290.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99382",
-      "name": "MASCOTA VIRTUAL EN BLISTER",
-      "unit_price": 2596,
-      "units_per_package": 288,
-      "image_url": "https://sanjulian99.com/fotos/99382.jpg",
-      "provider": "San Julián"
-    },
-    {
       "sku": "PAS-RD1016",
       "name": "MATE ACERO INOX.CON TAPA",
       "unit_price": 6977,
       "units_per_package": 120,
       "image_url": "https://sanjulian99.com/fotos/RD1016.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-MINIIMPRE",
-      "name": "MINI IMPRESORA TERMICA BLUETOOH RECARG.",
-      "unit_price": 13792,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/MINIIMPRE.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-MOP212",
-      "name": "MOPA EXCURRIDORA NOVEDAD MOP212",
-      "unit_price": 8113,
-      "units_per_package": 45,
-      "image_url": "https://sanjulian99.com/fotos/MOP212.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-HUE761",
-      "name": "PELOTA PLAYERA",
-      "unit_price": 649,
-      "units_per_package": 500,
-      "image_url": "https://sanjulian99.com/fotos/HUE761.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-2782",
-      "name": "PEN 32GB SANDISK",
-      "unit_price": 12177,
-      "units_per_package": 0,
-      "image_url": "https://sanjulian99.com/fotos/2782.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-5126",
-      "name": "PERFUMERO PORTATIL RECARGABLE 5ML",
-      "unit_price": 762,
-      "units_per_package": 1200,
-      "image_url": "https://sanjulian99.com/fotos/5126.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-JUA2030",
-      "name": "PIZARRA LED 20CM X 30CM",
-      "unit_price": 7142,
-      "units_per_package": 60,
-      "image_url": "https://sanjulian99.com/fotos/JUA2030.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-PIZABALLE",
-      "name": "PIZARRA MAGICA 9\" BALLENA",
-      "unit_price": 4345,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/PIZABALLE.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-PP005",
-      "name": "POP IT ANIMALES",
-      "unit_price": 3586,
-      "units_per_package": 1,
-      "image_url": "https://sanjulian99.com/fotos/PP005.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-PP009",
-      "name": "POPIT ASTRONAUTA",
-      "unit_price": 4057,
-      "units_per_package": 120,
-      "image_url": "https://sanjulian99.com/fotos/PP009.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-LA082",
-      "name": "POWER BANK 20.000 ma",
-      "unit_price": 11682,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/LA082.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-427610",
-      "name": "POWER BANK MI PORTATIL 12000MAH",
-      "unit_price": 9898,
-      "units_per_package": 200,
-      "image_url": "https://sanjulian99.com/fotos/427610.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99346",
-      "name": "PRACTICUNA BONUX HOGAR 101*70*72",
-      "unit_price": 61490,
-      "units_per_package": 1,
-      "image_url": "https://sanjulian99.com/fotos/99346.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-REL901",
-      "name": "RELOJ ALARMA CRONOM.LUZ SUMERGIBLE 30M",
-      "unit_price": 9735,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/REL901.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-MS21001",
-      "name": "RELOJ DE PARED LUJO 32CM",
-      "unit_price": 21888,
-      "units_per_package": 20,
-      "image_url": "https://sanjulian99.com/fotos/MS21001.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-REL908",
-      "name": "RELOJ LED HORA Y FECHA",
-      "unit_price": 1947,
-      "units_per_package": 200,
-      "image_url": "https://sanjulian99.com/fotos/REL908.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-RELED02",
-      "name": "RELOJ PARED DIGITAL  NUEVOSS ROJO 45CM",
-      "unit_price": 29205,
-      "units_per_package": 12,
-      "image_url": "https://sanjulian99.com/fotos/RELED02.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-REL907",
-      "name": "RELOJ SILICONA LED HORA Y FECHA",
-      "unit_price": 2434,
-      "units_per_package": 200,
-      "image_url": "https://sanjulian99.com/fotos/REL907.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-125050",
-      "name": "RIÑONERA SHIRKA",
-      "unit_price": 7058,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/125050.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-125054",
-      "name": "RIÑONERA SHIRKA",
-      "unit_price": 6004,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/125054.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-RING01",
-      "name": "RING PARA CELULAR",
-      "unit_price": 1136,
-      "units_per_package": 1000,
-      "image_url": "https://sanjulian99.com/fotos/RING01.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-NAL196",
-      "name": "SET CUCHILLOS 6PCS",
-      "unit_price": 17256,
-      "units_per_package": 30,
-      "image_url": "https://sanjulian99.com/fotos/NAL196.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99304",
-      "name": "SET DE DUCHA  OFEERTA SEMANAL",
-      "unit_price": 2199,
-      "units_per_package": 250,
-      "image_url": "https://sanjulian99.com/fotos/99304.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-RD721",
-      "name": "SET DE UTILES 63 PCS",
-      "unit_price": 8600,
-      "units_per_package": 72,
-      "image_url": "https://sanjulian99.com/fotos/RD721.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-RD521",
-      "name": "SET DESTORNILLADOR GOLPE 6PCS",
-      "unit_price": 5489,
-      "units_per_package": 60,
-      "image_url": "https://sanjulian99.com/fotos/RD521.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99019",
-      "name": "SONY ANGEL  X12 UNID (precio x unidad) ofertaa",
-      "unit_price": 536,
-      "units_per_package": 720,
-      "image_url": "https://sanjulian99.com/fotos/99019.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-427614",
-      "name": "STICKER MUNDIAL",
-      "unit_price": 1316,
-      "units_per_package": 300,
-      "image_url": "https://sanjulian99.com/fotos/427614.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-TENECON",
-      "name": "TENDER 3 PISOS 1,7MTRS DOBLE CAÑO",
-      "unit_price": 18659,
-      "units_per_package": 6,
-      "image_url": "https://sanjulian99.com/fotos/TENECON.jpg",
       "provider": "San Julián"
     },
     {
@@ -3417,475 +3885,15 @@
       "units_per_package": 30,
       "image_url": "https://sanjulian99.com/fotos/RD1007.jpg",
       "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-78033",
-      "name": "TETRIS  EN CAJA",
-      "unit_price": 2596,
-      "units_per_package": 200,
-      "image_url": "https://sanjulian99.com/fotos/78033.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99025",
-      "name": "TRABA PARA BICI /MOTO",
-      "unit_price": 8799,
-      "units_per_package": 30,
-      "image_url": "https://sanjulian99.com/fotos/99025.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-FD1275",
-      "name": "TRIPODE EXTENSIBLE 2.1MTS",
-      "unit_price": 4868,
-      "units_per_package": 40,
-      "image_url": "https://sanjulian99.com/fotos/FD1275.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99030",
-      "name": "VALIJA PARA COLOREAR (ASTRON.Y UNICORNIO)",
-      "unit_price": 13792,
-      "units_per_package": 10,
-      "image_url": "https://sanjulian99.com/fotos/99030.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99338",
-      "name": "VALIJA SET DE HERRAMIENTAS 108 PIEZAS",
-      "unit_price": 51109,
-      "units_per_package": 5,
-      "image_url": "https://sanjulian99.com/fotos/99338.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99223",
-      "name": "VENTILADOR DE MANO OFERTA LIQUIDACION",
-      "unit_price": 1461,
-      "units_per_package": 288,
-      "image_url": "https://sanjulian99.com/fotos/99223.jpg",
-      "provider": "San Julián"
     }
   ],
-  "Electrónica Gamer": [
+  "Accesorios Ópticos": [
     {
-      "sku": "SAR-X2",
-      "name": "CONSOLA X2 PLUS 64 GB",
-      "unit_price": 35529,
-      "units_per_package": 40,
-      "image_url": "https://www.impotekno.com/fotos/X2.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-AF-404",
-      "name": "JOYSTICK PS4 AFA EDICION LIMITADA",
-      "unit_price": 22368,
-      "units_per_package": 50,
-      "image_url": "https://www.impotekno.com/fotos/AF-404.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-MOU-150M07",
-      "name": "MOUSE INALAMBRICO TIME 150M10",
-      "unit_price": 3449,
+      "sku": "PAS-EX02772",
+      "name": "LENTES DE SOL ALTAVOZ BLUETOOTH 5.4 INALAMBRICO",
+      "unit_price": 11849,
       "units_per_package": 100,
-      "image_url": "https://www.impotekno.com/fotos/MOU-150M07.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-X2",
-      "name": "CONSOLA X2 PLUS 64 GB",
-      "unit_price": 35529,
-      "units_per_package": 40,
-      "image_url": "https://www.impotekno.com/fotos/X2.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "PAS-NAL185",
-      "name": "CONSOLA GAME BOX GS5",
-      "unit_price": 25960,
-      "units_per_package": 40,
-      "image_url": "https://sanjulian99.com/fotos/NAL185.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-JOYP3SO",
-      "name": "JOYSTICK DE PLAY3 SONY NEGRO",
-      "unit_price": 10222,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/JOYP3SO.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-H-MOUINA",
-      "name": "MOUSE INALAMBRICO (mou100)",
-      "unit_price": 3245,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/H-MOUINA.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-V103",
-      "name": "PAD CAMUFLADO 25x29 antideslizante -",
-      "unit_price": 1294,
-      "units_per_package": 500,
-      "image_url": "https://sanjulian99.com/fotos/V103.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-W3500",
-      "name": "TECLADO + MOUSE INALAMB. OFERTAAAA",
-      "unit_price": 10889,
-      "units_per_package": 30,
-      "image_url": "https://sanjulian99.com/fotos/W3500.jpg",
-      "provider": "San Julián"
-    }
-  ],
-  "Juguetes & Entretenimiento": [
-    {
-      "sku": "SAR-557-100B",
-      "name": "AUTO CYBERTRUCK TESLA CONTROL 168H-38",
-      "unit_price": 13800,
-      "units_per_package": 36,
-      "image_url": "https://www.impotekno.com/fotos/557-100B.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-S-2006A",
-      "name": "CRAYONES DE CERA COLORES X 6U.",
-      "unit_price": 229,
-      "units_per_package": 960,
-      "image_url": "https://www.impotekno.com/fotos/S-2006A.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-CU-2591",
-      "name": "G-91104 PARASOL PARA AUTO PORTATIL",
-      "unit_price": 7475,
-      "units_per_package": 60,
-      "image_url": "https://www.impotekno.com/fotos/CU-2591.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-HD-71018",
-      "name": "HD-71081 HOLDER SOPORTE REJILLA P/AUTO",
-      "unit_price": 2243,
-      "units_per_package": 200,
-      "image_url": "https://www.impotekno.com/fotos/HD-71018.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-JS-4428",
-      "name": "JUGUETE DISPENSADOR DE COMIDA P/MASCOTA",
-      "unit_price": 5865,
-      "units_per_package": 60,
-      "image_url": "https://www.impotekno.com/fotos/JS-4428.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-633116",
-      "name": "BANDERA P/ AUTO ARGENTINA 30X40CM EF10011 WCF-12",
-      "unit_price": 689,
-      "units_per_package": 500,
-      "image_url": "https://www.impotekno.com/fotos/633116.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "PAS-PP006",
-      "name": "POP IT AUTO JUEGO VELOCIDAD (PP006)",
-      "unit_price": 3732,
-      "units_per_package": 1,
-      "image_url": "https://sanjulian99.com/fotos/PP006.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-78078",
-      "name": "SOPORTE AUTO SUPER PRO 3 EN 1",
-      "unit_price": 4868,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/78078.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-SOP601",
-      "name": "SOPORTE NUEVO PARA AUTO IMANTADO",
-      "unit_price": 4868,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/SOP601.jpg",
-      "provider": "San Julián"
-    }
-  ],
-  "Placas de Sonido": [
-    {
-      "sku": "SAR-TMPAS8410",
-      "name": "PLACA DE SONIDO SUPER OFERTA",
-      "unit_price": 711,
-      "units_per_package": 500,
-      "image_url": "https://www.impotekno.com/fotos/TMPAS8410.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "PAS-99336",
-      "name": "ORGANIZ.DE REMERAS/JEAN P/ PLACARD 10 unidades",
-      "unit_price": 15252,
-      "units_per_package": 140,
-      "image_url": "https://sanjulian99.com/fotos/99336.jpg",
-      "provider": "San Julián"
-    }
-  ],
-  "Accesorios Automotrices": [
-    {
-      "sku": "SAR-HD-71075",
-      "name": "SOPORTE MAGNETICO HA-8043 K007",
-      "unit_price": 4255,
-      "units_per_package": 200,
-      "image_url": "https://www.impotekno.com/fotos/HD-71075.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-SP-73005",
-      "name": "SOPORTE PARA TV 14-42",
-      "unit_price": 2704,
-      "units_per_package": 20,
-      "image_url": "https://www.impotekno.com/fotos/SP-73005.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "PAS-VS250",
-      "name": "SOPORTE ACCESORIO ARO SELFIE",
-      "unit_price": 1866,
-      "units_per_package": 1,
-      "image_url": "https://sanjulian99.com/fotos/VS250.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-SOPSOLAR",
-      "name": "SOPORTE PARA REFLECTORES SOLARES",
-      "unit_price": 8113,
-      "units_per_package": 20,
-      "image_url": "https://sanjulian99.com/fotos/SOPSOLAR.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-SOPBICI",
-      "name": "SOPORTE REFORZADO P/BICI Y MOTO",
-      "unit_price": 5030,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/SOPBICI.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-SOPFIJO",
-      "name": "SOPORTE TV FIJO (14-42)",
-      "unit_price": 2434,
-      "units_per_package": 20,
-      "image_url": "https://sanjulian99.com/fotos/SOPFIJO.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-TVJ3000",
-      "name": "SOPORTE TV MOVIL 14 A 55",
-      "unit_price": 7699,
-      "units_per_package": 10,
-      "image_url": "https://sanjulian99.com/fotos/TVJ3000.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-TV3270",
-      "name": "SOPORTE TV MOVIL 32\" HASTA 70\" (REFORZADO)",
-      "unit_price": 27388,
-      "units_per_package": 5,
-      "image_url": "https://sanjulian99.com/fotos/TV3270.jpg",
-      "provider": "San Julián"
-    }
-  ],
-  "Deportes & Camping": [
-    {
-      "sku": "SAR-ICO-160913",
-      "name": "160918 COLCHON INFLABLE + INFLADOR  5min.",
-      "unit_price": 91999,
-      "units_per_package": 3,
-      "image_url": "https://www.impotekno.com/fotos/ICO-160913.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-ISF-160908",
-      "name": "SILLON INFLABLE GRAFITI CON REPOSAPIES",
-      "unit_price": 18975,
-      "units_per_package": 10,
-      "image_url": "https://www.impotekno.com/fotos/ISF-160908.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-ISF-160911",
-      "name": "SOFA CAMA PUFF INFLABLE",
-      "unit_price": 25144,
-      "units_per_package": 10,
-      "image_url": "https://www.impotekno.com/fotos/ISF-160911.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-ISF-160909",
-      "name": "SOFA REPOSERA INFLABLE",
-      "unit_price": 24597,
-      "units_per_package": 10,
-      "image_url": "https://www.impotekno.com/fotos/ISF-160909.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-ISF-160912",
-      "name": "SOFA SILLON PUFF ALMEJA  INFLABLE",
-      "unit_price": 17249,
-      "units_per_package": 20,
-      "image_url": "https://www.impotekno.com/fotos/ISF-160912.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-ICO-160913",
-      "name": "160918 COLCHON INFLABLE + INFLADOR  5min.",
-      "unit_price": 91999,
-      "units_per_package": 3,
-      "image_url": "https://www.impotekno.com/fotos/ICO-160913.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-ALF-160901",
-      "name": "ALFOMBRA INFLABLE PARA BEBES 100X100CM",
-      "unit_price": 3449,
-      "units_per_package": 100,
-      "image_url": "https://www.impotekno.com/fotos/ALF-160901.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-NH-M1",
-      "name": "MESA DE CAMPING PLEGABLE BLANCA",
-      "unit_price": 59800,
-      "units_per_package": 1,
-      "image_url": "https://www.impotekno.com/fotos/NH-M1.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "PAS-99197",
-      "name": "SOFA REPOSERA INFLABLE",
-      "unit_price": 26772,
-      "units_per_package": 10,
-      "image_url": "https://sanjulian99.com/fotos/99197.jpg",
-      "provider": "San Julián"
-    }
-  ],
-  "Iluminación": [
-    {
-      "sku": "SAR-LED-83068",
-      "name": "LAMPARA  ATARDECER  OFERTA!!",
-      "unit_price": 4371,
-      "units_per_package": 100,
-      "image_url": "https://www.impotekno.com/fotos/LED-83068.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-B005",
-      "name": "LAMPARA CAMPING SOLAR RECARGABLE 2029KA",
-      "unit_price": 7130,
-      "units_per_package": 1,
-      "image_url": "https://www.impotekno.com/fotos/B005.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-HW-978W",
-      "name": "LAMPARA FOCO FAROL",
-      "unit_price": 9189,
-      "units_per_package": 60,
-      "image_url": "https://www.impotekno.com/fotos/HW-978W.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-LED-81005",
-      "name": "LED-83105 LAMPARA MINI 20 LED MAGNETICO LED-83033",
-      "unit_price": 5118,
-      "units_per_package": 100,
-      "image_url": "https://www.impotekno.com/fotos/LED-81005.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "SAR-TMFOC9754",
-      "name": "TMFOC9759 FOCO BOLICHE DOBLE",
-      "unit_price": 3663,
-      "units_per_package": 100,
-      "image_url": "https://www.impotekno.com/fotos/TMFOC9754.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "PAS-LAM206",
-      "name": "LAMPARA AVION LED (LAM206/207) OFERTAAAA",
-      "unit_price": 3245,
-      "units_per_package": 144,
-      "image_url": "https://sanjulian99.com/fotos/LAM206.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-LAMCAPI",
-      "name": "LAMPARA RECARGABLE CAPIBARA  (RD543)",
-      "unit_price": 5679,
-      "units_per_package": 120,
-      "image_url": "https://sanjulian99.com/fotos/LAMCAPI.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-CAMFOCO",
-      "name": "CAMARA WIFI IP DE FOCO 360",
-      "unit_price": 13792,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/CAMFOCO.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-RGBFOC",
-      "name": "FOCO RGB CON CONTROL",
-      "unit_price": 2915,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/RGBFOC.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-LIN710",
-      "name": "LAMPARA EMERGENCIA/CAMPING 2 en 1",
-      "unit_price": 6328,
-      "units_per_package": 100,
-      "image_url": "https://sanjulian99.com/fotos/LIN710.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-99266",
-      "name": "LAMPARA PLATEADA TACTIL VELTAC",
-      "unit_price": 8693,
-      "units_per_package": 50,
-      "image_url": "https://sanjulian99.com/fotos/99266.jpg",
-      "provider": "San Julián"
-    }
-  ],
-  "Mochilas & Bolsas": [
-    {
-      "sku": "SAR-JK-2409",
-      "name": "MOCHILA PARA TRASLADAR MASCOTAS",
-      "unit_price": 22425,
-      "units_per_package": 40,
-      "image_url": "https://www.impotekno.com/fotos/JK-2409.jpg",
-      "provider": "Impotekno"
-    },
-    {
-      "sku": "PAS-125067",
-      "name": "BOLSA PLEGABLE PARA SUPER SHIRKA",
-      "unit_price": 2759,
-      "units_per_package": 360,
-      "image_url": "https://sanjulian99.com/fotos/125067.jpg",
-      "provider": "San Julián"
-    },
-    {
-      "sku": "PAS-MOMAS",
-      "name": "MOCHILA MULTIUSO TRANSP. (MASCOTA/ESCOLAR) 35CMX44",
-      "unit_price": 16225,
-      "units_per_package": 30,
-      "image_url": "https://sanjulian99.com/fotos/MOMAS.jpg",
+      "image_url": "https://sanjulian99.com/fotos/EX02772.jpg",
       "provider": "San Julián"
     }
   ],
