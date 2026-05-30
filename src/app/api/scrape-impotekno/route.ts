@@ -42,40 +42,39 @@ function sendComplete(controller: ReadableStreamDefaultController, count: number
 async function extractProductsFromHtml(html: string): Promise<any[]> {
   const products: any[] = [];
 
-  // Regex mejorado para extraer productos
-  const rowRegex = /<tr[^>]*>[\s\S]*?<\/tr>/g;
-  const rows = html.match(rowRegex) || [];
+  // Buscar bloques de productos (caja_producto)
+  const productBlockRegex = /<div class="col-xs-12 caja_producto">[\s\S]*?<\/div>\s*<\/div>/g;
+  const blocks = html.match(productBlockRegex) || [];
 
-  for (const row of rows) {
-    // Extraer celdas
-    const cellRegex = /<td[^>]*>([\s\S]*?)<\/td>/g;
-    const cells = [];
-    let match;
+  for (const block of blocks) {
+    // Extraer nombre (dentro de <h1>)
+    const nameMatch = block.match(/<h1>(.*?)<\/h1>/);
+    const name = nameMatch ? nameMatch[1].trim() : null;
 
-    while ((match = cellRegex.exec(row)) !== null) {
-      const text = match[1]
-        .replace(/<[^>]*>/g, "")
-        .replace(/&nbsp;/g, " ")
-        .replace(/\s+/g, " ")
-        .trim();
-      cells.push(text);
+    // Extraer SKU (después de "Codigo:")
+    const skuMatch = block.match(/Codigo:\s*([^\<\n]+)/);
+    const sku = skuMatch ? skuMatch[1].trim() : null;
+
+    // Extraer cantidad por bulto
+    const quantityMatch = block.match(/Ctdad\.\s*por\s*bulto:\s*([0-9]+)/);
+    const units_per_package = quantityMatch ? parseInt(quantityMatch[1]) : 1;
+
+    // Extraer precio (dentro de caja_precio)
+    const priceMatch = block.match(/<strong class="caja_precio">\s*\$\s*([0-9,]+)/);
+    let unit_price = 0;
+    if (priceMatch) {
+      const priceStr = priceMatch[1].replace(/,/g, "");
+      unit_price = parseInt(priceStr) || 0;
     }
 
-    if (cells.length >= 3) {
-      const sku = cells[0]?.trim();
-      const name = cells[1]?.trim();
-      const priceStr = cells[2]?.replace(/[^0-9.]/g, "");
-      const unit_price = parseFloat(priceStr) || 0;
-
-      if (sku && name && unit_price > 0) {
-        products.push({
-          sku: `SAR-${sku}`,
-          name,
-          unit_price: Math.round(unit_price * 1.15), // 15% margen
-          units_per_package: 1,
-          image_url: `https://www.impotekno.com/fotos/${sku}.jpg`,
-        });
-      }
+    if (sku && name && unit_price > 0) {
+      products.push({
+        sku: `SAR-${sku}`,
+        name,
+        unit_price: Math.round(unit_price * 1.15), // 15% margen
+        units_per_package,
+        image_url: `https://www.impotekno.com/fotos/${sku}.jpg`,
+      });
     }
   }
 
