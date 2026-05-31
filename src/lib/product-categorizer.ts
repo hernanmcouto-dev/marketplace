@@ -2,7 +2,7 @@ export type ProductCategory =
   | "Hogar y Cocina"
   | "Herramientas y Electricidad"
   | "Iluminación y LED"
-  | "Audio y Video"
+  | "Audio Video y Parlantes"
   | "Electrónica y Computación"
   | "Juegos y Juguetes"
   | "Gadgets"
@@ -111,27 +111,29 @@ const CATEGORIES: Record<ProductCategory, string[]> = {
     "dimmer",
     "rgb",
   ],
-  "Audio y Video": [
+  "Audio Video y Parlantes": [
     "audio",
     "video",
     "parlante",
     "speaker",
     "micrófono",
     "micrófono inalámbrico",
+    "karaoke",
     "audífono",
     "auricular",
     "auriculares",
+    "auriculares inalámbricos",
+    "auriculares bluetooth",
     "headphones",
     "headset",
+    "in-ear",
+    "over-ear",
     "equipo de música",
     "amplificador",
     "mezclador",
-    "consola",
     "dvd",
     "blu ray",
     "proyector",
-    "pantalla",
-    "monitor",
     "televisor",
     "tv",
     "televisión",
@@ -149,6 +151,11 @@ const CATEGORIES: Record<ProductCategory, string[]> = {
     "tuner",
     "crossover",
     "ecualizador",
+    "barra sonido",
+    "soundbar",
+    "woofer",
+    "subwoofer",
+    "tweeter",
   ],
   "Electrónica y Computación": [
     "computadora",
@@ -220,8 +227,6 @@ const CATEGORIES: Record<ProductCategory, string[]> = {
     "control remoto",
     "rc",
     "avión",
-    "dron",
-    "cuadricóptero",
     "patineta",
     "skate",
     "patín",
