@@ -33,6 +33,27 @@ export default function AdminDashboard() {
             </div>
           </Link>
 
+          <Link href="/admin/scraper" style={{ textDecoration: "none" }}>
+            <div style={{ backgroundColor: "#1e293b", border: "2px solid #8b5cf620", borderRadius: "0.75rem", padding: "1.5rem", cursor: "pointer", color: "white", minHeight: "150px", display: "flex", flexDirection: "column", justifyContent: "space-between" }} onMouseOver={e => { e.currentTarget.style.borderColor = "#8b5cf6"; e.currentTarget.style.backgroundColor = "#0f172a"; }} onMouseOut={e => { e.currentTarget.style.borderColor = "#8b5cf620"; e.currentTarget.style.backgroundColor = "#1e293b"; }}>
+              <div><h3 style={{ margin: "0 0 0.5rem 0" }}>Scraper General</h3></div>
+              <span style={{ color: "#8b5cf6" }}>→</span>
+            </div>
+          </Link>
+
+          <Link href="/admin/scraper-nextcell" style={{ textDecoration: "none" }}>
+            <div style={{ backgroundColor: "#1e293b", border: "2px solid #06b6d420", borderRadius: "0.75rem", padding: "1.5rem", cursor: "pointer", color: "white", minHeight: "150px", display: "flex", flexDirection: "column", justifyContent: "space-between" }} onMouseOver={e => { e.currentTarget.style.borderColor = "#06b6d4"; e.currentTarget.style.backgroundColor = "#0f172a"; }} onMouseOut={e => { e.currentTarget.style.borderColor = "#06b6d420"; e.currentTarget.style.backgroundColor = "#1e293b"; }}>
+              <div><h3 style={{ margin: "0 0 0.5rem 0" }}>Scraper NextCell</h3></div>
+              <span style={{ color: "#06b6d4" }}>→</span>
+            </div>
+          </Link>
+
+          <Link href="/admin/scraper-sanjulian" style={{ textDecoration: "none" }}>
+            <div style={{ backgroundColor: "#1e293b", border: "2px solid #f59e0b20", borderRadius: "0.75rem", padding: "1.5rem", cursor: "pointer", color: "white", minHeight: "150px", display: "flex", flexDirection: "column", justifyContent: "space-between" }} onMouseOver={e => { e.currentTarget.style.borderColor = "#f59e0b"; e.currentTarget.style.backgroundColor = "#0f172a"; }} onMouseOut={e => { e.currentTarget.style.borderColor = "#f59e0b20"; e.currentTarget.style.backgroundColor = "#1e293b"; }}>
+              <div><h3 style={{ margin: "0 0 0.5rem 0" }}>Scraper San Julián</h3></div>
+              <span style={{ color: "#f59e0b" }}>→</span>
+            </div>
+          </Link>
+
           <Link href="/shop" style={{ textDecoration: "none" }}>
             <div style={{ backgroundColor: "#1e293b", border: "2px solid #ec489920", borderRadius: "0.75rem", padding: "1.5rem", cursor: "pointer", color: "white", minHeight: "150px", display: "flex", flexDirection: "column", justifyContent: "space-between" }} onMouseOver={e => { e.currentTarget.style.borderColor = "#ec4899"; e.currentTarget.style.backgroundColor = "#0f172a"; }} onMouseOut={e => { e.currentTarget.style.borderColor = "#ec489920"; e.currentTarget.style.backgroundColor = "#1e293b"; }}>
               <div><h3 style={{ margin: "0 0 0.5rem 0" }}>Ver Tienda</h3></div>
