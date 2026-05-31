@@ -41,6 +41,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
     >
       <div
         style={{
+          position: "relative",
           backgroundColor: "white",
           borderRadius: "0.5rem",
           padding: "1.25rem",
