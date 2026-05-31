@@ -363,7 +363,10 @@ export default function ClientePage() {
       </main>
 
       {/* Product Detail Modal */}
-      <ProductModal product={selectedProduct} onClose={() => setShowModal(false)} />
+      <ProductModal product={selectedProduct} onClose={() => {
+        setShowModal(false);
+        setSelectedProduct(null);
+      }} />
 
       {/* Shopping Cart Panel */}
       <CartPanel isOpen={showCart} onClose={() => setShowCart(false)} />
