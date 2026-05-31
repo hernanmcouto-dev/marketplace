@@ -7,30 +7,8 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    // Redirigir a login si no hay sesión
-    const auth = document.cookie.includes("auth=");
-    if (!auth) {
-      router.push("/login");
-    } else {
-      // Si hay sesión, ir al dashboard correspondiente
-      try {
-        const authCookie = document.cookie
-          .split("; ")
-          .find((row) => row.startsWith("auth="))
-          ?.split("=")[1];
-
-        if (authCookie) {
-          const auth = JSON.parse(decodeURIComponent(authCookie));
-          if (auth.userType === "admin") {
-            router.push("/admin");
-          } else {
-            router.push("/cliente");
-          }
-        }
-      } catch (err) {
-        router.push("/login");
-      }
-    }
+    // Redirigir a la tienda pública por defecto
+    router.push("/shop");
   }, [router]);
 
   return (
