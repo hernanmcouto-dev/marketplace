@@ -57,16 +57,21 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
           onClick={onClose}
           style={{
             position: "absolute",
-            top: "0.75rem",
-            right: "0.75rem",
-            backgroundColor: "#ef4444",
+            top: "0.5rem",
+            right: "0.5rem",
+            backgroundColor: "#dc2626",
             color: "white",
             border: "none",
-            width: "1.75rem",
-            height: "1.75rem",
+            width: "2rem",
+            height: "2rem",
             borderRadius: "50%",
             cursor: "pointer",
-            fontSize: "1rem",
+            fontSize: "1.2rem",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
+            fontWeight: "bold",
           }}
         >
           ✕
@@ -90,13 +95,13 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
             <img
               src={product.image_url}
               alt={product.name}
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              style={{ width: "100%", height: "100%", objectFit: "contain", padding: "0.5rem" }}
               onError={(e) => {
                 (e.target as HTMLImageElement).style.display = "none";
               }}
             />
           ) : (
-            <span style={{ fontSize: "3rem" }}>📦</span>
+            <span style={{ fontSize: "2.5rem" }}>📦</span>
           )}
         </div>
 
