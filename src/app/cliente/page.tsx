@@ -243,7 +243,6 @@ export default function ClientePage() {
             </p>
           )}
         </div>
-        </div>
 
         {/* Content Area */}
         <div style={{ padding: "2rem" }}>
