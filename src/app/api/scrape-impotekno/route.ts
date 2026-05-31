@@ -5,6 +5,15 @@ import got from "got";
 import { CookieJar } from "tough-cookie";
 import { downloadAndCacheImage, getImageUrl } from "@/lib/image-registry";
 
+interface ScraperReport {
+  newProducts: number;
+  newImages: number;
+  cachedImages: number;
+  removedProducts: string[];
+  totalProducts: number;
+  timestamp: string;
+}
+
 export const maxDuration = 600;
 
 const CATEGORIES = [1, 2, 9, 10, 18, 22, 23, 29, 33, 44, 48, 51, 56, 61, 73, 78, 82, 83, 84, 85, 87, 88];
@@ -42,6 +51,14 @@ function sendComplete(controller: ReadableStreamDefaultController, count: number
     message: `✓ ${count} productos importados exitosamente`,
   });
   controller.enqueue(`data: ${complete}\n\n`);
+}
+
+function sendReport(controller: ReadableStreamDefaultController, report: ScraperReport) {
+  const reportMsg = JSON.stringify({
+    type: "report",
+    report,
+  });
+  controller.enqueue(`data: ${reportMsg}\n\n`);
 }
 
 async function extractProductsFromHtml(html: string): Promise<any[]> {
@@ -187,12 +204,54 @@ export async function POST(req: NextRequest) {
           };
         });
 
-        sendLog(controller, "💾 Guardando productos...");
+        sendLog(controller, "💾 Guardando productos y generando informe...");
 
         const filePath = path.join(process.cwd(), "public", "products.json");
+
+        // Leer productos anteriores para comparación
+        let previousProducts: any[] = [];
+        try {
+          if (fs.existsSync(filePath)) {
+            previousProducts = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+          }
+        } catch (err) {
+          sendLog(controller, "⚠️ No se pudo leer el archivo anterior");
+        }
+
+        // Comparar productos
+        const previousSkus = new Set(previousProducts.map(p => p.sku));
+        const currentSkus = new Set(productsWithProxy.map(p => p.sku));
+
+        const newSkus = Array.from(currentSkus).filter(sku => !previousSkus.has(sku));
+        const removedSkus = Array.from(previousSkus).filter(sku => !currentSkus.has(sku));
+
+        // Contar imágenes nuevas vs. cacheadas
+        let newImages = 0;
+        let cachedImages = 0;
+        productsWithProxy.forEach(p => {
+          if (p.image_url.includes("/api/image-proxy")) {
+            newImages++;
+          } else if (p.image_url.startsWith("/images/")) {
+            cachedImages++;
+          }
+        });
+
+        // Guardar productos
         fs.writeFileSync(filePath, JSON.stringify(productsWithProxy, null, 2), "utf-8");
 
+        // Enviar informe
+        const report: ScraperReport = {
+          newProducts: newSkus.length,
+          newImages,
+          cachedImages,
+          removedProducts: removedSkus,
+          totalProducts: productsWithProxy.length,
+          timestamp: new Date().toISOString(),
+        };
+
         sendLog(controller, `✅ Guardado en: public/products.json`);
+        sendLog(controller, `📊 Informe generado`);
+        sendReport(controller, report);
         sendComplete(controller, productsWithProxy.length);
         controller.close();
       } catch (err: any) {
