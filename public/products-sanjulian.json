@@ -5,7 +5,7 @@
     "unit_price": 6023,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2Finicio.jpg&provider=sanjulian&sku=PAS-inicio&v=1780181066075",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-91024",
@@ -13,7 +13,7 @@
     "unit_price": 5489,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F91024.jpg&provider=sanjulian&sku=PAS-91024&v=1780181066075",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-KS5145",
@@ -21,7 +21,7 @@
     "unit_price": 2759,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FKS5145.jpg&provider=sanjulian&sku=PAS-KS5145&v=1780181066075",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-CALC601",
@@ -29,7 +29,7 @@
     "unit_price": 2921,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FCALC601.jpg&provider=sanjulian&sku=PAS-CALC601&v=1780181066076",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-91023",
@@ -37,7 +37,7 @@
     "unit_price": 4706,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F91023.jpg&provider=sanjulian&sku=PAS-91023&v=1780181066076",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-3673",
@@ -45,7 +45,7 @@
     "unit_price": 25960,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F3673.jpg&provider=sanjulian&sku=PAS-3673&v=1780181066076",
-    "category": "Accesorios Auto Moto y Bici"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-V55",
@@ -61,7 +61,7 @@
     "unit_price": 2434,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F2808.jpg&provider=sanjulian&sku=PAS-2808&v=1780181066077",
-    "category": "Accesorios Auto Moto y Bici"
+    "category": "Iluminación y LED"
   },
   {
     "sku": "PAS-TQ2808",
@@ -69,7 +69,7 @@
     "unit_price": 6733,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FTQ2808.jpg&provider=sanjulian&sku=PAS-TQ2808&v=1780181066077",
-    "category": "Accesorios Auto Moto y Bici"
+    "category": "Iluminación y LED"
   },
   {
     "sku": "PAS-2515",
@@ -77,7 +77,7 @@
     "unit_price": 4057,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F2515.jpg&provider=sanjulian&sku=PAS-2515&v=1780181066077",
-    "category": "Cargadores y Fuentes"
+    "category": "Iluminación y LED"
   },
   {
     "sku": "PAS-SOPBICI",
@@ -85,7 +85,7 @@
     "unit_price": 5030,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FSOPBICI.jpg&provider=sanjulian&sku=PAS-SOPBICI&v=1780181066077",
-    "category": "Accesorios Auto Moto y Bici"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-inicio",
@@ -93,7 +93,7 @@
     "unit_price": 3849,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2Finicio.jpg&provider=sanjulian&sku=PAS-inicio&v=1780181066078",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-AUR125",
@@ -101,7 +101,7 @@
     "unit_price": 4715,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FAUR125.jpg&provider=sanjulian&sku=PAS-AUR125&v=1780181066078",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-E6S",
@@ -109,7 +109,7 @@
     "unit_price": 4868,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FE6S.jpg&provider=sanjulian&sku=PAS-E6S&v=1780181066078",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-F9-5",
@@ -117,7 +117,7 @@
     "unit_price": 4706,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FF9-5.jpg&provider=sanjulian&sku=PAS-F9-5&v=1780181066078",
-    "category": "Audio Video y Parlantes"
+    "category": "Cargadores y Fuentes"
   },
   {
     "sku": "PAS-99313",
@@ -125,7 +125,7 @@
     "unit_price": 1136,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99313.jpg&provider=sanjulian&sku=PAS-99313&v=1780181066078",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-AURKG",
@@ -133,7 +133,7 @@
     "unit_price": 16225,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FAURKG.jpg&provider=sanjulian&sku=PAS-AURKG&v=1780181066079",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99198",
@@ -149,7 +149,7 @@
     "unit_price": 1623,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F78017.jpg&provider=sanjulian&sku=PAS-78017&v=1780181066079",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-ATC60",
@@ -157,7 +157,7 @@
     "unit_price": 2759,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FATC60.jpg&provider=sanjulian&sku=PAS-ATC60&v=1780181066079",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-ATC70",
@@ -165,7 +165,7 @@
     "unit_price": 2596,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FATC70.jpg&provider=sanjulian&sku=PAS-ATC70&v=1780181066080",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-BK07",
@@ -181,7 +181,7 @@
     "unit_price": 1217,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2Finicio.jpg&provider=sanjulian&sku=PAS-inicio&v=1780181066080",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PV1130",
@@ -189,7 +189,7 @@
     "unit_price": 1815,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPV1130.jpg&provider=sanjulian&sku=PAS-PV1130&v=1780181066080",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-WR675",
@@ -197,7 +197,7 @@
     "unit_price": 6600,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FWR675.jpg&provider=sanjulian&sku=PAS-WR675&v=1780181066081",
-    "category": "Cargadores y Fuentes"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "PAS-WR10",
@@ -205,7 +205,7 @@
     "unit_price": 6006,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FWR10.jpg&provider=sanjulian&sku=PAS-WR10&v=1780181066081",
-    "category": "Cargadores y Fuentes"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "PAS-PV2032",
@@ -213,7 +213,7 @@
     "unit_price": 1055,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPV2032.jpg&provider=sanjulian&sku=PAS-PV2032&v=1780181066081",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PV1620",
@@ -221,7 +221,7 @@
     "unit_price": 2110,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPV1620.jpg&provider=sanjulian&sku=PAS-PV1620&v=1780181066081",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PIN23A",
@@ -229,7 +229,7 @@
     "unit_price": 2028,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPIN23A.jpg&provider=sanjulian&sku=PAS-PIN23A&v=1780181066081",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR371",
@@ -237,7 +237,7 @@
     "unit_price": 1815,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR371.jpg&provider=sanjulian&sku=PAS-PR371&v=1780181066082",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR394",
@@ -245,7 +245,7 @@
     "unit_price": 2706,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR394.jpg&provider=sanjulian&sku=PAS-PR394&v=1780181066093",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR395",
@@ -253,7 +253,7 @@
     "unit_price": 2145,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR395.jpg&provider=sanjulian&sku=PAS-PR395&v=1780181066094",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-23A",
@@ -261,7 +261,7 @@
     "unit_price": 3878,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F23A.jpg&provider=sanjulian&sku=PAS-23A&v=1780181066094",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-WR13",
@@ -269,7 +269,7 @@
     "unit_price": 5841,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FWR13.jpg&provider=sanjulian&sku=PAS-WR13&v=1780181066094",
-    "category": "Cargadores y Fuentes"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "PAS-RW312",
@@ -277,7 +277,7 @@
     "unit_price": 4950,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRW312.jpg&provider=sanjulian&sku=PAS-RW312&v=1780181066094",
-    "category": "Cargadores y Fuentes"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "PAS-AA20",
@@ -285,7 +285,7 @@
     "unit_price": 18150,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FAA20.jpg&provider=sanjulian&sku=PAS-AA20&v=1780181066095",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-AAA20",
@@ -293,7 +293,7 @@
     "unit_price": 18150,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FAAA20.jpg&provider=sanjulian&sku=PAS-AAA20&v=1780181066095",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-EVEAA",
@@ -301,7 +301,7 @@
     "unit_price": 10992,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FEVEAA.jpg&provider=sanjulian&sku=PAS-EVEAA&v=1780181066095",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-EVEAAA",
@@ -309,7 +309,7 @@
     "unit_price": 13910,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FEVEAAA.jpg&provider=sanjulian&sku=PAS-EVEAAA&v=1780181066095",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-IBAA",
@@ -317,7 +317,7 @@
     "unit_price": 5069,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FIBAA.jpg&provider=sanjulian&sku=PAS-IBAA&v=1780181066095",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-IBAAA",
@@ -325,7 +325,7 @@
     "unit_price": 5069,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FIBAAA.jpg&provider=sanjulian&sku=PAS-IBAAA&v=1780181066096",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PV1616",
@@ -333,7 +333,7 @@
     "unit_price": 2228,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPV1616.jpg&provider=sanjulian&sku=PAS-PV1616&v=1780181066096",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-LR44",
@@ -341,7 +341,7 @@
     "unit_price": 5363,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FLR44.jpg&provider=sanjulian&sku=PAS-LR44&v=1780181066096",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-CR1216",
@@ -349,7 +349,7 @@
     "unit_price": 2640,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FCR1216.jpg&provider=sanjulian&sku=PAS-CR1216&v=1780181066096",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR364",
@@ -357,7 +357,7 @@
     "unit_price": 8795,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR364.jpg&provider=sanjulian&sku=PAS-PR364&v=1780181066097",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR1220",
@@ -365,7 +365,7 @@
     "unit_price": 2541,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR1220.jpg&provider=sanjulian&sku=PAS-PR1220&v=1780181066097",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR1616",
@@ -373,7 +373,7 @@
     "unit_price": 2640,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR1616.jpg&provider=sanjulian&sku=PAS-PR1616&v=1780181066097",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR1620",
@@ -381,7 +381,7 @@
     "unit_price": 2640,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR1620.jpg&provider=sanjulian&sku=PAS-PR1620&v=1780181066097",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR2016",
@@ -389,7 +389,7 @@
     "unit_price": 4183,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR2016.jpg&provider=sanjulian&sku=PAS-PR2016&v=1780181066097",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR2025",
@@ -397,7 +397,7 @@
     "unit_price": 4183,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR2025.jpg&provider=sanjulian&sku=PAS-PR2025&v=1780181066098",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR2032",
@@ -405,7 +405,7 @@
     "unit_price": 3861,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR2032.jpg&provider=sanjulian&sku=PAS-PR2032&v=1780181066098",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-TIAN2016",
@@ -413,7 +413,7 @@
     "unit_price": 1832,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FTIAN2016.jpg&provider=sanjulian&sku=PAS-TIAN2016&v=1780181066098",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-TIAN2025",
@@ -421,7 +421,7 @@
     "unit_price": 1832,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FTIAN2025.jpg&provider=sanjulian&sku=PAS-TIAN2025&v=1780181066099",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-TIAN2032",
@@ -429,7 +429,7 @@
     "unit_price": 2347,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FTIAN2032.jpg&provider=sanjulian&sku=PAS-TIAN2032&v=1780181066099",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PV1216",
@@ -437,7 +437,7 @@
     "unit_price": 2125,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPV1216.jpg&provider=sanjulian&sku=PAS-PV1216&v=1780181066099",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PV1220",
@@ -445,7 +445,7 @@
     "unit_price": 2145,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPV1220.jpg&provider=sanjulian&sku=PAS-PV1220&v=1780181066099",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PV41",
@@ -453,7 +453,7 @@
     "unit_price": 1650,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPV41.jpg&provider=sanjulian&sku=PAS-PV41&v=1780181066100",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-LR1130",
@@ -461,7 +461,7 @@
     "unit_price": 5363,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FLR1130.jpg&provider=sanjulian&sku=PAS-LR1130&v=1780181066100",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-LR41",
@@ -469,7 +469,7 @@
     "unit_price": 5363,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FLR41.jpg&provider=sanjulian&sku=PAS-LR41&v=1780181066100",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR377",
@@ -477,7 +477,7 @@
     "unit_price": 8415,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR377.jpg&provider=sanjulian&sku=PAS-PR377&v=1780181066100",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PV626",
@@ -485,7 +485,7 @@
     "unit_price": 1403,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPV626.jpg&provider=sanjulian&sku=PAS-PV626&v=1780181066100",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-inicio",
@@ -501,7 +501,7 @@
     "unit_price": 9119,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FGX220D.jpg&provider=sanjulian&sku=PAS-GX220D&v=1780181066101",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99344",
@@ -509,7 +509,7 @@
     "unit_price": 2397,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99344.jpg&provider=sanjulian&sku=PAS-99344&v=1780181066101",
-    "category": "Accesorios Auto Moto y Bici"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99125",
@@ -517,7 +517,7 @@
     "unit_price": 5499,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99125.jpg&provider=sanjulian&sku=PAS-99125&v=1780181066101",
-    "category": "Accesorios Auto Moto y Bici"
+    "category": "Iluminación y LED"
   },
   {
     "sku": "PAS-99322",
@@ -533,7 +533,7 @@
     "unit_price": 2110,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99342.jpg&provider=sanjulian&sku=PAS-99342&v=1780181066102",
-    "category": "Hogar y Cocina"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RD1783M",
@@ -541,7 +541,7 @@
     "unit_price": 44959,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRD1783M.jpg&provider=sanjulian&sku=PAS-RD1783M&v=1780181066102",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-EX02772",
@@ -549,7 +549,7 @@
     "unit_price": 11849,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FEX02772.jpg&provider=sanjulian&sku=PAS-EX02772&v=1780181066102",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-DL1190",
@@ -565,7 +565,7 @@
     "unit_price": 2110,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FY3599.jpg&provider=sanjulian&sku=PAS-Y3599&v=1780181066103",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-EX01826",
@@ -573,7 +573,7 @@
     "unit_price": 5435,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FEX01826.jpg&provider=sanjulian&sku=PAS-EX01826&v=1780181066103",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-5126",
@@ -581,7 +581,7 @@
     "unit_price": 762,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F5126.jpg&provider=sanjulian&sku=PAS-5126&v=1780181066103",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-SJ0017",
@@ -589,7 +589,7 @@
     "unit_price": 11682,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FSJ0017.jpg&provider=sanjulian&sku=PAS-SJ0017&v=1780181066103",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99027",
@@ -605,7 +605,7 @@
     "unit_price": 12169,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2Finicio.jpg&provider=sanjulian&sku=PAS-inicio&v=1780181066104",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99291",
@@ -621,7 +621,7 @@
     "unit_price": 5642,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRDO127.jpg&provider=sanjulian&sku=PAS-RDO127&v=1780181066104",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99307",
@@ -629,7 +629,7 @@
     "unit_price": 28394,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99307.jpg&provider=sanjulian&sku=PAS-99307&v=1780181066105",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-NAL254",
@@ -637,7 +637,7 @@
     "unit_price": 1785,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FNAL254.jpg&provider=sanjulian&sku=PAS-NAL254&v=1780181066105",
-    "category": "Hogar y Cocina"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99399",
@@ -653,7 +653,7 @@
     "unit_price": 3245,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FLAM206.jpg&provider=sanjulian&sku=PAS-LAM206&v=1780181066105",
-    "category": "Cargadores y Fuentes"
+    "category": "Iluminación y LED"
   },
   {
     "sku": "PAS-LAM208",
@@ -661,7 +661,7 @@
     "unit_price": 3245,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FLAM208.jpg&provider=sanjulian&sku=PAS-LAM208&v=1780181066105",
-    "category": "Cargadores y Fuentes"
+    "category": "Iluminación y LED"
   },
   {
     "sku": "PAS-LAMCAPI",
@@ -669,7 +669,7 @@
     "unit_price": 5679,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FLAMCAPI.jpg&provider=sanjulian&sku=PAS-LAMCAPI&v=1780181066106",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-L3D",
@@ -677,7 +677,7 @@
     "unit_price": 10222,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FL3D.jpg&provider=sanjulian&sku=PAS-L3D&v=1780181066106",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-5742",
@@ -685,7 +685,7 @@
     "unit_price": 1295,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F5742.jpg&provider=sanjulian&sku=PAS-5742&v=1780181066106",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-91032",
@@ -693,7 +693,7 @@
     "unit_price": 3505,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F91032.jpg&provider=sanjulian&sku=PAS-91032&v=1780181066106",
-    "category": "Juegos Juguetes y Librería"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-91033",
@@ -701,7 +701,7 @@
     "unit_price": 9735,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F91033.jpg&provider=sanjulian&sku=PAS-91033&v=1780181066106",
-    "category": "Juegos Juguetes y Librería"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PE80",
@@ -709,7 +709,7 @@
     "unit_price": 12438,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPE80.jpg&provider=sanjulian&sku=PAS-PE80&v=1780181066107",
-    "category": "Juegos Juguetes y Librería"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-TOUCH",
@@ -717,7 +717,7 @@
     "unit_price": 6588,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FTOUCH.jpg&provider=sanjulian&sku=PAS-TOUCH&v=1780181066107",
-    "category": "Juegos Juguetes y Librería"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-ACRILIC24",
@@ -773,7 +773,7 @@
     "unit_price": 15739,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99290.jpg&provider=sanjulian&sku=PAS-99290&v=1780181066108",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99382",
@@ -781,7 +781,7 @@
     "unit_price": 2596,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99382.jpg&provider=sanjulian&sku=PAS-99382&v=1780181066109",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99381",
@@ -789,7 +789,7 @@
     "unit_price": 1866,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99381.jpg&provider=sanjulian&sku=PAS-99381&v=1780181066109",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-MINIIMPRE",
@@ -797,7 +797,7 @@
     "unit_price": 13792,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FMINIIMPRE.jpg&provider=sanjulian&sku=PAS-MINIIMPRE&v=1780181066109",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PELPA",
@@ -805,7 +805,7 @@
     "unit_price": 3299,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPELPA.jpg&provider=sanjulian&sku=PAS-PELPA&v=1780181066109",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-HUE761",
@@ -813,7 +813,7 @@
     "unit_price": 649,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FHUE761.jpg&provider=sanjulian&sku=PAS-HUE761&v=1780181066110",
-    "category": "Juegos Juguetes y Librería"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PIZABALLE",
@@ -821,7 +821,7 @@
     "unit_price": 4345,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPIZABALLE.jpg&provider=sanjulian&sku=PAS-PIZABALLE&v=1780181066110",
-    "category": "Cargadores y Fuentes"
+    "category": "Juegos Juguetes y Librería"
   },
   {
     "sku": "PAS-C4435",
@@ -829,7 +829,7 @@
     "unit_price": 2968,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FC4435.jpg&provider=sanjulian&sku=PAS-C4435&v=1780181066110",
-    "category": "Cargadores y Fuentes"
+    "category": "Juegos Juguetes y Librería"
   },
   {
     "sku": "PAS-PP005",
@@ -837,7 +837,7 @@
     "unit_price": 3586,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPP005.jpg&provider=sanjulian&sku=PAS-PP005&v=1780181066110",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PP006",
@@ -853,7 +853,7 @@
     "unit_price": 4057,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPP009.jpg&provider=sanjulian&sku=PAS-PP009&v=1780181066111",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PP013",
@@ -869,7 +869,7 @@
     "unit_price": 3484,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRE3D.jpg&provider=sanjulian&sku=PAS-RE3D&v=1780181066111",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-LINF01",
@@ -885,7 +885,7 @@
     "unit_price": 536,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99013.jpg&provider=sanjulian&sku=PAS-99013&v=1780181066111",
-    "category": "Liquidación"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99019",
@@ -893,7 +893,7 @@
     "unit_price": 536,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99019.jpg&provider=sanjulian&sku=PAS-99019&v=1780181066111",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-78033",
@@ -901,7 +901,7 @@
     "unit_price": 2596,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F78033.jpg&provider=sanjulian&sku=PAS-78033&v=1780181066112",
-    "category": "Hogar y Cocina"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99030",
@@ -909,7 +909,7 @@
     "unit_price": 13792,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99030.jpg&provider=sanjulian&sku=PAS-99030&v=1780181066112",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-KBX-145",
@@ -917,7 +917,7 @@
     "unit_price": 18659,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FKBX-145.jpg&provider=sanjulian&sku=PAS-KBX-145&v=1780181066112",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99223",
@@ -925,7 +925,7 @@
     "unit_price": 1461,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99223.jpg&provider=sanjulian&sku=PAS-99223&v=1780181066112",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99222",
@@ -933,7 +933,7 @@
     "unit_price": 1461,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99222.jpg&provider=sanjulian&sku=PAS-99222&v=1780181066112",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99221",
@@ -941,7 +941,7 @@
     "unit_price": 1461,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99221.jpg&provider=sanjulian&sku=PAS-99221&v=1780181066113",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-LV100",
@@ -949,7 +949,7 @@
     "unit_price": 5192,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FLV100.jpg&provider=sanjulian&sku=PAS-LV100&v=1780181066113",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-inicio",
@@ -957,7 +957,7 @@
     "unit_price": 3570,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2Finicio.jpg&provider=sanjulian&sku=PAS-inicio&v=1780181066113",
-    "category": "Cargadores y Fuentes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-LT-25E05",
@@ -965,7 +965,7 @@
     "unit_price": 6815,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FLT-25E05.jpg&provider=sanjulian&sku=PAS-LT-25E05&v=1780181066113",
-    "category": "Cargadores y Fuentes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-RDO114",
@@ -973,7 +973,7 @@
     "unit_price": 2078,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRDO114.jpg&provider=sanjulian&sku=PAS-RDO114&v=1780181066114",
-    "category": "Electrónica y Computación"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-FD1495",
@@ -989,7 +989,7 @@
     "unit_price": 1947,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FJGLIGHTAUX.jpg&provider=sanjulian&sku=PAS-JGLIGHTAUX&v=1780181066114",
-    "category": "Cables y Conectores"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-JGTIPOCAUX",
@@ -997,7 +997,7 @@
     "unit_price": 1947,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FJGTIPOCAUX.jpg&provider=sanjulian&sku=PAS-JGTIPOCAUX&v=1780181066114",
-    "category": "Cables y Conectores"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-2101",
@@ -1005,7 +1005,7 @@
     "unit_price": 2474,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F2101.jpg&provider=sanjulian&sku=PAS-2101&v=1780181066115",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99061",
@@ -1013,7 +1013,7 @@
     "unit_price": 6023,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99061.jpg&provider=sanjulian&sku=PAS-99061&v=1780181066115",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RDO12",
@@ -1029,7 +1029,7 @@
     "unit_price": 1785,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99149.jpg&provider=sanjulian&sku=PAS-99149&v=1780181066115",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-8401",
@@ -1045,7 +1045,7 @@
     "unit_price": 10998,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FQX260CT.jpg&provider=sanjulian&sku=PAS-QX260CT&v=1780181066116",
-    "category": "Iluminación y LED"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "PAS-ARO36RGB",
@@ -1053,7 +1053,7 @@
     "unit_price": 13386,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FARO36RGB.jpg&provider=sanjulian&sku=PAS-ARO36RGB&v=1780181066116",
-    "category": "Iluminación y LED"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "PAS-QX260",
@@ -1061,7 +1061,7 @@
     "unit_price": 6490,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FQX260.jpg&provider=sanjulian&sku=PAS-QX260&v=1780181066116",
-    "category": "Iluminación y LED"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "PAS-ARO10PUL",
@@ -1069,7 +1069,7 @@
     "unit_price": 4949,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FARO10PUL.jpg&provider=sanjulian&sku=PAS-ARO10PUL&v=1780181066117",
-    "category": "Indumentaria y Textiles"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-VS239",
@@ -1077,7 +1077,7 @@
     "unit_price": 8762,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FVS239.jpg&provider=sanjulian&sku=PAS-VS239&v=1780181066117",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99303",
@@ -1085,7 +1085,7 @@
     "unit_price": 20119,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99303.jpg&provider=sanjulian&sku=PAS-99303&v=1780181066117",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-SP226",
@@ -1093,7 +1093,7 @@
     "unit_price": 10952,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FSP226.jpg&provider=sanjulian&sku=PAS-SP226&v=1780181066118",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99077",
@@ -1101,7 +1101,7 @@
     "unit_price": 3849,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99077.jpg&provider=sanjulian&sku=PAS-99077&v=1780181066118",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-AUR125",
@@ -1109,7 +1109,7 @@
     "unit_price": 4715,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FAUR125.jpg&provider=sanjulian&sku=PAS-AUR125&v=1780181066118",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-E6S",
@@ -1117,7 +1117,7 @@
     "unit_price": 4868,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FE6S.jpg&provider=sanjulian&sku=PAS-E6S&v=1780181066118",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-F9-5",
@@ -1125,7 +1125,7 @@
     "unit_price": 4706,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FF9-5.jpg&provider=sanjulian&sku=PAS-F9-5&v=1780181066119",
-    "category": "Audio Video y Parlantes"
+    "category": "Cargadores y Fuentes"
   },
   {
     "sku": "PAS-99313",
@@ -1133,7 +1133,7 @@
     "unit_price": 1136,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99313.jpg&provider=sanjulian&sku=PAS-99313&v=1780181066119",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-AURKG",
@@ -1141,7 +1141,7 @@
     "unit_price": 16225,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FAURKG.jpg&provider=sanjulian&sku=PAS-AURKG&v=1780181066119",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99198",
@@ -1157,7 +1157,7 @@
     "unit_price": 1623,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F78017.jpg&provider=sanjulian&sku=PAS-78017&v=1780181066120",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-ATC60",
@@ -1165,7 +1165,7 @@
     "unit_price": 2759,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FATC60.jpg&provider=sanjulian&sku=PAS-ATC60&v=1780181066120",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-ATC70",
@@ -1173,7 +1173,7 @@
     "unit_price": 2596,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FATC70.jpg&provider=sanjulian&sku=PAS-ATC70&v=1780181066120",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-BK07",
@@ -1189,7 +1189,7 @@
     "unit_price": 3570,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FAV6337.jpg&provider=sanjulian&sku=PAS-AV6337&v=1780181066121",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99398",
@@ -1197,7 +1197,7 @@
     "unit_price": 2110,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99398.jpg&provider=sanjulian&sku=PAS-99398&v=1780181066121",
-    "category": "Accesorios Auto Moto y Bici"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99094",
@@ -1205,7 +1205,7 @@
     "unit_price": 8690,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99094.jpg&provider=sanjulian&sku=PAS-99094&v=1780181066121",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-125048",
@@ -1213,7 +1213,7 @@
     "unit_price": 7788,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F125048.jpg&provider=sanjulian&sku=PAS-125048&v=1780181066121",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99085",
@@ -1229,7 +1229,7 @@
     "unit_price": 12169,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FJUA252.jpg&provider=sanjulian&sku=PAS-JUA252&v=1780181066122",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99291",
@@ -1245,7 +1245,7 @@
     "unit_price": 1217,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FBAT18650.jpg&provider=sanjulian&sku=PAS-BAT18650&v=1780181066122",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-NAL93",
@@ -1253,7 +1253,7 @@
     "unit_price": 82748,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FNAL93.jpg&provider=sanjulian&sku=PAS-NAL93&v=1780181066122",
-    "category": "Cargadores y Fuentes"
+    "category": "Hogar y Cocina"
   },
   {
     "sku": "PAS-125067",
@@ -1261,7 +1261,7 @@
     "unit_price": 2759,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F125067.jpg&provider=sanjulian&sku=PAS-125067&v=1780181066123",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-125065",
@@ -1269,7 +1269,7 @@
     "unit_price": 5355,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F125065.jpg&provider=sanjulian&sku=PAS-125065&v=1780181066123",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RD1001",
@@ -1285,7 +1285,7 @@
     "unit_price": 4337,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FCAR2000.jpg&provider=sanjulian&sku=PAS-CAR2000&v=1780181066123",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-50DUO",
@@ -1293,7 +1293,7 @@
     "unit_price": 5435,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F50DUO.jpg&provider=sanjulian&sku=PAS-50DUO&v=1780181066123",
-    "category": "Cargadores y Fuentes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-AF216034",
@@ -1301,7 +1301,7 @@
     "unit_price": 3651,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FAF216034.jpg&provider=sanjulian&sku=PAS-AF216034&v=1780181066124",
-    "category": "Cargadores y Fuentes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-CAR6500",
@@ -1309,7 +1309,7 @@
     "unit_price": 5485,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FCAR6500.jpg&provider=sanjulian&sku=PAS-CAR6500&v=1780181066124",
-    "category": "Cargadores y Fuentes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-VCA105",
@@ -1325,7 +1325,7 @@
     "unit_price": 1623,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FCP4SO.jpg&provider=sanjulian&sku=PAS-CP4SO&v=1780181066124",
-    "category": "Cargadores y Fuentes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-CAV3PLAY",
@@ -1525,7 +1525,7 @@
     "unit_price": 5642,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRDO127.jpg&provider=sanjulian&sku=PAS-RDO127&v=1780181066129",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-91024",
@@ -1533,7 +1533,7 @@
     "unit_price": 5489,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F91024.jpg&provider=sanjulian&sku=PAS-91024&v=1780181066129",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-KS5145",
@@ -1541,7 +1541,7 @@
     "unit_price": 2759,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FKS5145.jpg&provider=sanjulian&sku=PAS-KS5145&v=1780181066129",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-CALC601",
@@ -1549,7 +1549,7 @@
     "unit_price": 2921,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FCALC601.jpg&provider=sanjulian&sku=PAS-CALC601&v=1780181066129",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-91023",
@@ -1557,7 +1557,7 @@
     "unit_price": 4706,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F91023.jpg&provider=sanjulian&sku=PAS-91023&v=1780181066129",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-78115",
@@ -1565,7 +1565,7 @@
     "unit_price": 16225,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F78115.jpg&provider=sanjulian&sku=PAS-78115&v=1780181066130",
-    "category": "Cargadores y Fuentes"
+    "category": "Electrónica y Computación"
   },
   {
     "sku": "PAS-99307",
@@ -1573,7 +1573,7 @@
     "unit_price": 28394,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99307.jpg&provider=sanjulian&sku=PAS-99307&v=1780181066130",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-CAMFOCO",
@@ -1581,7 +1581,7 @@
     "unit_price": 13792,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FCAMFOCO.jpg&provider=sanjulian&sku=PAS-CAMFOCO&v=1780181066130",
-    "category": "Electrónica y Computación"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-NAL122",
@@ -1589,7 +1589,7 @@
     "unit_price": 1055,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FNAL122.jpg&provider=sanjulian&sku=PAS-NAL122&v=1780181066130",
-    "category": "Seguridad y Cámaras"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-NAL123",
@@ -1597,7 +1597,7 @@
     "unit_price": 1541,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FNAL123.jpg&provider=sanjulian&sku=PAS-NAL123&v=1780181066130",
-    "category": "Seguridad y Cámaras"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-MS-212002",
@@ -1605,7 +1605,7 @@
     "unit_price": 10806,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FMS-212002.jpg&provider=sanjulian&sku=PAS-MS-212002&v=1780181066131",
-    "category": "Seguridad y Cámaras"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-IB2604",
@@ -1613,7 +1613,7 @@
     "unit_price": 2374,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FIB2604.jpg&provider=sanjulian&sku=PAS-IB2604&v=1780181066131",
-    "category": "Cargadores y Fuentes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-CAR-3100C",
@@ -1621,7 +1621,7 @@
     "unit_price": 3180,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FCAR-3100C.jpg&provider=sanjulian&sku=PAS-CAR-3100C&v=1780181066131",
-    "category": "Cargadores y Fuentes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-CAR4500C",
@@ -1629,7 +1629,7 @@
     "unit_price": 5209,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FCAR4500C.jpg&provider=sanjulian&sku=PAS-CAR4500C&v=1780181066131",
-    "category": "Cargadores y Fuentes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-CAR5100C",
@@ -1637,7 +1637,7 @@
     "unit_price": 3618,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FCAR5100C.jpg&provider=sanjulian&sku=PAS-CAR5100C&v=1780181066131",
-    "category": "Cargadores y Fuentes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-RDO401",
@@ -1661,7 +1661,7 @@
     "unit_price": 3408,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FIB582.jpg&provider=sanjulian&sku=PAS-IB582&v=1780181066132",
-    "category": "Cargadores y Fuentes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-IB4803",
@@ -1669,7 +1669,7 @@
     "unit_price": 3511,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FIB4803.jpg&provider=sanjulian&sku=PAS-IB4803&v=1780181066132",
-    "category": "Cargadores y Fuentes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-IB3026",
@@ -1685,7 +1685,7 @@
     "unit_price": 6490,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FCAR6501.jpg&provider=sanjulian&sku=PAS-CAR6501&v=1780181066132",
-    "category": "Cargadores y Fuentes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-LTC4",
@@ -1693,7 +1693,7 @@
     "unit_price": 4365,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FLTC4.jpg&provider=sanjulian&sku=PAS-LTC4&v=1780181066133",
-    "category": "Cargadores y Fuentes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-LT25120",
@@ -1717,7 +1717,7 @@
     "unit_price": 43808,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F10012.jpg&provider=sanjulian&sku=PAS-10012&v=1780181066133",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99287",
@@ -1733,7 +1733,7 @@
     "unit_price": 6328,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F125066.jpg&provider=sanjulian&sku=PAS-125066&v=1780181066134",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99309",
@@ -1741,7 +1741,7 @@
     "unit_price": 5273,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99309.jpg&provider=sanjulian&sku=PAS-99309&v=1780181066134",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99310",
@@ -1757,7 +1757,7 @@
     "unit_price": 2921,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99289.jpg&provider=sanjulian&sku=PAS-99289&v=1780181066134",
-    "category": "Cargadores y Fuentes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-99324",
@@ -1765,7 +1765,7 @@
     "unit_price": 1136,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99324.jpg&provider=sanjulian&sku=PAS-99324&v=1780181066134",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-3673",
@@ -1773,7 +1773,7 @@
     "unit_price": 25960,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F3673.jpg&provider=sanjulian&sku=PAS-3673&v=1780181066135",
-    "category": "Accesorios Auto Moto y Bici"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-SY05",
@@ -1789,7 +1789,7 @@
     "unit_price": 25960,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FNAL185.jpg&provider=sanjulian&sku=PAS-NAL185&v=1780181066135",
-    "category": "Juegos Juguetes y Librería"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-R36S",
@@ -1797,7 +1797,7 @@
     "unit_price": 54841,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FR36S.jpg&provider=sanjulian&sku=PAS-R36S&v=1780181066135",
-    "category": "Juegos Juguetes y Librería"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-CONT014",
@@ -1805,7 +1805,7 @@
     "unit_price": 2677,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FCONT014.jpg&provider=sanjulian&sku=PAS-CONT014&v=1780181066135",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-CONAIRE",
@@ -1813,7 +1813,7 @@
     "unit_price": 2125,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FCONAIRE.jpg&provider=sanjulian&sku=PAS-CONAIRE&v=1780181066136",
-    "category": "Accesorios Auto Moto y Bici"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-CONTTVBOX",
@@ -1821,7 +1821,7 @@
     "unit_price": 2190,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FCONTTVBOX.jpg&provider=sanjulian&sku=PAS-CONTTVBOX&v=1780181066136",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-HDMI2VGA",
@@ -1829,7 +1829,7 @@
     "unit_price": 3432,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FHDMI2VGA.jpg&provider=sanjulian&sku=PAS-HDMI2VGA&v=1780181066136",
-    "category": "Cargadores y Fuentes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-VGA2HDMI",
@@ -1837,7 +1837,7 @@
     "unit_price": 5192,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FVGA2HDMI.jpg&provider=sanjulian&sku=PAS-VGA2HDMI&v=1780181066136",
-    "category": "Cargadores y Fuentes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-tv2026",
@@ -1845,7 +1845,7 @@
     "unit_price": 23121,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2Ftv2026.jpg&provider=sanjulian&sku=PAS-tv2026&v=1780181066136",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-K8",
@@ -1853,7 +1853,7 @@
     "unit_price": 5273,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FK8.jpg&provider=sanjulian&sku=PAS-K8&v=1780181066137",
-    "category": "Gadgets"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99066",
@@ -1861,7 +1861,7 @@
     "unit_price": 4283,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99066.jpg&provider=sanjulian&sku=PAS-99066&v=1780181066137",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-TRIM",
@@ -1877,7 +1877,7 @@
     "unit_price": 9119,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FGX220D.jpg&provider=sanjulian&sku=PAS-GX220D&v=1780181066137",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99069",
@@ -1885,7 +1885,7 @@
     "unit_price": 2028,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99069.jpg&provider=sanjulian&sku=PAS-99069&v=1780181066138",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RD587",
@@ -1893,7 +1893,7 @@
     "unit_price": 2596,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRD587.jpg&provider=sanjulian&sku=PAS-RD587&v=1780181066138",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-DESP905",
@@ -1917,7 +1917,7 @@
     "unit_price": 8924,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRD632.jpg&provider=sanjulian&sku=PAS-RD632&v=1780181066138",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-DROND9",
@@ -1941,7 +1941,7 @@
     "unit_price": 2397,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99344.jpg&provider=sanjulian&sku=PAS-99344&v=1780181066139",
-    "category": "Accesorios Auto Moto y Bici"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99125",
@@ -1949,7 +1949,7 @@
     "unit_price": 5499,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99125.jpg&provider=sanjulian&sku=PAS-99125&v=1780181066139",
-    "category": "Accesorios Auto Moto y Bici"
+    "category": "Iluminación y LED"
   },
   {
     "sku": "PAS-99322",
@@ -1965,7 +1965,7 @@
     "unit_price": 2110,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99342.jpg&provider=sanjulian&sku=PAS-99342&v=1780181066139",
-    "category": "Hogar y Cocina"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99163",
@@ -1973,7 +1973,7 @@
     "unit_price": 7464,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99163.jpg&provider=sanjulian&sku=PAS-99163&v=1780181066140",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-ERIK03",
@@ -1981,7 +1981,7 @@
     "unit_price": 12980,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FERIK03.jpg&provider=sanjulian&sku=PAS-ERIK03&v=1780181066140",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RD1783M",
@@ -1989,7 +1989,7 @@
     "unit_price": 44959,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRD1783M.jpg&provider=sanjulian&sku=PAS-RD1783M&v=1780181066140",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RGBFOC",
@@ -1997,7 +1997,7 @@
     "unit_price": 2915,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRGBFOC.jpg&provider=sanjulian&sku=PAS-RGBFOC&v=1780181066140",
-    "category": "Iluminación y LED"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "PAS-OS35",
@@ -2005,7 +2005,7 @@
     "unit_price": 4057,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FOS35.jpg&provider=sanjulian&sku=PAS-OS35&v=1780181066140",
-    "category": "Iluminación y LED"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "PAS-FRE6.5",
@@ -2013,7 +2013,7 @@
     "unit_price": 52732,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FFRE6.5.jpg&provider=sanjulian&sku=PAS-FRE6.5&v=1780181066141",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-FRE7",
@@ -2021,7 +2021,7 @@
     "unit_price": 63765,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FFRE7.jpg&provider=sanjulian&sku=PAS-FRE7&v=1780181066141",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-AV1527",
@@ -2029,7 +2029,7 @@
     "unit_price": 925,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FAV1527.jpg&provider=sanjulian&sku=PAS-AV1527&v=1780181066141",
-    "category": "Accesorios para Celulares"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-NAL254",
@@ -2037,7 +2037,7 @@
     "unit_price": 1785,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FNAL254.jpg&provider=sanjulian&sku=PAS-NAL254&v=1780181066141",
-    "category": "Hogar y Cocina"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-DEF-1",
@@ -2045,7 +2045,7 @@
     "unit_price": 6049,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FDEF-1.jpg&provider=sanjulian&sku=PAS-DEF-1&v=1780181066141",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-HDMI-3",
@@ -2061,7 +2061,7 @@
     "unit_price": 3245,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FHDMI-5.jpg&provider=sanjulian&sku=PAS-HDMI-5&v=1780181066142",
-    "category": "Cargadores y Fuentes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-HUB7",
@@ -2069,7 +2069,7 @@
     "unit_price": 4381,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FHUB7.jpg&provider=sanjulian&sku=PAS-HUB7&v=1780181066142",
-    "category": "Electrónica y Computación"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-8EN1",
@@ -2085,7 +2085,7 @@
     "unit_price": 3245,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FHUB4.jpg&provider=sanjulian&sku=PAS-HUB4&v=1780181066142",
-    "category": "Electrónica y Computación"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-99132",
@@ -2093,7 +2093,7 @@
     "unit_price": 10871,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99132.jpg&provider=sanjulian&sku=PAS-99132&v=1780181066142",
-    "category": "Gadgets"
+    "category": "Hogar y Cocina"
   },
   {
     "sku": "PAS-JOYP4",
@@ -2133,7 +2133,7 @@
     "unit_price": 682,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FVS255.jpg&provider=sanjulian&sku=PAS-VS255&v=1780181066143",
-    "category": "Cargadores y Fuentes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-RD1003",
@@ -2149,7 +2149,7 @@
     "unit_price": 3245,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FLAM206.jpg&provider=sanjulian&sku=PAS-LAM206&v=1780181066144",
-    "category": "Cargadores y Fuentes"
+    "category": "Iluminación y LED"
   },
   {
     "sku": "PAS-LIN710",
@@ -2157,7 +2157,7 @@
     "unit_price": 6328,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FLIN710.jpg&provider=sanjulian&sku=PAS-LIN710&v=1780181066144",
-    "category": "Audio Video y Parlantes"
+    "category": "Bazar y Camping"
   },
   {
     "sku": "PAS-LAM208",
@@ -2165,7 +2165,7 @@
     "unit_price": 3245,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FLAM208.jpg&provider=sanjulian&sku=PAS-LAM208&v=1780181066144",
-    "category": "Cargadores y Fuentes"
+    "category": "Iluminación y LED"
   },
   {
     "sku": "PAS-99266",
@@ -2173,7 +2173,7 @@
     "unit_price": 8693,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99266.jpg&provider=sanjulian&sku=PAS-99266&v=1780181066144",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-LAMCAPI",
@@ -2181,7 +2181,7 @@
     "unit_price": 5679,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FLAMCAPI.jpg&provider=sanjulian&sku=PAS-LAMCAPI&v=1780181066144",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-L3D",
@@ -2189,7 +2189,7 @@
     "unit_price": 10222,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FL3D.jpg&provider=sanjulian&sku=PAS-L3D&v=1780181066145",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RD490",
@@ -2197,7 +2197,7 @@
     "unit_price": 7528,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRD490.jpg&provider=sanjulian&sku=PAS-RD490&v=1780181066145",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-EX02772",
@@ -2205,7 +2205,7 @@
     "unit_price": 11849,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FEX02772.jpg&provider=sanjulian&sku=PAS-EX02772&v=1780181066145",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-KP107",
@@ -2213,7 +2213,7 @@
     "unit_price": 7302,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FKP107.jpg&provider=sanjulian&sku=PAS-KP107&v=1780181066145",
-    "category": "Accesorios Auto Moto y Bici"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-JY819",
@@ -2229,7 +2229,7 @@
     "unit_price": 990,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FC53302.jpg&provider=sanjulian&sku=PAS-C53302&v=1780181066146",
-    "category": "Cargadores y Fuentes"
+    "category": "Bazar y Camping"
   },
   {
     "sku": "PAS-RD496",
@@ -2253,7 +2253,7 @@
     "unit_price": 6039,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FMS807.jpg&provider=sanjulian&sku=PAS-MS807&v=1780181066146",
-    "category": "Bazar y Camping"
+    "category": "Iluminación y LED"
   },
   {
     "sku": "PAS-BN1234",
@@ -2277,7 +2277,7 @@
     "unit_price": 3245,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99119.jpg&provider=sanjulian&sku=PAS-99119&v=1780181066147",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-5742",
@@ -2285,7 +2285,7 @@
     "unit_price": 1295,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F5742.jpg&provider=sanjulian&sku=PAS-5742&v=1780181066147",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RGB10M",
@@ -2293,7 +2293,7 @@
     "unit_price": 7788,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRGB10M.jpg&provider=sanjulian&sku=PAS-RGB10M&v=1780181066147",
-    "category": "Iluminación y LED"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "PAS-2808",
@@ -2301,7 +2301,7 @@
     "unit_price": 2434,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F2808.jpg&provider=sanjulian&sku=PAS-2808&v=1780181066147",
-    "category": "Accesorios Auto Moto y Bici"
+    "category": "Iluminación y LED"
   },
   {
     "sku": "PAS-TQ2808",
@@ -2309,7 +2309,7 @@
     "unit_price": 6733,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FTQ2808.jpg&provider=sanjulian&sku=PAS-TQ2808&v=1780181066148",
-    "category": "Accesorios Auto Moto y Bici"
+    "category": "Iluminación y LED"
   },
   {
     "sku": "PAS-EP090",
@@ -2325,7 +2325,7 @@
     "unit_price": 4057,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F2515.jpg&provider=sanjulian&sku=PAS-2515&v=1780181066148",
-    "category": "Cargadores y Fuentes"
+    "category": "Iluminación y LED"
   },
   {
     "sku": "PAS-MST01",
@@ -2333,7 +2333,7 @@
     "unit_price": 2110,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FMST01.jpg&provider=sanjulian&sku=PAS-MST01&v=1780181066148",
-    "category": "Cargadores y Fuentes"
+    "category": "Hogar y Cocina"
   },
   {
     "sku": "PAS-MST02",
@@ -2341,7 +2341,7 @@
     "unit_price": 1704,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FMST02.jpg&provider=sanjulian&sku=PAS-MST02&v=1780181066148",
-    "category": "Cargadores y Fuentes"
+    "category": "Hogar y Cocina"
   },
   {
     "sku": "PAS-99306",
@@ -2349,7 +2349,7 @@
     "unit_price": 12169,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99306.jpg&provider=sanjulian&sku=PAS-99306&v=1780181066149",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-DL1190",
@@ -2365,7 +2365,7 @@
     "unit_price": 31720,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPE204.jpg&provider=sanjulian&sku=PAS-PE204&v=1780181066149",
-    "category": "Juegos Juguetes y Librería"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-91032",
@@ -2373,7 +2373,7 @@
     "unit_price": 3505,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F91032.jpg&provider=sanjulian&sku=PAS-91032&v=1780181066149",
-    "category": "Juegos Juguetes y Librería"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-91033",
@@ -2381,7 +2381,7 @@
     "unit_price": 9735,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F91033.jpg&provider=sanjulian&sku=PAS-91033&v=1780181066149",
-    "category": "Juegos Juguetes y Librería"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PE80",
@@ -2389,7 +2389,7 @@
     "unit_price": 12438,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPE80.jpg&provider=sanjulian&sku=PAS-PE80&v=1780181066149",
-    "category": "Juegos Juguetes y Librería"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-TOUCH",
@@ -2397,7 +2397,7 @@
     "unit_price": 6588,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FTOUCH.jpg&provider=sanjulian&sku=PAS-TOUCH&v=1780181066150",
-    "category": "Juegos Juguetes y Librería"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-ACRILIC24",
@@ -2461,7 +2461,7 @@
     "unit_price": 15739,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99290.jpg&provider=sanjulian&sku=PAS-99290&v=1780181066151",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-Y3599",
@@ -2469,7 +2469,7 @@
     "unit_price": 2110,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FY3599.jpg&provider=sanjulian&sku=PAS-Y3599&v=1780181066151",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99382",
@@ -2477,7 +2477,7 @@
     "unit_price": 2596,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99382.jpg&provider=sanjulian&sku=PAS-99382&v=1780181066151",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99381",
@@ -2485,7 +2485,7 @@
     "unit_price": 1866,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99381.jpg&provider=sanjulian&sku=PAS-99381&v=1780181066152",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RD1016",
@@ -2493,7 +2493,7 @@
     "unit_price": 6977,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRD1016.jpg&provider=sanjulian&sku=PAS-RD1016&v=1780181066152",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-ERIK06",
@@ -2509,7 +2509,7 @@
     "unit_price": 13198,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FF15.jpg&provider=sanjulian&sku=PAS-F15&v=1780181066152",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-FD1491",
@@ -2533,7 +2533,7 @@
     "unit_price": 5435,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FEX01826.jpg&provider=sanjulian&sku=PAS-EX01826&v=1780181066153",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-MINIIMPRE",
@@ -2541,7 +2541,7 @@
     "unit_price": 13792,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FMINIIMPRE.jpg&provider=sanjulian&sku=PAS-MINIIMPRE&v=1780181066153",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RD38",
@@ -2557,7 +2557,7 @@
     "unit_price": 16225,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FMOMAS.jpg&provider=sanjulian&sku=PAS-MOMAS&v=1780181066153",
-    "category": "Bazar y Camping"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99173",
@@ -2565,7 +2565,7 @@
     "unit_price": 2749,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99173.jpg&provider=sanjulian&sku=PAS-99173&v=1780181066154",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-MOP212",
@@ -2573,7 +2573,7 @@
     "unit_price": 8113,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FMOP212.jpg&provider=sanjulian&sku=PAS-MOP212&v=1780181066154",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RD505",
@@ -2581,7 +2581,7 @@
     "unit_price": 17848,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRD505.jpg&provider=sanjulian&sku=PAS-RD505&v=1780181066154",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-H-MOUINA",
@@ -2597,7 +2597,7 @@
     "unit_price": 5030,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F132002.jpg&provider=sanjulian&sku=PAS-132002&v=1780181066154",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99336",
@@ -2605,7 +2605,7 @@
     "unit_price": 15252,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99336.jpg&provider=sanjulian&sku=PAS-99336&v=1780181066155",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99308",
@@ -2621,7 +2621,7 @@
     "unit_price": 1168,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F78138.jpg&provider=sanjulian&sku=PAS-78138&v=1780181066155",
-    "category": "Cargadores y Fuentes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-PENTOUCH",
@@ -2629,7 +2629,7 @@
     "unit_price": 4868,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPENTOUCH.jpg&provider=sanjulian&sku=PAS-PENTOUCH&v=1780181066155",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-V103",
@@ -2637,7 +2637,7 @@
     "unit_price": 1294,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FV103.jpg&provider=sanjulian&sku=PAS-V103&v=1780181066155",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PELPA",
@@ -2645,7 +2645,7 @@
     "unit_price": 3299,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPELPA.jpg&provider=sanjulian&sku=PAS-PELPA&v=1780181066155",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-SP204",
@@ -2669,7 +2669,7 @@
     "unit_price": 5111,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FWS887.jpg&provider=sanjulian&sku=PAS-WS887&v=1780181066156",
-    "category": "Audio Video y Parlantes"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-X13",
@@ -2677,7 +2677,7 @@
     "unit_price": 8924,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FX13.jpg&provider=sanjulian&sku=PAS-X13&v=1780181066156",
-    "category": "Iluminación y LED"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "PAS-SP219",
@@ -2693,7 +2693,7 @@
     "unit_price": 9735,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FX16.jpg&provider=sanjulian&sku=PAS-X16&v=1780181066157",
-    "category": "Iluminación y LED"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "PAS-WS592",
@@ -2701,7 +2701,7 @@
     "unit_price": 17848,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FWS592.jpg&provider=sanjulian&sku=PAS-WS592&v=1780181066157",
-    "category": "Cargadores y Fuentes"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "PAS-SP218",
@@ -2709,7 +2709,7 @@
     "unit_price": 8924,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FSP218.jpg&provider=sanjulian&sku=PAS-SP218&v=1780181066157",
-    "category": "Cargadores y Fuentes"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "PAS-PARRUEDA",
@@ -2717,7 +2717,7 @@
     "unit_price": 10952,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPARRUEDA.jpg&provider=sanjulian&sku=PAS-PARRUEDA&v=1780181066157",
-    "category": "Iluminación y LED"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "PAS-P22",
@@ -2741,7 +2741,7 @@
     "unit_price": 5499,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FMESSI.jpg&provider=sanjulian&sku=PAS-MESSI&v=1780181066158",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-HUE761",
@@ -2749,7 +2749,7 @@
     "unit_price": 649,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FHUE761.jpg&provider=sanjulian&sku=PAS-HUE761&v=1780181066158",
-    "category": "Juegos Juguetes y Librería"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-HA0862",
@@ -2757,7 +2757,7 @@
     "unit_price": 5030,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FHA0862.jpg&provider=sanjulian&sku=PAS-HA0862&v=1780181066158",
-    "category": "Cargadores y Fuentes"
+    "category": "Iluminación y LED"
   },
   {
     "sku": "PAS-2782",
@@ -2765,7 +2765,7 @@
     "unit_price": 12177,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F2782.jpg&provider=sanjulian&sku=PAS-2782&v=1780181066158",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PEN128K",
@@ -2773,7 +2773,7 @@
     "unit_price": 21904,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPEN128K.jpg&provider=sanjulian&sku=PAS-PEN128K&v=1780181066158",
-    "category": "Electrónica y Computación"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-5126",
@@ -2781,7 +2781,7 @@
     "unit_price": 762,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F5126.jpg&provider=sanjulian&sku=PAS-5126&v=1780181066158",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PV1130",
@@ -2789,7 +2789,7 @@
     "unit_price": 1815,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPV1130.jpg&provider=sanjulian&sku=PAS-PV1130&v=1780181066159",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-WR675",
@@ -2797,7 +2797,7 @@
     "unit_price": 6600,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FWR675.jpg&provider=sanjulian&sku=PAS-WR675&v=1780181066159",
-    "category": "Cargadores y Fuentes"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "PAS-WR10",
@@ -2805,7 +2805,7 @@
     "unit_price": 6006,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FWR10.jpg&provider=sanjulian&sku=PAS-WR10&v=1780181066159",
-    "category": "Cargadores y Fuentes"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "PAS-PV2032",
@@ -2813,7 +2813,7 @@
     "unit_price": 1055,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPV2032.jpg&provider=sanjulian&sku=PAS-PV2032&v=1780181066159",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PV1620",
@@ -2821,7 +2821,7 @@
     "unit_price": 2110,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPV1620.jpg&provider=sanjulian&sku=PAS-PV1620&v=1780181066159",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PIN23A",
@@ -2829,7 +2829,7 @@
     "unit_price": 2028,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPIN23A.jpg&provider=sanjulian&sku=PAS-PIN23A&v=1780181066160",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR371",
@@ -2837,7 +2837,7 @@
     "unit_price": 1815,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR371.jpg&provider=sanjulian&sku=PAS-PR371&v=1780181066160",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR394",
@@ -2845,7 +2845,7 @@
     "unit_price": 2706,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR394.jpg&provider=sanjulian&sku=PAS-PR394&v=1780181066160",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR395",
@@ -2853,7 +2853,7 @@
     "unit_price": 2145,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR395.jpg&provider=sanjulian&sku=PAS-PR395&v=1780181066160",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-23A",
@@ -2861,7 +2861,7 @@
     "unit_price": 3878,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F23A.jpg&provider=sanjulian&sku=PAS-23A&v=1780181066160",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-WR13",
@@ -2869,7 +2869,7 @@
     "unit_price": 5841,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FWR13.jpg&provider=sanjulian&sku=PAS-WR13&v=1780181066160",
-    "category": "Cargadores y Fuentes"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "PAS-RW312",
@@ -2877,7 +2877,7 @@
     "unit_price": 4950,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRW312.jpg&provider=sanjulian&sku=PAS-RW312&v=1780181066161",
-    "category": "Cargadores y Fuentes"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "PAS-AA20",
@@ -2885,7 +2885,7 @@
     "unit_price": 18150,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FAA20.jpg&provider=sanjulian&sku=PAS-AA20&v=1780181066161",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-AAA20",
@@ -2893,7 +2893,7 @@
     "unit_price": 18150,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FAAA20.jpg&provider=sanjulian&sku=PAS-AAA20&v=1780181066161",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-EVEAA",
@@ -2901,7 +2901,7 @@
     "unit_price": 10992,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FEVEAA.jpg&provider=sanjulian&sku=PAS-EVEAA&v=1780181066161",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-EVEAAA",
@@ -2909,7 +2909,7 @@
     "unit_price": 13910,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FEVEAAA.jpg&provider=sanjulian&sku=PAS-EVEAAA&v=1780181066162",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-IBAA",
@@ -2917,7 +2917,7 @@
     "unit_price": 5069,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FIBAA.jpg&provider=sanjulian&sku=PAS-IBAA&v=1780181066162",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-IBAAA",
@@ -2925,7 +2925,7 @@
     "unit_price": 5069,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FIBAAA.jpg&provider=sanjulian&sku=PAS-IBAAA&v=1780181066162",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PV1616",
@@ -2933,7 +2933,7 @@
     "unit_price": 2228,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPV1616.jpg&provider=sanjulian&sku=PAS-PV1616&v=1780181066162",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-LR44",
@@ -2941,7 +2941,7 @@
     "unit_price": 5363,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FLR44.jpg&provider=sanjulian&sku=PAS-LR44&v=1780181066162",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-CR1216",
@@ -2949,7 +2949,7 @@
     "unit_price": 2640,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FCR1216.jpg&provider=sanjulian&sku=PAS-CR1216&v=1780181066162",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR364",
@@ -2957,7 +2957,7 @@
     "unit_price": 8795,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR364.jpg&provider=sanjulian&sku=PAS-PR364&v=1780181066163",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR1220",
@@ -2965,7 +2965,7 @@
     "unit_price": 2541,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR1220.jpg&provider=sanjulian&sku=PAS-PR1220&v=1780181066163",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR1616",
@@ -2973,7 +2973,7 @@
     "unit_price": 2640,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR1616.jpg&provider=sanjulian&sku=PAS-PR1616&v=1780181066163",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR1620",
@@ -2981,7 +2981,7 @@
     "unit_price": 2640,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR1620.jpg&provider=sanjulian&sku=PAS-PR1620&v=1780181066163",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR2016",
@@ -2989,7 +2989,7 @@
     "unit_price": 4183,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR2016.jpg&provider=sanjulian&sku=PAS-PR2016&v=1780181066163",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR2025",
@@ -2997,7 +2997,7 @@
     "unit_price": 4183,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR2025.jpg&provider=sanjulian&sku=PAS-PR2025&v=1780181066163",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR2032",
@@ -3005,7 +3005,7 @@
     "unit_price": 3861,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR2032.jpg&provider=sanjulian&sku=PAS-PR2032&v=1780181066164",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-TIAN2016",
@@ -3013,7 +3013,7 @@
     "unit_price": 1832,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FTIAN2016.jpg&provider=sanjulian&sku=PAS-TIAN2016&v=1780181066164",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-TIAN2025",
@@ -3021,7 +3021,7 @@
     "unit_price": 1832,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FTIAN2025.jpg&provider=sanjulian&sku=PAS-TIAN2025&v=1780181066164",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-TIAN2032",
@@ -3029,7 +3029,7 @@
     "unit_price": 2347,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FTIAN2032.jpg&provider=sanjulian&sku=PAS-TIAN2032&v=1780181066164",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PV1216",
@@ -3037,7 +3037,7 @@
     "unit_price": 2125,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPV1216.jpg&provider=sanjulian&sku=PAS-PV1216&v=1780181066164",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PV1220",
@@ -3045,7 +3045,7 @@
     "unit_price": 2145,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPV1220.jpg&provider=sanjulian&sku=PAS-PV1220&v=1780181066165",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PV41",
@@ -3053,7 +3053,7 @@
     "unit_price": 1650,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPV41.jpg&provider=sanjulian&sku=PAS-PV41&v=1780181066165",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-LR1130",
@@ -3061,7 +3061,7 @@
     "unit_price": 5363,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FLR1130.jpg&provider=sanjulian&sku=PAS-LR1130&v=1780181066165",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-LR41",
@@ -3069,7 +3069,7 @@
     "unit_price": 5363,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FLR41.jpg&provider=sanjulian&sku=PAS-LR41&v=1780181066165",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PR377",
@@ -3077,7 +3077,7 @@
     "unit_price": 8415,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPR377.jpg&provider=sanjulian&sku=PAS-PR377&v=1780181066165",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PV626",
@@ -3085,7 +3085,7 @@
     "unit_price": 1403,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPV626.jpg&provider=sanjulian&sku=PAS-PV626&v=1780181066165",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-SJ0017",
@@ -3093,7 +3093,7 @@
     "unit_price": 11682,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FSJ0017.jpg&provider=sanjulian&sku=PAS-SJ0017&v=1780181066166",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-JUA2030",
@@ -3117,7 +3117,7 @@
     "unit_price": 4345,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPIZABALLE.jpg&provider=sanjulian&sku=PAS-PIZABALLE&v=1780181066166",
-    "category": "Cargadores y Fuentes"
+    "category": "Juegos Juguetes y Librería"
   },
   {
     "sku": "PAS-C4435",
@@ -3125,7 +3125,7 @@
     "unit_price": 2968,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FC4435.jpg&provider=sanjulian&sku=PAS-C4435&v=1780181066166",
-    "category": "Cargadores y Fuentes"
+    "category": "Juegos Juguetes y Librería"
   },
   {
     "sku": "PAS-PP005",
@@ -3133,7 +3133,7 @@
     "unit_price": 3586,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPP005.jpg&provider=sanjulian&sku=PAS-PP005&v=1780181066167",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-PP006",
@@ -3149,7 +3149,7 @@
     "unit_price": 4057,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FPP009.jpg&provider=sanjulian&sku=PAS-PP009&v=1780181066167",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99274",
@@ -3157,7 +3157,7 @@
     "unit_price": 2199,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99274.jpg&provider=sanjulian&sku=PAS-99274&v=1780181066167",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-LA082",
@@ -3197,7 +3197,7 @@
     "unit_price": 61490,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99346.jpg&provider=sanjulian&sku=PAS-99346&v=1780181066168",
-    "category": "Bazar y Camping"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-SP211",
@@ -3205,7 +3205,7 @@
     "unit_price": 15414,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FSP211.jpg&provider=sanjulian&sku=PAS-SP211&v=1780181066168",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-SP214",
@@ -3213,7 +3213,7 @@
     "unit_price": 8291,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FSP214.jpg&provider=sanjulian&sku=PAS-SP214&v=1780181066168",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99224",
@@ -3221,7 +3221,7 @@
     "unit_price": 18659,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99224.jpg&provider=sanjulian&sku=PAS-99224&v=1780181066169",
-    "category": "Audio Video y Parlantes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-REL901",
@@ -3253,7 +3253,7 @@
     "unit_price": 1099,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F78035.jpg&provider=sanjulian&sku=PAS-78035&v=1780181066169",
-    "category": "Cargadores y Fuentes"
+    "category": "Hogar y Cocina"
   },
   {
     "sku": "PAS-REL908",
@@ -3277,7 +3277,7 @@
     "unit_price": 29205,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRELED02.jpg&provider=sanjulian&sku=PAS-RELED02&v=1780181066170",
-    "category": "Cargadores y Fuentes"
+    "category": "Hogar y Cocina"
   },
   {
     "sku": "PAS-RD486",
@@ -3285,7 +3285,7 @@
     "unit_price": 27583,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRD486.jpg&provider=sanjulian&sku=PAS-RD486&v=1780181066170",
-    "category": "Cargadores y Fuentes"
+    "category": "Hogar y Cocina"
   },
   {
     "sku": "PAS-REL907",
@@ -3301,7 +3301,7 @@
     "unit_price": 3484,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRE3D.jpg&provider=sanjulian&sku=PAS-RE3D&v=1780181066170",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-125050",
@@ -3309,7 +3309,7 @@
     "unit_price": 7058,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F125050.jpg&provider=sanjulian&sku=PAS-125050&v=1780181066171",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-125053",
@@ -3317,7 +3317,7 @@
     "unit_price": 6004,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F125053.jpg&provider=sanjulian&sku=PAS-125053&v=1780181066171",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-125054",
@@ -3325,7 +3325,7 @@
     "unit_price": 6004,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F125054.jpg&provider=sanjulian&sku=PAS-125054&v=1780181066171",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RING02",
@@ -3333,7 +3333,7 @@
     "unit_price": 1055,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRING02.jpg&provider=sanjulian&sku=PAS-RING02&v=1780181066171",
-    "category": "Accesorios para Celulares"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RING01",
@@ -3341,7 +3341,7 @@
     "unit_price": 1136,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRING01.jpg&provider=sanjulian&sku=PAS-RING01&v=1780181066171",
-    "category": "Accesorios para Celulares"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RING03",
@@ -3349,7 +3349,7 @@
     "unit_price": 1541,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRING03.jpg&provider=sanjulian&sku=PAS-RING03&v=1780181066171",
-    "category": "Accesorios para Celulares"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99027",
@@ -3365,7 +3365,7 @@
     "unit_price": 16225,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRD825.jpg&provider=sanjulian&sku=PAS-RD825&v=1780181066172",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-NAL196",
@@ -3373,7 +3373,7 @@
     "unit_price": 17256,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FNAL196.jpg&provider=sanjulian&sku=PAS-NAL196&v=1780181066172",
-    "category": "Hogar y Cocina"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99339",
@@ -3381,7 +3381,7 @@
     "unit_price": 5030,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99339.jpg&provider=sanjulian&sku=PAS-99339&v=1780181066172",
-    "category": "Herramientas y Electricidad"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99304",
@@ -3389,7 +3389,7 @@
     "unit_price": 2199,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99304.jpg&provider=sanjulian&sku=PAS-99304&v=1780181066172",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RD719",
@@ -3397,7 +3397,7 @@
     "unit_price": 1623,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRD719.jpg&provider=sanjulian&sku=PAS-RD719&v=1780181066173",
-    "category": "Electrónica y Computación"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RD721",
@@ -3405,7 +3405,7 @@
     "unit_price": 8600,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRD721.jpg&provider=sanjulian&sku=PAS-RD721&v=1780181066173",
-    "category": "Electrónica y Computación"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RD720",
@@ -3413,7 +3413,7 @@
     "unit_price": 2110,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRD720.jpg&provider=sanjulian&sku=PAS-RD720&v=1780181066173",
-    "category": "Electrónica y Computación"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RD521",
@@ -3421,7 +3421,7 @@
     "unit_price": 5489,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRD521.jpg&provider=sanjulian&sku=PAS-RD521&v=1780181066173",
-    "category": "Herramientas y Electricidad"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99305",
@@ -3429,7 +3429,7 @@
     "unit_price": 154138,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99305.jpg&provider=sanjulian&sku=PAS-99305&v=1780181066173",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-LINF01",
@@ -3445,7 +3445,7 @@
     "unit_price": 24338,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99196.jpg&provider=sanjulian&sku=PAS-99196&v=1780181066174",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-SMARTTV",
@@ -3453,7 +3453,7 @@
     "unit_price": 356950,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FSMARTTV.jpg&provider=sanjulian&sku=PAS-SMARTTV&v=1780181066174",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99333",
@@ -3461,7 +3461,7 @@
     "unit_price": 8924,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99333.jpg&provider=sanjulian&sku=PAS-99333&v=1780181066174",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99334",
@@ -3469,7 +3469,7 @@
     "unit_price": 9735,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99334.jpg&provider=sanjulian&sku=PAS-99334&v=1780181066174",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99195",
@@ -3477,7 +3477,7 @@
     "unit_price": 21093,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99195.jpg&provider=sanjulian&sku=PAS-99195&v=1780181066174",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99197",
@@ -3485,7 +3485,7 @@
     "unit_price": 26772,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99197.jpg&provider=sanjulian&sku=PAS-99197&v=1780181066175",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99013",
@@ -3493,7 +3493,7 @@
     "unit_price": 536,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99013.jpg&provider=sanjulian&sku=PAS-99013&v=1780181066175",
-    "category": "Liquidación"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99019",
@@ -3501,7 +3501,7 @@
     "unit_price": 536,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99019.jpg&provider=sanjulian&sku=PAS-99019&v=1780181066175",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RD380",
@@ -3517,7 +3517,7 @@
     "unit_price": 1866,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FVS250.jpg&provider=sanjulian&sku=PAS-VS250&v=1780181066175",
-    "category": "Accesorios para Celulares"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-VS238",
@@ -3533,7 +3533,7 @@
     "unit_price": 4868,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F78078.jpg&provider=sanjulian&sku=PAS-78078&v=1780181066176",
-    "category": "Accesorios para Celulares"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-TVJ5000",
@@ -3541,7 +3541,7 @@
     "unit_price": 28719,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FTVJ5000.jpg&provider=sanjulian&sku=PAS-TVJ5000&v=1780181066176",
-    "category": "Accesorios para Celulares"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-SOP601",
@@ -3549,7 +3549,7 @@
     "unit_price": 4868,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FSOP601.jpg&provider=sanjulian&sku=PAS-SOP601&v=1780181066176",
-    "category": "Accesorios para Celulares"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-200721",
@@ -3557,7 +3557,7 @@
     "unit_price": 1584,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F200721.jpg&provider=sanjulian&sku=PAS-200721&v=1780181066176",
-    "category": "Accesorios para Celulares"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-SOPSOLAR",
@@ -3565,7 +3565,7 @@
     "unit_price": 8113,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FSOPSOLAR.jpg&provider=sanjulian&sku=PAS-SOPSOLAR&v=1780181066176",
-    "category": "Accesorios para Celulares"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-SOP600",
@@ -3573,7 +3573,7 @@
     "unit_price": 5679,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FSOP600.jpg&provider=sanjulian&sku=PAS-SOP600&v=1780181066177",
-    "category": "Accesorios para Celulares"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-SOPBICI",
@@ -3581,7 +3581,7 @@
     "unit_price": 5030,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FSOPBICI.jpg&provider=sanjulian&sku=PAS-SOPBICI&v=1780181066177",
-    "category": "Accesorios Auto Moto y Bici"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-TV4085",
@@ -3589,7 +3589,7 @@
     "unit_price": 7302,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FTV4085.jpg&provider=sanjulian&sku=PAS-TV4085&v=1780181066177",
-    "category": "Accesorios para Celulares"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-SOPFIJO",
@@ -3597,7 +3597,7 @@
     "unit_price": 2434,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FSOPFIJO.jpg&provider=sanjulian&sku=PAS-SOPFIJO&v=1780181066177",
-    "category": "Accesorios para Celulares"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-SOPFIJO02",
@@ -3605,7 +3605,7 @@
     "unit_price": 3651,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FSOPFIJO02.jpg&provider=sanjulian&sku=PAS-SOPFIJO02&v=1780181066177",
-    "category": "Accesorios para Celulares"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-TVJ3000",
@@ -3613,7 +3613,7 @@
     "unit_price": 7699,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FTVJ3000.jpg&provider=sanjulian&sku=PAS-TVJ3000&v=1780181066178",
-    "category": "Accesorios para Celulares"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-TVJ4000",
@@ -3621,7 +3621,7 @@
     "unit_price": 25554,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FTVJ4000.jpg&provider=sanjulian&sku=PAS-TVJ4000&v=1780181066178",
-    "category": "Accesorios para Celulares"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-TV3270",
@@ -3629,7 +3629,7 @@
     "unit_price": 27388,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FTV3270.jpg&provider=sanjulian&sku=PAS-TV3270&v=1780181066178",
-    "category": "Accesorios para Celulares"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-T5100",
@@ -3637,7 +3637,7 @@
     "unit_price": 3245,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FT5100.jpg&provider=sanjulian&sku=PAS-T5100&v=1780181066178",
-    "category": "Accesorios para Celulares"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-427614",
@@ -3645,7 +3645,7 @@
     "unit_price": 1316,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F427614.jpg&provider=sanjulian&sku=PAS-427614&v=1780181066178",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-AN30",
@@ -3653,7 +3653,7 @@
     "unit_price": 10547,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FAN30.jpg&provider=sanjulian&sku=PAS-AN30&v=1780181066178",
-    "category": "Cargadores y Fuentes"
+    "category": "Electrónica y Computación"
   },
   {
     "sku": "PAS-W3500",
@@ -3677,7 +3677,7 @@
     "unit_price": 18659,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FTENECON.jpg&provider=sanjulian&sku=PAS-TENECON&v=1780181066179",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RD796",
@@ -3685,7 +3685,7 @@
     "unit_price": 5355,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRD796.jpg&provider=sanjulian&sku=PAS-RD796&v=1780181066179",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RD1004",
@@ -3725,7 +3725,7 @@
     "unit_price": 2596,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F78033.jpg&provider=sanjulian&sku=PAS-78033&v=1780181066180",
-    "category": "Hogar y Cocina"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-RGB5050",
@@ -3733,7 +3733,7 @@
     "unit_price": 6875,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FRGB5050.jpg&provider=sanjulian&sku=PAS-RGB5050&v=1780181066180",
-    "category": "Iluminación y LED"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "PAS-99272",
@@ -3741,7 +3741,7 @@
     "unit_price": 8437,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99272.jpg&provider=sanjulian&sku=PAS-99272&v=1780181066180",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99262",
@@ -3749,7 +3749,7 @@
     "unit_price": 8437,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99262.jpg&provider=sanjulian&sku=PAS-99262&v=1780181066181",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99265",
@@ -3757,7 +3757,7 @@
     "unit_price": 8113,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99265.jpg&provider=sanjulian&sku=PAS-99265&v=1780181066181",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99259",
@@ -3765,7 +3765,7 @@
     "unit_price": 8113,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99259.jpg&provider=sanjulian&sku=PAS-99259&v=1780181066181",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99273",
@@ -3773,7 +3773,7 @@
     "unit_price": 8437,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99273.jpg&provider=sanjulian&sku=PAS-99273&v=1780181066181",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99286",
@@ -3781,7 +3781,7 @@
     "unit_price": 11832,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99286.jpg&provider=sanjulian&sku=PAS-99286&v=1780181066181",
-    "category": "Gadgets"
+    "category": "Cables y Conectores"
   },
   {
     "sku": "PAS-99025",
@@ -3789,7 +3789,7 @@
     "unit_price": 8799,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99025.jpg&provider=sanjulian&sku=PAS-99025&v=1780181066182",
-    "category": "Accesorios Auto Moto y Bici"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-200709",
@@ -3797,7 +3797,7 @@
     "unit_price": 877,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F200709.jpg&provider=sanjulian&sku=PAS-200709&v=1780181066182",
-    "category": "Juegos Juguetes y Librería"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-FD1275",
@@ -3805,7 +3805,7 @@
     "unit_price": 4868,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FFD1275.jpg&provider=sanjulian&sku=PAS-FD1275&v=1780181066182",
-    "category": "Accesorios para Celulares"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-H-TRIPAR",
@@ -3821,7 +3821,7 @@
     "unit_price": 13792,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99030.jpg&provider=sanjulian&sku=PAS-99030&v=1780181066182",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-KBX-145",
@@ -3829,7 +3829,7 @@
     "unit_price": 18659,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FKBX-145.jpg&provider=sanjulian&sku=PAS-KBX-145&v=1780181066183",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99338",
@@ -3837,7 +3837,7 @@
     "unit_price": 51109,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99338.jpg&provider=sanjulian&sku=PAS-99338&v=1780181066183",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99337",
@@ -3845,7 +3845,7 @@
     "unit_price": 96052,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99337.jpg&provider=sanjulian&sku=PAS-99337&v=1780181066183",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-Veles",
@@ -3853,7 +3853,7 @@
     "unit_price": 4868,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FVeles.jpg&provider=sanjulian&sku=PAS-Veles&v=1780181066183",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99222",
@@ -3861,7 +3861,7 @@
     "unit_price": 1461,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99222.jpg&provider=sanjulian&sku=PAS-99222&v=1780181066183",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99223",
@@ -3869,7 +3869,7 @@
     "unit_price": 1461,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99223.jpg&provider=sanjulian&sku=PAS-99223&v=1780181066184",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-99221",
@@ -3877,7 +3877,7 @@
     "unit_price": 1461,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99221.jpg&provider=sanjulian&sku=PAS-99221&v=1780181066184",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   },
   {
     "sku": "PAS-LV100",
@@ -3885,6 +3885,6 @@
     "unit_price": 5192,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FLV100.jpg&provider=sanjulian&sku=PAS-LV100&v=1780181066184",
-    "category": "Cargadores y Fuentes"
+    "category": "Cuidado Personal y Cosmética"
   }
 ]
