@@ -90,9 +90,12 @@ export default function ClientePage() {
       {/* Header */}
       <nav
         style={{
+          position: "sticky",
+          top: 0,
+          zIndex: 40,
           backgroundColor: "#3b82f6",
           color: "white",
-          padding: "1rem",
+          padding: "0.75rem 1rem",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -158,10 +161,10 @@ export default function ClientePage() {
         {/* Google-style Search Bar - Sticky */}
         <div style={{
           position: "sticky",
-          top: 0,
+          top: "3.5rem",
           zIndex: 30,
           backgroundColor: "white",
-          padding: "1rem 2rem",
+          padding: "0.5rem 1rem",
           borderBottom: "1px solid #e5e7eb",
           display: "flex",
           flexDirection: "column",
@@ -172,15 +175,15 @@ export default function ClientePage() {
             <div style={{ display: "flex", gap: "0.5rem" }}>
               <input
                 type="text"
-                placeholder="🔍 Buscar cable, termo, herramientas..."
+                placeholder="🔍 Buscar..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 onFocus={() => search && setShowSuggestions(true)}
                 onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
                 style={{
                   flex: 1,
-                  padding: "0.75rem 1rem",
-                  fontSize: "0.95rem",
+                  padding: "0.4rem 0.75rem",
+                  fontSize: "0.85rem",
                   border: "1px solid #d1d5db",
                   borderRadius: "0.375rem",
                   fontFamily: "inherit",
@@ -245,8 +248,8 @@ export default function ClientePage() {
         </div>
 
         {/* Content Area */}
-        <div style={{ padding: "2rem" }}>
-          <h2 style={{ fontSize: "1.875rem", marginBottom: "1rem" }}>Bienvenido, Cliente 👋</h2>
+        <div style={{ padding: "1.5rem 2rem" }}>
+          <h2 style={{ fontSize: "1.5rem", marginBottom: "0.75rem" }}>Bienvenido, Cliente 👋</h2>
 
           {loading ? (
           <div style={{ textAlign: "center", padding: "2rem", color: "#6b7280" }}>
