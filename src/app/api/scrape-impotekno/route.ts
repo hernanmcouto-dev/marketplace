@@ -73,12 +73,17 @@ async function extractProductsFromHtml(html: string): Promise<any[]> {
     }
 
     if (sku && name && unit_price > 0) {
+      // Evitar duplicar prefijo SAR-
+      const finalSku = sku.startsWith("SAR-") ? sku : `SAR-${sku}`;
+      // Extraer SKU sin prefijo para la URL de imagen
+      const skuWithoutPrefix = sku.replace(/^SAR-/, "");
+
       products.push({
-        sku: `SAR-${sku}`,
+        sku: finalSku,
         name,
         unit_price: Math.round(unit_price * 1.1), // 10% margen
         units_per_package,
-        image_url: `https://www.impotekno.com/fotos/${sku}.jpg`,
+        image_url: `https://www.impotekno.com/fotos/${skuWithoutPrefix}.jpg`,
       });
     }
   }
