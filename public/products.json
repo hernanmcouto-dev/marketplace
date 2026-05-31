@@ -6,7 +6,7 @@
     "units_per_package": 40,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FWS-1965.jpg&provider=impotekno&sku=SAR-SAR-WS-1965&v=1780251642165",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [
         "Juegos y Juguetes"
       ],
@@ -23,13 +23,10 @@
     "units_per_package": 40,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FWS-300SL.jpg&provider=impotekno&sku=SAR-SAR-WS-300SL&v=1780251642173",
     "categorization": {
-      "primary": "Audio y Video",
-      "alternatives": [
-        "Juegos y Juguetes",
-        "Gadgets"
-      ],
+      "primary": "Audio Video y Parlantes",
+      "alternatives": [],
       "confidence": 0.6666666666666666,
-      "needsConfirmation": true
+      "needsConfirmation": false
     },
     "userCategory": "Juegos y Juguetes",
     "category": "Juegos y Juguetes"
@@ -41,7 +38,7 @@
     "units_per_package": 24,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FE01-2.jpg&provider=impotekno&sku=SAR-SAR-E01-2&v=1780251642182",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
@@ -56,15 +53,15 @@
     "units_per_package": 40,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FKTS-1968.jpg&provider=impotekno&sku=SAR-SAR-KTS-1968&v=1780251642190",
     "categorization": {
-      "primary": "Iluminación y LED",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [
-        "Audio y Video"
+        "Iluminación y LED"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "userCategory": "Audio y Video",
-    "category": "Audio y Video"
+    "userCategory": "Audio Video y Parlantes",
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-B-21016",
@@ -73,15 +70,15 @@
     "units_per_package": 24,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FB-21016.jpg&provider=impotekno&sku=SAR-SAR-B-21016&v=1780251642197",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [
         "Indumentaria y Textiles"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "userCategory": "Audio y Video",
-    "category": "Audio y Video"
+    "userCategory": "Audio Video y Parlantes",
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-GTS-2263",
@@ -90,13 +87,13 @@
     "units_per_package": 12,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FGTS-2263.jpg&provider=impotekno&sku=SAR-SAR-GTS-2263&v=1780251642205",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "userCategory": "Audio y Video",
-    "category": "Audio y Video"
+    "userCategory": "Audio Video y Parlantes",
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-KTX-1222",
@@ -105,7 +102,7 @@
     "units_per_package": 24,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FKTX-1222.jpg&provider=impotekno&sku=SAR-SAR-KTX-1222&v=1780251642211",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
@@ -120,7 +117,7 @@
     "units_per_package": 60,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FKA-5796.jpg&provider=impotekno&sku=SAR-SAR-KA-5796&v=1780251642218",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
@@ -135,13 +132,13 @@
     "units_per_package": 20,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FM-32007.jpg&provider=impotekno&sku=SAR-SAR-M-32007&v=1780251642225",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "userCategory": "Audio y Video",
-    "category": "Audio y Video"
+    "userCategory": "Audio Video y Parlantes",
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-CH-M801",
@@ -152,14 +149,14 @@
     "categorization": {
       "primary": "Bazar y Camping",
       "alternatives": [
-        "Audio y Video",
+        "Audio Video y Parlantes",
         "Indumentaria y Textiles"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "userCategory": "Audio y Video",
-    "category": "Audio y Video"
+    "userCategory": "Audio Video y Parlantes",
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-CH-M808",
@@ -170,14 +167,14 @@
     "categorization": {
       "primary": "Bazar y Camping",
       "alternatives": [
-        "Audio y Video",
+        "Audio Video y Parlantes",
         "Indumentaria y Textiles"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "userCategory": "Audio y Video",
-    "category": "Audio y Video"
+    "userCategory": "Audio Video y Parlantes",
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-KTS-1849",
@@ -188,13 +185,13 @@
     "categorization": {
       "primary": "Iluminación y LED",
       "alternatives": [
-        "Audio y Video"
+        "Audio Video y Parlantes"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "userCategory": "Audio y Video",
-    "category": "Audio y Video"
+    "userCategory": "Audio Video y Parlantes",
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-BTS-1990",
@@ -218,7 +215,7 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FGTS-1942.jpg&provider=impotekno&sku=SAR-SAR-GTS-1942&v=1780251642260",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
@@ -233,7 +230,7 @@
     "units_per_package": 80,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FGTS-1867.jpg&provider=impotekno&sku=SAR-SAR-GTS-1867&v=1780251642267",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
@@ -248,15 +245,15 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FGTS-1835.jpg&provider=impotekno&sku=SAR-SAR-GTS-1835&v=1780251642274",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [
         "Iluminación y LED"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "userCategory": "Audio y Video",
-    "category": "Audio y Video"
+    "userCategory": "Audio Video y Parlantes",
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-KTS-2267",
@@ -265,7 +262,7 @@
     "units_per_package": 12,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FKTS-2267.jpg&provider=impotekno&sku=SAR-SAR-KTS-2267&v=1780251642281",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
@@ -280,15 +277,15 @@
     "units_per_package": 8,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FKTS-1860.jpg&provider=impotekno&sku=SAR-SAR-KTS-1860&v=1780251642290",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [
         "Iluminación y LED"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "userCategory": "Audio y Video",
-    "category": "Audio y Video"
+    "userCategory": "Audio Video y Parlantes",
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-KTS-2090",
@@ -297,16 +294,16 @@
     "units_per_package": 8,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FKTS-2090.jpg&provider=impotekno&sku=SAR-SAR-KTS-2090&v=1780251642297",
     "categorization": {
-      "primary": "Iluminación y LED",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [
-        "Audio y Video",
+        "Iluminación y LED",
         "Gadgets"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "userCategory": "Audio y Video",
-    "category": "Audio y Video"
+    "userCategory": "Audio Video y Parlantes",
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-GTS-1679",
@@ -315,16 +312,16 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FGTS-1679.jpg&provider=impotekno&sku=SAR-SAR-GTS-1679&v=1780251642304",
     "categorization": {
-      "primary": "Iluminación y LED",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [
-        "Audio y Video",
+        "Iluminación y LED",
         "Gadgets"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "userCategory": "Audio y Video",
-    "category": "Audio y Video"
+    "userCategory": "Audio Video y Parlantes",
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-SV-2402",
@@ -333,7 +330,7 @@
     "units_per_package": 16,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FSV-2402.jpg&provider=impotekno&sku=SAR-SAR-SV-2402&v=1780251642311",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
@@ -348,7 +345,7 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FGTS-1675.jpg&provider=impotekno&sku=SAR-SAR-GTS-1675&v=1780251642318",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
@@ -365,13 +362,13 @@
     "categorization": {
       "primary": "Iluminación y LED",
       "alternatives": [
-        "Audio y Video"
+        "Audio Video y Parlantes"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "userCategory": "Audio y Video",
-    "category": "Audio y Video"
+    "userCategory": "Audio Video y Parlantes",
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-GTS-1732",
@@ -382,13 +379,13 @@
     "categorization": {
       "primary": "Iluminación y LED",
       "alternatives": [
-        "Audio y Video"
+        "Audio Video y Parlantes"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "userCategory": "Audio y Video",
-    "category": "Audio y Video"
+    "userCategory": "Audio Video y Parlantes",
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-GTS-2097",
@@ -397,7 +394,7 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FGTS-2097.jpg&provider=impotekno&sku=SAR-SAR-GTS-2097&v=1780251642339",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
@@ -412,7 +409,7 @@
     "units_per_package": 120,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FKTS-2119.jpg&provider=impotekno&sku=SAR-SAR-KTS-2119&v=1780251642346",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
@@ -427,7 +424,7 @@
     "units_per_package": 80,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FGTS-2166.jpg&provider=impotekno&sku=SAR-SAR-GTS-2166&v=1780251642353",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
@@ -442,7 +439,7 @@
     "units_per_package": 20,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FG70.jpg&provider=impotekno&sku=SAR-SAR-G70&v=1780251642360",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
@@ -457,7 +454,7 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FGTS-1468.jpg&provider=impotekno&sku=SAR-SAR-GTS-1468&v=1780251642367",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
@@ -472,7 +469,7 @@
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FKTS-1940.jpg&provider=impotekno&sku=SAR-SAR-KTS-1940&v=1780251642374",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
@@ -487,7 +484,7 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FKTS-1677.jpg&provider=impotekno&sku=SAR-SAR-KTS-1677&v=1780251642381",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
@@ -504,13 +501,13 @@
     "categorization": {
       "primary": "Iluminación y LED",
       "alternatives": [
-        "Audio y Video"
+        "Audio Video y Parlantes"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "userCategory": "Audio y Video",
-    "category": "Audio y Video"
+    "userCategory": "Audio Video y Parlantes",
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-GTS-1492B",
@@ -519,15 +516,15 @@
     "units_per_package": 50,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FGTS-1492B.jpg&provider=impotekno&sku=SAR-SAR-GTS-1492B&v=1780251642395",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [
         "Iluminación y LED"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "userCategory": "Audio y Video",
-    "category": "Audio y Video"
+    "userCategory": "Audio Video y Parlantes",
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-KTF-2209",
@@ -538,13 +535,13 @@
     "categorization": {
       "primary": "Iluminación y LED",
       "alternatives": [
-        "Audio y Video"
+        "Audio Video y Parlantes"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "userCategory": "Audio y Video",
-    "category": "Audio y Video"
+    "userCategory": "Audio Video y Parlantes",
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-KTS-2281",
@@ -553,7 +550,7 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FKTS-2281.jpg&provider=impotekno&sku=SAR-SAR-KTS-2281&v=1780251642409",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
@@ -568,7 +565,7 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FGTS-1959.jpg&provider=impotekno&sku=SAR-SAR-GTS-1959&v=1780251642415",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
@@ -612,12 +609,12 @@
     "units_per_package": 80,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FUA-16008.jpg&provider=impotekno&sku=SAR-SAR-UA-16008&v=1780251642436",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-AU-14003",
@@ -626,12 +623,12 @@
     "units_per_package": 80,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FAU-14003.jpg&provider=impotekno&sku=SAR-SAR-AU-14003&v=1780251642443",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-JS370",
@@ -640,14 +637,12 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FJS370.jpg&provider=impotekno&sku=SAR-SAR-JS370&v=1780251642449",
     "categorization": {
-      "primary": "Audio y Video",
-      "alternatives": [
-        "Gadgets"
-      ],
+      "primary": "Audio Video y Parlantes",
+      "alternatives": [],
       "confidence": 0.6666666666666666,
-      "needsConfirmation": true
+      "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-JK-609",
@@ -656,12 +651,12 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FJK-609.jpg&provider=impotekno&sku=SAR-SAR-JK-609&v=1780251642456",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-JS-52",
@@ -670,12 +665,12 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FJS-52.jpg&provider=impotekno&sku=SAR-SAR-JS-52&v=1780251642463",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-AU-14005",
@@ -684,12 +679,12 @@
     "units_per_package": 60,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FAU-14005.jpg&provider=impotekno&sku=SAR-SAR-AU-14005&v=1780251642470",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-B-21013A",
@@ -698,12 +693,12 @@
     "units_per_package": 30,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FB-21013A.jpg&provider=impotekno&sku=SAR-SAR-B-21013A&v=1780251642476",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-M10",
@@ -712,12 +707,12 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FM10.jpg&provider=impotekno&sku=SAR-SAR-M10&v=1780251642483",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-JS25",
@@ -726,12 +721,12 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FJS25.jpg&provider=impotekno&sku=SAR-SAR-JS25&v=1780251642490",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-JK603",
@@ -740,12 +735,12 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FJK603.jpg&provider=impotekno&sku=SAR-SAR-JK603&v=1780251642497",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-JS-8",
@@ -754,12 +749,12 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FJS-8.jpg&provider=impotekno&sku=SAR-SAR-JS-8&v=1780251642504",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-VEL-81017",
@@ -796,12 +791,12 @@
     "units_per_package": 60,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FAU-14002.jpg&provider=impotekno&sku=SAR-SAR-AU-14002&v=1780251642526",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-AU-16015",
@@ -838,14 +833,14 @@
     "units_per_package": 40,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FPAD-61025.jpg&provider=impotekno&sku=SAR-SAR-PAD-61025&v=1780251642547",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [
         "Juegos y Juguetes"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-CNB-120002",
@@ -854,12 +849,12 @@
     "units_per_package": 2,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FCNB-120002.jpg&provider=impotekno&sku=SAR-SAR-CNB-120002&v=1780251642554",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-CNB-120001",
@@ -870,7 +865,7 @@
     "categorization": {
       "primary": "Electrónica y Computación",
       "alternatives": [
-        "Audio y Video"
+        "Audio Video y Parlantes"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
@@ -990,14 +985,14 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2F361.jpg&provider=impotekno&sku=SAR-SAR-361&v=1780251642616",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [
         "Electrónica y Computación"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-NGW-45",
@@ -1006,12 +1001,12 @@
     "units_per_package": 48,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FNGW-45.jpg&provider=impotekno&sku=SAR-SAR-NGW-45&v=1780251642622",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-C-121038",
@@ -1020,12 +1015,12 @@
     "units_per_package": 50,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FC-121038.jpg&provider=impotekno&sku=SAR-SAR-C-121038&v=1780251642629",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-NGW-11",
@@ -1034,12 +1029,12 @@
     "units_per_package": 50,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FNGW-11.jpg&provider=impotekno&sku=SAR-SAR-NGW-11&v=1780251642636",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-RM-014S",
@@ -1048,14 +1043,14 @@
     "units_per_package": 240,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FRM-014S.jpg&provider=impotekno&sku=SAR-SAR-RM-014S&v=1780251642643",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [
         "Iluminación y LED"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-CCTV-4W",
@@ -1064,12 +1059,12 @@
     "units_per_package": 6,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FCCTV-4W.jpg&provider=impotekno&sku=SAR-SAR-CCTV-4W&v=1780251642650",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-NKB78033",
@@ -1092,12 +1087,12 @@
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FPY-LED.jpg&provider=impotekno&sku=SAR-SAR-PY-LED&v=1780251642664",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-78005USB",
@@ -1136,12 +1131,12 @@
     "units_per_package": 50,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FTVB-48025.jpg&provider=impotekno&sku=SAR-SAR-TVB-48025&v=1780251642685",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-TVB-48026",
@@ -1150,12 +1145,12 @@
     "units_per_package": 20,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FTVB-48026.jpg&provider=impotekno&sku=SAR-SAR-TVB-48026&v=1780251642691",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-TVB-48011",
@@ -1164,12 +1159,12 @@
     "units_per_package": 50,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FTVB-48011.jpg&provider=impotekno&sku=SAR-SAR-TVB-48011&v=1780251642698",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-AU-11007",
@@ -1178,12 +1173,12 @@
     "units_per_package": 1000,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FAU-11007.jpg&provider=impotekno&sku=SAR-SAR-AU-11007&v=1780251642705",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-AU-1236",
@@ -1192,12 +1187,12 @@
     "units_per_package": 400,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FAU-1236.jpg&provider=impotekno&sku=SAR-SAR-AU-1236&v=1780251642712",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-11129H",
@@ -1206,12 +1201,12 @@
     "units_per_package": 1000,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2F11129H.jpg&provider=impotekno&sku=SAR-SAR-11129H&v=1780251642719",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-AU-1237",
@@ -1220,12 +1215,12 @@
     "units_per_package": 400,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FAU-1237.jpg&provider=impotekno&sku=SAR-SAR-AU-1237&v=1780251642725",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-ADAPTADOR",
@@ -1566,7 +1561,7 @@
     "units_per_package": 200,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FK350.jpg&provider=impotekno&sku=SAR-SAR-K350&v=1780251642892",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [
         "Hogar y Cocina",
         "Iluminación y LED",
@@ -1575,7 +1570,7 @@
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-CRT-110015",
@@ -1631,7 +1626,7 @@
       "primary": "Hogar y Cocina",
       "alternatives": [
         "Iluminación y LED",
-        "Audio y Video"
+        "Audio Video y Parlantes"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
@@ -1827,14 +1822,12 @@
     "units_per_package": 40,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FX2.jpg&provider=impotekno&sku=SAR-SAR-X2&v=1780251643014",
     "categorization": {
-      "primary": "Audio y Video",
-      "alternatives": [
-        "Juegos y Juguetes"
-      ],
+      "primary": "Juegos y Juguetes",
+      "alternatives": [],
       "confidence": 0.6666666666666666,
-      "needsConfirmation": true
+      "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Juegos y Juguetes"
   },
   {
     "sku": "SAR-SAR-JOY-61007",
@@ -1843,12 +1836,12 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FJOY-61007.jpg&provider=impotekno&sku=SAR-SAR-JOY-61007&v=1780251643021",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-AF-404",
@@ -1872,11 +1865,9 @@
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2F04205-1.jpg&provider=impotekno&sku=SAR-SAR-04205-1&v=1780251643035",
     "categorization": {
       "primary": "Juegos y Juguetes",
-      "alternatives": [
-        "Audio y Video"
-      ],
+      "alternatives": [],
       "confidence": 0.6666666666666666,
-      "needsConfirmation": true
+      "needsConfirmation": false
     },
     "category": "Juegos y Juguetes"
   },
@@ -1929,14 +1920,14 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FU9.jpg&provider=impotekno&sku=SAR-SAR-U9&v=1780251643062",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [
         "Electrónica y Computación"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-NKB-T100",
@@ -1959,12 +1950,12 @@
     "units_per_package": 8,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FGTS-1802.jpg&provider=impotekno&sku=SAR-SAR-GTS-1802&v=1780251643078",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-CA400-S2",
@@ -1987,12 +1978,12 @@
     "units_per_package": 1000,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FAU-11006.jpg&provider=impotekno&sku=SAR-SAR-AU-11006&v=1780251643091",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-AU-14004",
@@ -2001,12 +1992,12 @@
     "units_per_package": 60,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FAU-14004.jpg&provider=impotekno&sku=SAR-SAR-AU-14004&v=1780251643098",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-557-100B",
@@ -2246,12 +2237,12 @@
     "units_per_package": 30,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FKTX-1476.jpg&provider=impotekno&sku=SAR-SAR-KTX-1476&v=1780251643228",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-JK-4411",
@@ -2274,12 +2265,12 @@
     "units_per_package": 500,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FTMPAS8410.jpg&provider=impotekno&sku=SAR-SAR-TMPAS8410&v=1780251643243",
     "categorization": {
-      "primary": "Hogar y Cocina",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
-      "confidence": 0,
+      "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Hogar y Cocina"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-MG220",
@@ -2318,12 +2309,12 @@
     "units_per_package": 20,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FSP-73006.jpg&provider=impotekno&sku=SAR-SAR-SP-73006&v=1780251643263",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-CAB-41005",
@@ -3741,12 +3732,12 @@
     "units_per_package": 10,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FISF-160910.jpg&provider=impotekno&sku=SAR-SAR-ISF-160910&v=1780251643957",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-ISF-160911",
@@ -3755,12 +3746,12 @@
     "units_per_package": 10,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FISF-160911.jpg&provider=impotekno&sku=SAR-SAR-ISF-160911&v=1780251643964",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-ISF-160907",
@@ -3769,12 +3760,12 @@
     "units_per_package": 10,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FISF-160907.jpg&provider=impotekno&sku=SAR-SAR-ISF-160907&v=1780251643971",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-ISF-160909",
@@ -3825,12 +3816,12 @@
     "units_per_package": 10,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FTVJ20.jpg&provider=impotekno&sku=SAR-SAR-TVJ20&v=1780251643998",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-SP-73005",
@@ -3839,12 +3830,12 @@
     "units_per_package": 20,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FSP-73005.jpg&provider=impotekno&sku=SAR-SAR-SP-73005&v=1780251644005",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": false
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-OA-IL540",
@@ -4297,7 +4288,7 @@
     "categorization": {
       "primary": "Herramientas y Electricidad",
       "alternatives": [
-        "Audio y Video"
+        "Audio Video y Parlantes"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
@@ -4788,7 +4779,7 @@
     "categorization": {
       "primary": "Iluminación y LED",
       "alternatives": [
-        "Audio y Video"
+        "Audio Video y Parlantes"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
@@ -4846,12 +4837,12 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FLED-83068.jpg&provider=impotekno&sku=SAR-SAR-LED-83068&v=1780251644492",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-YC-7902A",
@@ -4862,7 +4853,7 @@
     "categorization": {
       "primary": "Iluminación y LED",
       "alternatives": [
-        "Audio y Video"
+        "Audio Video y Parlantes"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
@@ -4878,7 +4869,7 @@
     "categorization": {
       "primary": "Bazar y Camping",
       "alternatives": [
-        "Audio y Video"
+        "Audio Video y Parlantes"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
@@ -4892,14 +4883,14 @@
     "units_per_package": 100,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FDH-100.jpg&provider=impotekno&sku=SAR-SAR-DH-100&v=1780251644512",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [
         "Iluminación y LED"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-HW-978W",
@@ -4922,14 +4913,14 @@
     "units_per_package": 40,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2F010-LUNA.jpg&provider=impotekno&sku=SAR-SAR-010-LUNA&v=1780251644526",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [
         "Indumentaria y Textiles"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-LED-83055",
@@ -5052,12 +5043,12 @@
     "units_per_package": 48,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FBP24.jpg&provider=impotekno&sku=SAR-SAR-BP24&v=1780251644589",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-LED-4701",
@@ -5730,14 +5721,14 @@
     "units_per_package": 600,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FSL067.jpg&provider=impotekno&sku=SAR-SAR-SL067&v=1780251644915",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [
         "Bazar y Camping"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-9549AAA",
@@ -6012,14 +6003,14 @@
     "units_per_package": 80,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FCH-M833.jpg&provider=impotekno&sku=SAR-SAR-CH-M833&v=1780251645052",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [
         "Bazar y Camping"
       ],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-LD-01",
@@ -6056,12 +6047,12 @@
     "units_per_package": 20,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FC0030.jpg&provider=impotekno&sku=SAR-SAR-C0030&v=1780251645073",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-HT-2701",
@@ -6184,12 +6175,12 @@
     "units_per_package": 20,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FHOG0623.jpg&provider=impotekno&sku=SAR-SAR-HOG0623&v=1780251645139",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-JL-897-2",
@@ -6285,7 +6276,7 @@
       "primary": "Bazar y Camping",
       "alternatives": [],
       "confidence": 0.6666666666666666,
-      "needsConfirmation": true
+      "needsConfirmation": false
     },
     "category": "Bazar y Camping"
   },
@@ -6382,7 +6373,7 @@
     "categorization": {
       "primary": "Hogar y Cocina",
       "alternatives": [
-        "Audio y Video",
+        "Audio Video y Parlantes",
         "Electrónica y Computación",
         "Cuidado Personal y Cosmética"
       ],
@@ -6482,12 +6473,12 @@
     "units_per_package": 60,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FMY-04.jpg&provider=impotekno&sku=SAR-SAR-MY-04&v=1780251645297",
     "categorization": {
-      "primary": "Audio y Video",
+      "primary": "Audio Video y Parlantes",
       "alternatives": [],
       "confidence": 0.6666666666666666,
       "needsConfirmation": true
     },
-    "category": "Audio y Video"
+    "category": "Audio Video y Parlantes"
   },
   {
     "sku": "SAR-SAR-QYH-L5",

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { CATEGORY_LIST } from "@/lib/product-categorizer";
+import { categorizeProduct, CATEGORY_LIST } from "@/lib/product-categorizer";
 
 interface Product {
   sku: string;
@@ -22,19 +22,34 @@ interface TrainingExample {
 export default function EntrenarCategoriasPage() {
   const router = useRouter();
   const [products, setProducts] = useState<Product[]>([]);
+  const [shuffledProducts, setShuffledProducts] = useState<Product[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [supplier, setSupplier] = useState<"impotekno" | "sanjulian">("impotekno");
   const [trained, setTrained] = useState<TrainingExample[]>([]);
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
+  const [showAnalysis, setShowAnalysis] = useState(false);
+  const [showCategorySelect, setShowCategorySelect] = useState(false);
 
   useEffect(() => {
     loadProducts();
-  }, [supplier]);
-
-  useEffect(() => {
     loadTrainedExamples();
   }, []);
+
+  useEffect(() => {
+    if (products.length > 0) {
+      // Shuffle products
+      const shuffled = [...products].sort(() => Math.random() - 0.5);
+      setShuffledProducts(shuffled);
+    }
+  }, [products, supplier]);
+
+  // Auto-run analysis when we have 15+ examples
+  useEffect(() => {
+    if (trained.length >= 15 && !showAnalysis) {
+      setShowAnalysis(true);
+    }
+  }, [trained.length]);
 
   const loadProducts = async () => {
     setLoading(true);
@@ -44,7 +59,6 @@ export default function EntrenarCategoriasPage() {
       if (!response.ok) throw new Error("No se pudo cargar");
       const data = await response.json();
       setProducts(data);
-      setCurrentIndex(0);
     } catch (error) {
       console.error("Error:", error);
     } finally {
@@ -56,7 +70,13 @@ export default function EntrenarCategoriasPage() {
     try {
       const saved = localStorage.getItem("trainedExamples");
       if (saved) {
-        setTrained(JSON.parse(saved));
+        const parsed = JSON.parse(saved);
+        // Limpiar referencias a "Audio y Video" antigua
+        const cleaned = parsed.map((ex: TrainingExample) =>
+          ex.category === "Audio y Video" ? { ...ex, category: "Audio Video y Parlantes" } : ex
+        );
+        setTrained(cleaned);
+        localStorage.setItem("trainedExamples", JSON.stringify(cleaned));
       }
     } catch (error) {
       console.error("Error loading trained examples:", error);
@@ -64,7 +84,7 @@ export default function EntrenarCategoriasPage() {
   };
 
   const handleCategorize = (category: string) => {
-    const current = products[currentIndex];
+    const current = shuffledProducts[currentIndex];
     if (!current) return;
 
     const example: TrainingExample = {
@@ -74,25 +94,41 @@ export default function EntrenarCategoriasPage() {
       timestamp: new Date().toISOString(),
     };
 
-    const updated = trained.filter(
-      (t) => t.sku !== current.sku && t.name !== current.name
-    );
+    const updated = trained.filter((t) => t.sku !== current.sku);
     updated.push(example);
 
     setTrained(updated);
     localStorage.setItem("trainedExamples", JSON.stringify(updated));
     setMessage("✅ Guardado");
+    setShowCategorySelect(false);
     setTimeout(() => setMessage(""), 1000);
 
-    if (currentIndex < products.length - 1) {
+    if (currentIndex < shuffledProducts.length - 1) {
       setCurrentIndex(currentIndex + 1);
     }
   };
 
-  const current = products[currentIndex];
-  const isAlreadyTrained = trained.some(
+  const current = shuffledProducts[currentIndex];
+  const currentTraining = trained.find(
     (t) => t.sku === current?.sku || t.name === current?.name
   );
+  const proposedCategory = current
+    ? categorizeProduct(current.name).primary
+    : null;
+
+  if (showAnalysis) {
+    return (
+      <AnalysisView
+        trained={trained}
+        onBack={() => {
+          setShowAnalysis(false);
+          setCurrentIndex(0);
+          setTrained([]);
+          localStorage.removeItem("trainedExamples");
+        }}
+      />
+    );
+  }
 
   return (
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", backgroundColor: "#f9fafb" }}>
@@ -125,25 +161,40 @@ export default function EntrenarCategoriasPage() {
 
       {/* Main */}
       <main style={{ flex: 1, padding: "2rem", maxWidth: "900px", margin: "0 auto", width: "100%" }}>
-        {/* Proveedor */}
-        <div style={{ marginBottom: "2rem", display: "flex", gap: "1rem", alignItems: "center" }}>
-          <label style={{ fontWeight: "bold" }}>Proveedor:</label>
-          <select
-            value={supplier}
-            onChange={(e) => setSupplier(e.target.value as "impotekno" | "sanjulian")}
-            style={{
-              padding: "0.5rem",
-              border: "1px solid #e5e7eb",
-              borderRadius: "0.375rem",
-              cursor: "pointer",
-            }}
-          >
-            <option value="impotekno">Impotekno</option>
-            <option value="sanjulian">San Julián</option>
-          </select>
-          <span style={{ color: "#6b7280" }}>
-            {trained.length} categorizados
-          </span>
+        {/* Info */}
+        <div
+          style={{
+            marginBottom: "2rem",
+            padding: "1rem",
+            backgroundColor: "#dbeafe",
+            borderRadius: "0.5rem",
+            color: "#0c4a6e",
+          }}
+        >
+          ✨ <strong>Cuando tengas 15+ productos categorizados, haré el análisis automáticamente</strong>
+        </div>
+
+        {/* Proveedor y progreso */}
+        <div style={{ marginBottom: "2rem", display: "flex", gap: "2rem", alignItems: "center" }}>
+          <div>
+            <label style={{ fontWeight: "bold", marginRight: "0.5rem" }}>Proveedor:</label>
+            <select
+              value={supplier}
+              onChange={(e) => setSupplier(e.target.value as "impotekno" | "sanjulian")}
+              style={{
+                padding: "0.5rem",
+                border: "1px solid #e5e7eb",
+                borderRadius: "0.375rem",
+                cursor: "pointer",
+              }}
+            >
+              <option value="impotekno">Impotekno</option>
+              <option value="sanjulian">San Julián</option>
+            </select>
+          </div>
+          <div style={{ color: "#6b7280" }}>
+            <strong>{trained.length}</strong> categorizados | <strong>{shuffledProducts.length - currentIndex}</strong> por hacer
+          </div>
         </div>
 
         {loading ? (
@@ -152,7 +203,7 @@ export default function EntrenarCategoriasPage() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "300px 1fr",
+              gridTemplateColumns: "280px 1fr",
               gap: "2rem",
               alignItems: "start",
             }}
@@ -167,76 +218,118 @@ export default function EntrenarCategoriasPage() {
                   borderRadius: "0.375rem",
                   backgroundColor: "#f3f4f6",
                   marginBottom: "1rem",
+                  border: "1px solid #e5e7eb",
                 }}
                 onError={(e) => {
                   (e.target as HTMLImageElement).src =
                     "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%23e5e7eb' width='200' height='200'/%3E%3C/svg%3E";
                 }}
               />
-              <div style={{ fontSize: "0.875rem", color: "#6b7280", marginBottom: "0.25rem" }}>
+              <div style={{ fontSize: "0.75rem", color: "#6b7280", marginBottom: "0.25rem" }}>
                 SKU
               </div>
-              <div style={{ fontWeight: "bold", marginBottom: "1rem" }}>{current.sku}</div>
-              <div style={{ fontSize: "0.875rem", color: "#6b7280", marginBottom: "0.25rem" }}>
+              <div style={{ fontWeight: "bold", fontSize: "0.875rem", marginBottom: "0.75rem" }}>
+                {current.sku}
+              </div>
+              <div style={{ fontSize: "0.75rem", color: "#6b7280", marginBottom: "0.25rem" }}>
                 Precio
               </div>
-              <div style={{ fontWeight: "bold" }}>${current.unit_price}</div>
+              <div style={{ fontWeight: "bold", fontSize: "0.875rem" }}>${current.unit_price}</div>
             </div>
 
-            {/* Nombre y categorías */}
+            {/* Nombre y categoría */}
             <div>
               <div style={{ fontSize: "1.25rem", fontWeight: "bold", marginBottom: "2rem" }}>
                 {current.name}
               </div>
 
-              {isAlreadyTrained && (
-                <div
-                  style={{
-                    padding: "1rem",
-                    backgroundColor: "#dcfce7",
-                    border: "1px solid #86efac",
-                    borderRadius: "0.375rem",
-                    marginBottom: "1rem",
-                    color: "#166534",
-                    fontWeight: "bold",
-                  }}
-                >
-                  ✓ Ya categorizado: {trained.find((t) => t.sku === current.sku)?.category}
-                </div>
-              )}
-
-              <div style={{ fontSize: "0.875rem", color: "#6b7280", marginBottom: "0.75rem", fontWeight: "bold" }}>
-                ¿Cuál es la categoría correcta?
-              </div>
-
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
-                {CATEGORY_LIST.map((cat) => (
-                  <button
-                    key={cat}
-                    onClick={() => handleCategorize(cat)}
+              {!showCategorySelect ? (
+                <div>
+                  {/* Propuesta actual */}
+                  <div
                     style={{
-                      padding: "1rem",
-                      backgroundColor: "#f3f4f6",
-                      border: "1px solid #e5e7eb",
-                      borderRadius: "0.375rem",
-                      cursor: "pointer",
-                      fontWeight: "500",
-                      fontSize: "0.875rem",
-                      transition: "all 0.2s",
-                    }}
-                    onMouseEnter={(e) => {
-                      (e.target as HTMLButtonElement).style.backgroundColor = "#e5e7eb";
-                      (e.target as HTMLButtonElement).style.borderColor = "#3b82f6";
-                    }}
-                    onMouseLeave={(e) => {
-                      (e.target as HTMLButtonElement).style.backgroundColor = "#f3f4f6";
-                      (e.target as HTMLButtonElement).style.borderColor = "#e5e7eb";
+                      padding: "1.5rem",
+                      backgroundColor: currentTraining ? "#dcfce7" : "#dbeafe",
+                      border: `2px solid ${currentTraining ? "#86efac" : "#0284c7"}`,
+                      borderRadius: "0.5rem",
+                      marginBottom: "1rem",
                     }}
                   >
-                    {cat}
-                  </button>
-                ))}
-              </div>
+                    <div style={{ fontSize: "0.875rem", color: currentTraining ? "#166534" : "#0c4a6e", marginBottom: "0.5rem" }}>
+                      {currentTraining ? "✓ Categorizado:" : "Propuesta:"}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: "1.5rem",
+                        fontWeight: "bold",
+                        color: currentTraining ? "#22c55e" : "#0369a1",
+                      }}
+                    >
+                      {currentTraining?.category || proposedCategory}
+                    </div>
+                  </div>
+
+                  {/* Botones */}
+                  <div style={{ display: "flex", gap: "1rem" }}>
+                    <button
+                      onClick={() => handleCategorize(proposedCategory!)}
+                      style={{
+                        flex: 1,
+                        padding: "0.75rem",
+                        backgroundColor: "#10b981",
+                        color: "white",
+                        border: "none",
+                        borderRadius: "0.375rem",
+                        fontWeight: "bold",
+                        cursor: "pointer",
+                      }}
+                    >
+                      ✓ Confirmar
+                    </button>
+                    <button
+                      onClick={() => setShowCategorySelect(true)}
+                      style={{
+                        flex: 1,
+                        padding: "0.75rem",
+                        backgroundColor: "#f59e0b",
+                        color: "white",
+                        border: "none",
+                        borderRadius: "0.375rem",
+                        fontWeight: "bold",
+                        cursor: "pointer",
+                      }}
+                    >
+                      🔄 Cambiar
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div>
+                  <div style={{ fontSize: "0.875rem", color: "#6b7280", marginBottom: "1rem", fontWeight: "bold" }}>
+                    Selecciona la categoría correcta:
+                  </div>
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
+                    {CATEGORY_LIST.map((cat) => (
+                      <button
+                        key={cat}
+                        onClick={() => handleCategorize(cat)}
+                        style={{
+                          padding: "0.75rem",
+                          backgroundColor: cat === proposedCategory ? "#dbeafe" : "#f3f4f6",
+                          border: `2px solid ${cat === proposedCategory ? "#0284c7" : "#e5e7eb"}`,
+                          borderRadius: "0.375rem",
+                          cursor: "pointer",
+                          fontWeight: "500",
+                          fontSize: "0.875rem",
+                          color: cat === proposedCategory ? "#0369a1" : "#374151",
+                        }}
+                      >
+                        {cat}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {message && (
                 <div
@@ -253,10 +346,6 @@ export default function EntrenarCategoriasPage() {
                   {message}
                 </div>
               )}
-
-              <div style={{ marginTop: "2rem", fontSize: "0.875rem", color: "#6b7280" }}>
-                {currentIndex + 1} de {products.length}
-              </div>
             </div>
           </div>
         ) : (
@@ -273,22 +362,121 @@ export default function EntrenarCategoriasPage() {
             borderRadius: "0.5rem",
           }}
         >
-          <h3 style={{ margin: "0 0 1rem 0" }}>📊 Ejemplos Entrenados</h3>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: "1rem" }}>
+          <h3 style={{ margin: "0 0 1rem 0" }}>📊 Conteo por Categoría</h3>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))", gap: "1rem" }}>
             {CATEGORY_LIST.map((cat) => {
               const count = trained.filter((t) => t.category === cat).length;
               return (
-                <div key={cat} style={{ textAlign: "center" }}>
-                  <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#3b82f6" }}>
+                <div
+                  key={cat}
+                  style={{
+                    padding: "0.75rem",
+                    backgroundColor: count > 0 ? "#dbeafe" : "#f3f4f6",
+                    borderRadius: "0.375rem",
+                    textAlign: "center",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: "1.5rem",
+                      fontWeight: "bold",
+                      color: count > 0 ? "#0369a1" : "#9ca3af",
+                    }}
+                  >
                     {count}
                   </div>
-                  <div style={{ fontSize: "0.875rem", color: "#6b7280" }}>{cat}</div>
+                  <div style={{ fontSize: "0.75rem", color: "#6b7280" }}>{cat}</div>
                 </div>
               );
             })}
           </div>
         </div>
       </main>
+    </div>
+  );
+}
+
+/* Analysis View */
+function AnalysisView({
+  trained,
+  onBack,
+}: {
+  trained: TrainingExample[];
+  onBack: () => void;
+}) {
+  const categoryCounts: Record<string, number> = {};
+  const categoryExamples: Record<string, TrainingExample[]> = {};
+
+  trained.forEach((ex) => {
+    categoryCounts[ex.category] = (categoryCounts[ex.category] || 0) + 1;
+    if (!categoryExamples[ex.category]) {
+      categoryExamples[ex.category] = [];
+    }
+    categoryExamples[ex.category].push(ex);
+  });
+
+  return (
+    <div style={{ minHeight: "100vh", padding: "2rem", backgroundColor: "#f9fafb" }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+        <div style={{ marginBottom: "2rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <h1 style={{ margin: 0 }}>📊 Análisis de Aprendizaje</h1>
+          <button
+            onClick={onBack}
+            style={{
+              padding: "0.75rem 1.5rem",
+              backgroundColor: "#3b82f6",
+              color: "white",
+              border: "none",
+              borderRadius: "0.375rem",
+              fontWeight: "bold",
+              cursor: "pointer",
+            }}
+          >
+            ← Volver a Entrenar
+          </button>
+        </div>
+
+        <div
+          style={{
+            backgroundColor: "white",
+            border: "1px solid #e5e7eb",
+            borderRadius: "0.5rem",
+            padding: "2rem",
+          }}
+        >
+          <h2>📈 Tus Categorías Aprendidas</h2>
+          <p style={{ color: "#6b7280" }}>
+            Total de ejemplos: <strong>{trained.length}</strong>
+          </p>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem", marginTop: "2rem" }}>
+            {Object.entries(categoryCounts).map(([category, count]) => (
+              <div key={category} style={{ border: "1px solid #e5e7eb", borderRadius: "0.5rem", padding: "1.5rem" }}>
+                <h3 style={{ margin: "0 0 1rem 0", color: "#0369a1" }}>{category}</h3>
+                <p style={{ margin: "0 0 1rem 0", fontSize: "0.875rem", color: "#6b7280" }}>
+                  <strong>{count}</strong> productos
+                </p>
+                <div style={{ fontSize: "0.875rem" }}>
+                  {categoryExamples[category].slice(0, 5).map((ex, idx) => (
+                    <div key={idx} style={{ color: "#374151", marginBottom: "0.5rem" }}>
+                      • {ex.name.substring(0, 50)}...
+                    </div>
+                  ))}
+                  {categoryExamples[category].length > 5 && (
+                    <div style={{ color: "#9ca3af", fontSize: "0.75rem" }}>
+                      ... y {categoryExamples[category].length - 5} más
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ marginTop: "2rem", padding: "1.5rem", backgroundColor: "#dbeafe", borderRadius: "0.5rem", color: "#0c4a6e" }}>
+            ✅ <strong>Análisis listo.</strong> Ahora voy a reescribir el algoritmo basándome en estos patrones. Por favor, dame 2-3 minutos para actualizar el sistema.
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
