@@ -105,6 +105,21 @@ export default function ClientePage() {
         <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
           <span style={{ fontSize: "0.875rem" }}>{products.length} productos</span>
           <button
+            onClick={() => router.push("/categorias")}
+            style={{
+              backgroundColor: "#059669",
+              color: "white",
+              border: "none",
+              padding: "0.5rem 1rem",
+              borderRadius: "0.375rem",
+              cursor: "pointer",
+              fontSize: "0.875rem",
+              fontWeight: "500",
+            }}
+          >
+            📂 Categorías
+          </button>
+          <button
             onClick={() => setShowCart(!showCart)}
             style={{
               position: "relative",
