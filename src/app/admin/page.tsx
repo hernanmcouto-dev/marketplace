@@ -253,6 +253,23 @@ export default function AdminPage() {
                 🏷️ Categorizar Todos
               </button>
             </Link>
+            <Link href="/admin/entrenar-dudas" style={{ textDecoration: "none" }}>
+              <button
+                style={{
+                  width: "100%",
+                  padding: "0.75rem 1rem",
+                  backgroundColor: "#dc2626",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "0.375rem",
+                  cursor: "pointer",
+                  textAlign: "left",
+                  fontWeight: "500",
+                }}
+              >
+                🔍 Revisar Productos Dudosos
+              </button>
+            </Link>
             <button
               style={{
                 padding: "0.75rem 1rem",

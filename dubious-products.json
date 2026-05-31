@@ -1,0 +1,206 @@
+{
+  "dubious_products": [
+    {
+      "sku": "SAR-SAR-WS-1965",
+      "name": "AUTO PARLANTE VINTAGE",
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FWS-1965.jpg&provider=impotekno&sku=SAR-SAR-WS-1965&v=1780251642165",
+      "unit_price": 24035,
+      "units_per_package": 40,
+      "categorized_as": "Cargadores y Fuentes",
+      "confidence": "0.50",
+      "supplier": "impotekno"
+    },
+    {
+      "sku": "SAR-SAR-WS-300SL",
+      "name": "AUTO VINTAGE PARLANTE BLUETOOTH FM/ USB/TWS",
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FWS-300SL.jpg&provider=impotekno&sku=SAR-SAR-WS-300SL&v=1780251642173",
+      "unit_price": 24667,
+      "units_per_package": 40,
+      "categorized_as": "Audio Video y Parlantes",
+      "confidence": "0.50",
+      "supplier": "impotekno"
+    },
+    {
+      "sku": "SAR-SAR-E01-2",
+      "name": "B-21015 PROYECTOR PARLANTE HUEVO",
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FE01-2.jpg&provider=impotekno&sku=SAR-SAR-E01-2&v=1780251642182",
+      "unit_price": 15496,
+      "units_per_package": 24,
+      "categorized_as": "Audio Video y Parlantes",
+      "confidence": "1.00",
+      "supplier": "impotekno"
+    },
+    {
+      "sku": "SAR-SAR-KTS-1968",
+      "name": "BARRA PARLANTE PORTATIL RGB",
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FKTS-1968.jpg&provider=impotekno&sku=SAR-SAR-KTS-1968&v=1780251642190",
+      "unit_price": 18090,
+      "units_per_package": 40,
+      "categorized_as": "Cargadores y Fuentes",
+      "confidence": "1.00",
+      "supplier": "impotekno"
+    },
+    {
+      "sku": "SAR-SAR-B-21016",
+      "name": "COMBO 3 EN 1 PARLANTE+AURIC+RELOJ",
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FB-21016.jpg&provider=impotekno&sku=SAR-SAR-B-21016&v=1780251642197",
+      "unit_price": 18974,
+      "units_per_package": 24,
+      "categorized_as": "Hogar y Cocina",
+      "confidence": "0.50",
+      "supplier": "impotekno"
+    },
+    {
+      "sku": "SAR-SAR-GTS-2263",
+      "name": "FRAPERA C/PARLANTE OFERTA",
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FGTS-2263.jpg&provider=impotekno&sku=SAR-SAR-GTS-2263&v=1780251642205",
+      "unit_price": 12649,
+      "units_per_package": 12,
+      "categorized_as": "Cargadores y Fuentes",
+      "confidence": "0.50",
+      "supplier": "impotekno"
+    },
+    {
+      "sku": "SAR-SAR-KTX-1222",
+      "name": "GTS-1222 PARLANTE BT /FM USB C/MICROFONO",
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FKTX-1222.jpg&provider=impotekno&sku=SAR-SAR-KTX-1222&v=1780251642211",
+      "unit_price": 13788,
+      "units_per_package": 24,
+      "categorized_as": "Audio Video y Parlantes",
+      "confidence": "0.50",
+      "supplier": "impotekno"
+    },
+    {
+      "sku": "SAR-SAR-KA-5796",
+      "name": "MIC-21007 MICROFONO KARAOKE K-585",
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FKA-5796.jpg&provider=impotekno&sku=SAR-SAR-KA-5796&v=1780251642218",
+      "unit_price": 6703,
+      "units_per_package": 60,
+      "categorized_as": "Audio Video y Parlantes",
+      "confidence": "0.50",
+      "supplier": "impotekno"
+    },
+    {
+      "sku": "SAR-SAR-M-32007",
+      "name": "MICROFONO X2 NALAMBRICO",
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FM-32007.jpg&provider=impotekno&sku=SAR-SAR-M-32007&v=1780251642225",
+      "unit_price": 27324,
+      "units_per_package": 20,
+      "categorized_as": "Audio Video y Parlantes",
+      "confidence": "0.50",
+      "supplier": "impotekno"
+    },
+    {
+      "sku": "SAR-SAR-CH-M801",
+      "name": "MOCHILA CON PARLANTE",
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FCH-M801.jpg&provider=impotekno&sku=SAR-SAR-CH-M801&v=1780251642232",
+      "unit_price": 17709,
+      "units_per_package": 60,
+      "categorized_as": "Bazar y Camping",
+      "confidence": "1.00",
+      "supplier": "impotekno"
+    },
+    {
+      "sku": "SAR-SAR-CH-M808",
+      "name": "MOCHILA CON PARLANTE BT",
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FCH-M808.jpg&provider=impotekno&sku=SAR-SAR-CH-M808&v=1780251642239",
+      "unit_price": 20323,
+      "units_per_package": 60,
+      "categorized_as": "Audio Video y Parlantes",
+      "confidence": "1.00",
+      "supplier": "impotekno"
+    },
+    {
+      "sku": "SAR-SAR-KTS-1849",
+      "name": "PARLANTE 15PLG RGB 2 MICROFONOS",
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FKTS-1849.jpg&provider=impotekno&sku=SAR-SAR-KTS-1849&v=1780251642246",
+      "unit_price": 101199,
+      "units_per_package": 1,
+      "categorized_as": "Iluminación y LED",
+      "confidence": "1.00",
+      "supplier": "impotekno"
+    },
+    {
+      "sku": "SAR-SAR-BTS-1990",
+      "name": "PARLANTE 2X8 PLG C/ 2 MICROFONO LUZ RGB",
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FBTS-1990.jpg&provider=impotekno&sku=SAR-SAR-BTS-1990&v=1780251642253",
+      "unit_price": 183425,
+      "units_per_package": 1,
+      "categorized_as": "Iluminación y LED",
+      "confidence": "0.50",
+      "supplier": "impotekno"
+    },
+    {
+      "sku": "SAR-SAR-GTS-1942",
+      "name": "PARLANTE 3PLG  BLUETOOHT/FM/MP3",
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FGTS-1942.jpg&provider=impotekno&sku=SAR-SAR-GTS-1942&v=1780251642260",
+      "unit_price": 5313,
+      "units_per_package": 100,
+      "categorized_as": "Audio Video y Parlantes",
+      "confidence": "1.00",
+      "supplier": "impotekno"
+    },
+    {
+      "sku": "SAR-SAR-GTS-1867",
+      "name": "PARLANTE 3PLG  BT OFERTA !!!",
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FGTS-1867.jpg&provider=impotekno&sku=SAR-SAR-GTS-1867&v=1780251642267",
+      "unit_price": 6515,
+      "units_per_package": 80,
+      "categorized_as": "Audio Video y Parlantes",
+      "confidence": "0.50",
+      "supplier": "impotekno"
+    },
+    {
+      "sku": "SAR-SAR-GTS-1835",
+      "name": "PARLANTE 3PLG  C/ LUZ BLUETOOTH/FM/MP",
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FGTS-1835.jpg&provider=impotekno&sku=SAR-SAR-GTS-1835&v=1780251642274",
+      "unit_price": 5693,
+      "units_per_package": 100,
+      "categorized_as": "Audio Video y Parlantes",
+      "confidence": "0.50",
+      "supplier": "impotekno"
+    },
+    {
+      "sku": "SAR-SAR-KTS-2267",
+      "name": "PARLANTE 4X2 C/ MICROFONO",
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FKTS-2267.jpg&provider=impotekno&sku=SAR-SAR-KTS-2267&v=1780251642281",
+      "unit_price": 22770,
+      "units_per_package": 12,
+      "categorized_as": "Audio Video y Parlantes",
+      "confidence": "1.00",
+      "supplier": "impotekno"
+    },
+    {
+      "sku": "SAR-SAR-KTS-1860",
+      "name": "PARLANTE 6.5X2 PLG RGB BT/FM/MP3",
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FKTS-1860.jpg&provider=impotekno&sku=SAR-SAR-KTS-1860&v=1780251642290",
+      "unit_price": 36053,
+      "units_per_package": 8,
+      "categorized_as": "Audio Video y Parlantes",
+      "confidence": "1.00",
+      "supplier": "impotekno"
+    },
+    {
+      "sku": "SAR-SAR-KTS-2090",
+      "name": "PARLANTE BLUETOOTH  RGB",
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FKTS-2090.jpg&provider=impotekno&sku=SAR-SAR-KTS-2090&v=1780251642297",
+      "unit_price": 39974,
+      "units_per_package": 8,
+      "categorized_as": "Audio Video y Parlantes",
+      "confidence": "1.00",
+      "supplier": "impotekno"
+    },
+    {
+      "sku": "SAR-SAR-GTS-1679",
+      "name": "PARLANTE BLUETOOTH RGB",
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FGTS-1679.jpg&provider=impotekno&sku=SAR-SAR-GTS-1679&v=1780251642304",
+      "unit_price": 7337,
+      "units_per_package": 100,
+      "categorized_as": "Audio Video y Parlantes",
+      "confidence": "1.00",
+      "supplier": "impotekno"
+    }
+  ],
+  "total_dubious": 895,
+  "timestamp": "2026-05-31T19:44:51.858Z"
+}
