@@ -35,7 +35,7 @@ export default function CategorizarPage() {
     setLoading(true);
     try {
       const filename = supplier === "impotekno" ? "products.json" : "products-sanjulian.json";
-      const response = await fetch(`/public/${filename}`);
+      const response = await fetch(`/${filename}`);
       if (!response.ok) throw new Error("No se pudo cargar");
 
       const data: Product[] = await response.json();
