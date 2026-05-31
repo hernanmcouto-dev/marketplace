@@ -161,7 +161,7 @@ export default function ClientePage() {
         {/* Google-style Search Bar - Sticky */}
         <div style={{
           position: "sticky",
-          top: "3.8rem",
+          top: "4.5rem",
           zIndex: 30,
           backgroundColor: "white",
           padding: "0.5rem 1rem",
