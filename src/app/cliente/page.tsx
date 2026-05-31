@@ -2,6 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import ProductModal from "@/components/ProductModal";
+import CartPanel from "@/components/CartPanel";
+import { useCart } from "@/lib/CartContext";
 
 interface Product {
   sku: string;
@@ -13,6 +16,7 @@ interface Product {
 
 export default function ClientePage() {
   const router = useRouter();
+  const { itemCount } = useCart();
   const [products, setProducts] = useState<Product[]>([]);
   const [allProducts, setAllProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
@@ -20,6 +24,9 @@ export default function ClientePage() {
   const [suggestions, setSuggestions] = useState<Product[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [totalCount, setTotalCount] = useState(0);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [showModal, setShowModal] = useState(false);
+  const [showCart, setShowCart] = useState(false);
 
   useEffect(() => {
     loadProducts();
@@ -73,6 +80,11 @@ export default function ClientePage() {
     router.push("/login");
   };
 
+  const openProductModal = (product: Product) => {
+    setSelectedProduct(product);
+    setShowModal(true);
+  };
+
   return (
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
       {/* Header */}
@@ -89,6 +101,42 @@ export default function ClientePage() {
         <h1 style={{ margin: 0, fontSize: "1.5rem" }}>📦 Tienda</h1>
         <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
           <span style={{ fontSize: "0.875rem" }}>{products.length} productos</span>
+          <button
+            onClick={() => setShowCart(!showCart)}
+            style={{
+              position: "relative",
+              backgroundColor: "#1e40af",
+              color: "white",
+              border: "none",
+              padding: "0.5rem 1rem",
+              borderRadius: "0.375rem",
+              cursor: "pointer",
+              fontSize: "1.25rem",
+            }}
+          >
+            🛒
+            {itemCount > 0 && (
+              <span
+                style={{
+                  position: "absolute",
+                  top: "-0.5rem",
+                  right: "-0.5rem",
+                  backgroundColor: "#ef4444",
+                  color: "white",
+                  borderRadius: "50%",
+                  width: "1.5rem",
+                  height: "1.5rem",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "0.75rem",
+                  fontWeight: "bold",
+                }}
+              >
+                {itemCount}
+              </span>
+            )}
+          </button>
           <button
             onClick={handleLogout}
             style={{
@@ -219,6 +267,7 @@ export default function ClientePage() {
               {products.map((product) => (
                 <div
                   key={product.sku}
+                  onClick={() => openProductModal(product)}
                   style={{
                     backgroundColor: "white",
                     border: "1px solid #e5e7eb",
@@ -274,6 +323,10 @@ export default function ClientePage() {
                     </p>
                   )}
                   <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      openProductModal(product);
+                    }}
                     style={{
                       width: "100%",
                       backgroundColor: "#3b82f6",
@@ -286,7 +339,7 @@ export default function ClientePage() {
                       fontWeight: "500",
                     }}
                   >
-                    🛒 Agregar al carrito
+                    🛒 Ver detalles
                   </button>
                 </div>
               ))}
@@ -308,6 +361,12 @@ export default function ClientePage() {
           </>
         )}
       </main>
+
+      {/* Product Detail Modal */}
+      <ProductModal product={selectedProduct} onClose={() => setShowModal(false)} />
+
+      {/* Shopping Cart Panel */}
+      <CartPanel isOpen={showCart} onClose={() => setShowCart(false)} />
     </div>
   );
 }
