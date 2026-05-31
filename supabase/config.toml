@@ -1,0 +1,7 @@
+project_id = "ipkhmbxbmmbharbakukf"
+
+[functions.process-product-file]
+verify_jwt = false
+
+[functions.generate-product-image]
+verify_jwt = false
