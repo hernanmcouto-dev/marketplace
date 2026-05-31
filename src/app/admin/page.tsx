@@ -270,6 +270,23 @@ export default function AdminPage() {
                 🔍 Revisar Productos Dudosos
               </button>
             </Link>
+            <Link href="/admin/entrenar-final" style={{ textDecoration: "none" }}>
+              <button
+                style={{
+                  width: "100%",
+                  padding: "0.75rem 1rem",
+                  backgroundColor: "#059669",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "0.375rem",
+                  cursor: "pointer",
+                  textAlign: "left",
+                  fontWeight: "500",
+                }}
+              >
+                ✅ Validación Final
+              </button>
+            </Link>
             <button
               style={{
                 padding: "0.75rem 1rem",

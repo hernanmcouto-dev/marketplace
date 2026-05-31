@@ -1,0 +1,127 @@
+{
+  "final_validation_round": [
+    {
+      "sku": "SAR-TEST-001",
+      "name": "CAMARA DE SEGURIDAD IP WIFI FULL HD",
+      "image_url": "/images/placeholder.jpg",
+      "unit_price": 5500,
+      "units_per_package": 1,
+      "categorized_as": "Seguridad y Cámaras"
+    },
+    {
+      "sku": "SAR-TEST-002",
+      "name": "SMARTWATCH DEPORTIVO CON GPS",
+      "image_url": "/images/placeholder.jpg",
+      "unit_price": 8900,
+      "units_per_package": 1,
+      "categorized_as": "Gadgets"
+    },
+    {
+      "sku": "SAR-TEST-003",
+      "name": "SUDADERA DEPORTIVA NEGRA TALLE L",
+      "image_url": "/images/placeholder.jpg",
+      "unit_price": 2500,
+      "units_per_package": 1,
+      "categorized_as": "Indumentaria y Textiles"
+    },
+    {
+      "sku": "SAR-TEST-004",
+      "name": "CABLE HDMI 2.1 4K 60HZ 3M",
+      "image_url": "/images/placeholder.jpg",
+      "unit_price": 1200,
+      "units_per_package": 10,
+      "categorized_as": "Cables y Conectores"
+    },
+    {
+      "sku": "SAR-TEST-005",
+      "name": "PROTECTOR PANTALLA VIDRIO TEMPLADO IPHONE 15",
+      "image_url": "/images/placeholder.jpg",
+      "unit_price": 600,
+      "units_per_package": 20,
+      "categorized_as": "Accesorios para Celulares"
+    },
+    {
+      "sku": "SAR-TEST-006",
+      "name": "ATORNILLADOR ELECTRICO 18V INALAMBRICO",
+      "image_url": "/images/placeholder.jpg",
+      "unit_price": 4200,
+      "units_per_package": 1,
+      "categorized_as": "Herramientas y Electricidad"
+    },
+    {
+      "sku": "SAR-TEST-007",
+      "name": "MOUSE INALAMBRICO RGB 2.4GHZ GAMING",
+      "image_url": "/images/placeholder.jpg",
+      "unit_price": 1800,
+      "units_per_package": 1,
+      "categorized_as": "Electrónica y Computación"
+    },
+    {
+      "sku": "SAR-TEST-008",
+      "name": "AIRE ACONDICIONADO PORTATIL 3000W",
+      "image_url": "/images/placeholder.jpg",
+      "unit_price": 12500,
+      "units_per_package": 1,
+      "categorized_as": "Hogar y Cocina"
+    },
+    {
+      "sku": "SAR-TEST-009",
+      "name": "MICROONDAS DIGITAL 25L 900W ACERO",
+      "image_url": "/images/placeholder.jpg",
+      "unit_price": 8700,
+      "units_per_package": 1,
+      "categorized_as": "Hogar y Cocina"
+    },
+    {
+      "sku": "SAR-TEST-010",
+      "name": "PARLANTE GAMING RGB 5.1 SURROUND",
+      "image_url": "/images/placeholder.jpg",
+      "unit_price": 6500,
+      "units_per_package": 1,
+      "categorized_as": "Audio Video y Parlantes"
+    },
+    {
+      "sku": "SAR-TEST-011",
+      "name": "BARRA SONIDO SMART TV BLUETOOTH 2.0",
+      "image_url": "/images/placeholder.jpg",
+      "unit_price": 7200,
+      "units_per_package": 1,
+      "categorized_as": "Audio Video y Parlantes"
+    },
+    {
+      "sku": "SAR-TEST-012",
+      "name": "PANEL LED CUADRADO 60X60 RGB CON CONTROL",
+      "image_url": "/images/placeholder.jpg",
+      "unit_price": 3800,
+      "units_per_package": 1,
+      "categorized_as": "Iluminación y LED"
+    },
+    {
+      "sku": "SAR-TEST-013",
+      "name": "ADAPTADOR USB-C A HDMI MULTIFUNCION",
+      "image_url": "/images/placeholder.jpg",
+      "unit_price": 900,
+      "units_per_package": 15,
+      "categorized_as": "Cables y Conectores"
+    },
+    {
+      "sku": "SAR-TEST-014",
+      "name": "BOLSO MOCHILA PARA LAPTOP 17 PULGADAS",
+      "image_url": "/images/placeholder.jpg",
+      "unit_price": 2300,
+      "units_per_package": 1,
+      "categorized_as": "Indumentaria y Textiles"
+    },
+    {
+      "sku": "SAR-TEST-015",
+      "name": "KIT HERRAMIENTAS 45PCS DESTORNILLADORES PUNTAS",
+      "image_url": "/images/placeholder.jpg",
+      "unit_price": 1500,
+      "units_per_package": 1,
+      "categorized_as": "Herramientas y Electricidad"
+    }
+  ],
+  "total_selected": 15,
+  "timestamp": "2026-05-31T20:00:00Z",
+  "strategy": "Cobertura estratégica: categorías menos entrenadas + casos edge"
+}
