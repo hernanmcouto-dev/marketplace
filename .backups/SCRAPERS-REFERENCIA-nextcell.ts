@@ -111,11 +111,15 @@ export async function POST(req: NextRequest) {
 
         // Transformar productos
         const transformedProducts = apiProducts.map((p: any) => {
-          // Extraer precio (puede venir como string con formato)
+          // FIXED: Parse Argentine format prices correctly
+          // "9.000,00" → 9000 (punto=thousands separator, coma=decimal separator)
           let unit_price = 0;
           if (p.prices?.price) {
-            const priceStr = String(p.prices.price).replace(/[^\d]/g, "");
-            unit_price = parseInt(priceStr) || 0;
+            const cleaned = String(p.prices.price).trim();
+            const normalized = cleaned
+              .replace(/\./g, "") // Remove thousands separator (punto)
+              .replace(/,/, "."); // Replace decimal separator (coma) with punto
+            unit_price = Math.floor(parseFloat(normalized) || 0);
           }
 
           // Generar SKU si no existe (usar ID como fallback)

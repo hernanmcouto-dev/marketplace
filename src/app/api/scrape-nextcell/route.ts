@@ -1,4 +1,4 @@
-import { NextRequest } from "next/server";
+﻿import { NextRequest } from "next/server";
 import fs from "fs";
 import path from "path";
 import got from "got";
@@ -43,6 +43,25 @@ function sendComplete(controller: ReadableStreamDefaultController, count: number
     message: `✓ ${count} productos importados exitosamente`,
   });
   controller.enqueue(`data: ${complete}\n\n`);
+}
+
+// FIXED: Parse Argentine format prices correctly
+// "9.000,00" → 9000 (punto=thousands separator, coma=decimal separator)
+// "1.234.567,89" → 1234567 (ignore decimals, keep integer part)
+function parseArgentinePrice(priceStr: string): number {
+  if (!priceStr) return 0;
+
+  // Remove spaces and convert to string
+  const cleaned = String(priceStr).trim();
+
+  // Replace thousands separator (punto) with empty
+  // Replace decimal separator (coma) with punto for parseFloat
+  const normalized = cleaned
+    .replace(/\./g, "") // Remove all puntos (thousands separator)
+    .replace(/,/, "."); // Replace coma with punto for decimal parsing
+
+  const parsed = parseFloat(normalized) || 0;
+  return Math.floor(parsed); // Return integer part only (no decimals)
 }
 
 async function fetchAllProducts(): Promise<any[]> {
@@ -102,11 +121,10 @@ export async function POST(req: NextRequest) {
 
         // Transformar productos
         const transformedProducts = apiProducts.map((p: any) => {
-          // Extraer precio (puede venir como string con formato)
+          // FIXED: Use correct Argentine price parsing
           let unit_price = 0;
           if (p.prices?.price) {
-            const priceStr = String(p.prices.price).replace(/[^\d]/g, "");
-            unit_price = parseInt(priceStr) || 0;
+            unit_price = parseArgentinePrice(p.prices.price);
           }
 
           // Generar SKU si no existe (usar ID como fallback)
