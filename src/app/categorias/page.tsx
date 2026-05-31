@@ -17,7 +17,7 @@ export default function CategoriasPage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
-  const [supplier, setSupplier] = useState<"impotekno" | "sanjulian">("impotekno");
+  const [supplier, setSupplier] = useState<"impotekno" | "sanjulian" | "nextcell">("impotekno");
 
   useEffect(() => {
     loadProducts();
@@ -26,7 +26,10 @@ export default function CategoriasPage() {
   const loadProducts = async () => {
     setLoading(true);
     try {
-      const filename = supplier === "impotekno" ? "products.json" : "products-sanjulian.json";
+      const filename =
+        supplier === "impotekno" ? "products.json" :
+        supplier === "sanjulian" ? "products-sanjulian.json" :
+        "products-nextcell.json";
       const response = await fetch(`/${filename}`);
       if (!response.ok) throw new Error("Error cargando productos");
       const data = await response.json();
@@ -89,7 +92,7 @@ export default function CategoriasPage() {
         <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
           <select
             value={supplier}
-            onChange={(e) => setSupplier(e.target.value as "impotekno" | "sanjulian")}
+            onChange={(e) => setSupplier(e.target.value as "impotekno" | "sanjulian" | "nextcell")}
             style={{
               padding: "0.5rem",
               borderRadius: "0.375rem",
@@ -101,6 +104,7 @@ export default function CategoriasPage() {
           >
             <option value="impotekno">Impotekno</option>
             <option value="sanjulian">San Julián</option>
+            <option value="nextcell">NextCell</option>
           </select>
         </div>
       </nav>

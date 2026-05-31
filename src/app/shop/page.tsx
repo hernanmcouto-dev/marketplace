@@ -16,7 +16,7 @@ export default function ShopPage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
-  const [supplier, setSupplier] = useState<"impotekno" | "sanjulian">("impotekno");
+  const [supplier, setSupplier] = useState<"impotekno" | "sanjulian" | "nextcell">("impotekno");
   const [sortBy, setSortBy] = useState<"nombre" | "precio-asc" | "precio-desc">("nombre");
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 1000000]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -28,7 +28,10 @@ export default function ShopPage() {
   const loadProducts = async () => {
     setLoading(true);
     try {
-      const filename = supplier === "impotekno" ? "products.json" : "products-sanjulian.json";
+      const filename =
+        supplier === "impotekno" ? "products.json" :
+        supplier === "sanjulian" ? "products-sanjulian.json" :
+        "products-nextcell.json";
       const response = await fetch(`/${filename}`);
       if (!response.ok) throw new Error("Error cargando productos");
       const data = await response.json();
@@ -149,7 +152,7 @@ export default function ShopPage() {
             </label>
             <select
               value={supplier}
-              onChange={(e) => setSupplier(e.target.value as "impotekno" | "sanjulian")}
+              onChange={(e) => setSupplier(e.target.value as "impotekno" | "sanjulian" | "nextcell")}
               style={{
                 width: "100%",
                 padding: "0.75rem",
@@ -162,6 +165,7 @@ export default function ShopPage() {
             >
               <option value="impotekno">Impotekno</option>
               <option value="sanjulian">San Julián</option>
+              <option value="nextcell">NextCell</option>
             </select>
           </div>
 
