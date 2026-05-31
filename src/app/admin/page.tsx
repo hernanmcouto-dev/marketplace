@@ -219,6 +219,23 @@ export default function AdminPage() {
                 📥 Importar desde JSON
               </button>
             </Link>
+            <Link href="/admin/categorizar" style={{ textDecoration: "none" }}>
+              <button
+                style={{
+                  width: "100%",
+                  padding: "0.75rem 1rem",
+                  backgroundColor: "#7c3aed",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "0.375rem",
+                  cursor: "pointer",
+                  textAlign: "left",
+                  fontWeight: "500",
+                }}
+              >
+                🏷️ Categorizar Productos
+              </button>
+            </Link>
             <button
               style={{
                 padding: "0.75rem 1rem",
