@@ -73,6 +73,9 @@ const CATEGORIES: Record<ProductCategory, string[]> = {
     "freidora aire",
     "organizador baño",
     "organizador",
+    "encendedor",
+    "encendedor recargable",
+    "humidificador",
   ],
   "Herramientas y Electricidad": [
     "herramienta",
@@ -506,6 +509,11 @@ const CATEGORIES: Record<ProductCategory, string[]> = {
     "frapera",
     "hielera",
     "cooler",
+    "botella",
+    "botella termo",
+    "botella térmica",
+    "botella termica",
+    "termo",
   ],
   "Indumentaria y Textiles": [
     "ropa",
