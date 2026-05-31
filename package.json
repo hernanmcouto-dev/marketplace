@@ -16,6 +16,7 @@
     "puppeteer": "^25.1.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
+    "tailwindcss-animate": "^1.0.7",
     "tough-cookie": "^6.0.1"
   },
   "devDependencies": {

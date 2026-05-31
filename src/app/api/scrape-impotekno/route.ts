@@ -154,6 +154,7 @@ export async function POST(req: NextRequest) {
         }
 
         sendLog(controller, `📊 Total extraído: ${allProducts.length} productos`);
+        sendProgress(controller, CATEGORIES.length, CATEGORIES.length, "Procesando productos...");
 
         // Transformar productos con prefijo
         const transformedProducts = allProducts.map((p) => ({

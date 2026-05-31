@@ -134,6 +134,7 @@ export async function POST(req: NextRequest) {
         }
 
         sendLog(controller, `📊 Total extraído: ${products.length} productos`);
+        sendProgress(controller, categoryIds.length, categoryIds.length, "Procesando productos...");
 
         if (products.length === 0) {
           sendError(
