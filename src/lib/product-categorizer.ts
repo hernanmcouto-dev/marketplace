@@ -13,7 +13,9 @@ export type ProductCategory =
   | "Seguridad y Cámaras"
   | "Cargadores y Fuentes"
   | "Accesorios para Celulares"
-  | "Accesorios Auto Moto y Bici";
+  | "Accesorios Auto Moto y Bici"
+  | "Liquidación"
+  | "Próximo a Ingresar";
 
 const CATEGORIES: Record<ProductCategory, string[]> = {
   "Hogar y Cocina": [
@@ -806,6 +808,56 @@ const CATEGORIES: Record<ProductCategory, string[]> = {
     "cera",
     "sellador",
     "protector",
+  ],
+  "Liquidación": [
+    "liquidación",
+    "oferta",
+    "promoción",
+    "descuento",
+    "rebaja",
+    "sale",
+    "clearance",
+    "stock bajo",
+    "últimas unidades",
+    "agotado",
+    "fin de stock",
+    "liquidado",
+    "última oportunidad",
+    "precio especial",
+    "precio reducido",
+    "precio único",
+    "outlet",
+    "remate",
+    "quemazón",
+    "cierre",
+    "saldo",
+    "excedente",
+    "sobrante",
+  ],
+  "Próximo a Ingresar": [
+    "próximo",
+    "próxima llegada",
+    "próximo ingreso",
+    "por llegar",
+    "en camino",
+    "preventa",
+    "pre-order",
+    "preorden",
+    "disponible pronto",
+    "soon",
+    "coming soon",
+    "proximamente",
+    "próximamente",
+    "en breve",
+    "en stock pronto",
+    "nuevo ingreso",
+    "nuevo modelo",
+    "nueva colección",
+    "edición nueva",
+    "lanzamiento",
+    "release",
+    "debut",
+    "estreno",
   ],
 };
 
