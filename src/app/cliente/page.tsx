@@ -34,13 +34,14 @@ export default function ClientePage() {
           p.sku?.toLowerCase().includes(searchLower)
       );
       setSuggestions(filtered.slice(0, 8)); // Mostrar máximo 8 sugerencias
+      setProducts(filtered); // ✅ Actualizar también los productos mostrados
       setShowSuggestions(true);
     } else {
       setSuggestions([]);
       setShowSuggestions(false);
       setProducts(allProducts.slice(0, 50)); // Mostrar primeros 50 si está vacío
     }
-  }, [search]);
+  }, [search, allProducts]);
 
   const loadProducts = async () => {
     try {
