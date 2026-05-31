@@ -43,9 +43,11 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
         style={{
           backgroundColor: "white",
           borderRadius: "0.5rem",
-          padding: "2rem",
-          maxWidth: "500px",
-          width: "90%",
+          padding: "1.25rem",
+          maxWidth: "350px",
+          width: "85%",
+          maxHeight: "90vh",
+          overflowY: "auto",
           boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
         }}
         onClick={(e) => e.stopPropagation()}
@@ -55,16 +57,16 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
           onClick={onClose}
           style={{
             position: "absolute",
-            top: "1rem",
-            right: "1rem",
+            top: "0.75rem",
+            right: "0.75rem",
             backgroundColor: "#ef4444",
             color: "white",
             border: "none",
-            width: "2rem",
-            height: "2rem",
+            width: "1.75rem",
+            height: "1.75rem",
             borderRadius: "50%",
             cursor: "pointer",
-            fontSize: "1.25rem",
+            fontSize: "1rem",
           }}
         >
           ✕
@@ -74,10 +76,10 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
         <div
           style={{
             width: "100%",
-            height: "250px",
+            height: "180px",
             backgroundColor: "#f3f4f6",
             borderRadius: "0.375rem",
-            marginBottom: "1.5rem",
+            marginBottom: "1rem",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -99,42 +101,43 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
         </div>
 
         {/* Product Info */}
-        <h2 style={{ fontSize: "1.5rem", marginBottom: "0.5rem", color: "#1f2937" }}>
+        <h2 style={{ fontSize: "1.1rem", marginBottom: "0.25rem", color: "#1f2937", fontWeight: "600" }}>
           {product.name}
         </h2>
-        <p style={{ color: "#6b7280", fontSize: "0.875rem", marginBottom: "1rem" }}>
+        <p style={{ color: "#6b7280", fontSize: "0.75rem", marginBottom: "0.75rem" }}>
           SKU: {product.sku}
         </p>
 
-        <div style={{ marginBottom: "1.5rem" }}>
-          <p style={{ color: "#6b7280", fontSize: "0.875rem", marginBottom: "0.25rem" }}>
-            Precio unitario:
+        <div style={{ marginBottom: "1rem" }}>
+          <p style={{ color: "#6b7280", fontSize: "0.75rem", marginBottom: "0.125rem" }}>
+            Precio:
           </p>
-          <p style={{ fontSize: "1.75rem", color: "#10b981", fontWeight: "bold" }}>
+          <p style={{ fontSize: "1.5rem", color: "#10b981", fontWeight: "bold" }}>
             ${product.unit_price.toLocaleString("es-AR")}
           </p>
         </div>
 
         {product.units_per_package && (
-          <p style={{ color: "#6b7280", fontSize: "0.875rem", marginBottom: "1rem" }}>
-            Unidades por paquete: {product.units_per_package}
+          <p style={{ color: "#6b7280", fontSize: "0.7rem", marginBottom: "0.5rem" }}>
+            Bulto: {product.units_per_package} un.
           </p>
         )}
 
         {/* Quantity Selector */}
-        <div style={{ marginBottom: "1.5rem" }}>
-          <p style={{ color: "#6b7280", fontSize: "0.875rem", marginBottom: "0.5rem" }}>
+        <div style={{ marginBottom: "0.75rem" }}>
+          <p style={{ color: "#6b7280", fontSize: "0.75rem", marginBottom: "0.375rem" }}>
             Cantidad:
           </p>
-          <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+          <div style={{ display: "flex", gap: "0.375rem", alignItems: "center" }}>
             <button
               onClick={() => setQuantity(Math.max(1, quantity - 1))}
               style={{
-                padding: "0.5rem 0.75rem",
+                padding: "0.375rem 0.5rem",
                 backgroundColor: "#f3f4f6",
                 border: "1px solid #d1d5db",
-                borderRadius: "0.375rem",
+                borderRadius: "0.25rem",
                 cursor: "pointer",
+                fontSize: "0.875rem",
               }}
             >
               −
@@ -145,21 +148,23 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
               value={quantity}
               onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
               style={{
-                width: "60px",
-                padding: "0.5rem",
+                width: "50px",
+                padding: "0.375rem",
                 border: "1px solid #d1d5db",
-                borderRadius: "0.375rem",
+                borderRadius: "0.25rem",
                 textAlign: "center",
+                fontSize: "0.875rem",
               }}
             />
             <button
               onClick={() => setQuantity(quantity + 1)}
               style={{
-                padding: "0.5rem 0.75rem",
+                padding: "0.375rem 0.5rem",
                 backgroundColor: "#f3f4f6",
                 border: "1px solid #d1d5db",
-                borderRadius: "0.375rem",
+                borderRadius: "0.25rem",
                 cursor: "pointer",
+                fontSize: "0.875rem",
               }}
             >
               +
@@ -170,16 +175,16 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
         {/* Subtotal */}
         <div
           style={{
-            padding: "1rem",
+            padding: "0.75rem",
             backgroundColor: "#f3f4f6",
-            borderRadius: "0.375rem",
-            marginBottom: "1.5rem",
+            borderRadius: "0.25rem",
+            marginBottom: "1rem",
           }}
         >
-          <p style={{ color: "#6b7280", fontSize: "0.875rem", marginBottom: "0.25rem" }}>
+          <p style={{ margin: 0, color: "#6b7280", fontSize: "0.75rem", marginBottom: "0.125rem" }}>
             Subtotal:
           </p>
-          <p style={{ fontSize: "1.5rem", color: "#1f2937", fontWeight: "bold" }}>
+          <p style={{ margin: "0.125rem 0 0 0", fontSize: "1.25rem", fontWeight: "bold" }}>
             ${(product.unit_price * quantity).toLocaleString("es-AR")}
           </p>
         </div>
@@ -189,13 +194,13 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
           onClick={handleAddToCart}
           style={{
             width: "100%",
-            padding: "0.75rem 1rem",
+            padding: "0.625rem 0.875rem",
             backgroundColor: "#3b82f6",
             color: "white",
             border: "none",
             borderRadius: "0.375rem",
             cursor: "pointer",
-            fontSize: "1rem",
+            fontSize: "0.95rem",
             fontWeight: "bold",
           }}
         >
