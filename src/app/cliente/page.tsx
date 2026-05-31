@@ -154,11 +154,20 @@ export default function ClientePage() {
       </nav>
 
       {/* Main Content */}
-      <main style={{ flex: 1, padding: "2rem", maxWidth: "80rem", margin: "0 auto", width: "100%" }}>
-        <h2 style={{ fontSize: "1.875rem", marginBottom: "1rem" }}>Bienvenido, Cliente 👋</h2>
-
-        {/* Google-style Search Bar */}
-        <div style={{ marginBottom: "2rem", display: "flex", flexDirection: "column", alignItems: "center", width: "100%", maxWidth: "50%", margin: "0 auto 2rem" }}>
+      <main style={{ flex: 1, maxWidth: "80rem", margin: "0 auto", width: "100%" }}>
+        {/* Google-style Search Bar - Sticky */}
+        <div style={{
+          position: "sticky",
+          top: 0,
+          zIndex: 30,
+          backgroundColor: "white",
+          padding: "1rem 2rem",
+          borderBottom: "1px solid #e5e7eb",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          width: "100%"
+        }}>
           <div style={{ position: "relative", width: "100%" }}>
             <div style={{ display: "flex", gap: "0.5rem" }}>
               <input
@@ -234,8 +243,13 @@ export default function ClientePage() {
             </p>
           )}
         </div>
+        </div>
 
-        {loading ? (
+        {/* Content Area */}
+        <div style={{ padding: "2rem" }}>
+          <h2 style={{ fontSize: "1.875rem", marginBottom: "1rem" }}>Bienvenido, Cliente 👋</h2>
+
+          {loading ? (
           <div style={{ textAlign: "center", padding: "2rem", color: "#6b7280" }}>
             Cargando productos...
           </div>
@@ -360,6 +374,7 @@ export default function ClientePage() {
             </div>
           </>
         )}
+        </div>
       </main>
 
       {/* Product Detail Modal */}
