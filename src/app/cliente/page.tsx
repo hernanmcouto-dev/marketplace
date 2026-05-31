@@ -172,10 +172,10 @@ export default function ClientePage() {
           width: "100%"
         }}>
           <div style={{ position: "relative", width: "100%", maxWidth: "500px" }}>
-            <div style={{ display: "flex", gap: "0.5rem" }}>
+            <div style={{ display: "flex", gap: "0.5rem", width: "100%" }}>
               <input
                 type="text"
-                placeholder="🔍 Buscar..."
+                placeholder="Buscar..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 onFocus={() => search && setShowSuggestions(true)}
@@ -191,6 +191,22 @@ export default function ClientePage() {
                   transition: "all 0.2s",
                 }}
               />
+              <button
+                style={{
+                  padding: "0.4rem 0.75rem",
+                  backgroundColor: "#3b82f6",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "0.375rem",
+                  cursor: "pointer",
+                  fontSize: "1rem",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                🔍
+              </button>
             </div>
 
             {/* Suggestions Dropdown */}
