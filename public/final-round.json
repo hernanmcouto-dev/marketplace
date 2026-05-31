@@ -1,127 +1,112 @@
 {
   "final_validation_round": [
     {
-      "sku": "SAR-TEST-001",
-      "name": "CAMARA DE SEGURIDAD IP WIFI FULL HD",
-      "image_url": "/images/placeholder.jpg",
-      "unit_price": 5500,
+      "sku": "SAR-SAR-KTS-2267",
+      "name": "PARLANTE 4X2 C/ MICROFONO",
+      "unit_price": 22770,
+      "units_per_package": 12,
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FKTS-2267.jpg&provider=impotekno&sku=SAR-SAR-KTS-2267&v=1780251642281"
+    },
+    {
+      "sku": "SAR-SAR-PY-LED",
+      "name": "PROYECTOR  SIN JOYSTICK P-1",
+      "unit_price": 63187,
       "units_per_package": 1,
-      "categorized_as": "Seguridad y Cámaras"
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FPY-LED.jpg&provider=impotekno&sku=SAR-SAR-PY-LED&v=1780251642664"
     },
     {
-      "sku": "SAR-TEST-002",
-      "name": "SMARTWATCH DEPORTIVO CON GPS",
-      "image_url": "/images/placeholder.jpg",
-      "unit_price": 8900,
-      "units_per_package": 1,
-      "categorized_as": "Gadgets"
+      "sku": "SAR-SAR-CTR-110022",
+      "name": "CORTA PELO 5W 800 MAH VINTAGE",
+      "unit_price": 7589,
+      "units_per_package": 100,
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FCTR-110022.jpg&provider=impotekno&sku=SAR-SAR-CTR-110022&v=1780251642850"
     },
     {
-      "sku": "SAR-TEST-003",
-      "name": "SUDADERA DEPORTIVA NEGRA TALLE L",
-      "image_url": "/images/placeholder.jpg",
-      "unit_price": 2500,
-      "units_per_package": 1,
-      "categorized_as": "Indumentaria y Textiles"
+      "sku": "SAR-SAR-HMF-91076",
+      "name": "HUMIDIFICADOR MEDUSA V80/290 OFERTA!!!",
+      "unit_price": 24667,
+      "units_per_package": 18,
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FHMF-91076.jpg&provider=impotekno&sku=SAR-SAR-HMF-91076&v=1780251643685"
     },
     {
-      "sku": "SAR-TEST-004",
-      "name": "CABLE HDMI 2.1 4K 60HZ 3M",
-      "image_url": "/images/placeholder.jpg",
-      "unit_price": 1200,
-      "units_per_package": 10,
-      "categorized_as": "Cables y Conectores"
+      "sku": "SAR-SAR-VEL-81017",
+      "name": "LED-83103 LAMPARA VELADOR LED OREJITAS LED-83047",
+      "unit_price": 5123,
+      "units_per_package": 144,
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FVEL-81017.jpg&provider=impotekno&sku=SAR-SAR-VEL-81017&v=1780251642512"
     },
     {
-      "sku": "SAR-TEST-005",
-      "name": "PROTECTOR PANTALLA VIDRIO TEMPLADO IPHONE 15",
-      "image_url": "/images/placeholder.jpg",
-      "unit_price": 600,
+      "sku": "SAR-SAR-MELECH-398",
+      "name": "LUZ DE EMERGENCIA 60 LED  SV-060 CHICO",
+      "unit_price": 9488,
+      "units_per_package": 50,
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FMELECH-398.jpg&provider=impotekno&sku=SAR-SAR-MELECH-398&v=1780251643201"
+    },
+    {
+      "sku": "SAR-SAR-557-100B",
+      "name": "AUTO CYBERTRUCK TESLA CONTROL 168H-38",
+      "unit_price": 15180,
+      "units_per_package": 36,
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2F557-100B.jpg&provider=impotekno&sku=SAR-SAR-557-100B&v=1780251643105"
+    },
+    {
+      "sku": "SAR-SAR-HOG0625",
+      "name": "POCHOCLERA CON BOLW FUTBOL",
+      "unit_price": 35926,
+      "units_per_package": 8,
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FHOG0625.jpg&provider=impotekno&sku=SAR-SAR-HOG0625&v=1780251644956"
+    },
+    {
+      "sku": "SAR-SAR-TMWF8401",
+      "name": "ANTENA WIFI 600MPS TMPAS8417  1109",
+      "unit_price": 3751,
+      "units_per_package": 500,
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FTMWF8401.jpg&provider=impotekno&sku=SAR-SAR-TMWF8401&v=1780251642609"
+    },
+    {
+      "sku": "SAR-SAR-78005USB",
+      "name": "TECLADO USB NOGA NKB-78011",
+      "unit_price": 5312,
       "units_per_package": 20,
-      "categorized_as": "Accesorios para Celulares"
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2F78005USB.jpg&provider=impotekno&sku=SAR-SAR-78005USB&v=1780251642671"
     },
     {
-      "sku": "SAR-TEST-006",
-      "name": "ATORNILLADOR ELECTRICO 18V INALAMBRICO",
-      "image_url": "/images/placeholder.jpg",
-      "unit_price": 4200,
-      "units_per_package": 1,
-      "categorized_as": "Herramientas y Electricidad"
+      "sku": "SAR-SAR-TMCB6415",
+      "name": "CAB-46012 CABLE AUXILIAR CORDON 3.5",
+      "unit_price": 680,
+      "units_per_package": 800,
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FTMCB6415.jpg&provider=impotekno&sku=SAR-SAR-TMCB6415&v=1780251643313"
     },
     {
-      "sku": "SAR-TEST-007",
-      "name": "MOUSE INALAMBRICO RGB 2.4GHZ GAMING",
-      "image_url": "/images/placeholder.jpg",
-      "unit_price": 1800,
-      "units_per_package": 1,
-      "categorized_as": "Electrónica y Computación"
+      "sku": "SAR-SAR-CAB-46008",
+      "name": "CAB-46011 CABLE 2RCA  A 1PLUG 1.5M C1026",
+      "unit_price": 661,
+      "units_per_package": 500,
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FCAB-46008.jpg&provider=impotekno&sku=SAR-SAR-CAB-46008&v=1780251643306"
     },
     {
-      "sku": "SAR-TEST-008",
-      "name": "AIRE ACONDICIONADO PORTATIL 3000W",
-      "image_url": "/images/placeholder.jpg",
-      "unit_price": 12500,
-      "units_per_package": 1,
-      "categorized_as": "Hogar y Cocina"
+      "sku": "SAR-SAR-RA001",
+      "name": "PERFILADOR DE CEJAS XD306-1 MELECH-294",
+      "unit_price": 734,
+      "units_per_package": 1200,
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FRA001.jpg&provider=impotekno&sku=SAR-SAR-RA001&v=1780251642966"
     },
     {
-      "sku": "SAR-TEST-009",
-      "name": "MICROONDAS DIGITAL 25L 900W ACERO",
-      "image_url": "/images/placeholder.jpg",
-      "unit_price": 8700,
-      "units_per_package": 1,
-      "categorized_as": "Hogar y Cocina"
+      "sku": "SAR-SAR-CPO-4",
+      "name": "SET DE CEPILLO MOLDEADOR 5 EN 1 1200W NITSUK",
+      "unit_price": 21505,
+      "units_per_package": 20,
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FCPO-4.jpg&provider=impotekno&sku=SAR-SAR-CPO-4&v=1780251643007"
     },
     {
-      "sku": "SAR-TEST-010",
-      "name": "PARLANTE GAMING RGB 5.1 SURROUND",
-      "image_url": "/images/placeholder.jpg",
-      "unit_price": 6500,
-      "units_per_package": 1,
-      "categorized_as": "Audio Video y Parlantes"
-    },
-    {
-      "sku": "SAR-TEST-011",
-      "name": "BARRA SONIDO SMART TV BLUETOOTH 2.0",
-      "image_url": "/images/placeholder.jpg",
-      "unit_price": 7200,
-      "units_per_package": 1,
-      "categorized_as": "Audio Video y Parlantes"
-    },
-    {
-      "sku": "SAR-TEST-012",
-      "name": "PANEL LED CUADRADO 60X60 RGB CON CONTROL",
-      "image_url": "/images/placeholder.jpg",
-      "unit_price": 3800,
-      "units_per_package": 1,
-      "categorized_as": "Iluminación y LED"
-    },
-    {
-      "sku": "SAR-TEST-013",
-      "name": "ADAPTADOR USB-C A HDMI MULTIFUNCION",
-      "image_url": "/images/placeholder.jpg",
-      "unit_price": 900,
-      "units_per_package": 15,
-      "categorized_as": "Cables y Conectores"
-    },
-    {
-      "sku": "SAR-TEST-014",
-      "name": "BOLSO MOCHILA PARA LAPTOP 17 PULGADAS",
-      "image_url": "/images/placeholder.jpg",
-      "unit_price": 2300,
-      "units_per_package": 1,
-      "categorized_as": "Indumentaria y Textiles"
-    },
-    {
-      "sku": "SAR-TEST-015",
-      "name": "KIT HERRAMIENTAS 45PCS DESTORNILLADORES PUNTAS",
-      "image_url": "/images/placeholder.jpg",
-      "unit_price": 1500,
-      "units_per_package": 1,
-      "categorized_as": "Herramientas y Electricidad"
+      "sku": "SAR-SAR-EL278",
+      "name": "CANDADO CON ALARMA EL278 BICI/MOTO TW-100",
+      "unit_price": 5200,
+      "units_per_package": 10,
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FEL278.jpg&provider=impotekno&sku=SAR-SAR-EL278&v=1780251642304"
     }
   ],
   "total_selected": 15,
-  "timestamp": "2026-05-31T20:00:00Z",
-  "strategy": "Cobertura estratégica: categorías menos entrenadas + casos edge"
+  "timestamp": "2026-05-31T20:30:00Z",
+  "strategy": "15 productos REALES de Impotekno - diversas categorias"
 }
