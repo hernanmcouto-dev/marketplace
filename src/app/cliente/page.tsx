@@ -161,7 +161,7 @@ export default function ClientePage() {
         {/* Google-style Search Bar - Sticky */}
         <div style={{
           position: "sticky",
-          top: "3.5rem",
+          top: "3.8rem",
           zIndex: 30,
           backgroundColor: "white",
           padding: "0.5rem 1rem",
@@ -171,7 +171,7 @@ export default function ClientePage() {
           alignItems: "center",
           width: "100%"
         }}>
-          <div style={{ position: "relative", width: "100%" }}>
+          <div style={{ position: "relative", width: "100%", maxWidth: "500px" }}>
             <div style={{ display: "flex", gap: "0.5rem" }}>
               <input
                 type="text"
