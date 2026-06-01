@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import got from "got";
 import { getImageUrl } from "@/lib/image-registry";
+import { categorizeProduct } from "@/lib/product-categorizer";
 
 export const maxDuration = 600;
 
@@ -133,12 +134,16 @@ export async function POST(req: NextRequest) {
           // Obtener primera imagen
           const imageUrl = p.images?.[0]?.src || "";
 
+          // Categorizar producto
+          const categorization = categorizeProduct(p.name || "Sin nombre");
+
           return {
             sku: `PTT-${sku}`,
             name: p.name || "Sin nombre",
             unit_price: Math.round(unit_price * MARGIN),
             units_per_package: 1,
             image_url: imageUrl,
+            category: categorization.category,
           };
         });
 

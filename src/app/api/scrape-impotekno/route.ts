@@ -4,6 +4,7 @@ import path from "path";
 import got from "got";
 import { CookieJar } from "tough-cookie";
 import { downloadAndCacheImage, getImageUrl } from "@/lib/image-registry";
+import { categorizeProduct } from "@/lib/product-categorizer";
 
 interface ScraperReport {
   newProducts: number;
@@ -173,14 +174,18 @@ export async function POST(req: NextRequest) {
         sendLog(controller, `📊 Total extraído: ${allProducts.length} productos`);
         sendProgress(controller, CATEGORIES.length, CATEGORIES.length, "Procesando productos...");
 
-        // Transformar productos con prefijo y margen del 15%
-        const transformedProducts = allProducts.map((p) => ({
-          sku: `SAR-${p.sku}`,
-          name: p.name,
-          unit_price: Math.round(p.unit_price * 1.15), // 15% margen único
-          units_per_package: p.units_per_package,
-          image_url: p.image_url,
-        }));
+        // Transformar productos con prefijo, margen del 15% y categorización
+        const transformedProducts = allProducts.map((p) => {
+          const categorization = categorizeProduct(p.name);
+          return {
+            sku: `SAR-${p.sku}`,
+            name: p.name,
+            unit_price: Math.round(p.unit_price * 1.15), // 15% margen único
+            units_per_package: p.units_per_package,
+            image_url: p.image_url,
+            category: categorization.category,
+          };
+        });
 
         sendLog(controller, "🖼️ Proxy inteligente de imágenes (caché bajo demanda)...");
 
