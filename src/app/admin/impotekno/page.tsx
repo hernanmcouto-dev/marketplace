@@ -11,6 +11,7 @@ export default function ImpoteknoPanel() {
   const [editingProduct, setEditingProduct] = useState(null);
   const [editPrice, setEditPrice] = useState("");
   const [logs, setLogs] = useState([]);
+  const [showAnalysisDetails, setShowAnalysisDetails] = useState(null);
 
   useEffect(() => {
     loadProducts();
@@ -105,6 +106,59 @@ export default function ImpoteknoPanel() {
       p.sku.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const generateAnalytics = () => {
+    if (products.length === 0) return null;
+
+    // Estadísticas básicas
+    const prices = products.map((p) => p.unit_price);
+    const minPrice = Math.min(...prices);
+    const maxPrice = Math.max(...prices);
+    const avgPrice = Math.round(prices.reduce((a, b) => a + b, 0) / prices.length);
+
+    // Distribución por categoría
+    const categoryCount = {};
+    const uncategorized = [];
+    products.forEach((p) => {
+      const cat = p.category || "Sin categorizar";
+      if (cat === "Sin categorizar") {
+        uncategorized.push(p);
+      } else {
+        categoryCount[cat] = (categoryCount[cat] || 0) + 1;
+      }
+    });
+
+    // Rango de precios por categoría
+    const categoryPrices = {};
+    products.forEach((p) => {
+      const cat = p.category || "Sin categorizar";
+      if (!categoryPrices[cat]) {
+        categoryPrices[cat] = [];
+      }
+      categoryPrices[cat].push(p.unit_price);
+    });
+
+    const categoryStats = Object.entries(categoryPrices).map(([cat, prices]) => ({
+      category: cat,
+      count: prices.length,
+      minPrice: Math.min(...prices),
+      maxPrice: Math.max(...prices),
+      avgPrice: Math.round(prices.reduce((a, b) => a + b, 0) / prices.length),
+    }));
+
+    return {
+      totalProducts: products.length,
+      minPrice,
+      maxPrice,
+      avgPrice,
+      categories: Object.entries(categoryCount).length,
+      uncategorizedCount: uncategorized.length,
+      uncategorizedProducts: uncategorized,
+      categoryStats: categoryStats.sort((a, b) => b.count - a.count),
+    };
+  };
+
+  const analytics = generateAnalytics();
+
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "#0f172a", color: "white" }}>
       <header style={{ background: "linear-gradient(135deg, #3b82f680 0%, #0f172a 100%)", borderBottom: "2px solid #3b82f6", padding: "2rem 1rem" }}>
@@ -124,6 +178,7 @@ export default function ImpoteknoPanel() {
         <div style={{ display: "flex", gap: "1rem", marginBottom: "2rem", overflowX: "auto" }}>
           {[
             { key: "list", label: "📋 Productos" },
+            { key: "analysis", label: "📊 Análisis" },
             { key: "scrape", label: "🕷️ Scraper" },
             { key: "import", label: "📤 Importar" },
           ].map((tab) => (
@@ -209,6 +264,146 @@ export default function ImpoteknoPanel() {
             <p style={{ marginTop: "1rem", color: "#94a3b8", fontSize: "0.875rem" }}>
               Mostrando 50 de {filteredProducts.length} productos
             </p>
+          </div>
+        )}
+
+        {/* Análisis */}
+        {activeTab === "analysis" && analytics && (
+          <div>
+            <h2 style={{ marginBottom: "2rem" }}>📊 Análisis de Base de Datos</h2>
+
+            {/* Resumen General */}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem", marginBottom: "2rem" }}>
+              <div style={{ backgroundColor: "#1e293b", padding: "1.5rem", borderRadius: "0.5rem", borderLeft: "4px solid #3b82f6" }}>
+                <div style={{ fontSize: "0.875rem", color: "#94a3b8", marginBottom: "0.5rem" }}>Total Productos</div>
+                <div style={{ fontSize: "2rem", fontWeight: "bold", color: "#3b82f6" }}>
+                  {analytics.totalProducts.toLocaleString()}
+                </div>
+              </div>
+              <div style={{ backgroundColor: "#1e293b", padding: "1.5rem", borderRadius: "0.5rem", borderLeft: "4px solid #10b981" }}>
+                <div style={{ fontSize: "0.875rem", color: "#94a3b8", marginBottom: "0.5rem" }}>Categorías</div>
+                <div style={{ fontSize: "2rem", fontWeight: "bold", color: "#10b981" }}>
+                  {analytics.categories}
+                </div>
+              </div>
+              <div style={{ backgroundColor: "#1e293b", padding: "1.5rem", borderRadius: "0.5rem", borderLeft: "4px solid #f59e0b" }}>
+                <div style={{ fontSize: "0.875rem", color: "#94a3b8", marginBottom: "0.5rem" }}>Precio Promedio</div>
+                <div style={{ fontSize: "2rem", fontWeight: "bold", color: "#f59e0b" }}>
+                  ${analytics.avgPrice.toLocaleString()}
+                </div>
+              </div>
+              <div style={{ backgroundColor: "#1e293b", padding: "1.5rem", borderRadius: "0.5rem", borderLeft: "4px solid #ef4444" }}>
+                <div style={{ fontSize: "0.875rem", color: "#94a3b8", marginBottom: "0.5rem" }}>Sin Categorizar</div>
+                <div style={{ fontSize: "2rem", fontWeight: "bold", color: "#ef4444" }}>
+                  {analytics.uncategorizedCount}
+                </div>
+              </div>
+            </div>
+
+            {/* Rango de Precios */}
+            <div style={{ backgroundColor: "#1e293b", padding: "1.5rem", borderRadius: "0.5rem", marginBottom: "2rem" }}>
+              <h3 style={{ margin: "0 0 1rem 0" }}>💰 Rango de Precios</h3>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem" }}>
+                <div>
+                  <div style={{ fontSize: "0.875rem", color: "#94a3b8", marginBottom: "0.5rem" }}>Mínimo</div>
+                  <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#cbd5e1" }}>
+                    ${analytics.minPrice.toLocaleString()}
+                  </div>
+                </div>
+                <div>
+                  <div style={{ fontSize: "0.875rem", color: "#94a3b8", marginBottom: "0.5rem" }}>Promedio</div>
+                  <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#cbd5e1" }}>
+                    ${analytics.avgPrice.toLocaleString()}
+                  </div>
+                </div>
+                <div>
+                  <div style={{ fontSize: "0.875rem", color: "#94a3b8", marginBottom: "0.5rem" }}>Máximo</div>
+                  <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#cbd5e1" }}>
+                    ${analytics.maxPrice.toLocaleString()}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Distribución por Categoría */}
+            <div style={{ backgroundColor: "#1e293b", padding: "1.5rem", borderRadius: "0.5rem", marginBottom: "2rem" }}>
+              <h3 style={{ margin: "0 0 1rem 0" }}>📂 Distribución por Categoría</h3>
+              <div style={{ maxHeight: "500px", overflowY: "auto" }}>
+                <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                  <thead>
+                    <tr style={{ borderBottom: "1px solid #334155" }}>
+                      <th style={{ padding: "0.75rem", textAlign: "left", fontSize: "0.875rem" }}>Categoría</th>
+                      <th style={{ padding: "0.75rem", textAlign: "right", fontSize: "0.875rem" }}>Cantidad</th>
+                      <th style={{ padding: "0.75rem", textAlign: "right", fontSize: "0.875rem" }}>Min - Max</th>
+                      <th style={{ padding: "0.75rem", textAlign: "right", fontSize: "0.875rem" }}>Promedio</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {analytics.categoryStats.map((stat) => (
+                      <tr key={stat.category} style={{ borderBottom: "1px solid #334155" }}>
+                        <td style={{ padding: "0.75rem" }}>{stat.category}</td>
+                        <td style={{ padding: "0.75rem", textAlign: "right", color: "#3b82f6", fontWeight: "bold" }}>
+                          {stat.count}
+                        </td>
+                        <td style={{ padding: "0.75rem", textAlign: "right", fontSize: "0.875rem", color: "#94a3b8" }}>
+                          ${stat.minPrice.toLocaleString()} - ${stat.maxPrice.toLocaleString()}
+                        </td>
+                        <td style={{ padding: "0.75rem", textAlign: "right", color: "#10b981", fontWeight: "bold" }}>
+                          ${stat.avgPrice.toLocaleString()}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Productos Sin Categorizar */}
+            {analytics.uncategorizedCount > 0 && (
+              <div style={{ backgroundColor: "#1e293b", padding: "1.5rem", borderRadius: "0.5rem", borderLeft: "4px solid #ef4444" }}>
+                <button
+                  onClick={() => setShowAnalysisDetails(showAnalysisDetails === "uncategorized" ? null : "uncategorized")}
+                  style={{
+                    width: "100%",
+                    padding: "1rem",
+                    backgroundColor: "#334155",
+                    color: "#ef4444",
+                    border: "1px solid #ef4444",
+                    borderRadius: "0.5rem",
+                    cursor: "pointer",
+                    fontWeight: "bold",
+                    marginBottom: "1rem",
+                  }}
+                >
+                  ⚠️ Ver {analytics.uncategorizedCount} Productos Sin Categorizar
+                </button>
+
+                {showAnalysisDetails === "uncategorized" && (
+                  <div style={{ backgroundColor: "#0f172a", padding: "1rem", borderRadius: "0.5rem", maxHeight: "400px", overflowY: "auto" }}>
+                    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+                      <thead>
+                        <tr style={{ borderBottom: "1px solid #334155" }}>
+                          <th style={{ padding: "0.5rem", textAlign: "left" }}>SKU</th>
+                          <th style={{ padding: "0.5rem", textAlign: "left" }}>Nombre</th>
+                          <th style={{ padding: "0.5rem", textAlign: "right" }}>Precio</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {analytics.uncategorizedProducts.map((p) => (
+                          <tr key={p.sku} style={{ borderBottom: "1px solid #334155" }}>
+                            <td style={{ padding: "0.5rem" }}>{p.sku}</td>
+                            <td style={{ padding: "0.5rem", maxWidth: "200px", overflow: "hidden" }}>
+                              {p.name.substring(0, 30)}...
+                            </td>
+                            <td style={{ padding: "0.5rem", textAlign: "right" }}>${p.unit_price}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         )}
 
