@@ -1,15 +1,15 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function ImpoteknoPanel() {
   const [products, setProducts] = useState([]);
-  const [margin, setMargin] = useState(1.0);
   const [activeTab, setActiveTab] = useState("list");
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [editingProduct, setEditingProduct] = useState(null);
+  const [editPrice, setEditPrice] = useState("");
   const [logs, setLogs] = useState([]);
 
   useEffect(() => {
@@ -68,15 +68,35 @@ export default function ImpoteknoPanel() {
     }
   };
 
-  const updateMargin = (productId, newMargin) => {
-    setProducts((p) =>
-      p.map((prod) =>
-        prod.sku === productId
-          ? { ...prod, unit_price: Math.round(prod.unit_price * newMargin) }
-          : prod
-      )
-    );
-    addLog(`Margen actualizado para ${productId}`);
+  const saveProductPrice = async () => {
+    if (!editingProduct || !editPrice) return;
+
+    const newPrice = parseInt(editPrice);
+    if (isNaN(newPrice)) {
+      addLog("Precio inválido", "error");
+      return;
+    }
+
+    try {
+      const updatedProducts = products.map((p) =>
+        p.sku === editingProduct.sku ? { ...p, unit_price: newPrice } : p
+      );
+
+      const response = await fetch("/api/update-products", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ products: updatedProducts, supplier: "impotekno" }),
+      });
+
+      if (response.ok) {
+        setProducts(updatedProducts);
+        addLog(`✅ Precio actualizado: ${editingProduct.sku} → $${newPrice}`);
+        setEditingProduct(null);
+        setEditPrice("");
+      }
+    } catch (error) {
+      addLog(`Error guardando: ${error.message}`, "error");
+    }
   };
 
   const filteredProducts = products.filter(
@@ -84,217 +104,6 @@ export default function ImpoteknoPanel() {
       p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       p.sku.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
-  const Tabs = {
-    list: (
-      <div>
-        <h2 style={{ marginBottom: "1.5rem" }}>📋 Productos</h2>
-        <div style={{ marginBottom: "1rem" }}>
-          <input
-            type="text"
-            placeholder="Buscar por nombre o SKU..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            style={{
-              width: "100%",
-              padding: "0.75rem",
-              backgroundColor: "#1e293b",
-              border: "1px solid #334155",
-              borderRadius: "0.5rem",
-              color: "white",
-            }}
-          />
-        </div>
-        <div style={{ overflowX: "auto" }}>
-          <table style={{ width: "100%", borderCollapse: "collapse" }}>
-            <thead>
-              <tr style={{ borderBottom: "2px solid #334155" }}>
-                <th style={{ padding: "1rem", textAlign: "left" }}>SKU</th>
-                <th style={{ padding: "1rem", textAlign: "left" }}>Nombre</th>
-                <th style={{ padding: "1rem", textAlign: "right" }}>Precio</th>
-                <th style={{ padding: "1rem", textAlign: "center" }}>Margen</th>
-                <th style={{ padding: "1rem", textAlign: "center" }}>Acciones</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filteredProducts.slice(0, 20).map((product) => (
-                <tr key={product.sku} style={{ borderBottom: "1px solid #334155" }}>
-                  <td style={{ padding: "1rem" }}>{product.sku}</td>
-                  <td style={{ padding: "1rem", maxWidth: "300px", overflow: "hidden" }}>
-                    {product.name.substring(0, 50)}...
-                  </td>
-                  <td style={{ padding: "1rem", textAlign: "right" }}>${product.unit_price}</td>
-                  <td style={{ padding: "1rem", textAlign: "center" }}>
-                    <select
-                      defaultValue="1.0"
-                      onChange={(e) => updateMargin(product.sku, parseFloat(e.target.value))}
-                      style={{
-                        padding: "0.5rem",
-                        backgroundColor: "#334155",
-                        color: "white",
-                        border: "1px solid #3b82f6",
-                        borderRadius: "0.25rem",
-                      }}
-                    >
-                      <option value="0.9">-10%</option>
-                      <option value="1.0">0%</option>
-                      <option value="1.1">+10%</option>
-                      <option value="1.2">+20%</option>
-                      <option value="1.5">+50%</option>
-                    </select>
-                  </td>
-                  <td style={{ padding: "1rem", textAlign: "center" }}>
-                    <button
-                      onClick={() => setEditingProduct(product)}
-                      style={{
-                        padding: "0.5rem 1rem",
-                        backgroundColor: "#3b82f6",
-                        color: "white",
-                        border: "none",
-                        borderRadius: "0.25rem",
-                        cursor: "pointer",
-                      }}
-                    >
-                      Editar
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p style={{ marginTop: "1rem", color: "#94a3b8", fontSize: "0.875rem" }}>
-          Mostrando 20 de {filteredProducts.length} productos
-        </p>
-      </div>
-    ),
-    scrape: (
-      <div>
-        <h2 style={{ marginBottom: "1.5rem" }}>🕷️ Ejecutar Scraper</h2>
-        <button
-          onClick={handleScrape}
-          disabled={loading}
-          style={{
-            padding: "1rem 2rem",
-            backgroundColor: loading ? "#666" : "#ef4444",
-            color: "white",
-            border: "none",
-            borderRadius: "0.5rem",
-            cursor: loading ? "not-allowed" : "pointer",
-            fontSize: "1rem",
-            fontWeight: "bold",
-            marginBottom: "2rem",
-          }}
-        >
-          {loading ? "⏳ Scrapeando..." : "🚀 Iniciar Scraper"}
-        </button>
-
-        <div
-          style={{
-            backgroundColor: "#1e293b",
-            padding: "1rem",
-            borderRadius: "0.5rem",
-            maxHeight: "400px",
-            overflowY: "auto",
-          }}
-        >
-          {logs.map((log, i) => (
-            <div key={i} style={{ fontSize: "0.875rem", color: "#cbd5e1", marginBottom: "0.5rem" }}>
-              <span style={{ color: "#94a3b8" }}>[{log.time}]</span> {log.message}
-            </div>
-          ))}
-        </div>
-      </div>
-    ),
-    margin: (
-      <div>
-        <h2 style={{ marginBottom: "1.5rem" }}>💰 Ajustar Margen Global</h2>
-        <div style={{ backgroundColor: "#1e293b", padding: "2rem", borderRadius: "0.5rem", maxWidth: "500px" }}>
-          <label style={{ display: "block", marginBottom: "1rem" }}>
-            Multiplicador de precio:
-            <input
-              type="number"
-              min="0.5"
-              max="3"
-              step="0.1"
-              defaultValue="1.0"
-              onChange={(e) => setMargin(parseFloat(e.target.value))}
-              style={{
-                marginTop: "0.5rem",
-                width: "100%",
-                padding: "0.75rem",
-                backgroundColor: "#334155",
-                color: "white",
-                border: "1px solid #3b82f6",
-                borderRadius: "0.25rem",
-              }}
-            />
-          </label>
-          <p style={{ color: "#94a3b8", fontSize: "0.875rem", marginBottom: "1rem" }}>
-            1.0 = sin cambio | 1.2 = +20% | 0.8 = -20%
-          </p>
-          <button
-            onClick={() => {
-              setProducts((p) =>
-                p.map((prod) => ({ ...prod, unit_price: Math.round(prod.unit_price * margin) }))
-              );
-              addLog(`Margen global aplicado: ${(margin * 100).toFixed(0)}%`);
-            }}
-            style={{
-              width: "100%",
-              padding: "0.75rem",
-              backgroundColor: "#f59e0b",
-              color: "white",
-              border: "none",
-              borderRadius: "0.5rem",
-              cursor: "pointer",
-              fontWeight: "bold",
-            }}
-          >
-            Aplicar a Todos
-          </button>
-        </div>
-      </div>
-    ),
-    import: (
-      <div>
-        <h2 style={{ marginBottom: "1.5rem" }}>📤 Importar desde CSV</h2>
-        <div style={{ backgroundColor: "#1e293b", padding: "2rem", borderRadius: "0.5rem", maxWidth: "500px" }}>
-          <input
-            type="file"
-            accept=".csv"
-            style={{
-              display: "block",
-              marginBottom: "1rem",
-              padding: "1rem",
-              backgroundColor: "#334155",
-              border: "2px dashed #3b82f6",
-              borderRadius: "0.5rem",
-              color: "white",
-            }}
-          />
-          <p style={{ color: "#94a3b8", fontSize: "0.875rem", marginBottom: "1rem" }}>
-            Formato esperado: SKU, Nombre, Precio
-          </p>
-          <button
-            onClick={() => addLog("Importación: Funcionalidad en desarrollo")}
-            style={{
-              width: "100%",
-              padding: "0.75rem",
-              backgroundColor: "#8b5cf6",
-              color: "white",
-              border: "none",
-              borderRadius: "0.5rem",
-              cursor: "pointer",
-              fontWeight: "bold",
-            }}
-          >
-            Subir CSV
-          </button>
-        </div>
-      </div>
-    ),
-  };
 
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "#0f172a", color: "white" }}>
@@ -311,12 +120,12 @@ export default function ImpoteknoPanel() {
       </header>
 
       <main style={{ maxWidth: "1200px", margin: "0 auto", padding: "2rem 1rem" }}>
+        {/* Tabs */}
         <div style={{ display: "flex", gap: "1rem", marginBottom: "2rem", overflowX: "auto" }}>
           {[
-            { key: "list", label: "📋 Productos", icon: "📋" },
-            { key: "scrape", label: "🕷️ Scraper", icon: "🕷️" },
-            { key: "margin", label: "💰 Margen", icon: "💰" },
-            { key: "import", label: "📤 Importar", icon: "📤" },
+            { key: "list", label: "📋 Productos" },
+            { key: "scrape", label: "🕷️ Scraper" },
+            { key: "import", label: "📤 Importar" },
           ].map((tab) => (
             <button
               key={tab.key}
@@ -337,7 +146,182 @@ export default function ImpoteknoPanel() {
           ))}
         </div>
 
-        {Tabs[activeTab] || Tabs.list}
+        {/* Lista de Productos */}
+        {activeTab === "list" && (
+          <div>
+            <h2 style={{ marginBottom: "1.5rem" }}>📋 Productos</h2>
+            <input
+              type="text"
+              placeholder="Buscar por nombre o SKU..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              style={{
+                width: "100%",
+                padding: "0.75rem",
+                marginBottom: "1rem",
+                backgroundColor: "#1e293b",
+                border: "1px solid #334155",
+                borderRadius: "0.5rem",
+                color: "white",
+              }}
+            />
+            <div style={{ overflowX: "auto" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                <thead>
+                  <tr style={{ borderBottom: "2px solid #334155" }}>
+                    <th style={{ padding: "1rem", textAlign: "left" }}>SKU</th>
+                    <th style={{ padding: "1rem", textAlign: "left" }}>Nombre</th>
+                    <th style={{ padding: "1rem", textAlign: "right" }}>Precio</th>
+                    <th style={{ padding: "1rem", textAlign: "center" }}>Editar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {filteredProducts.slice(0, 50).map((product) => (
+                    <tr key={product.sku} style={{ borderBottom: "1px solid #334155" }}>
+                      <td style={{ padding: "1rem" }}>{product.sku}</td>
+                      <td style={{ padding: "1rem", maxWidth: "300px" }}>
+                        {product.name.substring(0, 40)}...
+                      </td>
+                      <td style={{ padding: "1rem", textAlign: "right" }}>${product.unit_price}</td>
+                      <td style={{ padding: "1rem", textAlign: "center" }}>
+                        <button
+                          onClick={() => {
+                            setEditingProduct(product);
+                            setEditPrice(product.unit_price.toString());
+                          }}
+                          style={{
+                            padding: "0.5rem 1rem",
+                            backgroundColor: "#3b82f6",
+                            color: "white",
+                            border: "none",
+                            borderRadius: "0.25rem",
+                            cursor: "pointer",
+                          }}
+                        >
+                          ✏️ Editar
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p style={{ marginTop: "1rem", color: "#94a3b8", fontSize: "0.875rem" }}>
+              Mostrando 50 de {filteredProducts.length} productos
+            </p>
+          </div>
+        )}
+
+        {/* Scraper */}
+        {activeTab === "scrape" && (
+          <div>
+            <h2 style={{ marginBottom: "1.5rem" }}>🕷️ Ejecutar Scraper</h2>
+            <button
+              onClick={handleScrape}
+              disabled={loading}
+              style={{
+                padding: "1rem 2rem",
+                backgroundColor: loading ? "#666" : "#ef4444",
+                color: "white",
+                border: "none",
+                borderRadius: "0.5rem",
+                cursor: loading ? "not-allowed" : "pointer",
+                fontSize: "1rem",
+                fontWeight: "bold",
+                marginBottom: "2rem",
+              }}
+            >
+              {loading ? "⏳ Scrapeando..." : "🚀 Iniciar Scraper"}
+            </button>
+            <div style={{ backgroundColor: "#1e293b", padding: "1rem", borderRadius: "0.5rem", maxHeight: "400px", overflowY: "auto" }}>
+              {logs.map((log, i) => (
+                <div key={i} style={{ fontSize: "0.875rem", color: "#cbd5e1", marginBottom: "0.5rem" }}>
+                  <span style={{ color: "#94a3b8" }}>[{log.time}]</span> {log.message}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Importar CSV */}
+        {activeTab === "import" && (
+          <div>
+            <h2 style={{ marginBottom: "1.5rem" }}>📤 Importar desde CSV</h2>
+            <div style={{ backgroundColor: "#1e293b", padding: "2rem", borderRadius: "0.5rem", maxWidth: "500px" }}>
+              <input type="file" accept=".csv" style={{ marginBottom: "1rem", display: "block", width: "100%", padding: "1rem", backgroundColor: "#334155", border: "2px dashed #3b82f6", borderRadius: "0.5rem", color: "white" }} />
+              <p style={{ color: "#94a3b8", fontSize: "0.875rem", marginBottom: "1rem" }}>Formato: SKU, Nombre, Precio</p>
+              <button style={{ width: "100%", padding: "0.75rem", backgroundColor: "#8b5cf6", color: "white", border: "none", borderRadius: "0.5rem", cursor: "pointer", fontWeight: "bold" }}>
+                Subir CSV
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Modal de Edición */}
+        {editingProduct && (
+          <div style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "rgba(0,0,0,0.7)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 1000 }}>
+            <div style={{ backgroundColor: "#1e293b", padding: "2rem", borderRadius: "1rem", maxWidth: "500px", width: "90%" }}>
+              <h3 style={{ margin: "0 0 1rem 0", fontSize: "1.5rem" }}>✏️ Editar Precio</h3>
+              <p style={{ color: "#cbd5e1", marginBottom: "1rem" }}>
+                <strong>{editingProduct.name}</strong>
+              </p>
+              <p style={{ color: "#94a3b8", fontSize: "0.875rem", marginBottom: "1rem" }}>
+                SKU: {editingProduct.sku}
+              </p>
+              <div style={{ marginBottom: "1rem" }}>
+                <label style={{ display: "block", marginBottom: "0.5rem", color: "#cbd5e1" }}>
+                  Nuevo Precio:
+                </label>
+                <input
+                  type="number"
+                  value={editPrice}
+                  onChange={(e) => setEditPrice(e.target.value)}
+                  style={{
+                    width: "100%",
+                    padding: "0.75rem",
+                    backgroundColor: "#334155",
+                    border: "1px solid #3b82f6",
+                    borderRadius: "0.5rem",
+                    color: "white",
+                    fontSize: "1rem",
+                  }}
+                />
+              </div>
+              <div style={{ display: "flex", gap: "1rem" }}>
+                <button
+                  onClick={saveProductPrice}
+                  style={{
+                    flex: 1,
+                    padding: "0.75rem",
+                    backgroundColor: "#10b981",
+                    color: "white",
+                    border: "none",
+                    borderRadius: "0.5rem",
+                    cursor: "pointer",
+                    fontWeight: "bold",
+                  }}
+                >
+                  ✅ Confirmar
+                </button>
+                <button
+                  onClick={() => setEditingProduct(null)}
+                  style={{
+                    flex: 1,
+                    padding: "0.75rem",
+                    backgroundColor: "#ef4444",
+                    color: "white",
+                    border: "none",
+                    borderRadius: "0.5rem",
+                    cursor: "pointer",
+                    fontWeight: "bold",
+                  }}
+                >
+                  ❌ Cancelar
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </main>
     </div>
   );
