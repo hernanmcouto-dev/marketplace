@@ -216,14 +216,9 @@ export async function POST(req: NextRequest) {
         const newSkus = new Set(Array.from(currentSkus).filter(sku => !previousSkus.has(sku)));
         const removedSkus = new Set(Array.from(previousSkus).filter(sku => !currentSkus.has(sku)));
 
-        // Descargar y subir imágenes solo de productos NUEVOS
+        // Descargar y subir imágenes de TODOS los productos
         const productsWithImages = await Promise.all(
           transformedProducts.map(async (product) => {
-            if (!newSkus.has(product.sku)) {
-              // Producto ya existente, mantener URL anterior
-              return product;
-            }
-
             try {
               const imageResponse = await got(product.image_url);
               const imageBuffer = Buffer.from(imageResponse.rawBody);

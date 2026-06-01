@@ -164,8 +164,8 @@ export async function POST(req: NextRequest) {
                 ...product,
                 image_url: s3Url,
               };
-            } catch (err) {
-              sendLog(controller, `⚠️ Error descargando imagen ${product.sku}`);
+            } catch (err: any) {
+              sendLog(controller, `⚠️ Error descargando imagen ${product.sku}: ${err.message}`);
               return product;
             }
           })

@@ -203,13 +203,9 @@ export async function POST(req: NextRequest) {
         const newSkus = new Set(Array.from(currentSkus).filter(sku => !previousSkus.has(sku)));
         const removedSkus = Array.from(previousSkus).filter(sku => !currentSkus.has(sku));
 
-        // Descargar y subir imágenes solo de productos NUEVOS
+        // Descargar y subir imágenes de TODOS los productos
         const productsWithProxy = await Promise.all(
           transformedProducts.map(async (product) => {
-            if (!newSkus.has(product.sku)) {
-              return product;
-            }
-
             try {
               const imageResponse = await got(product.image_url);
               const imageBuffer = Buffer.from(imageResponse.rawBody);
