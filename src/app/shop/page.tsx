@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { CATEGORY_LIST } from "@/lib/product-categorizer";
+import { useCart } from "@/lib/CartContext";
+import CartPanel from "@/components/CartPanel";
 
 interface Product {
   sku: string;
@@ -14,6 +16,7 @@ interface Product {
 }
 
 export default function ShopPage() {
+  const { addToCart } = useCart();
   const [products, setProducts] = useState<Product[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -21,6 +24,8 @@ export default function ShopPage() {
   const [sortBy, setSortBy] = useState<"nombre" | "precio-asc" | "precio-desc">("nombre");
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 1000000]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedQuantities, setSelectedQuantities] = useState<Record<string, number>>({});
+  const [showCart, setShowCart] = useState(false);
 
   useEffect(() => {
     loadProducts();
@@ -491,11 +496,128 @@ export default function ShopPage() {
                         </div>
                       </div>
                       <div>
-                        <div style={{ fontSize: "0.75rem", color: "#94a3b8" }}>Cantidad</div>
+                        <div style={{ fontSize: "0.75rem", color: "#94a3b8" }}>Bulto</div>
                         <div style={{ fontSize: "0.75rem", color: "#cbd5e1", fontWeight: "500" }}>
                           {product.units_per_package} pcs
                         </div>
                       </div>
+                    </div>
+
+                    {/* Controles de Cantidad */}
+                    <div style={{ marginTop: "1rem", paddingTop: "1rem", borderTop: "1px solid #334155" }}>
+                      <div style={{ fontSize: "0.75rem", color: "#94a3b8", marginBottom: "0.5rem" }}>
+                        Cantidad a comprar
+                      </div>
+                      <div
+                        style={{
+                          display: "flex",
+                          gap: "0.5rem",
+                          alignItems: "center",
+                          marginBottom: "0.75rem",
+                        }}
+                      >
+                        <button
+                          onClick={() =>
+                            setSelectedQuantities({
+                              ...selectedQuantities,
+                              [product.sku]: Math.max(0, (selectedQuantities[product.sku] || 0) - 1),
+                            })
+                          }
+                          style={{
+                            padding: "0.4rem 0.6rem",
+                            backgroundColor: "#334155",
+                            border: "1px solid #475569",
+                            borderRadius: "0.25rem",
+                            cursor: "pointer",
+                            fontSize: "1rem",
+                            fontWeight: "600",
+                            color: "#e2e8f0",
+                          }}
+                        >
+                          −
+                        </button>
+                        <input
+                          type="number"
+                          min="0"
+                          value={selectedQuantities[product.sku] || 0}
+                          onChange={(e) =>
+                            setSelectedQuantities({
+                              ...selectedQuantities,
+                              [product.sku]: Math.max(0, parseInt(e.target.value) || 0),
+                            })
+                          }
+                          style={{
+                            width: "3rem",
+                            padding: "0.4rem",
+                            border: "1px solid #475569",
+                            borderRadius: "0.25rem",
+                            textAlign: "center",
+                            fontSize: "0.95rem",
+                            fontWeight: "600",
+                            backgroundColor: "#0f172a",
+                            color: "#e2e8f0",
+                          }}
+                        />
+                        <button
+                          onClick={() =>
+                            setSelectedQuantities({
+                              ...selectedQuantities,
+                              [product.sku]: (selectedQuantities[product.sku] || 0) + 1,
+                            })
+                          }
+                          style={{
+                            padding: "0.4rem 0.6rem",
+                            backgroundColor: "#334155",
+                            border: "1px solid #475569",
+                            borderRadius: "0.25rem",
+                            cursor: "pointer",
+                            fontSize: "1rem",
+                            fontWeight: "600",
+                            color: "#e2e8f0",
+                          }}
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button
+                        onClick={() => {
+                          const quantity = selectedQuantities[product.sku] || 0;
+                          if (quantity > 0) {
+                            addToCart(
+                              {
+                                sku: product.sku,
+                                name: product.name,
+                                unit_price: product.unit_price,
+                                quantity: quantity,
+                                image_url: product.image_url,
+                                units_per_package: product.units_per_package,
+                                supplier: product.supplier,
+                              },
+                              quantity
+                            );
+                            setSelectedQuantities({
+                              ...selectedQuantities,
+                              [product.sku]: 0,
+                            });
+                            setShowCart(true);
+                          }
+                        }}
+                        disabled={(selectedQuantities[product.sku] || 0) === 0}
+                        style={{
+                          width: "100%",
+                          backgroundColor: (selectedQuantities[product.sku] || 0) > 0 ? "#10b981" : "#475569",
+                          color: "#fff",
+                          border: "none",
+                          padding: "0.5rem",
+                          borderRadius: "0.375rem",
+                          cursor: (selectedQuantities[product.sku] || 0) > 0 ? "pointer" : "not-allowed",
+                          fontWeight: "600",
+                          fontSize: "0.9rem",
+                        }}
+                      >
+                        {(selectedQuantities[product.sku] || 0) > 0 ? "✓ Enviar al carrito" : "Agregar cantidad"}
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -551,6 +673,9 @@ export default function ShopPage() {
       >
         <p>© 2026 Planeta Once Marketplace. Sistema de categorización inteligente</p>
       </footer>
+
+      {/* Shopping Cart Panel */}
+      <CartPanel isOpen={showCart} onClose={() => setShowCart(false)} />
     </div>
   );
 }
