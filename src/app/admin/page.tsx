@@ -2,86 +2,138 @@
 
 import Link from "next/link";
 
-export default function AdminHome() {
-  const suppliers = [
+export default function AdminDashboard() {
+  const deposits = [
     {
-      name: "Impotekno",
-      products: 447,
+      name: "Depósito Azul",
+      path: "/admin/impotekno",
       color: "#3b82f6",
-      icon: "📱",
-      href: "/admin/impotekno",
-      description: "Electrónica y tecnología",
+      icon: "🔵",
+      description: "Panel de administración",
     },
     {
-      name: "San Julián",
-      products: 486,
+      name: "Depósito Verde",
+      path: "/admin/sanjulian",
       color: "#10b981",
-      icon: "🛍️",
-      href: "/admin/sanjulian",
-      description: "Productos variados",
+      icon: "🟢",
+      description: "Panel de administración",
     },
     {
-      name: "NextCell",
-      products: 4668,
-      color: "#f59e0b",
-      icon: "📦",
-      href: "/admin/nextcell",
-      description: "Catálogo amplio",
+      name: "Depósito Rojo",
+      path: "/admin/nextcell",
+      color: "#ef4444",
+      icon: "🔴",
+      description: "Panel de administración",
+    },
+    {
+      name: "Depósito Amarillo",
+      path: "/admin/nodo",
+      color: "#fbbf24",
+      icon: "🟡",
+      description: "Panel de administración",
     },
   ];
 
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "#0f172a", color: "white" }}>
-      <header style={{ background: "linear-gradient(135deg, #1e293b 0%, #0f172a 100%)", borderBottom: "2px solid #3b82f6", padding: "2rem 1rem" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h1 style={{ margin: 0, fontSize: "2.5rem", fontWeight: "bold" }}>⚙️ Panel de Administración</h1>
-          <p style={{ margin: "0.5rem 0 0 0", color: "#94a3b8" }}>Selecciona un proveedor para gestionar sus productos</p>
-        </div>
+      {/* Header */}
+      <header
+        style={{
+          background: "linear-gradient(135deg, #1e293b 0%, #0f172a 100%)",
+          padding: "2rem 1rem",
+          borderBottom: "2px solid #3b82f6",
+          textAlign: "center",
+        }}
+      >
+        <h1 style={{ fontSize: "2.5rem", marginBottom: "0.5rem" }}>🏭 Planeta Once - Admin</h1>
+        <p style={{ color: "#94a3b8", fontSize: "1.1rem" }}>Gestiona los depósitos</p>
       </header>
 
+      {/* Main Content */}
       <main style={{ maxWidth: "1200px", margin: "0 auto", padding: "3rem 1rem" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "2rem" }}>
-          {suppliers.map((supplier) => (
-            <Link key={supplier.name} href={supplier.href} style={{ textDecoration: "none" }}>
+        {/* Botón de Reportes */}
+        <div style={{ marginBottom: "3rem", textAlign: "center" }}>
+          <Link href="/admin/reportes" style={{ textDecoration: "none" }}>
+            <button
+              style={{
+                padding: "1rem 2rem",
+                backgroundColor: "#8b5cf6",
+                color: "white",
+                border: "none",
+                borderRadius: "8px",
+                fontSize: "1.1rem",
+                fontWeight: "600",
+                cursor: "pointer",
+                transition: "all 0.3s ease",
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.backgroundColor = "#7c3aed";
+                e.currentTarget.style.transform = "scale(1.05)";
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.backgroundColor = "#8b5cf6";
+                e.currentTarget.style.transform = "scale(1)";
+              }}
+            >
+              📋 Ver Reportes de Scraping
+            </button>
+          </Link>
+        </div>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: "2rem",
+          }}
+        >
+          {deposits.map((deposit) => (
+            <Link
+              key={deposit.path}
+              href={deposit.path}
+              style={{
+                textDecoration: "none",
+                color: "inherit",
+              }}
+            >
               <div
                 style={{
-                  backgroundColor: "#1e293b",
-                  border: `2px solid ${supplier.color}30`,
-                  borderRadius: "1rem",
+                  background: `linear-gradient(135deg, ${deposit.color}20 0%, ${deposit.color}05 100%)`,
+                  border: `2px solid ${deposit.color}`,
+                  borderRadius: "12px",
                   padding: "2rem",
                   cursor: "pointer",
-                  transition: "all 0.3s",
-                  height: "100%",
+                  transition: "all 0.3s ease",
+                  textAlign: "center",
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = supplier.color;
-                  e.currentTarget.style.backgroundColor = "#0f172a";
-                  e.currentTarget.style.boxShadow = `0 0 30px ${supplier.color}40`;
+                onMouseOver={(e) => {
                   e.currentTarget.style.transform = "translateY(-8px)";
+                  e.currentTarget.style.boxShadow = `0 10px 30px ${deposit.color}30`;
                 }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = `${supplier.color}30`;
-                  e.currentTarget.style.backgroundColor = "#1e293b";
-                  e.currentTarget.style.boxShadow = "none";
+                onMouseOut={(e) => {
                   e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow = "none";
                 }}
               >
-                <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>{supplier.icon}</div>
-                <h2 style={{ margin: "0 0 0.5rem 0", fontSize: "1.5rem", color: supplier.color }}>
-                  {supplier.name}
+                <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>{deposit.icon}</div>
+                <h2 style={{ fontSize: "1.5rem", marginBottom: "0.5rem", color: deposit.color }}>
+                  {deposit.name}
                 </h2>
-                <p style={{ margin: "0 0 1.5rem 0", color: "#cbd5e1", fontSize: "0.875rem" }}>
-                  {supplier.description}
-                </p>
-                <div style={{ backgroundColor: "#334155", padding: "1rem", borderRadius: "0.5rem", marginBottom: "1.5rem" }}>
-                  <div style={{ fontSize: "0.75rem", color: "#94a3b8", marginBottom: "0.25rem" }}>Productos</div>
-                  <div style={{ fontSize: "2rem", fontWeight: "bold", color: supplier.color }}>
-                    {supplier.products.toLocaleString()}
-                  </div>
-                </div>
-                <div style={{ color: supplier.color, fontSize: "1.25rem", fontWeight: "bold" }}>
+                <p style={{ color: "#cbd5e1" }}>{deposit.description}</p>
+                <button
+                  style={{
+                    marginTop: "1rem",
+                    padding: "0.75rem 1.5rem",
+                    backgroundColor: deposit.color,
+                    color: "white",
+                    border: "none",
+                    borderRadius: "6px",
+                    cursor: "pointer",
+                    fontSize: "1rem",
+                    fontWeight: "600",
+                  }}
+                >
                   Abrir Panel →
-                </div>
+                </button>
               </div>
             </Link>
           ))}

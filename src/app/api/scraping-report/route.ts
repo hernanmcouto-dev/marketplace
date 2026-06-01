@@ -11,6 +11,7 @@ export async function GET(req: NextRequest) {
       impotekno: ".scraping-report-impotekno.json",
       sanjulian: ".scraping-report-sanjulian.json",
       nextcell: ".scraping-report-nextcell.json",
+      nodo: ".scraping-report-nodo.json",
     };
 
     const reportFile = reportFileMap[supplier];

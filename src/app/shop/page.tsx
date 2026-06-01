@@ -10,13 +10,14 @@ interface Product {
   units_per_package: number;
   image_url: string;
   category: string;
+  supplier?: "impotekno" | "sanjulian" | "nextcell" | "nodo";
 }
 
 export default function ShopPage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
-  const [supplier, setSupplier] = useState<"impotekno" | "sanjulian" | "nextcell">("impotekno");
+  const [supplier, setSupplier] = useState<"impotekno" | "sanjulian" | "nextcell" | "nodo" | "todos">("todos");
   const [sortBy, setSortBy] = useState<"nombre" | "precio-asc" | "precio-desc">("nombre");
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 1000000]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -28,14 +29,34 @@ export default function ShopPage() {
   const loadProducts = async () => {
     setLoading(true);
     try {
-      const filename =
-        supplier === "impotekno" ? "products.json" :
-        supplier === "sanjulian" ? "products-sanjulian.json" :
-        "products-nextcell.json";
-      const response = await fetch(`/${filename}`);
-      if (!response.ok) throw new Error("Error cargando productos");
-      const data = await response.json();
-      setProducts(data);
+      if (supplier === "todos") {
+        // Cargar todos los depósitos
+        const [azul, verde, rojo, amarillo] = await Promise.all([
+          fetch("/products.json").then(r => r.json()),
+          fetch("/products-sanjulian.json").then(r => r.json()),
+          fetch("/products-nextcell.json").then(r => r.json()),
+          fetch("/products-nodo.json").then(r => r.json()),
+        ]);
+
+        const allProducts = [
+          ...azul.map((p: any) => ({ ...p, supplier: "impotekno" as const })),
+          ...verde.map((p: any) => ({ ...p, supplier: "sanjulian" as const })),
+          ...rojo.map((p: any) => ({ ...p, supplier: "nextcell" as const })),
+          ...amarillo.map((p: any) => ({ ...p, supplier: "nodo" as const })),
+        ];
+
+        setProducts(allProducts);
+      } else {
+        const filename =
+          supplier === "impotekno" ? "products.json" :
+          supplier === "sanjulian" ? "products-sanjulian.json" :
+          supplier === "nextcell" ? "products-nextcell.json" :
+          "products-nodo.json";
+        const response = await fetch(`/${filename}`);
+        if (!response.ok) throw new Error("Error cargando productos");
+        const data = await response.json();
+        setProducts(data.map((p: any) => ({ ...p, supplier })));
+      }
     } catch (error) {
       console.error("Error:", error);
     } finally {
@@ -49,14 +70,54 @@ export default function ShopPage() {
     categoryCounts[p.category] = (categoryCounts[p.category] || 0) + 1;
   });
 
+  // Función de búsqueda mejorada
+  const searchProducts = (products: Product[], term: string) => {
+    if (!term.trim()) return products;
+
+    const lowerTerm = term.toLowerCase();
+    const searchWords = lowerTerm.split(/\s+/).filter(w => w.length > 0);
+
+    return products
+      .map((product) => {
+        const nameLower = product.name.toLowerCase();
+        const skuLower = product.sku.toLowerCase();
+
+        let score = 0;
+
+        // Búsqueda exacta en SKU (máxima prioridad)
+        if (skuLower === lowerTerm) {
+          score += 1000;
+        } else if (skuLower.includes(lowerTerm)) {
+          score += 500;
+        }
+
+        // Búsqueda de palabras completas en nombre
+        searchWords.forEach((word) => {
+          const words = nameLower.split(/[\s\-().,/]+/);
+          if (words.includes(word)) {
+            score += 100;
+          } else if (nameLower.includes(word)) {
+            // Subcadena en nombre (menor prioridad)
+            score += 10;
+          }
+        });
+
+        return { product, score };
+      })
+      .filter(({ score }) => score > 0)
+      .sort((a, b) => b.score - a.score)
+      .map(({ product }) => product);
+  };
+
   // Filtrar y ordenar productos
   let filtered = products.filter((p) => {
     const matchCategory = !selectedCategory || p.category === selectedCategory;
     const matchPrice = p.unit_price >= priceRange[0] && p.unit_price <= priceRange[1];
-    const matchSearch = p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                       p.sku.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchCategory && matchPrice && matchSearch;
+    return matchCategory && matchPrice;
   });
+
+  // Aplicar búsqueda mejorada
+  filtered = searchProducts(filtered, searchTerm);
 
   // Ordenar
   if (sortBy === "precio-asc") {
@@ -66,6 +127,13 @@ export default function ShopPage() {
   } else {
     filtered.sort((a, b) => a.name.localeCompare(b.name));
   }
+
+  const SUPPLIER_COLORS: Record<string, { name: string; color: string }> = {
+    impotekno: { name: "Depósito Azul", color: "#3b82f6" },
+    sanjulian: { name: "Depósito Verde", color: "#10b981" },
+    nextcell: { name: "Depósito Rojo", color: "#ef4444" },
+    nodo: { name: "Depósito Amarillo", color: "#fbbf24" },
+  };
 
   const COLORS: Record<string, string> = {
     "Hogar y Cocina": "#ef4444",
@@ -152,7 +220,7 @@ export default function ShopPage() {
             </label>
             <select
               value={supplier}
-              onChange={(e) => setSupplier(e.target.value as "impotekno" | "sanjulian" | "nextcell")}
+              onChange={(e) => setSupplier(e.target.value as "impotekno" | "sanjulian" | "nextcell" | "todos")}
               style={{
                 width: "100%",
                 padding: "0.75rem",
@@ -163,9 +231,11 @@ export default function ShopPage() {
                 cursor: "pointer",
               }}
             >
-              <option value="impotekno">Impotekno</option>
-              <option value="sanjulian">San Julián</option>
-              <option value="nextcell">NextCell</option>
+              <option value="todos">🏢 Todos los Depósitos</option>
+              <option value="impotekno">🔵 Depósito Azul</option>
+              <option value="sanjulian">🟢 Depósito Verde</option>
+              <option value="nextcell">🔴 Depósito Rojo</option>
+              <option value="nodo">🟡 Depósito Amarillo</option>
             </select>
           </div>
 
@@ -367,7 +437,7 @@ export default function ShopPage() {
                         position: "absolute",
                         top: "0.5rem",
                         right: "0.5rem",
-                        backgroundColor: COLORS[product.category] || "#3b82f6",
+                        backgroundColor: product.supplier ? SUPPLIER_COLORS[product.supplier]?.color || "#3b82f6" : "#3b82f6",
                         color: "white",
                         padding: "0.25rem 0.75rem",
                         borderRadius: "0.375rem",
@@ -375,7 +445,7 @@ export default function ShopPage() {
                         fontWeight: "600",
                       }}
                     >
-                      {product.category}
+                      {product.supplier ? SUPPLIER_COLORS[product.supplier]?.name.split(" ")[1] : "Depósito"}
                     </div>
                   </div>
 
@@ -406,7 +476,7 @@ export default function ShopPage() {
                         style={{
                           fontSize: "1.5rem",
                           fontWeight: "bold",
-                          color: COLORS[product.category] || "#3b82f6",
+                          color: product.supplier ? SUPPLIER_COLORS[product.supplier]?.color || "#3b82f6" : COLORS[product.category] || "#3b82f6",
                         }}
                       >
                         ${product.unit_price.toLocaleString("es-AR")}

@@ -11,13 +11,14 @@ interface Product {
   units_per_package: number;
   image_url: string;
   category: string;
+  supplier?: "impotekno" | "sanjulian" | "nextcell" | "nodo";
 }
 
 export default function CategoriasPage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
-  const [supplier, setSupplier] = useState<"impotekno" | "sanjulian" | "nextcell">("impotekno");
+  const [supplier, setSupplier] = useState<"impotekno" | "sanjulian" | "nextcell" | "nodo" | "todos">("todos");
 
   useEffect(() => {
     loadProducts();
@@ -26,14 +27,33 @@ export default function CategoriasPage() {
   const loadProducts = async () => {
     setLoading(true);
     try {
-      const filename =
-        supplier === "impotekno" ? "products.json" :
-        supplier === "sanjulian" ? "products-sanjulian.json" :
-        "products-nextcell.json";
-      const response = await fetch(`/${filename}`);
-      if (!response.ok) throw new Error("Error cargando productos");
-      const data = await response.json();
-      setProducts(data);
+      if (supplier === "todos") {
+        const [azul, verde, rojo, amarillo] = await Promise.all([
+          fetch("/products.json").then(r => r.json()),
+          fetch("/products-sanjulian.json").then(r => r.json()),
+          fetch("/products-nextcell.json").then(r => r.json()),
+          fetch("/products-nodo.json").then(r => r.json()),
+        ]);
+
+        const allProducts = [
+          ...azul.map((p: any) => ({ ...p, supplier: "impotekno" as const })),
+          ...verde.map((p: any) => ({ ...p, supplier: "sanjulian" as const })),
+          ...rojo.map((p: any) => ({ ...p, supplier: "nextcell" as const })),
+          ...amarillo.map((p: any) => ({ ...p, supplier: "nodo" as const })),
+        ];
+
+        setProducts(allProducts);
+      } else {
+        const filename =
+          supplier === "impotekno" ? "products.json" :
+          supplier === "sanjulian" ? "products-sanjulian.json" :
+          supplier === "nextcell" ? "products-nextcell.json" :
+          "products-nodo.json";
+        const response = await fetch(`/${filename}`);
+        if (!response.ok) throw new Error("Error cargando productos");
+        const data = await response.json();
+        setProducts(data.map((p: any) => ({ ...p, supplier: supplier as const })));
+      }
       setSelectedCategory(null);
     } catch (error) {
       console.error("Error:", error);
@@ -52,6 +72,13 @@ export default function CategoriasPage() {
   const filteredProducts = selectedCategory
     ? products.filter((p) => p.category === selectedCategory)
     : [];
+
+  const SUPPLIER_COLORS: Record<string, { name: string; color: string }> = {
+    impotekno: { name: "Depósito Azul", color: "#3b82f6" },
+    sanjulian: { name: "Depósito Verde", color: "#10b981" },
+    nextcell: { name: "Depósito Rojo", color: "#ef4444" },
+    nodo: { name: "Depósito Amarillo", color: "#fbbf24" },
+  };
 
   const COLORS: Record<string, string> = {
     "Hogar y Cocina": "#ef4444",
@@ -92,7 +119,7 @@ export default function CategoriasPage() {
         <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
           <select
             value={supplier}
-            onChange={(e) => setSupplier(e.target.value as "impotekno" | "sanjulian" | "nextcell")}
+            onChange={(e) => setSupplier(e.target.value as "impotekno" | "sanjulian" | "nextcell" | "nodo" | "todos")}
             style={{
               padding: "0.5rem",
               borderRadius: "0.375rem",
@@ -102,9 +129,11 @@ export default function CategoriasPage() {
               cursor: "pointer",
             }}
           >
-            <option value="impotekno">Impotekno</option>
-            <option value="sanjulian">San Julián</option>
-            <option value="nextcell">NextCell</option>
+            <option value="todos">🏢 Todos los Depósitos</option>
+            <option value="impotekno">🔵 Depósito Azul</option>
+            <option value="sanjulian">🟢 Depósito Verde</option>
+            <option value="nextcell">🔴 Depósito Rojo</option>
+            <option value="nodo">🟡 Depósito Amarillo</option>
           </select>
         </div>
       </nav>
@@ -212,6 +241,7 @@ export default function CategoriasPage() {
                         height: "180px",
                         backgroundColor: "#f3f4f6",
                         overflow: "hidden",
+                        position: "relative",
                       }}
                     >
                       <img
@@ -227,6 +257,21 @@ export default function CategoriasPage() {
                             "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='180'%3E%3Crect fill='%23e5e7eb' width='200' height='180'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%239ca3af'%3ESin imagen%3C/text%3E%3C/svg%3E";
                         }}
                       />
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: "0.5rem",
+                          right: "0.5rem",
+                          backgroundColor: product.supplier ? SUPPLIER_COLORS[product.supplier]?.color || "#3b82f6" : "#3b82f6",
+                          color: "white",
+                          padding: "0.25rem 0.5rem",
+                          borderRadius: "0.375rem",
+                          fontSize: "0.65rem",
+                          fontWeight: "600",
+                        }}
+                      >
+                        {product.supplier ? SUPPLIER_COLORS[product.supplier]?.name.split(" ")[1] : "Depósito"}
+                      </div>
                     </div>
 
                     {/* Contenido */}
@@ -256,7 +301,7 @@ export default function CategoriasPage() {
                           style={{
                             fontSize: "1.25rem",
                             fontWeight: "bold",
-                            color: COLORS[product.category] || "#111827",
+                            color: product.supplier ? SUPPLIER_COLORS[product.supplier]?.color || "#111827" : COLORS[product.category] || "#111827",
                           }}
                         >
                           ${product.unit_price.toLocaleString("es-AR")}
