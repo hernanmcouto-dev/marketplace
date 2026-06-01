@@ -16,7 +16,7 @@ interface Product {
 
 export default function ClientePage() {
   const router = useRouter();
-  const { itemCount } = useCart();
+  const { itemCount, addToCart } = useCart();
   const [products, setProducts] = useState<Product[]>([]);
   const [allProducts, setAllProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
@@ -27,6 +27,7 @@ export default function ClientePage() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [showModal, setShowModal] = useState(false);
   const [showCart, setShowCart] = useState(false);
+  const [selectedQuantities, setSelectedQuantities] = useState<Record<string, number>>({});
 
   useEffect(() => {
     loadProducts();
@@ -311,85 +312,217 @@ export default function ClientePage() {
                 marginBottom: "2rem",
               }}
             >
-              {products.map((product) => (
-                <div
-                  key={product.sku}
-                  onClick={() => openProductModal(product)}
-                  style={{
-                    backgroundColor: "white",
-                    border: "1px solid #e5e7eb",
-                    borderRadius: "0.5rem",
-                    padding: "1rem",
-                    textAlign: "center",
-                    transition: "box-shadow 0.2s",
-                    cursor: "pointer",
-                  }}
-                  onMouseOver={(e) => (e.currentTarget.style.boxShadow = "0 10px 15px rgba(0,0,0,0.1)")}
-                  onMouseOut={(e) => (e.currentTarget.style.boxShadow = "none")}
-                >
+              {products.map((product) => {
+                const quantity = selectedQuantities[product.sku] || 0;
+                const subtotal = product.unit_price * quantity;
+
+                return (
                   <div
+                    key={product.sku}
                     style={{
-                      backgroundColor: "#f3f4f6",
-                      height: "150px",
-                      borderRadius: "0.375rem",
-                      marginBottom: "1rem",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: "3rem",
-                      overflow: "hidden",
+                      backgroundColor: "white",
+                      border: "1px solid #e5e7eb",
+                      borderRadius: "0.5rem",
+                      padding: "1rem",
+                      textAlign: "center",
+                      transition: "box-shadow 0.2s",
                     }}
+                    onMouseOver={(e) => (e.currentTarget.style.boxShadow = "0 10px 15px rgba(0,0,0,0.1)")}
+                    onMouseOut={(e) => (e.currentTarget.style.boxShadow = "none")}
                   >
-                    {product.image_url ? (
-                      <img
-                        src={product.image_url}
-                        alt={product.name}
-                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                        onError={(e) => {
-                          (e.target as HTMLImageElement).style.display = "none";
-                          const parent = (e.target as HTMLImageElement).parentElement;
-                          if (parent) parent.textContent = "📦";
-                        }}
-                      />
-                    ) : (
-                      "📦"
-                    )}
-                  </div>
-                  <p style={{ fontSize: "0.75rem", color: "#9ca3af", margin: "0 0 0.5rem 0" }}>
-                    {product.sku}
-                  </p>
-                  <h3 style={{ margin: "0 0 0.5rem 0", fontSize: "0.95rem", fontWeight: "600", minHeight: "2.5rem" }}>
-                    {product.name}
-                  </h3>
-                  <p style={{ color: "#10b981", margin: "0.5rem 0", fontSize: "1.25rem", fontWeight: "bold" }}>
-                    ${product.unit_price.toLocaleString("es-AR")}
-                  </p>
-                  {product.units_per_package && (
-                    <p style={{ color: "#6b7280", fontSize: "0.75rem", margin: "0.5rem 0" }}>
-                      {product.units_per_package} unidades por bulto
+                    <div
+                      style={{
+                        backgroundColor: "#f3f4f6",
+                        height: "150px",
+                        borderRadius: "0.375rem",
+                        marginBottom: "1rem",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontSize: "3rem",
+                        overflow: "hidden",
+                        cursor: "pointer",
+                      }}
+                      onClick={() => openProductModal(product)}
+                    >
+                      {product.image_url ? (
+                        <img
+                          src={product.image_url}
+                          alt={product.name}
+                          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).style.display = "none";
+                            const parent = (e.target as HTMLImageElement).parentElement;
+                            if (parent) parent.textContent = "📦";
+                          }}
+                        />
+                      ) : (
+                        "📦"
+                      )}
+                    </div>
+                    <p style={{ fontSize: "0.75rem", color: "#9ca3af", margin: "0 0 0.5rem 0" }}>
+                      {product.sku}
                     </p>
-                  )}
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      openProductModal(product);
-                    }}
-                    style={{
-                      width: "100%",
-                      backgroundColor: "#3b82f6",
-                      color: "white",
-                      border: "none",
-                      padding: "0.5rem",
-                      borderRadius: "0.375rem",
-                      cursor: "pointer",
-                      marginTop: "0.75rem",
-                      fontWeight: "500",
-                    }}
-                  >
-                    🛒 Ver detalles
-                  </button>
-                </div>
-              ))}
+                    <h3
+                      style={{
+                        margin: "0 0 0.5rem 0",
+                        fontSize: "0.95rem",
+                        fontWeight: "600",
+                        minHeight: "2.5rem",
+                        cursor: "pointer",
+                      }}
+                      onClick={() => openProductModal(product)}
+                    >
+                      {product.name}
+                    </h3>
+                    <p style={{ color: "#10b981", margin: "0.5rem 0", fontSize: "1.25rem", fontWeight: "bold" }}>
+                      ${product.unit_price.toLocaleString("es-AR")}
+                    </p>
+                    {product.units_per_package && (
+                      <p style={{ color: "#6b7280", fontSize: "0.75rem", margin: "0.5rem 0" }}>
+                        {product.units_per_package} unidades por bulto
+                      </p>
+                    )}
+
+                    <div style={{ marginTop: "1rem", paddingTop: "1rem", borderTop: "1px solid #e5e7eb" }}>
+                      <label style={{ display: "block", fontSize: "0.75rem", color: "#6b7280", marginBottom: "0.5rem" }}>
+                        Cantidad
+                      </label>
+                      <div
+                        style={{
+                          display: "flex",
+                          gap: "0.5rem",
+                          alignItems: "center",
+                          marginBottom: "0.75rem",
+                        }}
+                      >
+                        <button
+                          onClick={() =>
+                            setSelectedQuantities({
+                              ...selectedQuantities,
+                              [product.sku]: Math.max(0, quantity - 1),
+                            })
+                          }
+                          style={{
+                            padding: "0.4rem 0.6rem",
+                            backgroundColor: "#f3f4f6",
+                            border: "1px solid #d1d5db",
+                            borderRadius: "0.25rem",
+                            cursor: "pointer",
+                            fontSize: "1rem",
+                            fontWeight: "600",
+                            color: "#1f2937",
+                          }}
+                        >
+                          −
+                        </button>
+                        <input
+                          type="number"
+                          min="0"
+                          value={quantity}
+                          onChange={(e) =>
+                            setSelectedQuantities({
+                              ...selectedQuantities,
+                              [product.sku]: Math.max(0, parseInt(e.target.value) || 0),
+                            })
+                          }
+                          style={{
+                            width: "3rem",
+                            padding: "0.4rem",
+                            border: "1px solid #d1d5db",
+                            borderRadius: "0.25rem",
+                            textAlign: "center",
+                            fontSize: "0.95rem",
+                            fontWeight: "600",
+                          }}
+                        />
+                        <button
+                          onClick={() =>
+                            setSelectedQuantities({
+                              ...selectedQuantities,
+                              [product.sku]: quantity + 1,
+                            })
+                          }
+                          style={{
+                            padding: "0.4rem 0.6rem",
+                            backgroundColor: "#f3f4f6",
+                            border: "1px solid #d1d5db",
+                            borderRadius: "0.25rem",
+                            cursor: "pointer",
+                            fontSize: "1rem",
+                            fontWeight: "600",
+                            color: "#1f2937",
+                          }}
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      {quantity > 0 && (
+                        <p style={{ fontSize: "0.85rem", color: "#6b7280", margin: "0.5rem 0" }}>
+                          Subtotal: ${subtotal.toLocaleString("es-AR")}
+                        </p>
+                      )}
+
+                      <button
+                        onClick={() => {
+                          if (quantity > 0) {
+                            addToCart(
+                              {
+                                sku: product.sku,
+                                name: product.name,
+                                unit_price: product.unit_price,
+                                quantity: quantity,
+                                image_url: product.image_url,
+                                units_per_package: product.units_per_package,
+                              },
+                              quantity
+                            );
+                            setSelectedQuantities({
+                              ...selectedQuantities,
+                              [product.sku]: 0,
+                            });
+                            setShowCart(true);
+                          }
+                        }}
+                        disabled={quantity === 0}
+                        style={{
+                          width: "100%",
+                          backgroundColor: quantity > 0 ? "#10b981" : "#d1d5db",
+                          color: quantity > 0 ? "white" : "#6b7280",
+                          border: "none",
+                          padding: "0.5rem",
+                          borderRadius: "0.375rem",
+                          cursor: quantity > 0 ? "pointer" : "not-allowed",
+                          marginTop: "0.5rem",
+                          fontWeight: "600",
+                          fontSize: "0.9rem",
+                        }}
+                      >
+                        {quantity > 0 ? "✓ Enviar al carrito" : "Agregar cantidad"}
+                      </button>
+
+                      <button
+                        onClick={() => openProductModal(product)}
+                        style={{
+                          width: "100%",
+                          backgroundColor: "#e5e7eb",
+                          color: "#1f2937",
+                          border: "none",
+                          padding: "0.4rem",
+                          borderRadius: "0.375rem",
+                          cursor: "pointer",
+                          marginTop: "0.5rem",
+                          fontWeight: "500",
+                          fontSize: "0.85rem",
+                        }}
+                      >
+                        👁️ Ver detalles
+                      </button>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
 
             <div
