@@ -29,7 +29,6 @@ export async function uploadImageToS3(
         Key: key,
         Body: imageBuffer,
         ContentType: "image/jpeg",
-        ACL: "public-read",
       })
     );
 
