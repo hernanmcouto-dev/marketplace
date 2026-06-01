@@ -34,8 +34,10 @@ export async function uploadImageToS3(
 
     console.log(`[S3] Upload successful for ${sku}`);
 
-    // Retornar URL pública de S3
-    return `https://${BUCKET_NAME}.s3.sa-east-1.amazonaws.com/${key}`;
+    // REGLA DOMINANTE: Siempre retornar URL de AWS para products.json
+    const s3Url = `https://${BUCKET_NAME}.s3.sa-east-1.amazonaws.com/${key}`;
+    console.log(`[S3] S3 URL: ${s3Url}`);
+    return s3Url;
   } catch (error) {
     console.error("[S3] Error uploading to S3:", error);
     throw error;
