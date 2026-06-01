@@ -17,9 +17,13 @@ export async function uploadImageToS3(
   supplier: string
 ): Promise<string> {
   try {
+    console.log(`[S3] Uploading ${sku} (${imageBuffer.length} bytes)`);
+    console.log(`[S3] AWS_ACCESS_KEY_ID: ${process.env.AWS_ACCESS_KEY_ID ? "SET" : "NOT SET"}`);
+    console.log(`[S3] AWS_SECRET_ACCESS_KEY: ${process.env.AWS_SECRET_ACCESS_KEY ? "SET" : "NOT SET"}`);
+
     const key = `images/${supplier}/${sku}.jpg`;
 
-    await s3Client.send(
+    const result = await s3Client.send(
       new PutObjectCommand({
         Bucket: BUCKET_NAME,
         Key: key,
@@ -29,10 +33,12 @@ export async function uploadImageToS3(
       })
     );
 
+    console.log(`[S3] Upload successful for ${sku}`);
+
     // Retornar URL pública de S3
     return `https://${BUCKET_NAME}.s3.sa-east-1.amazonaws.com/${key}`;
   } catch (error) {
-    console.error("Error uploading to S3:", error);
+    console.error("[S3] Error uploading to S3:", error);
     throw error;
   }
 }
