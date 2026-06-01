@@ -66,7 +66,6 @@ function extractProducts(html: string): any[] {
   const products: any[] = [];
   const invalidSkus = ["inicio", "indice", "index", "header", "footer", "nav", "menu"];
 
-  // Buscar bloques de productos: <a name="SKU"> seguido de <h1>NOMBRE</h1> y precio en <strong>
   const productBlockRegex = /<a\s+(?:name|id)="([^"]+)"[^>]*>[\s\S]*?<h1>([^<]+)<\/h1>[\s\S]*?Codigo:\s*([^\<\n]+)[\s\S]*?<strong[^>]*>[\s\S]*?\$\s*([0-9,]+)/g;
 
   let match;
@@ -76,14 +75,14 @@ function extractProducts(html: string): any[] {
     const priceStr = match[4].replace(/,/g, "").trim();
     const unit_price = parseInt(priceStr) || 0;
 
-    // Excluir SKUs inválidos (navegación, anclas especiales)
     if (sku && name && unit_price > 0 && !invalidSkus.includes(sku.toLowerCase())) {
+      const cleanSku = sku.replace(/^PAS-/, "");
       products.push({
-        sku,
+        sku: cleanSku,
         name,
         unit_price,
         units_per_package: 1,
-        image_url: `https://sanjulian99.com/fotos/${sku}.jpg`,
+        image_url: `https://sanjulian99.com/fotos/${cleanSku}.jpg`,
       });
     }
   }
@@ -96,9 +95,7 @@ export async function POST(req: NextRequest) {
     async start(controller) {
       try {
         sendLog(controller, "🚀 Iniciando scraper de San Julián...");
-
-        const products: any[] = [];
-        const categoryIds = CATEGORIES;
+        sendLog(controller, "🔐 Realizando login...");
 
         const cookieJar = new CookieJar();
         const client = got.extend({
@@ -108,7 +105,6 @@ export async function POST(req: NextRequest) {
           },
         });
 
-        sendLog(controller, "🔐 Haciendo login...");
         try {
           await client.post("https://sanjulian99.com/index.php", {
             form: {
@@ -118,18 +114,14 @@ export async function POST(req: NextRequest) {
           });
           sendLog(controller, "✓ Login exitoso");
         } catch (err: any) {
-          sendLog(controller, `⚠️ Error en login: ${err.message}`);
+          sendLog(controller, `⚠️ Login falló: ${err.message}`);
         }
 
-        for (let i = 0; i < categoryIds.length; i++) {
-          const categoryId = categoryIds[i];
+        const allProducts: any[] = [];
 
-          sendProgress(
-            controller,
-            i,
-            categoryIds.length,
-            `Extrayendo categoría ${categoryId}...`
-          );
+        for (let i = 0; i < CATEGORIES.length; i++) {
+          const categoryId = CATEGORIES[i];
+          sendProgress(controller, i, CATEGORIES.length, `Extrayendo categoría ${categoryId}...`);
 
           try {
             const response = await client.get(
@@ -137,54 +129,31 @@ export async function POST(req: NextRequest) {
             );
 
             const html = response.body;
-            const categoryProducts = extractProducts(html);
-            products.push(...categoryProducts);
-            sendLog(
-              controller,
-              `✓ Categoría ${categoryId}: ${categoryProducts.length} productos`
-            );
-          } catch (err: any) {
-            sendLog(
-              controller,
-              `⚠️ Error en categoría ${categoryId}: ${err.message}`
-            );
-          }
+            const products = extractProducts(html);
 
-          await new Promise((r) => setTimeout(r, 300));
+            if (products.length > 0) {
+              sendLog(controller, `✓ Categoría ${categoryId}: ${products.length} productos`);
+              allProducts.push(...products);
+            } else {
+              sendLog(controller, `⚠️ Categoría ${categoryId}: Sin productos`);
+            }
+
+            await new Promise((r) => setTimeout(r, 300));
+          } catch (err: any) {
+            sendLog(controller, `❌ Error en categoría ${categoryId}: ${err.message}`);
+          }
         }
 
-        sendLog(controller, `📊 Total extraído: ${products.length} productos`);
-        sendProgress(controller, categoryIds.length, categoryIds.length, "Procesando productos...");
-
-        if (products.length === 0) {
-          sendError(
-            controller,
-            "No se extrajeron productos del sitio"
-          );
+        if (allProducts.length === 0) {
+          sendError(controller, "No se extrajeron productos. Verifica la clave de acceso.");
           controller.close();
           return;
         }
 
-        // Transformar productos con margen del 10% y categorización
-        const transformedProducts = products.map((p) => {
-          const categorization = categorizeProduct(p.name);
-          return {
-            sku: `PAS-${p.sku}`,
-            name: p.name,
-            unit_price: Math.round(p.unit_price * 1.1), // 10% margen único
-            units_per_package: p.units_per_package,
-            image_url: p.image_url,
-            category: categorization.primary,
-          };
-        });
+        sendLog(controller, `📊 Total extraído: ${allProducts.length} productos`);
+        sendProgress(controller, CATEGORIES.length, CATEGORIES.length, "Procesando productos...");
 
-        sendLog(controller, "🖼️ Descargando imágenes a S3...");
-
-        const filePath = path.join(
-          process.cwd(),
-          "public",
-          "products-sanjulian.json"
-        );
+        const filePath = path.join(process.cwd(), "public", "products-sanjulian.json");
 
         // Leer productos anteriores para comparación
         let previousProducts: any[] = [];
@@ -196,15 +165,33 @@ export async function POST(req: NextRequest) {
           sendLog(controller, "⚠️ No se pudo leer el archivo anterior");
         }
 
-        // Comparar productos
+        const previousProductsMap = new Map(previousProducts.map(p => [p.sku, p]));
+
+        const transformedProducts = allProducts.map((p) => {
+          const sku = `PAS-${p.sku}`;
+          const previousProduct = previousProductsMap.get(sku);
+
+          const category = previousProduct?.category || categorizeProduct(p.name).primary;
+
+          return {
+            sku,
+            name: p.name,
+            unit_price: Math.round(p.unit_price * 1.1),
+            units_per_package: p.units_per_package,
+            image_url: p.image_url,
+            category,
+          };
+        });
+
+        sendLog(controller, "🖼️ Descargando imágenes a S3...");
+
         const previousSkus = new Set(previousProducts.map(p => p.sku));
         const currentSkus = new Set(transformedProducts.map(p => p.sku));
 
         const newSkus = new Set(Array.from(currentSkus).filter(sku => !previousSkus.has(sku)));
-        const removedSkus = Array.from(previousSkus).filter(sku => !currentSkus.has(sku));
+        const removedSkus = new Set(Array.from(previousSkus).filter(sku => !currentSkus.has(sku)));
 
-        // Descargar y subir imágenes de TODOS los productos
-        const productsWithProxy = await Promise.all(
+        const productsWithImages = await Promise.all(
           transformedProducts.map(async (product) => {
             try {
               const imageResponse = await got(product.image_url);
@@ -215,8 +202,8 @@ export async function POST(req: NextRequest) {
                 ...product,
                 image_url: s3Url,
               };
-            } catch (err) {
-              sendLog(controller, `⚠️ Error descargando imagen ${product.sku}`);
+            } catch (err: any) {
+              sendLog(controller, `⚠️ Error ${product.sku}: ${err.message || err}`);
               return {
                 ...product,
                 image_url: ""
@@ -227,10 +214,9 @@ export async function POST(req: NextRequest) {
 
         sendLog(controller, "💾 Guardando productos y generando informe...");
 
-        // Contar imágenes
         let newImages = 0;
         let cachedImages = 0;
-        productsWithProxy.forEach(p => {
+        productsWithImages.forEach(p => {
           if (p.image_url.includes("amazonaws.com")) {
             newImages++;
           } else if (!p.image_url.includes("http")) {
@@ -238,26 +224,31 @@ export async function POST(req: NextRequest) {
           }
         });
 
-        fs.writeFileSync(
-          filePath,
-          JSON.stringify(productsWithProxy, null, 2),
-          "utf-8"
-        );
+        fs.writeFileSync(filePath, JSON.stringify(productsWithImages, null, 2), "utf-8");
 
-        // Enviar informe
+        const newProductsDetails = productsWithImages.filter(p => newSkus.has(p.sku));
+        const removedProductsDetails = previousProducts.filter(p => removedSkus.has(p.sku));
+
         const report: ScraperReport = {
-          newProducts: newSkus.length,
+          newProducts: newSkus.size,
           newImages,
           cachedImages,
-          removedProducts: removedSkus,
-          totalProducts: productsWithProxy.length,
+          removedProducts: Array.from(removedSkus),
+          totalProducts: productsWithImages.length,
           timestamp: new Date().toISOString(),
         };
 
+        const reportFilePath = path.join(process.cwd(), "public", ".scraping-report-sanjulian.json");
+        fs.writeFileSync(reportFilePath, JSON.stringify({
+          report,
+          newProductsDetails,
+          removedProductsDetails,
+          updatedCount: productsWithImages.length - newSkus.size - removedSkus.size,
+        }, null, 2), "utf-8");
+
         sendLog(controller, `✅ Guardado en: public/products-sanjulian.json`);
-        sendLog(controller, `📊 Informe generado`);
-        sendReport(controller, report);
-        sendComplete(controller, productsWithProxy.length);
+        sendLog(controller, `✓ ${newSkus.size} nuevos, ${removedSkus.size} eliminados`);
+        sendComplete(controller, productsWithImages.length);
         controller.close();
       } catch (err: any) {
         sendError(controller, err.message || "Error desconocido");

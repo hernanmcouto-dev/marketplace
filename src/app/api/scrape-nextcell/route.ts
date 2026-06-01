@@ -149,7 +149,7 @@ export async function POST(req: NextRequest) {
 
         sendLog(controller, "🖼️ Descargando imágenes a S3...");
 
-        const productsWithProxy = await Promise.all(
+        const productsWithImages = await Promise.all(
           transformedProducts.map(async (product) => {
             if (!product.image_url) {
               return product;
@@ -173,6 +173,8 @@ export async function POST(req: NextRequest) {
             }
           })
         );
+
+        const productsWithProxy = productsWithImages;
 
         sendLog(controller, "💾 Guardando productos...");
 
