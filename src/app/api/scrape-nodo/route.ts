@@ -208,7 +208,7 @@ export async function POST(request: NextRequest) {
                 p.image_url = await uploadImageToS3(imageBuffer, p.sku, SUPPLIER_CODE.toLowerCase());
                 descargadas++;
               } catch (e) {
-                // continuar sin imagen
+                p.image_url = "";
               }
             }
           });

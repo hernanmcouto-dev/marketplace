@@ -21,7 +21,7 @@ export async function uploadImageToS3(
     console.log(`[S3] AWS_ACCESS_KEY_ID: ${process.env.AWS_ACCESS_KEY_ID ? "SET" : "NOT SET"}`);
     console.log(`[S3] AWS_SECRET_ACCESS_KEY: ${process.env.AWS_SECRET_ACCESS_KEY ? "SET" : "NOT SET"}`);
 
-    const key = `images/${supplier}/${sku}.jpg`;
+    const key = `${sku}.jpg`;
 
     const result = await s3Client.send(
       new PutObjectCommand({

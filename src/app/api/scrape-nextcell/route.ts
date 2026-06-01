@@ -166,7 +166,10 @@ export async function POST(req: NextRequest) {
               };
             } catch (err: any) {
               sendLog(controller, `⚠️ Error descargando imagen ${product.sku}: ${err.message}`);
-              return product;
+              return {
+                ...product,
+                image_url: ""
+              };
             }
           })
         );

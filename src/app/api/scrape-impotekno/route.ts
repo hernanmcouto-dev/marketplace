@@ -230,7 +230,10 @@ export async function POST(req: NextRequest) {
               };
             } catch (err: any) {
               sendLog(controller, `⚠️ Error ${product.sku}: ${err.message || err}`);
-              return product;
+              return {
+                ...product,
+                image_url: ""
+              };
             }
           })
         );
