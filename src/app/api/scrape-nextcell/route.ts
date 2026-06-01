@@ -8,7 +8,7 @@ export const maxDuration = 600;
 
 const API_BASE = "https://nextcell.com.ar/wp-json/wc/store/products";
 const ITEMS_PER_PAGE = 20;
-const MARGIN = 1.1; // 10% margen
+const MARGIN = 1.2; // 20% margen
 
 function sendLog(controller: ReadableStreamDefaultController, message: string) {
   const log = JSON.stringify({ type: "log", message });
