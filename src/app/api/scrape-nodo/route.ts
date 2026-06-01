@@ -5,7 +5,7 @@ import { chromium } from "playwright";
 import { downloadAndCacheImage } from "@/lib/image-registry";
 import { categorizeProduct } from "@/lib/product-categorizer";
 
-export const maxDuration = 600;
+export const maxDuration = 300;
 
 const BASE_URL = "https://www.nodourquiza.com";
 const SUPPLIER_CODE = "NDO";

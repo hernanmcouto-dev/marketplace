@@ -15,7 +15,7 @@ interface ScraperReport {
   timestamp: string;
 }
 
-export const maxDuration = 600;
+export const maxDuration = 300;
 
 const CATEGORIES = [1, 2, 9, 10, 18, 22, 23, 29, 33, 44, 48, 51, 56, 61, 73, 78, 82, 83, 84, 85, 87, 88];
 

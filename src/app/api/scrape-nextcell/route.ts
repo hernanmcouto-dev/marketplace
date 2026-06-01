@@ -5,7 +5,7 @@ import got from "got";
 import { getImageUrl } from "@/lib/image-registry";
 import { categorizeProduct } from "@/lib/product-categorizer";
 
-export const maxDuration = 600;
+export const maxDuration = 300;
 
 const API_BASE = "https://nextcell.com.ar/wp-json/wc/store/products";
 const ITEMS_PER_PAGE = 20;
