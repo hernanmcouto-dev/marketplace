@@ -174,16 +174,26 @@ export async function POST(req: NextRequest) {
         sendLog(controller, `📊 Total extraído: ${allProducts.length} productos`);
         sendProgress(controller, CATEGORIES.length, CATEGORIES.length, "Procesando productos...");
 
-        // Transformar productos con prefijo, margen del 15% y categorización
+        // Crear mapa de productos anteriores por SKU para referencia rápida
+        const previousProductsMap = new Map(previousProducts.map(p => [p.sku, p]));
+
+        // Transformar productos con prefijo, margen del 15%
+        // Categorizar solo NUEVOS, mantener categoría de EXISTENTES
         const transformedProducts = allProducts.map((p) => {
-          const categorization = categorizeProduct(p.name);
+          const sku = `SAR-${p.sku}`;
+          const previousProduct = previousProductsMap.get(sku);
+
+          // Si ya existe, mantener su categoría anterior
+          // Si es nuevo, categorizar automáticamente
+          const category = previousProduct?.category || categorizeProduct(p.name).primary;
+
           return {
-            sku: `SAR-${p.sku}`,
+            sku,
             name: p.name,
             unit_price: Math.round(p.unit_price * 1.15), // 15% margen único
             units_per_package: p.units_per_package,
             image_url: p.image_url,
-            category: categorization.primary,
+            category,
           };
         });
 
@@ -244,7 +254,10 @@ export async function POST(req: NextRequest) {
         // Guardar productos
         fs.writeFileSync(filePath, JSON.stringify(productsWithProxy, null, 2), "utf-8");
 
-        // Enviar informe
+        // Generar informe pero NO enviarlo automáticamente
+        const newProductsDetails = productsWithProxy.filter(p => newSkus.has(p.sku));
+        const removedProductsDetails = previousProducts.filter(p => removedSkus.has(p.sku));
+
         const report: ScraperReport = {
           newProducts: newSkus.length,
           newImages,
@@ -254,9 +267,17 @@ export async function POST(req: NextRequest) {
           timestamp: new Date().toISOString(),
         };
 
+        // Guardar reporte en archivo para acceso posterior
+        const reportFilePath = path.join(process.cwd(), "public", ".scraping-report-impotekno.json");
+        fs.writeFileSync(reportFilePath, JSON.stringify({
+          report,
+          newProductsDetails,
+          removedProductsDetails,
+          updatedCount: productsWithProxy.length - newSkus.length - removedSkus.length,
+        }, null, 2), "utf-8");
+
         sendLog(controller, `✅ Guardado en: public/products.json`);
-        sendLog(controller, `📊 Informe generado`);
-        sendReport(controller, report);
+        sendLog(controller, `✓ ${newSkus.length} nuevos, ${removedSkus.length} eliminados`);
         sendComplete(controller, productsWithProxy.length);
         controller.close();
       } catch (err: any) {

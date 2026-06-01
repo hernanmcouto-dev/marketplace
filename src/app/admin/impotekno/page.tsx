@@ -13,6 +13,10 @@ export default function ImpoteknoPanel() {
   const [logs, setLogs] = useState([]);
   const [showAnalysisDetails, setShowAnalysisDetails] = useState(null);
   const [categorizingProducts, setCategorizingProducts] = useState(false);
+  const [changingCategory, setChangingCategory] = useState(null);
+  const [newCategory, setNewCategory] = useState("");
+  const [scrapingReport, setScrapingReport] = useState(null);
+  const [showScrapingReport, setShowScrapingReport] = useState(false);
 
   useEffect(() => {
     loadProducts();
@@ -35,6 +39,7 @@ export default function ImpoteknoPanel() {
   const handleScrape = async () => {
     setLoading(true);
     setLogs([]);
+    setScrapingReport(null);
     addLog("Iniciando scraping de Impotekno...");
 
     try {
@@ -63,10 +68,47 @@ export default function ImpoteknoPanel() {
 
       addLog("✅ Scraping completado", "complete");
       loadProducts();
+
+      // Cargar reporte después del scraping
+      const reportResponse = await fetch("/api/scraping-report?supplier=impotekno");
+      if (reportResponse.ok) {
+        const report = await reportResponse.json();
+        setScrapingReport(report);
+      }
     } catch (err) {
       addLog(`Error: ${err.message}`, "error");
     } finally {
       setLoading(false);
+    }
+  };
+
+  const updateProductCategory = async () => {
+    if (!changingCategory || !newCategory) return;
+
+    try {
+      const response = await fetch("/api/update-product-category", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          sku: changingCategory.sku,
+          category: newCategory,
+          supplier: "impotekno",
+        }),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        setProducts((prev) =>
+          prev.map((p) =>
+            p.sku === changingCategory.sku ? { ...p, category: newCategory } : p
+          )
+        );
+        addLog(`✅ ${result.message}`);
+        setChangingCategory(null);
+        setNewCategory("");
+      }
+    } catch (error) {
+      addLog(`Error: ${error.message}`, "error");
     }
   };
 
@@ -250,35 +292,61 @@ export default function ImpoteknoPanel() {
                   <tr style={{ borderBottom: "2px solid #334155" }}>
                     <th style={{ padding: "1rem", textAlign: "left" }}>SKU</th>
                     <th style={{ padding: "1rem", textAlign: "left" }}>Nombre</th>
+                    <th style={{ padding: "1rem", textAlign: "left" }}>Categoría</th>
                     <th style={{ padding: "1rem", textAlign: "right" }}>Precio</th>
-                    <th style={{ padding: "1rem", textAlign: "center" }}>Editar</th>
+                    <th style={{ padding: "1rem", textAlign: "center" }}>Acciones</th>
                   </tr>
                 </thead>
                 <tbody>
                   {filteredProducts.slice(0, 50).map((product) => (
                     <tr key={product.sku} style={{ borderBottom: "1px solid #334155" }}>
                       <td style={{ padding: "1rem" }}>{product.sku}</td>
-                      <td style={{ padding: "1rem", maxWidth: "300px" }}>
-                        {product.name.substring(0, 40)}...
+                      <td style={{ padding: "1rem", maxWidth: "200px" }}>
+                        {product.name.substring(0, 35)}...
+                      </td>
+                      <td style={{ padding: "1rem", fontSize: "0.875rem", color: "#cbd5e1" }}>
+                        {product.category || "Sin categorizar"}
                       </td>
                       <td style={{ padding: "1rem", textAlign: "right" }}>${product.unit_price}</td>
                       <td style={{ padding: "1rem", textAlign: "center" }}>
-                        <button
-                          onClick={() => {
-                            setEditingProduct(product);
-                            setEditPrice(product.unit_price.toString());
-                          }}
-                          style={{
-                            padding: "0.5rem 1rem",
-                            backgroundColor: "#3b82f6",
-                            color: "white",
-                            border: "none",
-                            borderRadius: "0.25rem",
-                            cursor: "pointer",
-                          }}
-                        >
-                          ✏️ Editar
-                        </button>
+                        <div style={{ display: "flex", gap: "0.5rem", justifyContent: "center" }}>
+                          <button
+                            onClick={() => {
+                              setEditingProduct(product);
+                              setEditPrice(product.unit_price.toString());
+                            }}
+                            title="Editar precio"
+                            style={{
+                              padding: "0.4rem 0.8rem",
+                              backgroundColor: "#3b82f6",
+                              color: "white",
+                              border: "none",
+                              borderRadius: "0.25rem",
+                              cursor: "pointer",
+                              fontSize: "0.875rem",
+                            }}
+                          >
+                            💰
+                          </button>
+                          <button
+                            onClick={() => {
+                              setChangingCategory(product);
+                              setNewCategory(product.category || "");
+                            }}
+                            title="Cambiar categoría"
+                            style={{
+                              padding: "0.4rem 0.8rem",
+                              backgroundColor: "#8b5cf6",
+                              color: "white",
+                              border: "none",
+                              borderRadius: "0.25rem",
+                              cursor: "pointer",
+                              fontSize: "0.875rem",
+                            }}
+                          >
+                            🏷️
+                          </button>
+                        </div>
                       </td>
                     </tr>
                   ))}
@@ -450,23 +518,128 @@ export default function ImpoteknoPanel() {
         {activeTab === "scrape" && (
           <div>
             <h2 style={{ marginBottom: "1.5rem" }}>🕷️ Ejecutar Scraper</h2>
-            <button
-              onClick={handleScrape}
-              disabled={loading}
-              style={{
-                padding: "1rem 2rem",
-                backgroundColor: loading ? "#666" : "#ef4444",
-                color: "white",
-                border: "none",
-                borderRadius: "0.5rem",
-                cursor: loading ? "not-allowed" : "pointer",
-                fontSize: "1rem",
-                fontWeight: "bold",
-                marginBottom: "2rem",
-              }}
-            >
-              {loading ? "⏳ Scrapeando..." : "🚀 Iniciar Scraper"}
-            </button>
+            <div style={{ display: "flex", gap: "1rem", marginBottom: "2rem" }}>
+              <button
+                onClick={handleScrape}
+                disabled={loading}
+                style={{
+                  padding: "1rem 2rem",
+                  backgroundColor: loading ? "#666" : "#ef4444",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "0.5rem",
+                  cursor: loading ? "not-allowed" : "pointer",
+                  fontSize: "1rem",
+                  fontWeight: "bold",
+                  flex: 1,
+                }}
+              >
+                {loading ? "⏳ Scrapeando..." : "🚀 Iniciar Scraper"}
+              </button>
+              {scrapingReport && (
+                <button
+                  onClick={() => setShowScrapingReport(!showScrapingReport)}
+                  style={{
+                    padding: "1rem 2rem",
+                    backgroundColor: "#3b82f6",
+                    color: "white",
+                    border: "none",
+                    borderRadius: "0.5rem",
+                    cursor: "pointer",
+                    fontSize: "1rem",
+                    fontWeight: "bold",
+                  }}
+                >
+                  {showScrapingReport ? "Ocultar" : "📊 Ver detalles"}
+                </button>
+              )}
+            </div>
+
+            {/* Detalles del scraping */}
+            {showScrapingReport && scrapingReport && (
+              <div style={{ backgroundColor: "#1e293b", padding: "1.5rem", borderRadius: "0.5rem", marginBottom: "2rem" }}>
+                <h3 style={{ margin: "0 0 1rem 0" }}>📊 Detalles del Scraping</h3>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem", marginBottom: "1.5rem" }}>
+                  <div style={{ backgroundColor: "#0f172a", padding: "1rem", borderRadius: "0.5rem" }}>
+                    <div style={{ fontSize: "0.875rem", color: "#94a3b8" }}>Nuevos</div>
+                    <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#10b981" }}>
+                      {scrapingReport.report.newProducts}
+                    </div>
+                  </div>
+                  <div style={{ backgroundColor: "#0f172a", padding: "1rem", borderRadius: "0.5rem" }}>
+                    <div style={{ fontSize: "0.875rem", color: "#94a3b8" }}>Actualizados</div>
+                    <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#3b82f6" }}>
+                      {scrapingReport.updatedCount}
+                    </div>
+                  </div>
+                  <div style={{ backgroundColor: "#0f172a", padding: "1rem", borderRadius: "0.5rem" }}>
+                    <div style={{ fontSize: "0.875rem", color: "#94a3b8" }}>Eliminados</div>
+                    <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#ef4444" }}>
+                      {scrapingReport.report.removedProducts.length}
+                    </div>
+                  </div>
+                </div>
+
+                {scrapingReport.newProductsDetails.length > 0 && (
+                  <div style={{ marginBottom: "1.5rem" }}>
+                    <h4 style={{ margin: "0 0 1rem 0", color: "#10b981" }}>✨ Productos Nuevos</h4>
+                    <div style={{ maxHeight: "300px", overflowY: "auto" }}>
+                      <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+                        <thead>
+                          <tr style={{ borderBottom: "1px solid #334155" }}>
+                            <th style={{ padding: "0.5rem", textAlign: "left" }}>SKU</th>
+                            <th style={{ padding: "0.5rem", textAlign: "left" }}>Nombre</th>
+                            <th style={{ padding: "0.5rem", textAlign: "right" }}>Precio</th>
+                            <th style={{ padding: "0.5rem", textAlign: "left" }}>Categoría</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {scrapingReport.newProductsDetails.map((p: any) => (
+                            <tr key={p.sku} style={{ borderBottom: "1px solid #334155" }}>
+                              <td style={{ padding: "0.5rem" }}>{p.sku}</td>
+                              <td style={{ padding: "0.5rem", maxWidth: "200px", overflow: "hidden" }}>
+                                {p.name.substring(0, 30)}...
+                              </td>
+                              <td style={{ padding: "0.5rem", textAlign: "right" }}>${p.unit_price}</td>
+                              <td style={{ padding: "0.5rem", color: "#94a3b8" }}>{p.category}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                )}
+
+                {scrapingReport.removedProductsDetails.length > 0 && (
+                  <div>
+                    <h4 style={{ margin: "0 0 1rem 0", color: "#ef4444" }}>❌ Productos Eliminados</h4>
+                    <div style={{ maxHeight: "300px", overflowY: "auto" }}>
+                      <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+                        <thead>
+                          <tr style={{ borderBottom: "1px solid #334155" }}>
+                            <th style={{ padding: "0.5rem", textAlign: "left" }}>SKU</th>
+                            <th style={{ padding: "0.5rem", textAlign: "left" }}>Nombre</th>
+                            <th style={{ padding: "0.5rem", textAlign: "left" }}>Categoría</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {scrapingReport.removedProductsDetails.map((p: any) => (
+                            <tr key={p.sku} style={{ borderBottom: "1px solid #334155" }}>
+                              <td style={{ padding: "0.5rem" }}>{p.sku}</td>
+                              <td style={{ padding: "0.5rem", maxWidth: "200px", overflow: "hidden" }}>
+                                {p.name.substring(0, 30)}...
+                              </td>
+                              <td style={{ padding: "0.5rem", color: "#94a3b8" }}>{p.category}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+
             <div style={{ backgroundColor: "#1e293b", padding: "1rem", borderRadius: "0.5rem", maxHeight: "400px", overflowY: "auto" }}>
               {logs.map((log, i) => (
                 <div key={i} style={{ fontSize: "0.875rem", color: "#cbd5e1", marginBottom: "0.5rem" }}>
@@ -487,6 +660,90 @@ export default function ImpoteknoPanel() {
               <button style={{ width: "100%", padding: "0.75rem", backgroundColor: "#8b5cf6", color: "white", border: "none", borderRadius: "0.5rem", cursor: "pointer", fontWeight: "bold" }}>
                 Subir CSV
               </button>
+            </div>
+          </div>
+        )}
+
+        {/* Modal para cambiar categoría */}
+        {changingCategory && (
+          <div style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "rgba(0,0,0,0.7)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 1000 }}>
+            <div style={{ backgroundColor: "#1e293b", padding: "2rem", borderRadius: "1rem", maxWidth: "500px", width: "90%" }}>
+              <h3 style={{ margin: "0 0 1rem 0", fontSize: "1.5rem" }}>🏷️ Cambiar Categoría</h3>
+              <p style={{ color: "#cbd5e1", marginBottom: "1rem" }}>
+                <strong>{changingCategory.name}</strong>
+              </p>
+              <p style={{ color: "#94a3b8", fontSize: "0.875rem", marginBottom: "1rem" }}>
+                SKU: {changingCategory.sku}
+              </p>
+              <div style={{ marginBottom: "1rem" }}>
+                <label style={{ display: "block", marginBottom: "0.5rem", color: "#cbd5e1" }}>
+                  Categoría:
+                </label>
+                <select
+                  value={newCategory}
+                  onChange={(e) => setNewCategory(e.target.value)}
+                  style={{
+                    width: "100%",
+                    padding: "0.75rem",
+                    backgroundColor: "#334155",
+                    border: "1px solid #3b82f6",
+                    borderRadius: "0.5rem",
+                    color: "white",
+                    fontSize: "1rem",
+                  }}
+                >
+                  <option value="">Seleccionar categoría...</option>
+                  <option value="Hogar y Cocina">Hogar y Cocina</option>
+                  <option value="Herramientas y Electricidad">Herramientas y Electricidad</option>
+                  <option value="Iluminación y LED">Iluminación y LED</option>
+                  <option value="Audio Video y Parlantes">Audio Video y Parlantes</option>
+                  <option value="Electrónica y Computación">Electrónica y Computación</option>
+                  <option value="Juegos Juguetes y Librería">Juegos Juguetes y Librería</option>
+                  <option value="Gadgets">Gadgets</option>
+                  <option value="Bazar y Camping">Bazar y Camping</option>
+                  <option value="Indumentaria y Textiles">Indumentaria y Textiles</option>
+                  <option value="Cuidado Personal y Cosmética">Cuidado Personal y Cosmética</option>
+                  <option value="Cables y Conectores">Cables y Conectores</option>
+                  <option value="Seguridad y Cámaras">Seguridad y Cámaras</option>
+                  <option value="Cargadores y Fuentes">Cargadores y Fuentes</option>
+                  <option value="Accesorios para Celulares">Accesorios para Celulares</option>
+                  <option value="Accesorios Auto Moto y Bici">Accesorios Auto Moto y Bici</option>
+                  <option value="Liquidación">Liquidación</option>
+                  <option value="Próximo a Ingresar">Próximo a Ingresar</option>
+                </select>
+              </div>
+              <div style={{ display: "flex", gap: "1rem" }}>
+                <button
+                  onClick={updateProductCategory}
+                  style={{
+                    flex: 1,
+                    padding: "0.75rem",
+                    backgroundColor: "#10b981",
+                    color: "white",
+                    border: "none",
+                    borderRadius: "0.5rem",
+                    cursor: "pointer",
+                    fontWeight: "bold",
+                  }}
+                >
+                  ✅ Confirmar
+                </button>
+                <button
+                  onClick={() => setChangingCategory(null)}
+                  style={{
+                    flex: 1,
+                    padding: "0.75rem",
+                    backgroundColor: "#ef4444",
+                    color: "white",
+                    border: "none",
+                    borderRadius: "0.5rem",
+                    cursor: "pointer",
+                    fontWeight: "bold",
+                  }}
+                >
+                  ❌ Cancelar
+                </button>
+              </div>
             </div>
           </div>
         )}
