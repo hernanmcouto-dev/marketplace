@@ -172,6 +172,18 @@ export async function POST(req: NextRequest) {
         sendLog(controller, `📊 Total extraído: ${allProducts.length} productos`);
         sendProgress(controller, CATEGORIES.length, CATEGORIES.length, "Procesando productos...");
 
+        const filePath = path.join(process.cwd(), "public", "products.json");
+
+        // Leer productos anteriores para comparación
+        let previousProducts: any[] = [];
+        try {
+          if (fs.existsSync(filePath)) {
+            previousProducts = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+          }
+        } catch (err) {
+          sendLog(controller, "⚠️ No se pudo leer el archivo anterior");
+        }
+
         // Crear mapa de productos anteriores por SKU para referencia rápida
         const previousProductsMap = new Map(previousProducts.map(p => [p.sku, p]));
 
@@ -219,24 +231,12 @@ export async function POST(req: NextRequest) {
 
         sendLog(controller, "💾 Guardando productos y generando informe...");
 
-        const filePath = path.join(process.cwd(), "public", "products.json");
-
-        // Leer productos anteriores para comparación
-        let previousProducts: any[] = [];
-        try {
-          if (fs.existsSync(filePath)) {
-            previousProducts = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-          }
-        } catch (err) {
-          sendLog(controller, "⚠️ No se pudo leer el archivo anterior");
-        }
-
         // Comparar productos
         const previousSkus = new Set(previousProducts.map(p => p.sku));
         const currentSkus = new Set(productsWithProxy.map(p => p.sku));
 
-        const newSkus = Array.from(currentSkus).filter(sku => !previousSkus.has(sku));
-        const removedSkus = Array.from(previousSkus).filter(sku => !currentSkus.has(sku));
+        const newSkus = new Set(Array.from(currentSkus).filter(sku => !previousSkus.has(sku)));
+        const removedSkus = new Set(Array.from(previousSkus).filter(sku => !currentSkus.has(sku)));
 
         // Contar imágenes nuevas vs. cacheadas
         let newImages = 0;
@@ -257,10 +257,10 @@ export async function POST(req: NextRequest) {
         const removedProductsDetails = previousProducts.filter(p => removedSkus.has(p.sku));
 
         const report: ScraperReport = {
-          newProducts: newSkus.length,
+          newProducts: newSkus.size,
           newImages,
           cachedImages,
-          removedProducts: removedSkus,
+          removedProducts: Array.from(removedSkus),
           totalProducts: productsWithProxy.length,
           timestamp: new Date().toISOString(),
         };
@@ -271,11 +271,11 @@ export async function POST(req: NextRequest) {
           report,
           newProductsDetails,
           removedProductsDetails,
-          updatedCount: productsWithProxy.length - newSkus.length - removedSkus.length,
+          updatedCount: productsWithProxy.length - newSkus.size - removedSkus.size,
         }, null, 2), "utf-8");
 
         sendLog(controller, `✅ Guardado en: public/products.json`);
-        sendLog(controller, `✓ ${newSkus.length} nuevos, ${removedSkus.length} eliminados`);
+        sendLog(controller, `✓ ${newSkus.size} nuevos, ${removedSkus.size} eliminados`);
         sendComplete(controller, productsWithProxy.length);
         controller.close();
       } catch (err: any) {

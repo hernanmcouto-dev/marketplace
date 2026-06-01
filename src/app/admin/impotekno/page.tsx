@@ -4,20 +4,20 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function ImpoteknoPanel() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<any[]>([]);
   const [activeTab, setActiveTab] = useState("list");
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 50;
-  const [editingProduct, setEditingProduct] = useState(null);
+  const [editingProduct, setEditingProduct] = useState<{ sku: string; name?: string } | null>(null);
   const [editPrice, setEditPrice] = useState("");
-  const [logs, setLogs] = useState([]);
-  const [showAnalysisDetails, setShowAnalysisDetails] = useState(null);
+  const [logs, setLogs] = useState<Array<{ message: string; type: string; time: string }>>([]);
+  const [showAnalysisDetails, setShowAnalysisDetails] = useState<string | null>(null);
   const [categorizingProducts, setCategorizingProducts] = useState(false);
-  const [changingCategory, setChangingCategory] = useState(null);
+  const [changingCategory, setChangingCategory] = useState<{ sku: string; name?: string } | null>(null);
   const [newCategory, setNewCategory] = useState("");
-  const [scrapingReport, setScrapingReport] = useState(null);
+  const [scrapingReport, setScrapingReport] = useState<any>(null);
   const [showScrapingReport, setShowScrapingReport] = useState(false);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export default function ImpoteknoPanel() {
     }
   };
 
-  const addLog = (message, type = "log") => {
+  const addLog = (message: string, type: string = "log") => {
     setLogs((p) => [...p, { message, type, time: new Date().toLocaleTimeString() }]);
   };
 
@@ -78,7 +78,7 @@ export default function ImpoteknoPanel() {
         setScrapingReport(report);
       }
     } catch (err) {
-      addLog(`Error: ${err.message}`, "error");
+      addLog(`Error: ${err instanceof Error ? err.message : String(err)}`, "error");
     } finally {
       setLoading(false);
     }
@@ -110,7 +110,7 @@ export default function ImpoteknoPanel() {
         setNewCategory("");
       }
     } catch (error) {
-      addLog(`Error: ${error.message}`, "error");
+      addLog(`Error: ${error instanceof Error ? error.message : String(error)}`, "error");
     }
   };
 
@@ -141,7 +141,7 @@ export default function ImpoteknoPanel() {
         setEditPrice("");
       }
     } catch (error) {
-      addLog(`Error guardando: ${error.message}`, "error");
+      addLog(`Error guardando: ${error instanceof Error ? error.message : String(error)}`, "error");
     }
   };
 
@@ -162,7 +162,7 @@ export default function ImpoteknoPanel() {
         addLog(`Error: ${result.error}`, "error");
       }
     } catch (error) {
-      addLog(`Error: ${error.message}`, "error");
+      addLog(`Error: ${error instanceof Error ? error.message : String(error)}`, "error");
     } finally {
       setCategorizingProducts(false);
     }
@@ -189,8 +189,8 @@ export default function ImpoteknoPanel() {
     const avgPrice = Math.round(prices.reduce((a, b) => a + b, 0) / prices.length);
 
     // Distribución por categoría
-    const categoryCount = {};
-    const uncategorized = [];
+    const categoryCount: { [key: string]: number } = {};
+    const uncategorized: any[] = [];
     products.forEach((p) => {
       const cat = p.category || "Sin categorizar";
       if (cat === "Sin categorizar") {
@@ -201,7 +201,7 @@ export default function ImpoteknoPanel() {
     });
 
     // Rango de precios por categoría
-    const categoryPrices = {};
+    const categoryPrices: { [key: string]: number[] } = {};
     products.forEach((p) => {
       const cat = p.category || "Sin categorizar";
       if (!categoryPrices[cat]) {

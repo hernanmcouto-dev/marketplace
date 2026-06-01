@@ -52,7 +52,7 @@ export default function CategoriasPage() {
         const response = await fetch(`/${filename}`);
         if (!response.ok) throw new Error("Error cargando productos");
         const data = await response.json();
-        setProducts(data.map((p: any) => ({ ...p, supplier: supplier as const })));
+        setProducts(data.map((p: any) => ({ ...p, supplier })));
       }
       setSelectedCategory(null);
     } catch (error) {
