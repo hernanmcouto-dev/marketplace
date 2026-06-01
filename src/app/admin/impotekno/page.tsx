@@ -12,6 +12,7 @@ export default function ImpoteknoPanel() {
   const [editPrice, setEditPrice] = useState("");
   const [logs, setLogs] = useState([]);
   const [showAnalysisDetails, setShowAnalysisDetails] = useState(null);
+  const [categorizingProducts, setCategorizingProducts] = useState(false);
 
   useEffect(() => {
     loadProducts();
@@ -97,6 +98,29 @@ export default function ImpoteknoPanel() {
       }
     } catch (error) {
       addLog(`Error guardando: ${error.message}`, "error");
+    }
+  };
+
+  const categorizeAllProducts = async () => {
+    setCategorizingProducts(true);
+    try {
+      const response = await fetch("/api/categorize-products", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ supplier: "impotekno" }),
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        addLog(`✅ ${result.categorized} productos categorizados`);
+        loadProducts();
+      } else {
+        addLog(`Error: ${result.error}`, "error");
+      }
+    } catch (error) {
+      addLog(`Error: ${error.message}`, "error");
+    } finally {
+      setCategorizingProducts(false);
     }
   };
 
@@ -361,22 +385,37 @@ export default function ImpoteknoPanel() {
             {/* Productos Sin Categorizar */}
             {analytics.uncategorizedCount > 0 && (
               <div style={{ backgroundColor: "#1e293b", padding: "1.5rem", borderRadius: "0.5rem", borderLeft: "4px solid #ef4444" }}>
-                <button
-                  onClick={() => setShowAnalysisDetails(showAnalysisDetails === "uncategorized" ? null : "uncategorized")}
-                  style={{
-                    width: "100%",
-                    padding: "1rem",
-                    backgroundColor: "#334155",
-                    color: "#ef4444",
-                    border: "1px solid #ef4444",
-                    borderRadius: "0.5rem",
-                    cursor: "pointer",
-                    fontWeight: "bold",
-                    marginBottom: "1rem",
-                  }}
-                >
-                  ⚠️ Ver {analytics.uncategorizedCount} Productos Sin Categorizar
-                </button>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "1rem" }}>
+                  <button
+                    onClick={() => setShowAnalysisDetails(showAnalysisDetails === "uncategorized" ? null : "uncategorized")}
+                    style={{
+                      padding: "1rem",
+                      backgroundColor: "#334155",
+                      color: "#ef4444",
+                      border: "1px solid #ef4444",
+                      borderRadius: "0.5rem",
+                      cursor: "pointer",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    📋 Ver {analytics.uncategorizedCount}
+                  </button>
+                  <button
+                    onClick={categorizeAllProducts}
+                    disabled={categorizingProducts}
+                    style={{
+                      padding: "1rem",
+                      backgroundColor: categorizingProducts ? "#666" : "#ef4444",
+                      color: "white",
+                      border: "1px solid #ef4444",
+                      borderRadius: "0.5rem",
+                      cursor: categorizingProducts ? "not-allowed" : "pointer",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {categorizingProducts ? "⏳ Categorizando..." : "🤖 Categorizar Ahora"}
+                  </button>
+                </div>
 
                 {showAnalysisDetails === "uncategorized" && (
                   <div style={{ backgroundColor: "#0f172a", padding: "1rem", borderRadius: "0.5rem", maxHeight: "400px", overflowY: "auto" }}>
