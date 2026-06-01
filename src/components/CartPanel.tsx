@@ -4,13 +4,59 @@ import { useCart } from "@/lib/CartContext";
 interface CartPanelProps {
   isOpen: boolean;
   onClose: () => void;
+  onFilterBySupplier?: (supplier: string) => void;
 }
 
-export default function CartPanel({ isOpen, onClose }: CartPanelProps) {
-  const { items, removeFromCart, updateQuantity, total, validateCart } = useCart();
-  const validation = validateCart();
+const SUPPLIER_INFO: Record<string, { name: string; color: string; minOrder: number }> = {
+  impotekno: { name: "Depósito Azul", color: "#1E40AF", minOrder: 150000 },
+  sanjulian: { name: "Depósito Verde", color: "#16A34A", minOrder: 100000 },
+  nodo: { name: "Depósito Amarillo", color: "#D97706", minOrder: 50000 },
+  nextcell: { name: "Depósito Rojo", color: "#DC2626", minOrder: 150000 },
+};
+
+export default function CartPanel({ isOpen, onClose, onFilterBySupplier }: CartPanelProps) {
+  const { items, removeFromCart, updateQuantity, total } = useCart();
 
   if (!isOpen) return null;
+
+  // Agrupar items por depósito
+  const itemsBySupplier = items.reduce(
+    (acc, item) => {
+      const supplier = item.supplier || "impotekno";
+      if (!acc[supplier]) acc[supplier] = [];
+      acc[supplier].push(item);
+      return acc;
+    },
+    {} as Record<string, typeof items>
+  );
+
+  // Calcular subtotales y estado por depósito
+  const depositoStates = Object.entries(itemsBySupplier).map(([supplier, supplierItems]) => {
+    const info = SUPPLIER_INFO[supplier];
+    const subtotal = supplierItems.reduce((sum, item) => sum + item.unit_price * item.quantity, 0);
+    const isReady = subtotal >= info.minOrder;
+    const remaining = Math.max(0, info.minOrder - subtotal);
+
+    return {
+      supplier,
+      info,
+      items: supplierItems,
+      subtotal,
+      isReady,
+      remaining,
+      progress: Math.min((subtotal / info.minOrder) * 100, 100),
+    };
+  });
+
+  const readyDeposits = depositoStates.filter((d) => d.isReady);
+  const pendingDeposits = depositoStates.filter((d) => !d.isReady);
+  const totalReadyAmount = readyDeposits.reduce((sum, d) => sum + d.subtotal, 0);
+
+  const handleCheckoutDeposit = (supplier: string) => {
+    // Implementar lógica de checkout individual
+    console.log(`Checkout para ${supplier}`);
+    // TODO: Redirigir a checkout con solo los items de este depósito
+  };
 
   return (
     <div
@@ -29,277 +75,431 @@ export default function CartPanel({ isOpen, onClose }: CartPanelProps) {
           top: 0,
           bottom: 0,
           width: "100%",
-          maxWidth: "400px",
+          maxWidth: "1000px",
           backgroundColor: "white",
           boxShadow: "-10px 0 25px rgba(0,0,0,0.2)",
           display: "flex",
-          flexDirection: "column",
+          flexDirection: "row",
           zIndex: 50,
         }}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Header */}
+        {/* ========== PANEL IZQUIERDO: DEPÓSITOS ========== */}
         <div
           style={{
-            backgroundColor: "#3b82f6",
-            color: "white",
-            padding: "1rem",
+            flex: 0.6,
             display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
+            flexDirection: "column",
+            borderRight: "1px solid #E5E7EB",
+            overflow: "hidden",
           }}
         >
-          <h2 style={{ margin: 0, fontSize: "1.25rem" }}>🛒 Carrito</h2>
-          <button
-            onClick={onClose}
+          {/* Header */}
+          <div
             style={{
-              backgroundColor: "#1e40af",
+              backgroundColor: "#1F2937",
               color: "white",
-              border: "none",
-              width: "2rem",
-              height: "2rem",
-              borderRadius: "50%",
-              cursor: "pointer",
-              fontSize: "1.25rem",
+              padding: "1.25rem",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
-            ✕
-          </button>
-        </div>
+            <div>
+              <h2 style={{ margin: 0, fontSize: "1.3rem", fontWeight: "700" }}>MI CARRITO</h2>
+              <p style={{ margin: "0.25rem 0 0 0", fontSize: "0.85rem", color: "#D1D5DB" }}>
+                {items.length} producto{items.length !== 1 ? "s" : ""}
+              </p>
+            </div>
+            <button
+              onClick={onClose}
+              style={{
+                backgroundColor: "#374151",
+                color: "white",
+                border: "none",
+                width: "2.5rem",
+                height: "2.5rem",
+                borderRadius: "50%",
+                cursor: "pointer",
+                fontSize: "1.5rem",
+                fontWeight: "bold",
+              }}
+            >
+              ✕
+            </button>
+          </div>
 
-        {/* Items List */}
-        <div
-          style={{
-            flex: 1,
-            overflowY: "auto",
-            padding: "1rem",
-          }}
-        >
+          {/* Contenido */}
           {items.length === 0 ? (
-            <div style={{ textAlign: "center", color: "#6b7280", padding: "2rem 0" }}>
-              <p style={{ margin: 0, fontSize: "3rem" }}>🛒</p>
-              <p style={{ margin: "0.5rem 0 0 0" }}>El carrito está vacío</p>
+            <div
+              style={{
+                flex: 1,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column",
+                color: "#6B7280",
+              }}
+            >
+              <p style={{ fontSize: "3rem", margin: 0 }}>🛒</p>
+              <p style={{ fontSize: "1rem", marginTop: "0.5rem" }}>El carrito está vacío</p>
             </div>
           ) : (
-            <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-              {items.map((item) => (
+            <div style={{ flex: 1, overflowY: "auto", padding: "1rem" }}>
+              {depositoStates.map((deposito) => (
                 <div
-                  key={item.sku}
+                  key={deposito.supplier}
                   style={{
-                    padding: "1rem",
-                    border: "1px solid #e5e7eb",
-                    borderRadius: "0.375rem",
+                    marginBottom: "1.5rem",
+                    padding: "1.2rem",
+                    backgroundColor: `${deposito.info.color}08`,
+                    border: `2px solid ${deposito.info.color}`,
+                    borderRadius: "0.75rem",
                   }}
                 >
-                  {/* Product Info */}
-                  <div style={{ marginBottom: "0.75rem" }}>
-                    <p style={{ margin: "0 0 0.25rem 0", fontWeight: "600", fontSize: "0.95rem" }}>
-                      {item.name}
-                    </p>
-                    <p style={{ margin: 0, color: "#6b7280", fontSize: "0.75rem" }}>
-                      SKU: {item.sku}
-                    </p>
-                  </div>
-
-                  {/* Price */}
-                  <p
-                    style={{
-                      margin: "0.5rem 0",
-                      color: "#10b981",
-                      fontWeight: "bold",
-                      fontSize: "1rem",
-                    }}
-                  >
-                    ${item.unit_price.toLocaleString("es-AR")}
-                  </p>
-
-                  {/* Quantity Controls */}
+                  {/* Encabezado de Depósito - Nuevo Diseño */}
                   <div
                     style={{
-                      display: "flex",
-                      gap: "0.5rem",
-                      alignItems: "center",
-                      marginBottom: "0.75rem",
+                      marginBottom: "1rem",
+                      paddingBottom: "1rem",
+                      borderBottom: `2px solid ${deposito.info.color}40`,
                     }}
                   >
-                    <span style={{ color: "#6b7280", fontSize: "0.875rem" }}>Cantidad:</span>
-                    <button
-                      onClick={() => updateQuantity(item.sku, item.quantity - 1)}
+                    <h3 style={{ margin: "0 0 0.5rem 0", fontSize: "1rem", fontWeight: "700", color: "#1F2937" }}>
+                      {deposito.info.name} - Mínimo de compra ${deposito.info.minOrder.toLocaleString("es-AR")}
+                    </h3>
+                    <div
                       style={{
-                        padding: "0.25rem 0.5rem",
-                        backgroundColor: "#f3f4f6",
-                        border: "1px solid #d1d5db",
-                        borderRadius: "0.25rem",
-                        cursor: "pointer",
-                        fontSize: "0.875rem",
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
                       }}
                     >
-                      −
-                    </button>
-                    <span style={{ fontWeight: "600", minWidth: "2rem", textAlign: "center" }}>
-                      {item.quantity}
-                    </span>
+                      <p style={{ margin: 0, fontSize: "1.1rem", fontWeight: "700", color: "#1F2937" }}>
+                        ${deposito.subtotal.toLocaleString("es-AR")}
+                      </p>
+                      <div style={{ fontSize: "1.2rem" }}>
+                        {deposito.isReady ? (
+                          <span style={{ color: "#22C55E" }}>✅</span>
+                        ) : (
+                          <span style={{ color: "#DC2626" }}>❌</span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Productos */}
+                  <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", marginBottom: "1rem" }}>
+                    {deposito.items.map((item) => (
+                      <div
+                        key={item.sku}
+                        style={{
+                          padding: "0.75rem",
+                          backgroundColor: "#F9FAFB",
+                          border: `1px solid ${deposito.info.color}20`,
+                          borderRadius: "0.375rem",
+                        }}
+                      >
+                        <div
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "start",
+                            marginBottom: "0.5rem",
+                          }}
+                        >
+                          <div style={{ flex: 1 }}>
+                            <p style={{ margin: 0, fontWeight: "600", fontSize: "0.85rem", color: "#1F2937" }}>
+                              {item.name}
+                            </p>
+                            <p style={{ margin: "0.1rem 0 0 0", fontSize: "0.75rem", color: "#6B7280" }}>
+                              {item.sku}
+                            </p>
+                          </div>
+                          <p style={{ margin: 0, fontWeight: "700", color: deposito.info.color, fontSize: "0.9rem" }}>
+                            ${item.unit_price.toLocaleString("es-AR")}
+                          </p>
+                        </div>
+
+                        <div
+                          style={{
+                            display: "flex",
+                            gap: "0.3rem",
+                            alignItems: "center",
+                            marginBottom: "0.5rem",
+                          }}
+                        >
+                          <button
+                            onClick={() => updateQuantity(item.sku, Math.max(0, item.quantity - 1))}
+                            style={{
+                              padding: "0.2rem 0.35rem",
+                              backgroundColor: deposito.info.color,
+                              color: "white",
+                              border: "none",
+                              borderRadius: "0.2rem",
+                              cursor: "pointer",
+                              fontSize: "0.7rem",
+                              fontWeight: "bold",
+                            }}
+                          >
+                            −
+                          </button>
+                          <span style={{ fontWeight: "600", minWidth: "1.2rem", textAlign: "center", fontSize: "0.8rem" }}>
+                            {item.quantity}
+                          </span>
+                          <button
+                            onClick={() => updateQuantity(item.sku, item.quantity + 1)}
+                            style={{
+                              padding: "0.2rem 0.35rem",
+                              backgroundColor: deposito.info.color,
+                              color: "white",
+                              border: "none",
+                              borderRadius: "0.2rem",
+                              cursor: "pointer",
+                              fontSize: "0.7rem",
+                              fontWeight: "bold",
+                            }}
+                          >
+                            +
+                          </button>
+                          <span style={{ marginLeft: "auto", fontWeight: "700", color: "#1F2937", fontSize: "0.8rem" }}>
+                            ${(item.unit_price * item.quantity).toLocaleString("es-AR")}
+                          </span>
+                        </div>
+
+                        <button
+                          onClick={() => removeFromCart(item.sku)}
+                          style={{
+                            width: "100%",
+                            padding: "0.3rem",
+                            backgroundColor: "#FEE2E2",
+                            color: "#991B1B",
+                            border: "none",
+                            borderRadius: "0.25rem",
+                            cursor: "pointer",
+                            fontSize: "0.7rem",
+                            fontWeight: "500",
+                          }}
+                        >
+                          🗑️ Remover
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Acciones de Depósito */}
+                  <div style={{ display: "flex", gap: "0.5rem" }}>
                     <button
-                      onClick={() => updateQuantity(item.sku, item.quantity + 1)}
+                      onClick={() => {
+                        onFilterBySupplier?.(deposito.supplier);
+                        onClose();
+                      }}
                       style={{
-                        padding: "0.25rem 0.5rem",
-                        backgroundColor: "#f3f4f6",
-                        border: "1px solid #d1d5db",
-                        borderRadius: "0.25rem",
+                        flex: 1,
+                        padding: "0.75rem",
+                        backgroundColor: deposito.info.color,
+                        color: "white",
+                        border: "none",
+                        borderRadius: "0.375rem",
                         cursor: "pointer",
-                        fontSize: "0.875rem",
+                        fontWeight: "700",
+                        fontSize: "0.9rem",
                       }}
                     >
-                      +
+                      ➕ Continuar en {deposito.info.name.split(" ")[1]}
                     </button>
+                    {deposito.isReady && (
+                      <button
+                        onClick={() => handleCheckoutDeposit(deposito.supplier)}
+                        style={{
+                          flex: 1,
+                          padding: "0.6rem",
+                          backgroundColor: deposito.info.color,
+                          color: "white",
+                          border: "none",
+                          borderRadius: "0.375rem",
+                          cursor: "pointer",
+                          fontWeight: "700",
+                          fontSize: "0.8rem",
+                        }}
+                      >
+                        FINALIZAR ✅
+                      </button>
+                    )}
                   </div>
-
-                  {/* Subtotal */}
-                  <div
-                    style={{
-                      padding: "0.5rem",
-                      backgroundColor: "#f3f4f6",
-                      borderRadius: "0.25rem",
-                      marginBottom: "0.75rem",
-                    }}
-                  >
-                    <p style={{ margin: 0, fontSize: "0.75rem", color: "#6b7280" }}>Subtotal:</p>
-                    <p style={{ margin: 0, fontWeight: "bold", color: "#1f2937" }}>
-                      ${(item.unit_price * item.quantity).toLocaleString("es-AR")}
-                    </p>
-                  </div>
-
-                  {/* Remove Button */}
-                  <button
-                    onClick={() => removeFromCart(item.sku)}
-                    style={{
-                      width: "100%",
-                      padding: "0.5rem",
-                      backgroundColor: "#fee2e2",
-                      color: "#991b1b",
-                      border: "1px solid #fecaca",
-                      borderRadius: "0.375rem",
-                      cursor: "pointer",
-                      fontSize: "0.875rem",
-                      fontWeight: "500",
-                    }}
-                  >
-                    🗑️ Remover
-                  </button>
                 </div>
               ))}
             </div>
           )}
         </div>
 
-        {/* Footer */}
+        {/* ========== PANEL DERECHO: RESUMEN ========== */}
         {items.length > 0 && (
           <div
             style={{
-              borderTop: "1px solid #e5e7eb",
-              padding: "1rem",
+              flex: 0.4,
               display: "flex",
               flexDirection: "column",
-              gap: "0.75rem",
-              maxHeight: "40%",
+              backgroundColor: "#F9FAFB",
+              padding: "1.5rem",
               overflowY: "auto",
             }}
           >
-            {/* Total */}
-            <div
-              style={{
-                backgroundColor: "#f3f4f6",
-                padding: "1rem",
-                borderRadius: "0.375rem",
-              }}
-            >
-              <p style={{ margin: 0, color: "#6b7280", fontSize: "0.875rem" }}>Total:</p>
-              <p style={{ margin: "0.25rem 0 0 0", fontSize: "1.5rem", fontWeight: "bold" }}>
-                ${total.toLocaleString("es-AR")}
-              </p>
-            </div>
+            {/* Depósitos Listos */}
+            <div style={{ marginBottom: "2rem" }}>
+              <h3 style={{ margin: "0 0 1rem 0", fontSize: "0.95rem", fontWeight: "700", color: "#1F2937" }}>
+                ✅ DEPÓSITOS LISTOS ({readyDeposits.length})
+              </h3>
 
-            {/* Condiciones de Compra */}
-            <div
-              style={{
-                backgroundColor: validation.isValid ? "#dcfce7" : "#fee2e2",
-                border: `2px solid ${validation.isValid ? "#22c55e" : "#ef4444"}`,
-                padding: "0.75rem",
-                borderRadius: "0.375rem",
-              }}
-            >
-              <p style={{ margin: "0 0 0.5rem 0", fontWeight: "bold", fontSize: "0.875rem", color: validation.isValid ? "#166534" : "#991b1b" }}>
-                {validation.isValid ? "✅ Condiciones cumplidas" : "⚠️ Condiciones no cumplidas"}
-              </p>
-
-              {/* Total mínimo */}
-              <div style={{ marginBottom: "0.5rem", fontSize: "0.75rem" }}>
-                <p style={{ margin: "0 0 0.25rem 0", color: validation.totalMet ? "#166534" : "#991b1b" }}>
-                  {validation.totalMet ? "✓" : "✗"} Total mínimo: ${validation.totalMinimum.toLocaleString("es-AR")}
+              {readyDeposits.length === 0 ? (
+                <p style={{ margin: 0, fontSize: "0.85rem", color: "#6B7280", fontStyle: "italic" }}>
+                  Ningún depósito alcanzó el mínimo
                 </p>
-                <p style={{ margin: 0, color: "#6b7280", fontSize: "0.7rem" }}>
-                  Tienes: ${validation.totalCurrent.toLocaleString("es-AR")}
-                </p>
-              </div>
+              ) : (
+                <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                  {readyDeposits.map((deposito) => (
+                    <div
+                      key={deposito.supplier}
+                      style={{
+                        padding: "0.75rem",
+                        backgroundColor: "white",
+                        border: `2px solid ${deposito.info.color}`,
+                        borderRadius: "0.375rem",
+                      }}
+                    >
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                        }}
+                      >
+                        <p style={{ margin: 0, fontSize: "0.85rem", fontWeight: "600", color: "#1F2937" }}>
+                          {deposito.info.name}
+                        </p>
+                        <p
+                          style={{
+                            margin: 0,
+                            fontSize: "0.9rem",
+                            fontWeight: "700",
+                            color: deposito.info.color,
+                          }}
+                        >
+                          ${deposito.subtotal.toLocaleString("es-AR")}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
 
-              {/* Mínimos por depósito */}
-              <div>
-                {validation.suppliersMet.map((supplier) => (
-                  <div key={supplier.name} style={{ marginBottom: "0.25rem" }}>
-                    <p style={{ margin: 0, fontSize: "0.7rem", color: supplier.current === 0 ? "#6b7280" : supplier.met ? "#166534" : "#991b1b" }}>
-                      {supplier.current === 0 ? "−" : supplier.met ? "✓" : "✗"} {supplier.name}: ${supplier.minimum.toLocaleString("es-AR")}
-                      {supplier.current > 0 && <span style={{ color: "#6b7280" }}> (tienes ${supplier.current.toLocaleString("es-AR")})</span>}
+                  <div
+                    style={{
+                      padding: "1rem",
+                      backgroundColor: "#DCFCE7",
+                      border: "2px solid #22C55E",
+                      borderRadius: "0.375rem",
+                      marginTop: "0.5rem",
+                    }}
+                  >
+                    <p style={{ margin: "0 0 0.5rem 0", fontSize: "0.8rem", color: "#15803D" }}>
+                      MONTO TOTAL LISTO
+                    </p>
+                    <p
+                      style={{
+                        margin: 0,
+                        fontSize: "1.5rem",
+                        fontWeight: "900",
+                        color: "#15803D",
+                      }}
+                    >
+                      ${totalReadyAmount.toLocaleString("es-AR")}
                     </p>
                   </div>
-                ))}
-              </div>
 
-              {/* Errores */}
-              {validation.errors.length > 0 && (
-                <div style={{ backgroundColor: "rgba(0,0,0,0.1)", padding: "0.5rem", borderRadius: "0.25rem", marginTop: "0.5rem" }}>
-                  {validation.errors.map((error, idx) => (
-                    <p key={idx} style={{ margin: "0.25rem 0", fontSize: "0.7rem", color: "#991b1b" }}>
-                      • {error}
-                    </p>
-                  ))}
+                  <button
+                    style={{
+                      width: "100%",
+                      padding: "0.85rem",
+                      backgroundColor: "#22C55E",
+                      color: "white",
+                      border: "none",
+                      borderRadius: "0.375rem",
+                      cursor: "pointer",
+                      fontWeight: "700",
+                      fontSize: "0.95rem",
+                      marginTop: "1rem",
+                    }}
+                  >
+                    ENVIAR PEDIDO ({readyDeposits.length}) ✅
+                  </button>
                 </div>
               )}
             </div>
 
-            {/* Buttons */}
-            <button
-              onClick={onClose}
-              style={{
-                width: "100%",
-                padding: "0.75rem 1rem",
-                backgroundColor: "#e5e7eb",
-                color: "#1f2937",
-                border: "none",
-                borderRadius: "0.375rem",
-                cursor: "pointer",
-                fontWeight: "500",
-              }}
-            >
-              Continuar comprando
-            </button>
+            {/* Depósitos Pendientes */}
+            {pendingDeposits.length > 0 && (
+              <div>
+                <h3 style={{ margin: "0 0 1rem 0", fontSize: "0.95rem", fontWeight: "700", color: "#6B7280" }}>
+                  ⏳ DEPÓSITOS PENDIENTES ({pendingDeposits.length})
+                </h3>
 
-            <button
-              disabled={!validation.isValid}
-              style={{
-                width: "100%",
-                padding: "0.75rem 1rem",
-                backgroundColor: validation.isValid ? "#10b981" : "#d1d5db",
-                color: validation.isValid ? "white" : "#6b7280",
-                border: "none",
-                borderRadius: "0.375rem",
-                cursor: validation.isValid ? "pointer" : "not-allowed",
-                fontWeight: "bold",
-                fontSize: "1rem",
-                opacity: validation.isValid ? 1 : 0.6,
-              }}
-            >
-              {validation.isValid ? "Proceder al checkout" : "No cumple condiciones"}
-            </button>
+                <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                  {pendingDeposits.map((deposito) => (
+                    <div
+                      key={deposito.supplier}
+                      style={{
+                        padding: "0.75rem",
+                        backgroundColor: "#F3F4F6",
+                        border: "1px solid #D1D5DB",
+                        borderRadius: "0.375rem",
+                      }}
+                    >
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                          marginBottom: "0.4rem",
+                        }}
+                      >
+                        <p style={{ margin: 0, fontSize: "0.85rem", fontWeight: "600", color: "#6B7280" }}>
+                          {deposito.info.name}
+                        </p>
+                        <p
+                          style={{
+                            margin: 0,
+                            fontSize: "0.75rem",
+                            fontWeight: "700",
+                            color: "#F97316",
+                          }}
+                        >
+                          Faltan ${deposito.remaining.toLocaleString("es-AR")}
+                        </p>
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "0.75rem",
+                          color: "#6B7280",
+                        }}
+                      >
+                        ${deposito.subtotal.toLocaleString("es-AR")} / ${deposito.info.minOrder.toLocaleString("es-AR")}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <p
+                  style={{
+                    margin: "1rem 0 0 0",
+                    fontSize: "0.75rem",
+                    color: "#6B7280",
+                    fontStyle: "italic",
+                    lineHeight: "1.4",
+                  }}
+                >
+                  📌 <strong>Estos productos no se perderán.</strong> Se guardarán automáticamente en tu carrito para tu próxima compra.
+                </p>
+              </div>
+            )}
           </div>
         )}
       </div>

@@ -550,7 +550,11 @@ export default function ClientePage() {
       }} />
 
       {/* Shopping Cart Panel */}
-      <CartPanel isOpen={showCart} onClose={() => setShowCart(false)} />
+      <CartPanel
+        isOpen={showCart}
+        onClose={() => setShowCart(false)}
+        onFilterBySupplier={() => {}}
+      />
     </div>
   );
 }

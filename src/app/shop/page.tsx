@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { CATEGORY_LIST } from "@/lib/product-categorizer";
 import { useCart } from "@/lib/CartContext";
 import CartPanel from "@/components/CartPanel";
@@ -16,7 +16,7 @@ interface Product {
 }
 
 export default function ShopPage() {
-  const { addToCart } = useCart();
+  const { addToCart, items, total } = useCart();
   const [products, setProducts] = useState<Product[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -26,42 +26,99 @@ export default function ShopPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedQuantities, setSelectedQuantities] = useState<Record<string, number>>({});
   const [showCart, setShowCart] = useState(false);
+  const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set());
+  const [depositoSearchTerm, setDepositoSearchTerm] = useState("");
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const [featuredProducts, setFeaturedProducts] = useState<string[]>([]);
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [isCarouselHovered, setIsCarouselHovered] = useState(false);
+
+  // Función para obtener productos random de cada depósito
+  const generateFeaturedProducts = (allProducts: Product[]) => {
+    const suppliers = ["impotekno", "sanjulian", "nextcell", "nodo"];
+    const featured: string[] = [];
+
+    suppliers.forEach((supplier) => {
+      const supplierProducts = allProducts.filter((p) => p.supplier === supplier);
+      if (supplierProducts.length > 0) {
+        // Seleccionar 4 productos random de cada depósito
+        const shuffled = [...supplierProducts].sort(() => Math.random() - 0.5);
+        const selected = shuffled.slice(0, 4);
+        featured.push(...selected.map((p) => p.sku));
+      }
+    });
+
+    setFeaturedProducts(featured);
+  };
 
   useEffect(() => {
     loadProducts();
   }, [supplier]);
 
+  // Auto-scroll del carrusel (infinito sin interrupción)
+  useEffect(() => {
+    if (!isCarouselHovered && carouselRef.current) {
+      const interval = setInterval(() => {
+        if (carouselRef.current) {
+          const carousel = carouselRef.current;
+          const halfScroll = (carousel.scrollWidth - carousel.clientWidth) / 2;
+
+          // Si llegó a la mitad (final de la primera copia), volver al inicio sin animación
+          if (carousel.scrollLeft >= halfScroll - 50) {
+            carousel.scrollLeft = 0;
+          } else {
+            carousel.scrollBy({
+              left: 440, // Desplazar 2 productos a la vez
+              behavior: "auto",
+            });
+          }
+        }
+      }, 1500); // Desplazarse cada 1.5 segundos
+
+      return () => clearInterval(interval);
+    }
+  }, [isCarouselHovered]);
+
+  const handleFilterBySupplier = (supplierCode: string) => {
+    const supplierMap: Record<string, "impotekno" | "sanjulian" | "nextcell" | "nodo" | "todos"> = {
+      impotekno: "impotekno",
+      sanjulian: "sanjulian",
+      nextcell: "nextcell",
+      nodo: "nodo",
+    };
+    setSupplier(supplierMap[supplierCode] || "todos");
+    setSelectedCategory(null);
+    setSearchTerm("");
+  };
+
   const loadProducts = async () => {
     setLoading(true);
     try {
-      if (supplier === "todos") {
-        // Cargar todos los depósitos
-        const [azul, verde, rojo, amarillo] = await Promise.all([
-          fetch("/products.json").then(r => r.json()),
-          fetch("/products-sanjulian.json").then(r => r.json()),
-          fetch("/products-nextcell.json").then(r => r.json()),
-          fetch("/products-nodo.json").then(r => r.json()),
-        ]);
+      // Siempre cargar todos los depósitos para permitir búsqueda global
+      const [azul, verde, rojo, amarillo] = await Promise.all([
+        fetch("/products.json").then(r => r.json()),
+        fetch("/products-sanjulian.json").then(r => r.json()),
+        fetch("/products-nextcell.json").then(r => r.json()),
+        fetch("/products-nodo.json").then(r => r.json()),
+      ]);
 
-        const allProducts = [
-          ...azul.map((p: any) => ({ ...p, supplier: "impotekno" as const })),
-          ...verde.map((p: any) => ({ ...p, supplier: "sanjulian" as const })),
-          ...rojo.map((p: any) => ({ ...p, supplier: "nextcell" as const })),
-          ...amarillo.map((p: any) => ({ ...p, supplier: "nodo" as const })),
-        ];
+      const allProductsWithSupplier = [
+        ...azul.map((p: any) => ({ ...p, supplier: "impotekno" as const })),
+        ...verde.map((p: any) => ({ ...p, supplier: "sanjulian" as const })),
+        ...rojo.map((p: any) => ({ ...p, supplier: "nextcell" as const })),
+        ...amarillo.map((p: any) => ({ ...p, supplier: "nodo" as const })),
+      ];
 
-        setProducts(allProducts);
-      } else {
-        const filename =
-          supplier === "impotekno" ? "products.json" :
-          supplier === "sanjulian" ? "products-sanjulian.json" :
-          supplier === "nextcell" ? "products-nextcell.json" :
-          "products-nodo.json";
-        const response = await fetch(`/${filename}`);
-        if (!response.ok) throw new Error("Error cargando productos");
-        const data = await response.json();
-        setProducts(data.map((p: any) => ({ ...p, supplier })));
-      }
+      // Eliminar duplicados por SKU (mantener el primero)
+      const seenSkus = new Set<string>();
+      const uniqueProducts = allProductsWithSupplier.filter((p) => {
+        if (seenSkus.has(p.sku)) return false;
+        seenSkus.add(p.sku);
+        return true;
+      });
+
+      setProducts(uniqueProducts);
+      generateFeaturedProducts(uniqueProducts);
     } catch (error) {
       console.error("Error:", error);
     } finally {
@@ -75,54 +132,76 @@ export default function ShopPage() {
     categoryCounts[p.category] = (categoryCounts[p.category] || 0) + 1;
   });
 
-  // Función de búsqueda mejorada
+  // Función de búsqueda tipo Mercado Libre
   const searchProducts = (products: Product[], term: string) => {
     if (!term.trim()) return products;
 
     const lowerTerm = term.toLowerCase();
     const searchWords = lowerTerm.split(/\s+/).filter(w => w.length > 0);
+    const hasMultipleWords = searchWords.length > 1;
 
     return products
       .map((product) => {
         const nameLower = product.name.toLowerCase();
         const skuLower = product.sku.toLowerCase();
+        const nameWords = nameLower.split(/[\s\-().,/]+/);
 
         let score = 0;
+        let matchedWordsCount = 0;
 
         // Búsqueda exacta en SKU (máxima prioridad)
         if (skuLower === lowerTerm) {
-          score += 1000;
+          score = 10000;
+          matchedWordsCount = searchWords.length;
         } else if (skuLower.includes(lowerTerm)) {
-          score += 500;
+          score = 5000;
+          matchedWordsCount = searchWords.length;
+        } else {
+          // Verificar si todas las palabras están presentes
+          searchWords.forEach((word) => {
+            if (nameWords.includes(word)) {
+              score += 100;
+              matchedWordsCount++;
+            } else if (nameLower.includes(word)) {
+              score += 10;
+              matchedWordsCount++;
+            }
+          });
         }
 
-        // Búsqueda de palabras completas en nombre
-        searchWords.forEach((word) => {
-          const words = nameLower.split(/[\s\-().,/]+/);
-          if (words.includes(word)) {
-            score += 100;
-          } else if (nameLower.includes(word)) {
-            // Subcadena en nombre (menor prioridad)
-            score += 10;
-          }
-        });
-
-        return { product, score };
+        return { product, score, matchedWordsCount };
       })
-      .filter(({ score }) => score > 0)
+      .filter(({ matchedWordsCount }) => {
+        // Si hay múltiples palabras, todas deben estar presentes
+        // Si hay una sola palabra, basta con que esté presente
+        if (hasMultipleWords) {
+          return matchedWordsCount === searchWords.length;
+        }
+        return matchedWordsCount > 0;
+      })
       .sort((a, b) => b.score - a.score)
       .map(({ product }) => product);
   };
 
-  // Filtrar y ordenar productos
-  let filtered = products.filter((p) => {
-    const matchCategory = !selectedCategory || p.category === selectedCategory;
-    const matchPrice = p.unit_price >= priceRange[0] && p.unit_price <= priceRange[1];
-    return matchCategory && matchPrice;
-  });
+  // Aplicar búsqueda mejorada (sin filtros de categoría/supplier si hay búsqueda)
+  let filtered = searchTerm.trim()
+    ? searchProducts(products, searchTerm)
+    : products;
 
-  // Aplicar búsqueda mejorada
-  filtered = searchProducts(filtered, searchTerm);
+  // Filtrar por categoría, supplier y precio (solo si no hay búsqueda activa)
+  if (!searchTerm.trim()) {
+    filtered = filtered.filter((p) => {
+      const matchCategory = !selectedCategory || p.category === selectedCategory;
+      const matchSupplier = supplier === "todos" || p.supplier === supplier;
+      const matchPrice = p.unit_price >= priceRange[0] && p.unit_price <= priceRange[1];
+      return matchCategory && matchSupplier && matchPrice;
+    });
+  }
+
+  // Aplicar búsqueda dentro del depósito (solo si no hay búsqueda principal)
+  if (!searchTerm.trim() && depositoSearchTerm.trim()) {
+    filtered = searchProducts(filtered, depositoSearchTerm);
+  }
 
   // Ordenar
   if (sortBy === "precio-asc") {
@@ -160,6 +239,22 @@ export default function ShopPage() {
     "Próximo a Ingresar": "#78716c",
   };
 
+  // Agrupar items por supplier
+  const itemsBySupplier: Record<string, number> = {};
+  const totalesBySupplier: Record<string, number> = {};
+  items.forEach((item) => {
+    const supplier = item.supplier || "sin-deposito";
+    itemsBySupplier[supplier] = (itemsBySupplier[supplier] || 0) + item.quantity;
+    totalesBySupplier[supplier] = (totalesBySupplier[supplier] || 0) + item.unit_price * item.quantity;
+  });
+
+  const SUPPLIER_NAMES: Record<string, string> = {
+    impotekno: "Azul",
+    sanjulian: "Verde",
+    nextcell: "Rojo",
+    nodo: "Amarillo",
+  };
+
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "#0f172a" }}>
       {/* Header Premium */}
@@ -169,6 +264,7 @@ export default function ShopPage() {
           color: "white",
           padding: "2rem 1rem",
           borderBottom: "2px solid #3b82f6",
+          position: "relative",
         }}
       >
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
@@ -179,204 +275,342 @@ export default function ShopPage() {
             Descubre {products.length} productos categorizados inteligentemente
           </p>
         </div>
+
+        {/* Cart Button */}
+        <button
+          onClick={() => setShowCart(true)}
+          style={{
+            position: "absolute",
+            top: "1rem",
+            right: "2rem",
+            bottom: "1rem",
+            backgroundColor: "#1a1a1a",
+            color: "white",
+            border: items.length > 0 ? "2px solid #22C55E" : "2px solid #64748b",
+            borderRadius: "0.75rem",
+            padding: "1rem 1.8rem",
+            cursor: "pointer",
+            fontWeight: "700",
+            fontSize: "0.9rem",
+            width: "calc(100% - 4rem - 280px)",
+            maxWidth: "480px",
+            textAlign: "left",
+            boxShadow: items.length > 0 ? "0 10px 25px -5px #22C55E40" : "none",
+            transition: "all 0.3s",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            whiteSpace: "normal",
+            lineHeight: "1.3",
+            overflow: "hidden",
+          }}
+          onMouseOver={(e) => {
+            if (items.length > 0) {
+              (e.currentTarget as HTMLButtonElement).style.borderColor = "#16a34a";
+              (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.02)";
+            }
+          }}
+          onMouseOut={(e) => {
+            if (items.length > 0) {
+              (e.currentTarget as HTMLButtonElement).style.borderColor = "#22C55E";
+              (e.currentTarget as HTMLButtonElement).style.transform = "scale(1)";
+            }
+          }}
+        >
+          <div style={{ marginBottom: "0.3rem", color: "white", fontSize: "0.95rem", fontWeight: "700" }}>
+            🛒 {items.length > 0 ? `${items.length} productos` : "Carrito vacío"}
+          </div>
+          {items.length > 0 && (
+            <>
+              <div style={{ fontSize: "0.8rem", marginBottom: "0.3rem", borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: "0.3rem" }}>
+                {Object.entries(itemsBySupplier).map(([supplier, quantity]) => (
+                  <div key={supplier} style={{ display: "flex", justifyContent: "space-between", fontSize: "0.8rem", color: SUPPLIER_COLORS[supplier]?.color || "#cbd5e1", marginBottom: "0.2rem" }}>
+                    <span>Depósito {SUPPLIER_NAMES[supplier]}:</span>
+                    <span>${totalesBySupplier[supplier]?.toLocaleString("es-AR") || 0}</span>
+                  </div>
+                ))}
+              </div>
+              <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: "0.3rem", fontSize: "0.95rem", fontWeight: "800", color: "white" }}>
+                Total: ${total.toLocaleString("es-AR")}
+              </div>
+            </>
+          )}
+        </button>
       </header>
 
       {/* Main Content */}
       <main style={{ padding: "2rem 1rem", maxWidth: "1400px", margin: "0 auto" }}>
-        {/* Toolbar */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-            gap: "1.5rem",
-            marginBottom: "2rem",
-            backgroundColor: "#1e293b",
-            padding: "1.5rem",
-            borderRadius: "0.75rem",
-            border: "1px solid #334155",
-          }}
-        >
-          {/* Search */}
-          <div>
-            <label style={{ display: "block", marginBottom: "0.5rem", color: "#e2e8f0", fontWeight: "500" }}>
-              🔍 Buscar
-            </label>
-            <input
-              type="text"
-              placeholder="Nombre o SKU..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+        {/* Featured Products Carousel */}
+        <div style={{ marginBottom: "3rem" }}>
+          <h2 style={{ color: "white", marginBottom: "1.5rem", fontSize: "1.5rem", fontWeight: "bold" }}>
+            ⭐ Novedades Destacadas
+          </h2>
+          <div style={{ position: "relative", overflow: "hidden" }}>
+            <div
+              ref={carouselRef}
+              onMouseEnter={() => setIsCarouselHovered(true)}
+              onMouseLeave={() => setIsCarouselHovered(false)}
               style={{
-                width: "100%",
-                padding: "0.75rem",
-                borderRadius: "0.5rem",
-                border: "1px solid #475569",
-                backgroundColor: "#0f172a",
-                color: "white",
-                fontSize: "1rem",
-              }}
-            />
-          </div>
-
-          {/* Supplier */}
-          <div>
-            <label style={{ display: "block", marginBottom: "0.5rem", color: "#e2e8f0", fontWeight: "500" }}>
-              🏪 Proveedor
-            </label>
-            <select
-              value={supplier}
-              onChange={(e) => setSupplier(e.target.value as "impotekno" | "sanjulian" | "nextcell" | "todos")}
-              style={{
-                width: "100%",
-                padding: "0.75rem",
-                borderRadius: "0.5rem",
-                border: "1px solid #475569",
-                backgroundColor: "#0f172a",
-                color: "white",
-                cursor: "pointer",
+                display: "flex",
+                gap: "1rem",
+                overflowX: "auto",
+                paddingBottom: "1rem",
+                scrollBehavior: "auto",
+                scrollbarWidth: "none",
               }}
             >
-              <option value="todos">🏢 Todos los Depósitos</option>
-              <option value="impotekno">🔵 Depósito Azul</option>
-              <option value="sanjulian">🟢 Depósito Verde</option>
-              <option value="nextcell">🔴 Depósito Rojo</option>
-              <option value="nodo">🟡 Depósito Amarillo</option>
-            </select>
-          </div>
+              {/* Renderizar productos dos veces para efecto infinito */}
+              {[...Array(2)].map((_, iteration) =>
+                products.map((product) => {
+                  if (!featuredProducts.includes(product.sku)) return null;
+                  const supplierInfo = SUPPLIER_COLORS[product.supplier];
 
-          {/* Sort */}
-          <div>
-            <label style={{ display: "block", marginBottom: "0.5rem", color: "#e2e8f0", fontWeight: "500" }}>
-              📊 Ordenar
-            </label>
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as any)}
-              style={{
-                width: "100%",
-                padding: "0.75rem",
-                borderRadius: "0.5rem",
-                border: "1px solid #475569",
-                backgroundColor: "#0f172a",
-                color: "white",
-                cursor: "pointer",
-              }}
-            >
-              <option value="nombre">Nombre (A-Z)</option>
-              <option value="precio-asc">Precio (Menor a Mayor)</option>
-              <option value="precio-desc">Precio (Mayor a Menor)</option>
-            </select>
-          </div>
+                  return (
+                    <div
+                      key={`${product.sku}-${iteration}`}
+                      style={{
+                        flex: "0 0 200px",
+                        backgroundColor: "#1e293b",
+                        borderRadius: "0.75rem",
+                        border: "1px solid #334155",
+                        overflow: "hidden",
+                        transition: "all 0.3s",
+                        cursor: "pointer",
+                      }}
+                      onMouseOver={(e) => {
+                        (e.currentTarget as HTMLDivElement).style.transform = "translateY(-8px)";
+                        (e.currentTarget as HTMLDivElement).style.borderColor = supplierInfo?.color || "#3b82f6";
+                      }}
+                      onMouseOut={(e) => {
+                        (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
+                        (e.currentTarget as HTMLDivElement).style.borderColor = "#334155";
+                      }}
+                    >
+                      {/* Imagen */}
+                      <div
+                        style={{
+                          width: "100%",
+                          paddingBottom: "100%",
+                          backgroundColor: "#0f172a",
+                          overflow: "hidden",
+                          position: "relative",
+                        }}
+                      >
+                        <img
+                          src={product.image_url}
+                          alt={product.name}
+                          style={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                          }}
+                        />
+                      </div>
 
-          {/* Price Range */}
-          <div>
-            <label style={{ display: "block", marginBottom: "0.5rem", color: "#e2e8f0", fontWeight: "500" }}>
-              💰 Precio Máx: ${priceRange[1].toLocaleString("es-AR")}
-            </label>
-            <input
-              type="range"
-              min="0"
-              max="1000000"
-              step="10000"
-              value={priceRange[1]}
-              onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
-              style={{ width: "100%", cursor: "pointer" }}
-            />
+                      {/* Depósito Badge */}
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: "0.5rem",
+                          right: "0.5rem",
+                          backgroundColor: supplierInfo?.color || "#3b82f6",
+                          color: "white",
+                          padding: "0.3rem 0.7rem",
+                          borderRadius: "0.25rem",
+                          fontSize: "0.7rem",
+                          fontWeight: "700",
+                        }}
+                      >
+                        {supplierInfo?.name.split(" ")[1]}
+                      </div>
+
+                      {/* Información */}
+                      <div style={{ padding: "0.75rem" }}>
+                        <p style={{ margin: "0 0 0.5rem 0", fontSize: "0.8rem", color: "#cbd5e1", lineHeight: "1.2", minHeight: "2.4rem" }}>
+                          {product.name}
+                        </p>
+                        <p style={{ margin: 0, fontSize: "1.1rem", fontWeight: "bold", color: supplierInfo?.color || "#3b82f6" }}>
+                          ${product.unit_price.toLocaleString("es-AR")}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })
+              )}
+            </div>
           </div>
         </div>
 
-        {/* Categories Grid */}
-        <div style={{ marginBottom: "3rem" }}>
-          <h2 style={{ color: "white", marginBottom: "1rem" }}>📂 Categorías ({CATEGORY_LIST.length})</h2>
-          <div
+        {/* Toolbar */}
+        <div style={{ marginBottom: "2rem" }}>
+          {/* Search & Supplier Row */}
+          <div style={{ display: "flex", gap: "2rem", alignItems: "flex-end", marginBottom: "1.5rem" }}>
+            {/* Search - Principal */}
+            <div>
+              <label style={{ display: "block", marginBottom: "0.5rem", color: "#e2e8f0", fontWeight: "600", fontSize: "0.95rem" }}>
+                🔍 Buscador Principal - Busca en todo el sitio
+              </label>
+              <input
+                type="text"
+                placeholder="Nombre, SKU, marca..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                style={{
+                  width: "100%",
+                  maxWidth: "500px",
+                  padding: "0.65rem 1rem",
+                  borderRadius: "0.5rem",
+                  border: "2px solid #3b82f6",
+                  backgroundColor: "#0f172a",
+                  color: "white",
+                  fontSize: "0.95rem",
+                  fontWeight: "500",
+                }}
+              />
+            </div>
+
+            {/* Supplier */}
+            <div style={{ marginLeft: "auto" }}>
+              <label style={{ display: "block", marginBottom: "0.5rem", color: "#e2e8f0", fontWeight: "500", fontSize: "0.875rem" }}>
+                🏪 Proveedor
+              </label>
+              <select
+                value={supplier}
+                onChange={(e) => setSupplier(e.target.value as "impotekno" | "sanjulian" | "nextcell" | "todos")}
+                style={{
+                  padding: "0.65rem 0.75rem",
+                  borderRadius: "0.5rem",
+                  border: "1px solid #475569",
+                  backgroundColor: "#0f172a",
+                  color: "white",
+                  cursor: "pointer",
+                  fontSize: "0.875rem",
+                  minWidth: "400px",
+                }}
+              >
+                <option value="todos">🏢 Todos los Depósitos</option>
+                <option value="impotekno">🔵 Depósito Azul</option>
+                <option value="sanjulian">🟢 Depósito Verde</option>
+                <option value="nextcell">🔴 Depósito Rojo</option>
+                <option value="nodo">🟡 Depósito Amarillo</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        {/* Categories Horizontal Buttons */}
+        <div style={{ marginBottom: "2rem", display: "flex", gap: "0.75rem", flexWrap: "wrap", alignItems: "center" }}>
+          <button
+            onClick={() => setSelectedCategory(null)}
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))",
-              gap: "1rem",
+              padding: "0.5rem 1rem",
+              backgroundColor: !selectedCategory ? "#3b82f6" : "#475569",
+              border: "none",
+              borderRadius: "0.375rem",
+              cursor: "pointer",
+              color: "white",
+              fontWeight: "600",
+              fontSize: "0.825rem",
+              whiteSpace: "nowrap",
+              transition: "all 0.2s",
+            }}
+            onMouseOver={(e) => {
+              if (selectedCategory) {
+                (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#3b82f6";
+              }
+            }}
+            onMouseOut={(e) => {
+              if (selectedCategory) {
+                (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#475569";
+              }
             }}
           >
-            <button
-              onClick={() => setSelectedCategory(null)}
-              style={{
-                padding: "1rem",
-                backgroundColor: !selectedCategory ? "#3b82f6" : "#1e293b",
-                border: `2px solid ${!selectedCategory ? "#3b82f6" : "#475569"}`,
-                borderRadius: "0.5rem",
-                cursor: "pointer",
-                fontWeight: "600",
-                color: "white",
-                transition: "all 0.2s",
-              }}
-              onMouseOver={(e) => {
-                if (selectedCategory) {
-                  (e.target as HTMLButtonElement).style.backgroundColor = "#334155";
-                }
-              }}
-              onMouseOut={(e) => {
-                if (selectedCategory) {
-                  (e.target as HTMLButtonElement).style.backgroundColor = "#1e293b";
-                }
-              }}
-            >
-              <div>Todas</div>
-              <div style={{ fontSize: "1.5rem", marginTop: "0.5rem" }}>{products.length}</div>
-            </button>
+            Todas
+          </button>
+          {CATEGORY_LIST.map((category) => {
+            const isSelected = selectedCategory === category;
 
-            {CATEGORY_LIST.map((category) => {
-              const count = categoryCounts[category] || 0;
-              const color = COLORS[category] || "#6b7280";
-              const isSelected = selectedCategory === category;
-
-              return (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(isSelected ? null : category)}
-                  style={{
-                    padding: "1rem",
-                    backgroundColor: isSelected ? color : "#1e293b",
-                    border: `2px solid ${color}`,
-                    borderRadius: "0.5rem",
-                    cursor: "pointer",
-                    fontWeight: "600",
-                    color: isSelected ? "white" : color,
-                    transition: "all 0.2s",
-                    minHeight: "100px",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    textAlign: "center",
-                    fontSize: "0.875rem",
-                  }}
-                  onMouseOver={(e) => {
-                    if (!isSelected) {
-                      (e.target as HTMLButtonElement).style.backgroundColor = `${color}15`;
-                      (e.target as HTMLButtonElement).style.transform = "scale(1.05)";
-                    }
-                  }}
-                  onMouseOut={(e) => {
-                    if (!isSelected) {
-                      (e.target as HTMLButtonElement).style.backgroundColor = "#1e293b";
-                      (e.target as HTMLButtonElement).style.transform = "scale(1)";
-                    }
-                  }}
-                >
-                  <div>{category}</div>
-                  <div style={{ fontSize: "1.5rem", fontWeight: "bold", marginTop: "0.5rem" }}>
-                    {count}
-                  </div>
-                </button>
-              );
-            })}
-          </div>
+            return (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(isSelected ? null : category)}
+                style={{
+                  padding: "0.5rem 1rem",
+                  backgroundColor: isSelected ? "#3b82f6" : "#475569",
+                  border: "none",
+                  borderRadius: "0.375rem",
+                  cursor: "pointer",
+                  color: "white",
+                  fontWeight: "600",
+                  fontSize: "0.825rem",
+                  whiteSpace: "nowrap",
+                  transition: "all 0.2s",
+                }}
+                onMouseOver={(e) => {
+                  (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#3b82f6";
+                }}
+                onMouseOut={(e) => {
+                  if (!isSelected) {
+                    (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#475569";
+                  }
+                }}
+              >
+                {category}
+              </button>
+            );
+          })}
         </div>
 
         {/* Products Grid */}
         <div>
-          <div style={{ marginBottom: "1.5rem", color: "#e2e8f0" }}>
-            <h2 style={{ margin: "0 0 0.5rem 0" }}>
+          <div style={{ marginBottom: "1.5rem", color: "#e2e8f0", display: "flex", justifyContent: "flex-start", alignItems: "center", gap: "3rem", flexWrap: "wrap" }}>
+            <h2 style={{ margin: 0 }}>
               📦 {selectedCategory || "Todos los"} Productos ({filtered.length})
             </h2>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+              <label style={{ color: "#cbd5e1", fontWeight: "500", whiteSpace: "nowrap" }}>Ordenar:</label>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value as any)}
+                style={{
+                  padding: "0.5rem 0.75rem",
+                  borderRadius: "0.375rem",
+                  border: "1px solid #475569",
+                  backgroundColor: "#0f172a",
+                  color: "white",
+                  cursor: "pointer",
+                  minWidth: "180px",
+                  fontSize: "0.875rem",
+                }}
+              >
+                <option value="nombre">Nombre (A-Z)</option>
+                <option value="precio-asc">Precio (Menor a Mayor)</option>
+                <option value="precio-desc">Precio (Mayor a Menor)</option>
+              </select>
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginLeft: "auto" }}>
+              <label style={{ color: "#e2e8f0", fontWeight: "600", whiteSpace: "nowrap", fontSize: "0.95rem" }}>🔎 En este depósito:</label>
+              <input
+                type="text"
+                placeholder="Buscar en este depósito..."
+                value={depositoSearchTerm}
+                onChange={(e) => setDepositoSearchTerm(e.target.value)}
+                style={{
+                  padding: "0.65rem 1rem",
+                  borderRadius: "0.375rem",
+                  border: "2px solid #10b981",
+                  backgroundColor: "#0f172a",
+                  color: "white",
+                  cursor: "text",
+                  minWidth: "300px",
+                  fontSize: "0.95rem",
+                  fontWeight: "500",
+                }}
+              />
+            </div>
           </div>
 
           {loading ? (
@@ -387,8 +621,8 @@ export default function ShopPage() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
-                gap: "1.5rem",
+                gridTemplateColumns: "repeat(6, 1fr)",
+                gap: "1rem",
               }}
             >
               {filtered.map((product) => (
@@ -418,7 +652,7 @@ export default function ShopPage() {
                   <div
                     style={{
                       width: "100%",
-                      height: "200px",
+                      paddingBottom: "120%",
                       backgroundColor: "#0f172a",
                       overflow: "hidden",
                       position: "relative",
@@ -430,7 +664,10 @@ export default function ShopPage() {
                       style={{
                         width: "100%",
                         height: "100%",
-                        objectFit: "cover",
+                        objectFit: "contain",
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
                       }}
                       onError={(e) => {
                         (e.target as HTMLImageElement).src =
@@ -455,14 +692,14 @@ export default function ShopPage() {
                   </div>
 
                   {/* Contenido */}
-                  <div style={{ padding: "1rem" }}>
+                  <div style={{ padding: "0.5rem" }}>
                     <h4
                       style={{
-                        margin: "0 0 0.75rem 0",
-                        fontSize: "0.875rem",
+                        margin: "0 0 0.25rem 0",
+                        fontSize: "0.75rem",
                         fontWeight: "600",
                         color: "white",
-                        minHeight: "40px",
+                        minHeight: "30px",
                         overflow: "hidden",
                         textOverflow: "ellipsis",
                         display: "-webkit-box",
@@ -473,47 +710,28 @@ export default function ShopPage() {
                       {product.name}
                     </h4>
 
-                    <div style={{ marginTop: "1rem" }}>
-                      <div style={{ fontSize: "0.75rem", color: "#94a3b8", marginBottom: "0.25rem" }}>
-                        Precio Unitario
-                      </div>
+                    <div style={{ marginTop: "0.25rem" }}>
                       <div
                         style={{
-                          fontSize: "1.5rem",
-                          fontWeight: "bold",
+                          fontSize: "1.25rem",
+                          fontWeight: "700",
                           color: product.supplier ? SUPPLIER_COLORS[product.supplier]?.color || "#3b82f6" : COLORS[product.category] || "#3b82f6",
+                          textAlign: "center",
                         }}
                       >
                         ${product.unit_price.toLocaleString("es-AR")}
                       </div>
                     </div>
 
-                    <div style={{ marginTop: "0.75rem", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem" }}>
-                      <div>
-                        <div style={{ fontSize: "0.75rem", color: "#94a3b8" }}>SKU</div>
-                        <div style={{ fontSize: "0.75rem", color: "#cbd5e1", fontWeight: "500" }}>
-                          {product.sku}
-                        </div>
-                      </div>
-                      <div>
-                        <div style={{ fontSize: "0.75rem", color: "#94a3b8" }}>Bulto</div>
-                        <div style={{ fontSize: "0.75rem", color: "#cbd5e1", fontWeight: "500" }}>
-                          {product.units_per_package} pcs
-                        </div>
-                      </div>
-                    </div>
-
                     {/* Controles de Cantidad */}
-                    <div style={{ marginTop: "1rem", paddingTop: "1rem", borderTop: "1px solid #334155" }}>
-                      <div style={{ fontSize: "0.75rem", color: "#94a3b8", marginBottom: "0.5rem" }}>
-                        Cantidad a comprar
-                      </div>
+                    <div style={{ marginTop: "0.5rem" }}>
                       <div
                         style={{
                           display: "flex",
-                          gap: "0.5rem",
+                          gap: "0.4rem",
                           alignItems: "center",
-                          marginBottom: "0.75rem",
+                          justifyContent: "center",
+                          marginBottom: "0.5rem",
                         }}
                       >
                         <button
@@ -524,14 +742,19 @@ export default function ShopPage() {
                             })
                           }
                           style={{
-                            padding: "0.4rem 0.6rem",
-                            backgroundColor: "#334155",
-                            border: "1px solid #475569",
+                            padding: "0.25rem 0.5rem",
+                            backgroundColor: product.supplier ? SUPPLIER_COLORS[product.supplier]?.color || "#3b82f6" : "#3b82f6",
+                            border: "none",
                             borderRadius: "0.25rem",
                             cursor: "pointer",
                             fontSize: "1rem",
-                            fontWeight: "600",
-                            color: "#e2e8f0",
+                            fontWeight: "700",
+                            color: "white",
+                            width: "1.8rem",
+                            height: "1.8rem",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
                           }}
                         >
                           −
@@ -547,15 +770,16 @@ export default function ShopPage() {
                             })
                           }
                           style={{
-                            width: "3rem",
-                            padding: "0.4rem",
-                            border: "1px solid #475569",
-                            borderRadius: "0.25rem",
+                            width: "1.8rem",
+                            height: "1.8rem",
+                            padding: "0.1rem",
+                            border: `1px solid ${product.supplier ? SUPPLIER_COLORS[product.supplier]?.color || "#475569" : "#475569"}`,
+                            borderRadius: "0.2rem",
                             textAlign: "center",
-                            fontSize: "0.95rem",
-                            fontWeight: "600",
+                            fontSize: "0.8rem",
+                            fontWeight: "700",
                             backgroundColor: "#0f172a",
-                            color: "#e2e8f0",
+                            color: product.supplier ? SUPPLIER_COLORS[product.supplier]?.color || "#10b981" : "#10b981",
                           }}
                         />
                         <button
@@ -566,14 +790,19 @@ export default function ShopPage() {
                             })
                           }
                           style={{
-                            padding: "0.4rem 0.6rem",
-                            backgroundColor: "#334155",
-                            border: "1px solid #475569",
+                            padding: "0.25rem 0.5rem",
+                            backgroundColor: product.supplier ? SUPPLIER_COLORS[product.supplier]?.color || "#10b981" : "#10b981",
+                            border: "none",
                             borderRadius: "0.25rem",
                             cursor: "pointer",
                             fontSize: "1rem",
-                            fontWeight: "600",
-                            color: "#e2e8f0",
+                            fontWeight: "700",
+                            color: "white",
+                            width: "1.8rem",
+                            height: "1.8rem",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
                           }}
                         >
                           +
@@ -609,14 +838,14 @@ export default function ShopPage() {
                           backgroundColor: (selectedQuantities[product.sku] || 0) > 0 ? "#10b981" : "#475569",
                           color: "#fff",
                           border: "none",
-                          padding: "0.5rem",
-                          borderRadius: "0.375rem",
+                          padding: "0.3rem",
+                          borderRadius: "0.25rem",
                           cursor: (selectedQuantities[product.sku] || 0) > 0 ? "pointer" : "not-allowed",
                           fontWeight: "600",
-                          fontSize: "0.9rem",
+                          fontSize: "0.75rem",
                         }}
                       >
-                        {(selectedQuantities[product.sku] || 0) > 0 ? "✓ Enviar al carrito" : "Agregar cantidad"}
+                        {(selectedQuantities[product.sku] || 0) > 0 ? "Carrito" : "Agregar"}
                       </button>
                     </div>
                   </div>
@@ -675,7 +904,11 @@ export default function ShopPage() {
       </footer>
 
       {/* Shopping Cart Panel */}
-      <CartPanel isOpen={showCart} onClose={() => setShowCart(false)} />
+      <CartPanel
+        isOpen={showCart}
+        onClose={() => setShowCart(false)}
+        onFilterBySupplier={handleFilterBySupplier}
+      />
     </div>
   );
 }
