@@ -76,6 +76,13 @@ const CATEGORIES: Record<ProductCategory, string[]> = {
     "encendedor",
     "encendedor recargable",
     "humidificador",
+    "balanza",
+    "balanza de cocina",
+    "balanza digital",
+    "balanza baño",
+    "balanza electrónica",
+    "bascula",
+    "bascula cocina",
   ],
   "Herramientas y Electricidad": [
     "herramienta",
