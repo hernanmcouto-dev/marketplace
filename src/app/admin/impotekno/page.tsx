@@ -8,6 +8,8 @@ export default function ImpoteknoPanel() {
   const [activeTab, setActiveTab] = useState("list");
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 50;
   const [editingProduct, setEditingProduct] = useState(null);
   const [editPrice, setEditPrice] = useState("");
   const [logs, setLogs] = useState([]);
@@ -172,6 +174,11 @@ export default function ImpoteknoPanel() {
       p.sku.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
+
   const generateAnalytics = () => {
     if (products.length === 0) return null;
 
@@ -275,7 +282,10 @@ export default function ImpoteknoPanel() {
               type="text"
               placeholder="Buscar por nombre o SKU..."
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+                setCurrentPage(1);
+              }}
               style={{
                 width: "100%",
                 padding: "0.75rem",
@@ -298,7 +308,7 @@ export default function ImpoteknoPanel() {
                   </tr>
                 </thead>
                 <tbody>
-                  {filteredProducts.slice(0, 50).map((product) => (
+                  {paginatedProducts.map((product) => (
                     <tr key={product.sku} style={{ borderBottom: "1px solid #334155" }}>
                       <td style={{ padding: "1rem" }}>{product.sku}</td>
                       <td style={{ padding: "1rem", maxWidth: "200px" }}>
@@ -353,9 +363,102 @@ export default function ImpoteknoPanel() {
                 </tbody>
               </table>
             </div>
-            <p style={{ marginTop: "1rem", color: "#94a3b8", fontSize: "0.875rem" }}>
-              Mostrando 50 de {filteredProducts.length} productos
-            </p>
+
+            {/* Paginación */}
+            <div style={{ marginTop: "1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
+              <p style={{ color: "#94a3b8", fontSize: "0.875rem", margin: 0 }}>
+                Mostrando {startIndex + 1} a {Math.min(endIndex, filteredProducts.length)} de {filteredProducts.length} productos
+              </p>
+
+              <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+                <button
+                  onClick={() => setCurrentPage(1)}
+                  disabled={currentPage === 1}
+                  style={{
+                    padding: "0.5rem 1rem",
+                    backgroundColor: currentPage === 1 ? "#334155" : "#3b82f6",
+                    color: "white",
+                    border: "none",
+                    borderRadius: "0.25rem",
+                    cursor: currentPage === 1 ? "not-allowed" : "pointer",
+                    fontSize: "0.875rem",
+                  }}
+                >
+                  ⏮️
+                </button>
+                <button
+                  onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
+                  disabled={currentPage === 1}
+                  style={{
+                    padding: "0.5rem 1rem",
+                    backgroundColor: currentPage === 1 ? "#334155" : "#3b82f6",
+                    color: "white",
+                    border: "none",
+                    borderRadius: "0.25rem",
+                    cursor: currentPage === 1 ? "not-allowed" : "pointer",
+                    fontSize: "0.875rem",
+                  }}
+                >
+                  ◀️ Anterior
+                </button>
+
+                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                  <input
+                    type="number"
+                    min="1"
+                    max={totalPages}
+                    value={currentPage}
+                    onChange={(e) => {
+                      const page = Math.min(totalPages, Math.max(1, parseInt(e.target.value) || 1));
+                      setCurrentPage(page);
+                    }}
+                    style={{
+                      width: "50px",
+                      padding: "0.5rem",
+                      backgroundColor: "#1e293b",
+                      border: "1px solid #334155",
+                      borderRadius: "0.25rem",
+                      color: "white",
+                      textAlign: "center",
+                    }}
+                  />
+                  <span style={{ color: "#94a3b8", fontSize: "0.875rem" }}>
+                    de {totalPages}
+                  </span>
+                </div>
+
+                <button
+                  onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
+                  disabled={currentPage === totalPages}
+                  style={{
+                    padding: "0.5rem 1rem",
+                    backgroundColor: currentPage === totalPages ? "#334155" : "#3b82f6",
+                    color: "white",
+                    border: "none",
+                    borderRadius: "0.25rem",
+                    cursor: currentPage === totalPages ? "not-allowed" : "pointer",
+                    fontSize: "0.875rem",
+                  }}
+                >
+                  Siguiente ▶️
+                </button>
+                <button
+                  onClick={() => setCurrentPage(totalPages)}
+                  disabled={currentPage === totalPages}
+                  style={{
+                    padding: "0.5rem 1rem",
+                    backgroundColor: currentPage === totalPages ? "#334155" : "#3b82f6",
+                    color: "white",
+                    border: "none",
+                    borderRadius: "0.25rem",
+                    cursor: currentPage === totalPages ? "not-allowed" : "pointer",
+                    fontSize: "0.875rem",
+                  }}
+                >
+                  ⏭️
+                </button>
+              </div>
+            </div>
           </div>
         )}
 
