@@ -83,6 +83,11 @@ const CATEGORIES: Record<ProductCategory, string[]> = {
     "balanza electrónica",
     "bascula",
     "bascula cocina",
+    "tender",
+    "tendedero",
+    "tendedero ropa",
+    "tender ropa",
+    "secadora ropa",
   ],
   "Herramientas y Electricidad": [
     "herramienta",
