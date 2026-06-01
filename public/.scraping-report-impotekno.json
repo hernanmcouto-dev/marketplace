@@ -1,0 +1,51 @@
+{
+  "report": {
+    "newProducts": 1,
+    "newImages": 1,
+    "cachedImages": 436,
+    "removedProducts": [
+      "SAR-MG220",
+      "SAR-105DB",
+      "SAR-LED-83055"
+    ],
+    "totalProducts": 437,
+    "timestamp": "2026-06-01T04:09:13.399Z"
+  },
+  "newProductsDetails": [
+    {
+      "sku": "SAR-CAMISA",
+      "name": "CAMISETA  AFA   TALLES M",
+      "unit_price": 16099,
+      "units_per_package": 150,
+      "image_url": "/api/image-proxy?url=https%3A%2F%2Fwww.impotekno.com%2Ffotos%2FCAMISA.jpg&provider=impotekno&sku=SAR-CAMISA&v=1780286953005",
+      "category": "Indumentaria y Textiles"
+    }
+  ],
+  "removedProductsDetails": [
+    {
+      "sku": "SAR-MG220",
+      "name": "PRO-4 GUANTES REFORZADO PARA MOTO",
+      "unit_price": 6785,
+      "units_per_package": 200,
+      "image_url": "/images/cache/impotekno/SAR-MG220.jpg",
+      "category": "Accesorios Auto Moto y Bici"
+    },
+    {
+      "sku": "SAR-105DB",
+      "name": "ALARMA CON SENSOR DE MOVIMIENTO YL-105",
+      "unit_price": 6765,
+      "units_per_package": 50,
+      "image_url": "/images/cache/impotekno/SAR-105DB.jpg",
+      "category": "Seguridad y Cámaras"
+    },
+    {
+      "sku": "SAR-LED-83055",
+      "name": "LED DE PARED BIDIRECCIONAL RGB+SENSOR",
+      "unit_price": 8746,
+      "units_per_package": 100,
+      "image_url": "/images/cache/impotekno/SAR-LED-83055.jpg",
+      "category": "Iluminación y LED"
+    }
+  ],
+  "updatedCount": 433
+}

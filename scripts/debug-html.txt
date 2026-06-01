@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!--RSS-->
+<!--metas-->
+<meta http-equiv="Content-Language" content="es">
+<meta name="Description" content="">
+<meta name="Keywords" content="Cartuchos Alternativos,Toner alternativos,cds, dvds, insumos, resmas, virgenes, barato, baratos, calidad, marca, envios, domicilio, tintas, cartuchos, ridata, verbatim, verba, imation, sony, philips, argenbox, nacionales, cajas, cajas de dvd, cajas de cd, distribuidora de insumos, cd-rw, dvd+rw, dvd-rw, economico, economicos, envios, interior, expresos, dvd, lg,mouse,teclado,fuente,fuentes,led,panel,plafon,tira,controladora,auriculares,auricular,gamer,gaming,parlante,parlantes,bafle,router,wifi,gtc,noga,seisa,kolke,soporte,celular,tablet,funda,mp3,mp4,inalambrico,home,cargador,samsung,mayorista,importador,electronica,once,">
+<meta name="Security" content="Public">
+<meta name="Robots" content="index,follow">
+<link rel="shortcut icon" href="favicon.ico">
+<!--css-->
+<link href="css/slimbox.css" rel="stylesheet" type="text/css" media="screen">
+
+<link rel="stylesheet" type="text/css" media="all" href="css/960.css">
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css">
+<link rel="stylesheet" type="text/css" media="all" href="css/text.css">
+<link rel="stylesheet" type="text/css" media="all" href="css/estilo.css">
+<!--link rel="stylesheet" type="text/css" media="print" href="css/print.css" /-->
+<link rel="Shortcut Icon" href="img/favicon.ico" title="Favicon">
+<!--link rel="stylesheet" href="../nivo-slider.css" type="text/css" media="screen" /-->
+<!--link rel="stylesheet" href="style.css" type="text/css" media="screen" /-->
+
+<!--js-->
+<script type="text/javascript" src="panel/js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="js/mootools.v1.1.js"></script>
+<script type="text/javascript" src="js/slimbox.js"></script>
+<script type="text/javascript" src="js/growl.js"></script>
+<script type="text/javascript" src="js/form.validator.js"></script>
+<script type="text/javascript" src="js/personalization.js"></script>
+
+
+<title>Mayorista electronica importador </title>
+</head>
+<body>
+
+<input id="color-pagina-0" type="hidden" name="color-pagina-0" value="#edf8e9">
+<input id="color-pagina-1" type="hidden" name="color-pagina-1" value="#bae4b3">
+<input id="color-pagina-2" type="hidden" name="color-pagina-2" value="#74c476">
+<input id="color-pagina-3" type="hidden" name="color-pagina-3" value="#31a354">
+<input id="color-pagina-4" type="hidden" name="color-pagina-4" value="#006d2c">
+
+<div class="container_16 fondo">
+
+	<!-- > INICIO ENCABEZADO -->
+
+	<!-- > FIN ENCABEZADO, INICIO MENU -->
+
+	<div id="header-pagina" class="grid_16 menu" style="height: 70px; background-color: rgb(49, 163, 84);">
+
+
+		<div class="grid_5">
+			<ul id="menu">
+        		<div><form id="form-buscador" method="get" action="index.php">
+        		<div>
+                        	<input type="hidden" name="idPadre" value="">
+                        	<input type="hidden" name="sec" value="subcateg">
+                        	<label id="termino">Buscar:</label>
+                        	<input placeholder="  Buscar Productos  " type="text" name="vaBuscar" value="">
+                	</div>
+                	<div>
+                        	<input type="submit" name="buscar" value="Buscar" class="btn-buscar">
+                	</div>
+        		</form>
+            </div>
+            <div>
+                          <form id="form-marcas" method="get" action="">
+              <br>
+      <ul id="side-marcas">
+         <li>
+              <input type="hidden" name="sec" value="subcateg">
+              <input type="hidden" name="npag" value="1">
+                <select id="selector-categorias" class="categorias corrido1" name="idPadre" onchange="if(this.selectedIndex!=0)this.form.submit();" style="background-color: rgb(0, 109, 44); border: rgb(186, 228, 179);">
+                  <option value="">CATEGORIAS</option>
+                                      <option value="151">ACCESORIOS</option>
+                              <option value="17">AUDIO ACC</option>
+                              <option value="13">AURICULARES</option>
+                              <option value="2">CABLES&amp;ADAPTADORES</option>
+                              <option value="4">CARGADORES</option>
+                              <option value="256">COMPUTACION</option>
+                              <option value="12">COMPUTACION,PERIFERICOS, ACC</option>
+                              <option value="162">ELECTRONICA, GAMING</option>
+                              <option value="65">EN LISTA DE ESPERA</option>
+                              <option value="7">FUNDAS</option>
+                              <option value="257">ILUMINACION- WEBCAM</option>
+                              <option value="24">INGRESOS RECI

@@ -363,7 +363,7 @@ export default function ShopPage() {
               {[...Array(2)].map((_, iteration) =>
                 products.map((product) => {
                   if (!featuredProducts.includes(product.sku)) return null;
-                  const supplierInfo = SUPPLIER_COLORS[product.supplier];
+                  const supplierInfo = product.supplier ? SUPPLIER_COLORS[product.supplier] : undefined;
 
                   return (
                     <div

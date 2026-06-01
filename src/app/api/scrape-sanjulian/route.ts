@@ -64,6 +64,7 @@ function sendReport(controller: ReadableStreamDefaultController, report: Scraper
 
 function extractProducts(html: string): any[] {
   const products: any[] = [];
+  const invalidSkus = ["inicio", "indice", "index", "header", "footer", "nav", "menu"];
 
   // Buscar bloques de productos: <a name="SKU"> seguido de <h1>NOMBRE</h1> y precio en <strong>
   const productBlockRegex = /<a\s+(?:name|id)="([^"]+)"[^>]*>[\s\S]*?<h1>([^<]+)<\/h1>[\s\S]*?Codigo:\s*([^\<\n]+)[\s\S]*?<strong[^>]*>[\s\S]*?\$\s*([0-9,]+)/g;
@@ -75,7 +76,8 @@ function extractProducts(html: string): any[] {
     const priceStr = match[4].replace(/,/g, "").trim();
     const unit_price = parseInt(priceStr) || 0;
 
-    if (sku && name && unit_price > 0) {
+    // Excluir SKUs inválidos (navegación, anclas especiales)
+    if (sku && name && unit_price > 0 && !invalidSkus.includes(sku.toLowerCase())) {
       products.push({
         sku,
         name,

@@ -1,0 +1,64 @@
+{
+  "report": {
+    "newProducts": 0,
+    "newImages": 0,
+    "cachedImages": 477,
+    "removedProducts": [
+      "PAS-inicio"
+    ],
+    "totalProducts": 477,
+    "timestamp": "2026-06-01T06:24:35.908Z"
+  },
+  "newProductsDetails": [],
+  "removedProductsDetails": [
+    {
+      "sku": "PAS-inicio",
+      "name": "ALARMA SENSOR DE PUERTA A PILA",
+      "unit_price": 6023,
+      "units_per_package": 1,
+      "image_url": "/images/cache/PAS-inicio.jpg",
+      "category": "Seguridad y Cámaras"
+    },
+    {
+      "sku": "PAS-inicio",
+      "name": "AURIC. P47 BLUETOOTH",
+      "unit_price": 3849,
+      "units_per_package": 1,
+      "image_url": "/images/cache/PAS-inicio.jpg",
+      "category": "Audio Video y Parlantes"
+    },
+    {
+      "sku": "PAS-inicio",
+      "name": "BATERIA 18650 6800 Ah",
+      "unit_price": 1217,
+      "units_per_package": 1,
+      "image_url": "/images/cache/PAS-inicio.jpg",
+      "category": "Herramientas y Electricidad"
+    },
+    {
+      "sku": "PAS-inicio",
+      "name": "CORTA UÑA TRIM GRANDE",
+      "unit_price": 455,
+      "units_per_package": 1,
+      "image_url": "/images/cache/PAS-inicio.jpg",
+      "category": "Cuidado Personal y Cosmética"
+    },
+    {
+      "sku": "PAS-inicio",
+      "name": "BASE BURBUJERA MUNDIALISTA",
+      "unit_price": 12169,
+      "units_per_package": 1,
+      "image_url": "/images/cache/PAS-inicio.jpg",
+      "category": "Cuidado Personal y Cosmética"
+    },
+    {
+      "sku": "PAS-inicio",
+      "name": "ADAP. DISPLAY PORT A HDMI (CON101)",
+      "unit_price": 3570,
+      "units_per_package": 1,
+      "image_url": "/images/cache/PAS-inicio.jpg",
+      "category": "Accesorios para Celulares"
+    }
+  ],
+  "updatedCount": 476
+}

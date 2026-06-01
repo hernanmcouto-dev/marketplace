@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useCart } from "@/lib/CartContext";
+import { useCart, CartItem } from "@/lib/CartContext";
 
 interface Product {
   sku: string;
@@ -21,7 +21,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
   if (!product) return null;
 
   const handleAddToCart = () => {
-    addToCart(product, quantity);
+    addToCart(product as CartItem, quantity);
     setQuantity(1);
     onClose();
   };

@@ -34,7 +34,7 @@ export const ProductFilters = ({ products, onFilterChange }: ProductFiltersProps
     new Set(
       products
         .map((p) => p.node.productType || p.node.vendor)
-        .filter(Boolean)
+        .filter((cat): cat is string => Boolean(cat))
     )
   ).sort();
 

@@ -1,13 +1,5 @@
 [
   {
-    "sku": "PAS-inicio",
-    "name": "ALARMA SENSOR DE PUERTA A PILA",
-    "unit_price": 6023,
-    "units_per_package": 1,
-    "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2Finicio.jpg&provider=sanjulian&sku=PAS-inicio&v=1780181066075",
-    "category": "Cargadores y Fuentes"
-  },
-  {
     "sku": "PAS-91024",
     "name": "CALC. SOLAR PASTEL TECLA Y DIGITOS GRANDES",
     "unit_price": 5489,
@@ -88,14 +80,6 @@
     "category": "Accesorios Auto Moto y Bici"
   },
   {
-    "sku": "PAS-inicio",
-    "name": "AURIC. P47 BLUETOOTH",
-    "unit_price": 3849,
-    "units_per_package": 1,
-    "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2Finicio.jpg&provider=sanjulian&sku=PAS-inicio&v=1780181066078",
-    "category": "Audio Video y Parlantes"
-  },
-  {
     "sku": "PAS-AUR125",
     "name": "AURICULAR BLUETOOTH  P9  varios colores",
     "unit_price": 4715,
@@ -174,14 +158,6 @@
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FBK07.jpg&provider=sanjulian&sku=PAS-BK07&v=1780181066080",
     "category": "Audio Video y Parlantes"
-  },
-  {
-    "sku": "PAS-inicio",
-    "name": "BATERIA 18650 6800 Ah",
-    "unit_price": 1217,
-    "units_per_package": 1,
-    "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2Finicio.jpg&provider=sanjulian&sku=PAS-inicio&v=1780181066080",
-    "category": "Cargadores y Fuentes"
   },
   {
     "sku": "PAS-PV1130",
@@ -488,14 +464,6 @@
     "category": "Cargadores y Fuentes"
   },
   {
-    "sku": "PAS-inicio",
-    "name": "CORTA UÑA TRIM GRANDE",
-    "unit_price": 455,
-    "units_per_package": 1,
-    "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2Finicio.jpg&provider=sanjulian&sku=PAS-inicio&v=1780181066101",
-    "category": "Cuidado Personal y Cosmética"
-  },
-  {
     "sku": "PAS-GX220D",
     "name": "CORTAPELO LAMBOTECH CON VISOR RECARG.",
     "unit_price": 9119,
@@ -598,14 +566,6 @@
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2F99027.jpg&provider=sanjulian&sku=PAS-99027&v=1780181066104",
     "category": "Cuidado Personal y Cosmética"
-  },
-  {
-    "sku": "PAS-inicio",
-    "name": "BASE BURBUJERA MUNDIALISTA",
-    "unit_price": 12169,
-    "units_per_package": 1,
-    "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2Finicio.jpg&provider=sanjulian&sku=PAS-inicio&v=1780181066104",
-    "category": "Cargadores y Fuentes"
   },
   {
     "sku": "PAS-99291",
@@ -949,14 +909,6 @@
     "unit_price": 5192,
     "units_per_package": 1,
     "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2FLV100.jpg&provider=sanjulian&sku=PAS-LV100&v=1780181066113",
-    "category": "Cargadores y Fuentes"
-  },
-  {
-    "sku": "PAS-inicio",
-    "name": "ADAP. DISPLAY PORT A HDMI (CON101)",
-    "unit_price": 3570,
-    "units_per_package": 1,
-    "image_url": "/api/image-proxy?url=https%3A%2F%2Fsanjulian99.com%2Ffotos%2Finicio.jpg&provider=sanjulian&sku=PAS-inicio&v=1780181066113",
     "category": "Cargadores y Fuentes"
   },
   {
