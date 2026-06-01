@@ -7,7 +7,8 @@ interface CartPanelProps {
 }
 
 export default function CartPanel({ isOpen, onClose }: CartPanelProps) {
-  const { items, removeFromCart, updateQuantity, total } = useCart();
+  const { items, removeFromCart, updateQuantity, total, validateCart } = useCart();
+  const validation = validateCart();
 
   if (!isOpen) return null;
 
@@ -200,6 +201,8 @@ export default function CartPanel({ isOpen, onClose }: CartPanelProps) {
               display: "flex",
               flexDirection: "column",
               gap: "0.75rem",
+              maxHeight: "40%",
+              overflowY: "auto",
             }}
           >
             {/* Total */}
@@ -214,6 +217,53 @@ export default function CartPanel({ isOpen, onClose }: CartPanelProps) {
               <p style={{ margin: "0.25rem 0 0 0", fontSize: "1.5rem", fontWeight: "bold" }}>
                 ${total.toLocaleString("es-AR")}
               </p>
+            </div>
+
+            {/* Condiciones de Compra */}
+            <div
+              style={{
+                backgroundColor: validation.isValid ? "#dcfce7" : "#fee2e2",
+                border: `2px solid ${validation.isValid ? "#22c55e" : "#ef4444"}`,
+                padding: "0.75rem",
+                borderRadius: "0.375rem",
+              }}
+            >
+              <p style={{ margin: "0 0 0.5rem 0", fontWeight: "bold", fontSize: "0.875rem", color: validation.isValid ? "#166534" : "#991b1b" }}>
+                {validation.isValid ? "✅ Condiciones cumplidas" : "⚠️ Condiciones no cumplidas"}
+              </p>
+
+              {/* Total mínimo */}
+              <div style={{ marginBottom: "0.5rem", fontSize: "0.75rem" }}>
+                <p style={{ margin: "0 0 0.25rem 0", color: validation.totalMet ? "#166534" : "#991b1b" }}>
+                  {validation.totalMet ? "✓" : "✗"} Total mínimo: ${validation.totalMinimum.toLocaleString("es-AR")}
+                </p>
+                <p style={{ margin: 0, color: "#6b7280", fontSize: "0.7rem" }}>
+                  Tienes: ${validation.totalCurrent.toLocaleString("es-AR")}
+                </p>
+              </div>
+
+              {/* Mínimos por depósito */}
+              <div>
+                {validation.suppliersMet.map((supplier) => (
+                  <div key={supplier.name} style={{ marginBottom: "0.25rem" }}>
+                    <p style={{ margin: 0, fontSize: "0.7rem", color: supplier.current === 0 ? "#6b7280" : supplier.met ? "#166534" : "#991b1b" }}>
+                      {supplier.current === 0 ? "−" : supplier.met ? "✓" : "✗"} {supplier.name}: ${supplier.minimum.toLocaleString("es-AR")}
+                      {supplier.current > 0 && <span style={{ color: "#6b7280" }}> (tienes ${supplier.current.toLocaleString("es-AR")})</span>}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Errores */}
+              {validation.errors.length > 0 && (
+                <div style={{ backgroundColor: "rgba(0,0,0,0.1)", padding: "0.5rem", borderRadius: "0.25rem", marginTop: "0.5rem" }}>
+                  {validation.errors.map((error, idx) => (
+                    <p key={idx} style={{ margin: "0.25rem 0", fontSize: "0.7rem", color: "#991b1b" }}>
+                      • {error}
+                    </p>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Buttons */}
@@ -234,19 +284,21 @@ export default function CartPanel({ isOpen, onClose }: CartPanelProps) {
             </button>
 
             <button
+              disabled={!validation.isValid}
               style={{
                 width: "100%",
                 padding: "0.75rem 1rem",
-                backgroundColor: "#10b981",
-                color: "white",
+                backgroundColor: validation.isValid ? "#10b981" : "#d1d5db",
+                color: validation.isValid ? "white" : "#6b7280",
                 border: "none",
                 borderRadius: "0.375rem",
-                cursor: "pointer",
+                cursor: validation.isValid ? "pointer" : "not-allowed",
                 fontWeight: "bold",
                 fontSize: "1rem",
+                opacity: validation.isValid ? 1 : 0.6,
               }}
             >
-              Proceder al checkout
+              {validation.isValid ? "Proceder al checkout" : "No cumple condiciones"}
             </button>
           </div>
         )}
