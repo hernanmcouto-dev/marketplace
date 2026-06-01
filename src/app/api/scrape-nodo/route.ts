@@ -189,16 +189,15 @@ export async function POST(request: NextRequest) {
           }
         }
 
-        // Solo descargar imágenes de productos NUEVOS
+        // Descargar imágenes de TODOS los productos
         log("📥 Descargando imágenes a S3...");
         let descargadas = 0;
         const CONCURRENT_DOWNLOADS = 5;
-        const productosNuevos = allProducts.filter((p) => !existingSKUs.has(p.sku));
 
-        log(`📊 Productos nuevos: ${productosNuevos.length}, Productos existentes: ${existingSKUs.size}`);
+        log(`📊 Total productos: ${allProducts.length}`);
 
-        for (let i = 0; i < productosNuevos.length; i += CONCURRENT_DOWNLOADS) {
-          const batch = productosNuevos.slice(i, i + CONCURRENT_DOWNLOADS);
+        for (let i = 0; i < allProducts.length; i += CONCURRENT_DOWNLOADS) {
+          const batch = allProducts.slice(i, i + CONCURRENT_DOWNLOADS);
 
           const promises = batch.map(async (p) => {
             if (p.image_url?.includes("http")) {
@@ -207,15 +206,17 @@ export async function POST(request: NextRequest) {
                 const imageBuffer = Buffer.from(imageResponse.rawBody);
                 p.image_url = await uploadImageToS3(imageBuffer, p.sku, SUPPLIER_CODE.toLowerCase());
                 descargadas++;
-              } catch (e) {
+                log(`✅ ${p.sku}`);
+              } catch (e: any) {
+                log(`⚠️ ${p.sku}: ${e.message}`);
                 p.image_url = "";
               }
             }
           });
 
           await Promise.all(promises);
-          if (productosNuevos.length > 0) {
-            log(`📥 Progreso: ${Math.min(i + CONCURRENT_DOWNLOADS, productosNuevos.length)}/${productosNuevos.length} imágenes`);
+          if (allProducts.length > 0) {
+            log(`📥 Progreso: ${Math.min(i + CONCURRENT_DOWNLOADS, allProducts.length)}/${allProducts.length} imágenes`);
           }
         }
 
