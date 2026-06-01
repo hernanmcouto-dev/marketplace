@@ -181,12 +181,6 @@ export async function POST(request: NextRequest) {
           p.image_url = p.imagenUrl;
           const catResult = categorizeProduct(p.name);
           p.category = typeof catResult === "string" ? catResult : (catResult as any).primary || "otros";
-
-          // Si el producto ya existe, mantener su imagen anterior
-          const existing = existingProducts.find((ep: any) => ep.sku === p.sku);
-          if (existing && existing.image_url && !existing.image_url.includes("http")) {
-            p.image_url = existing.image_url;
-          }
         }
 
         // Descargar imágenes de TODOS los productos
