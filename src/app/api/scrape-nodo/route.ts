@@ -2,7 +2,8 @@ import { NextRequest } from "next/server";
 import fs from "fs";
 import path from "path";
 import { chromium } from "playwright";
-import { downloadAndCacheImage } from "@/lib/image-registry";
+import got from "got";
+import { uploadImageToS3 } from "@/lib/s3-upload";
 import { categorizeProduct } from "@/lib/product-categorizer";
 
 export const maxDuration = 300;
@@ -189,7 +190,7 @@ export async function POST(request: NextRequest) {
         }
 
         // Solo descargar imágenes de productos NUEVOS
-        log("📥 Descargando imágenes de productos nuevos...");
+        log("📥 Descargando imágenes a S3...");
         let descargadas = 0;
         const CONCURRENT_DOWNLOADS = 5;
         const productosNuevos = allProducts.filter((p) => !existingSKUs.has(p.sku));
@@ -202,8 +203,9 @@ export async function POST(request: NextRequest) {
           const promises = batch.map(async (p) => {
             if (p.image_url?.includes("http")) {
               try {
-                const imgPath = await downloadAndCacheImage(p.image_url, p.sku, SUPPLIER_CODE.toLowerCase());
-                p.image_url = imgPath;
+                const imageResponse = await got(p.image_url);
+                const imageBuffer = Buffer.from(imageResponse.rawBody);
+                p.image_url = await uploadImageToS3(imageBuffer, p.sku, SUPPLIER_CODE.toLowerCase());
                 descargadas++;
               } catch (e) {
                 // continuar sin imagen
@@ -217,7 +219,7 @@ export async function POST(request: NextRequest) {
           }
         }
 
-        log(`✅ ${descargadas} imágenes nuevas descargadas`);
+        log(`✅ ${descargadas} imágenes subidas a S3`);
 
         // Guardar
         log("💾 Guardando productos...");

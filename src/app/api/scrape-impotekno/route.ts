@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import got from "got";
 import { CookieJar } from "tough-cookie";
-import { downloadAndCacheImage, getImageUrl } from "@/lib/image-registry";
+import { uploadImageToS3 } from "@/lib/s3-upload";
 import { categorizeProduct } from "@/lib/product-categorizer";
 
 interface ScraperReport {
@@ -207,44 +207,50 @@ export async function POST(req: NextRequest) {
           };
         });
 
-        sendLog(controller, "🖼️ Proxy inteligente de imágenes (caché bajo demanda)...");
-
-        // Usar proxy con caché inteligente
-        const productsWithProxy = transformedProducts.map((product) => {
-          // Buscar si ya tiene imagen cacheada
-          const cachedUrl = getImageUrl(product.sku);
-          if (cachedUrl) {
-            sendLog(controller, `♻️ Reutilizando caché: ${product.sku}`);
-            return {
-              ...product,
-              image_url: cachedUrl,
-            };
-          }
-
-          // Usar proxy para descarga bajo demanda
-          const timestamp = Date.now();
-          return {
-            ...product,
-            image_url: `/api/image-proxy?url=${encodeURIComponent(product.image_url)}&provider=impotekno&sku=${product.sku}&v=${timestamp}`,
-          };
-        });
-
-        sendLog(controller, "💾 Guardando productos y generando informe...");
+        sendLog(controller, "🖼️ Descargando imágenes a S3...");
 
         // Comparar productos
         const previousSkus = new Set(previousProducts.map(p => p.sku));
-        const currentSkus = new Set(productsWithProxy.map(p => p.sku));
+        const currentSkus = new Set(transformedProducts.map(p => p.sku));
 
         const newSkus = new Set(Array.from(currentSkus).filter(sku => !previousSkus.has(sku)));
         const removedSkus = new Set(Array.from(previousSkus).filter(sku => !currentSkus.has(sku)));
 
-        // Contar imágenes nuevas vs. cacheadas
+        // Descargar y subir imágenes solo de productos NUEVOS
+        const productsWithImages = await Promise.all(
+          transformedProducts.map(async (product) => {
+            if (!newSkus.has(product.sku)) {
+              // Producto ya existente, mantener URL anterior
+              return product;
+            }
+
+            try {
+              const imageResponse = await got(product.image_url);
+              const imageBuffer = Buffer.from(imageResponse.rawBody);
+              const s3Url = await uploadImageToS3(imageBuffer, product.sku, "impotekno");
+              sendLog(controller, `✅ Imagen subida: ${product.sku}`);
+              return {
+                ...product,
+                image_url: s3Url,
+              };
+            } catch (err) {
+              sendLog(controller, `⚠️ Error descargando imagen ${product.sku}`);
+              return product;
+            }
+          })
+        );
+
+        const productsWithProxy = productsWithImages;
+
+        sendLog(controller, "💾 Guardando productos y generando informe...");
+
+        // Contar imágenes
         let newImages = 0;
         let cachedImages = 0;
         productsWithProxy.forEach(p => {
-          if (p.image_url.includes("/api/image-proxy")) {
+          if (p.image_url.includes("amazonaws.com")) {
             newImages++;
-          } else if (p.image_url.startsWith("/images/")) {
+          } else if (!p.image_url.includes("http")) {
             cachedImages++;
           }
         });

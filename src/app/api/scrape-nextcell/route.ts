@@ -2,7 +2,7 @@
 import fs from "fs";
 import path from "path";
 import got from "got";
-import { getImageUrl } from "@/lib/image-registry";
+import { uploadImageToS3 } from "@/lib/s3-upload";
 import { categorizeProduct } from "@/lib/product-categorizer";
 
 export const maxDuration = 300;
@@ -147,31 +147,29 @@ export async function POST(req: NextRequest) {
           };
         });
 
-        sendLog(controller, "🖼️ Procesando imágenes con caché...");
+        sendLog(controller, "🖼️ Descargando imágenes a S3...");
 
-        // Usar proxy con caché inteligente
-        const productsWithProxy = transformedProducts.map((product) => {
-          // Buscar si ya tiene imagen cacheada
-          const cachedUrl = getImageUrl(product.sku);
-          if (cachedUrl) {
-            sendLog(controller, `♻️ Reutilizando caché: ${product.sku}`);
-            return {
-              ...product,
-              image_url: cachedUrl,
-            };
-          }
+        const productsWithProxy = await Promise.all(
+          transformedProducts.map(async (product) => {
+            if (!product.image_url) {
+              return product;
+            }
 
-          // Si tiene imagen, usar proxy para descarga bajo demanda
-          if (product.image_url) {
-            const timestamp = Date.now();
-            return {
-              ...product,
-              image_url: `/api/image-proxy?url=${encodeURIComponent(product.image_url)}&provider=nextcell&sku=${product.sku}&v=${timestamp}`,
-            };
-          }
-
-          return product;
-        });
+            try {
+              const imageResponse = await got(product.image_url);
+              const imageBuffer = Buffer.from(imageResponse.rawBody);
+              const s3Url = await uploadImageToS3(imageBuffer, product.sku, "nextcell");
+              sendLog(controller, `✅ Imagen subida: ${product.sku}`);
+              return {
+                ...product,
+                image_url: s3Url,
+              };
+            } catch (err) {
+              sendLog(controller, `⚠️ Error descargando imagen ${product.sku}`);
+              return product;
+            }
+          })
+        );
 
         sendLog(controller, "💾 Guardando productos...");
 
