@@ -98,7 +98,7 @@ async function extractProductsFromHtml(html: string): Promise<any[]> {
       products.push({
         sku: finalSku,
         name,
-        unit_price: Math.round(unit_price * 1.1), // 10% margen
+        unit_price: unit_price, // Sin margen aquí - se aplica después
         units_per_package,
         image_url: `https://www.impotekno.com/fotos/${skuWithoutPrefix}.jpg`,
       });
@@ -173,11 +173,11 @@ export async function POST(req: NextRequest) {
         sendLog(controller, `📊 Total extraído: ${allProducts.length} productos`);
         sendProgress(controller, CATEGORIES.length, CATEGORIES.length, "Procesando productos...");
 
-        // Transformar productos con prefijo
+        // Transformar productos con prefijo y margen del 15%
         const transformedProducts = allProducts.map((p) => ({
           sku: `SAR-${p.sku}`,
           name: p.name,
-          unit_price: Math.round(p.unit_price * 1.15),
+          unit_price: Math.round(p.unit_price * 1.15), // 15% margen único
           units_per_package: p.units_per_package,
           image_url: p.image_url,
         }));
