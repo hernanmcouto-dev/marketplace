@@ -37,10 +37,11 @@ export async function POST(req: NextRequest) {
       if (!p.category || p.category === "Sin categorizar") {
         const categorization = categorizeProduct(p.name);
         categorizedCount++;
-        return {
+        const updated = {
           ...p,
-          category: categorization.category,
+          category: categorization.primary,
         };
+        return updated;
       }
       return p;
     });

@@ -143,7 +143,7 @@ export async function POST(req: NextRequest) {
             unit_price: Math.round(unit_price * MARGIN),
             units_per_package: 1,
             image_url: imageUrl,
-            category: categorization.category,
+            category: categorization.primary,
           };
         });
 

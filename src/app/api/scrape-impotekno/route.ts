@@ -183,7 +183,7 @@ export async function POST(req: NextRequest) {
             unit_price: Math.round(p.unit_price * 1.15), // 15% margen único
             units_per_package: p.units_per_package,
             image_url: p.image_url,
-            category: categorization.category,
+            category: categorization.primary,
           };
         });
 
